@@ -1,0 +1,1577 @@
+format-version: 1.2
+date: 15:05:2009 21:36
+saved-by: lindsaycowell
+auto-generated-by: OBO-Edit 2.000-beta56
+default-namespace: IDO
+
+[Term]
+id: bfo:Entity
+name: entity
+namespace: BFO
+
+[Term]
+id: GO:0008150
+name: biological process
+namespace: GO BP
+is_a: span:Process ! process
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:25:54Z
+
+[Term]
+id: IDO:0000000
+name: relational quality between bearers of symbiont roles
+def: "A relational quality of continuant that inheres_in a multiplicity of continuant entities, at least one continuant entity that has_role host and at least one continuant that has_role commensal or parasite." [LGC:lgc]
+is_a: PATO:0001238 ! relational quality of continuant
+created_by: lindsaycowell
+creation_date: 2008-09-05T08:50:46Z
+
+[Term]
+id: IDO:0000001
+name: relational quality between bearers of the host and infectious agent roles
+is_a: IDO:0000000 ! relational quality between bearers of symbiont roles
+created_by: lindsaycowell
+creation_date: 2008-09-05T09:45:50Z
+
+[Term]
+id: IDO:0000002
+name: host
+def: "A symbiont role played by a continuant when providing an environment or nutrient resources in or on itself for the survival of another type of continuant." [LGC:lgc]
+is_a: IDO:0000024 ! symbiont
+created_by: lindsaycowell
+creation_date: 2008-09-05T09:48:08Z
+
+[Term]
+id: IDO:0000003
+name: invasiveness of infectious agent
+is_a: IDO:0000013 ! relational quality of infectious agent to host
+created_by: lindsaycowell
+creation_date: 2008-09-05T10:32:07Z
+
+[Term]
+id: IDO:0000004
+name: long-term non-progression
+is_a: IDO:0000097 ! monadic quality of infectious disease course
+created_by: lindsaycowell
+creation_date: 2008-09-05T10:35:36Z
+
+[Term]
+id: IDO:0000005
+name: refractoriness of host
+is_a: IDO:0000000 ! relational quality between bearers of symbiont roles
+created_by: lindsaycowell
+creation_date: 2008-09-05T10:37:11Z
+
+[Term]
+id: IDO:0000006
+name: susceptibility of host to infectious agent
+is_a: IDO:0000030 ! relational quality of host to infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-05T10:48:59Z
+
+[Term]
+id: IDO:0000007
+name: resistance of host to infectious agent
+is_a: IDO:0000030 ! relational quality of host to infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-05T10:49:23Z
+
+[Term]
+id: IDO:0000008
+name: relational quality of an infectious disease and a host population
+is_a: PATO:0001238 ! relational quality of continuant
+created_by: lindsaycowell
+creation_date: 2008-09-05T11:02:13Z
+
+[Term]
+id: IDO:0000009
+name: endemic quality of infectious disease
+def: "The quality of being typical or common to a particular population or geographic region.\n\npopulation not region\npop in a particular region" [LGC:lgc]
+is_a: IDO:0000008 ! relational quality of an infectious disease and a host population
+created_by: lindsaycowell
+creation_date: 2008-09-05T11:03:00Z
+
+[Term]
+id: IDO:0000010
+name: prevalence of infectious disease
+def: "Total number of cases in a population." [LGC:lgc]
+is_a: IDO:0000008 ! relational quality of an infectious disease and a host population
+created_by: lindsaycowell
+creation_date: 2008-09-05T11:04:42Z
+
+[Term]
+id: IDO:0000011
+name: seroprevalence of infectious disease
+is_a: IDO:0000010 ! prevalence of infectious disease
+created_by: lindsaycowell
+creation_date: 2008-09-05T11:05:02Z
+
+[Term]
+id: IDO:0000012
+name: protective immunity
+is_a: IDO:0000184 ! immunity
+created_by: lindsaycowell
+creation_date: 2008-09-05T11:10:08Z
+
+[Term]
+id: IDO:0000013
+name: relational quality of infectious agent to host
+is_a: IDO:0000001 ! relational quality between bearers of the host and infectious agent roles
+created_by: lindsaycowell
+creation_date: 2008-09-07T04:20:14Z
+
+[Term]
+id: IDO:0000014
+name: antiviral resistance
+is_a: IDO:0000175 ! drug resistance
+created_by: lindsaycowell
+creation_date: 2008-09-06T10:02:10Z
+
+[Term]
+id: IDO:0000015
+name: antifungal resistance
+is_a: IDO:0000175 ! drug resistance
+created_by: lindsaycowell
+creation_date: 2008-09-06T10:03:25Z
+
+[Term]
+id: IDO:0000016
+name: antiparasitic resistance
+is_a: IDO:0000175 ! drug resistance
+created_by: lindsaycowell
+creation_date: 2008-09-06T10:04:28Z
+
+[Term]
+id: IDO:0000017
+name: infectious disease
+def: "A disease whose physical basis is an infectious disorder." [SS:rs.bs]
+comment: Definition proposed in Smith and Scheuermann AMIA paper.
+is_a: IDO:1111111 ! disease
+
+[Term]
+id: IDO:0000018
+name: transporter of infectious agent
+def: "A role realized by a continuant when the continuant (1) has a part which is the location of an infectious agent and (2) has the capacity to carry the infectious agent from one location to another." [LGC:lgc]
+is_a: snap:Role ! role
+created_by: lindsaycowell
+creation_date: 2008-09-08T10:06:25Z
+
+[Term]
+id: IDO:0000019
+name: antibacterial role
+def: "active against bacteria.\n\nA role realized by a continuant when the continuant destroys \nbacteria or inhibits their growth" [LGC:lgc]
+comment: Positivity Principle: There probably isn't a better way to capture the "anti-" in antibacterial in a uniform way that applies to all anti-bacterials.
+is_a: snap:Role ! role
+created_by: lindsaycowell
+creation_date: 2008-09-06T10:15:40Z
+
+[Term]
+id: IDO:0000020
+name: antifungal role
+def: "A role realized by a continuant when the continuant destroys \nfungi or inhibits their growth" [LGC:lgc]
+is_a: snap:Role ! role
+created_by: lindsaycowell
+creation_date: 2008-09-06T10:16:02Z
+
+[Term]
+id: IDO:0000021
+name: antiparasitic role
+def: "A role realized by a continuant when the continuant destroys \nparasites or inhibits their growth" [LGC:lgc]
+is_a: snap:Role ! role
+created_by: lindsaycowell
+creation_date: 2008-09-06T10:16:18Z
+
+[Term]
+id: IDO:0000022
+name: antiviral role
+def: "A role realized by a continuant when the continuant destroys \nviruses or inhibits their growth" [LGC:lgc]
+is_a: snap:Role ! role
+created_by: lindsaycowell
+creation_date: 2008-09-06T10:16:41Z
+
+[Term]
+id: IDO:0000023
+name: antimycobacterial role
+def: "An antibacterial role realized by a continuant when the \ncontinuant destroys mycobacteria or inhibits their growth." [LGC:lgc]
+comment: Need def for mycobacteria. Does this belong in top-level IDO?
+is_a: IDO:0000019 ! antibacterial role
+created_by: lindsaycowell
+creation_date: 2008-09-06T10:16:58Z
+
+[Term]
+id: IDO:0000024
+name: symbiont
+def: "A role played by a continuant when participating in the process of symbiosis (GO:0044403)." [LGC:lgc]
+comment: This specifies the process in which the role is realized, but doesn't really define the role.
+is_a: snap:Role ! role
+created_by: lindsaycowell
+creation_date: 2008-09-06T10:23:24Z
+
+[Term]
+id: IDO:0000025
+name: mutualist
+def: "A symbiont role played by a continuant when participating in a process of symbiosis from which both symbionts derive a fitness advantage." [LGC:lgc]
+comment: This specifies the process in which the role is realized, but doesn't really define the role.
+is_a: IDO:0000024 ! symbiont
+created_by: lindsaycowell
+creation_date: 2008-09-06T10:24:15Z
+
+[Term]
+id: IDO:0000026
+name: commensal
+def: "A symbiont role played by a continuant when participating in a process of symbiosis from which it derives a fitness advantage but its host is neither advantaged nor disadvantaged by the symbiosis." [LGC:lgc]
+comment: This specifies the process in which the role is realized, but doesn't really define the role.
+is_a: IDO:0000024 ! symbiont
+created_by: lindsaycowell
+creation_date: 2008-09-06T10:24:31Z
+
+[Term]
+id: IDO:0000027
+name: parasite
+def: "A symbiont role played by a continuant when participating in a process of symbiosis from which it derives a fitness advantage but its host’s fitness is reduced." [LGC:lgc]
+comment: This specifies the process in which the role is realized, but doesn't really define the role.
+is_a: IDO:0000024 ! symbiont
+created_by: lindsaycowell
+creation_date: 2008-09-06T10:25:20Z
+
+[Term]
+id: IDO:0000028
+name: host of parasite
+def: "A host role played by a continuant that is harmed as a result of playing the host role." [LGC:lgc]
+is_a: IDO:0000002 ! host
+created_by: lindsaycowell
+creation_date: 2008-09-06T10:30:04Z
+
+[Term]
+id: IDO:0000029
+name: colonization of host
+def: "The process by which an organism or virus establishes multiple copies of itself in or on a host organism or virus. See comment." [LGC:lgc]
+comment: Colonization sometimes means specifically growth on epithelial tissues.\nIt may be that colonization is not used for viruses.\nDo we need terms for colonization of part of an organism or for specific parts (like subepithelial space)?
+is_a: GO:0008150 ! biological process
+created_by: lindsaycowell
+creation_date: 2008-09-06T11:01:04Z
+
+[Term]
+id: IDO:0000030
+name: relational quality of host to infectious agent
+is_a: IDO:0000001 ! relational quality between bearers of the host and infectious agent roles
+created_by: lindsaycowell
+creation_date: 2008-09-07T04:20:50Z
+
+[Term]
+id: IDO:0000031
+name: infection process
+def: "The process by which an infection is established in a host." [LGC:lgc]
+is_a: GO:0008150 ! biological process
+created_by: lindsaycowell
+creation_date: 2008-09-06T11:02:40Z
+
+[Term]
+id: IDO:0000032
+name: coinfection process
+def: "The infection process by which infection with an infectious agent is established in a host already infected with another infectious agent. See comment." [LGC:lgc]
+comment: Not sure if coinfection is restricted to infectious agent infections but I think it is.
+is_a: IDO:0000031 ! infection process
+created_by: lindsaycowell
+creation_date: 2008-09-06T11:35:54Z
+
+[Term]
+id: IDO:0000033
+name: quality of being colonized
+def: "See comment." [LGC:lgc]
+comment: We have multiple inheritance here because instances of quality of being colonized could also be instances of relational quality of host to infectious agent.
+is_a: IDO:0000000 ! relational quality between bearers of symbiont roles
+created_by: lindsaycowell
+creation_date: 2008-09-06T11:38:45Z
+
+[Term]
+id: IDO:0000034
+name: resistance of host to disease caused by infectious agent
+is_a: IDO:0000093 ! relational quality of an infectious disease and a host
+created_by: lindsaycowell
+creation_date: 2008-09-06T11:40:29Z
+
+[Term]
+id: IDO:0000035
+name: susceptibility of host to disease caused by infectious agent
+is_a: IDO:0000093 ! relational quality of an infectious disease and a host
+created_by: lindsaycowell
+creation_date: 2008-09-06T11:40:51Z
+
+[Term]
+id: IDO:0000036
+name: latency of infectious agent
+is_a: IDO:0000158 ! monadic quality of bearer of infectious agent role
+created_by: lindsaycowell
+creation_date: 2008-09-06T03:58:44Z
+
+[Term]
+id: IDO:0000037
+name: active quality of infectious agent
+is_a: IDO:0000158 ! monadic quality of bearer of infectious agent role
+created_by: lindsaycowell
+creation_date: 2008-09-06T04:01:38Z
+
+[Term]
+id: IDO:0000038
+name: transmission of infectious agent
+def: "The process by which an infectious agent leaves an infected host through a portal of exit, is conveyed by some mode of transmission, and enters through an appropriate portal of entry to infect a susceptible (and uninfected) host. See comment." [LGC:lgc]
+comment: Transmission may be from reservoir or host to uninfected individual. Bearer of host role can also be bearer of reservoir role.\nPotentially a subtype of GO BP GO:0051821 : dissemination or transmission of organism from other organism during symbiotic interaction.
+is_a: GO:0008150 ! biological process
+created_by: lindsaycowell
+creation_date: 2008-09-06T04:16:35Z
+
+[Term]
+id: IDO:0000039
+name: source of infectious agent
+is_a: snap:Role ! role
+created_by: lindsaycowell
+creation_date: 2008-09-06T04:19:01Z
+
+[Term]
+id: IDO:0000040
+name: indirect mode of transmission of infectious agent
+def: "Transfer of infectious agent from reservoir to host via an intermediary." [LGC:lgc]
+is_a: IDO:0000052 ! mode of transmission of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-06T04:23:53Z
+
+[Term]
+id: IDO:0000041
+name: direct mode of transmission of infectious agent
+def: "Agent is transferred from reservoir to host by direct physical contact between the two or by contact between new host and droplets spread by cough or sneeze that have not yet landed on a surface (maybe we could say direct contact with reservoir or part of reservoir although is it part once it has been expired)." [LGC:lgc]
+comment: Are this term and its child terms really roles?  BFOv1.1 states realizable \nentities (such as roles) hold between a dependent continuant and an \nindependent continuant.  Can we say a process has a role in a larger \nprocess?
+is_a: IDO:0000052 ! mode of transmission of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-06T04:24:11Z
+
+[Term]
+id: IDO:0000042
+name: direct contact transmission of infectious agent
+def: "Direct contact between host and reservoir or part of the reservoir." [LGC:lgc]
+is_a: IDO:0000041 ! direct mode of transmission of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-06T04:29:45Z
+
+[Term]
+id: IDO:0000043
+name: droplet spread transmission of infectious agent
+def: "Contact between host and air droplets expired by reservoir and that have not landed on any surface.  Are these always fluid?  We could say they haven't dried and been resuspended." [LGC:lgc]
+is_a: IDO:0000041 ! direct mode of transmission of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-06T04:30:14Z
+
+[Term]
+id: IDO:0000044
+name: airborne transmission of infectious agent
+def: "transfer of infectious agent from reservoir to host by dust or droplet nuclei that have been suspended in the air by wind or air currents." [LGC:lgc]
+is_a: IDO:0000040 ! indirect mode of transmission of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-06T04:31:08Z
+
+[Term]
+id: IDO:0000045
+name: vehicle transmission of infectious agent
+def: "Transfer of infectious agent from reservoir to host by an inanimate entity.  Examples include blood, food, water, and fomites." [LGC:lgc]
+is_a: IDO:0000040 ! indirect mode of transmission of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-06T04:31:21Z
+
+[Term]
+id: IDO:0000046
+name: vector transmission of infectious agent
+def: "Transfer of infectious agent from reservoir to host via an animate entity." [LGC:lgc]
+is_a: IDO:0000040 ! indirect mode of transmission of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-06T04:31:32Z
+
+[Term]
+id: IDO:0000047
+name: mechanical transmission of infectious agent by a vector
+def: "The infectious agent is transferred from reservoir to host by vector and remains in the same life stage.  Are there cases considered biologic where there is only a change in size or number of infectious agent?" [LGC:lgc]
+is_a: IDO:0000046 ! vector transmission of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-06T04:31:46Z
+
+[Term]
+id: IDO:0000048
+name: biologic transmission of infectious agent by a vector
+def: "The infectious agent undergoes maturation or development in/on the vector." [LGC:<new dbxref>, LGC:lgc]
+is_a: IDO:0000046 ! vector transmission of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-06T04:31:57Z
+
+[Term]
+id: IDO:0000049
+name: vehicle of infectious agent
+def: "Inanimate transporter." [LGC:lgc]
+is_a: IDO:0000018 ! transporter of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-06T04:48:25Z
+
+[Term]
+id: IDO:0000050
+name: portal of exit of infectious agent
+is_a: snap:Role ! role
+created_by: lindsaycowell
+creation_date: 2008-09-06T05:07:54Z
+
+[Term]
+id: IDO:0000051
+name: portal of entry of infectious agent
+synonym: "locus of entry" RELATED []
+is_a: snap:Role ! role
+created_by: lindsaycowell
+creation_date: 2008-09-06T05:08:16Z
+
+[Term]
+id: IDO:0000052
+name: mode of transmission of infectious agent
+synonym: "route of transmission" RELATED []
+is_a: snap:Role ! role
+created_by: lindsaycowell
+creation_date: 2008-09-06T05:09:56Z
+
+[Term]
+id: IDO:0000053
+name: endemic level of infectious disease
+def: "The level of disease typically observed in a particular population or geographic area." [LGC:lgc]
+synonym: "baseline level of infectious disease" EXACT []
+is_a: IDO:0000008 ! relational quality of an infectious disease and a host population
+created_by: lindsaycowell
+creation_date: 2008-09-06T05:22:22Z
+
+[Term]
+id: IDO:0000054
+name: epidemic quality of infectious disease
+def: "The quality of an infectious disease in a specific population when the incidence of disease exceeds what is expected based on recent experience." [LGC:lgc]
+is_a: IDO:0000008 ! relational quality of an infectious disease and a host population
+created_by: lindsaycowell
+creation_date: 2008-09-06T05:44:29Z
+
+[Term]
+id: IDO:0000055
+name: sporadicity of infectious disease
+def: "Sporadic is in PATO." [LGC:lgc]
+is_a: IDO:0000008 ! relational quality of an infectious disease and a host population
+created_by: lindsaycowell
+creation_date: 2008-09-06T05:26:40Z
+
+[Term]
+id: IDO:0000056
+name: hyper-endemic quality of infectious disease
+def: "The quality of being typical or common at a high level in a particular population or geographic region." [LGC:lgc]
+is_a: IDO:0000009 ! endemic quality of infectious disease
+created_by: lindsaycowell
+creation_date: 2008-09-06T05:27:34Z
+
+[Term]
+id: IDO:0000057
+name: pandemic quality of infectious disease
+is_a: IDO:0000054 ! epidemic quality of infectious disease
+created_by: lindsaycowell
+creation_date: 2008-09-06T05:50:40Z
+
+[Term]
+id: IDO:0000058
+name: incidence proportion of infectious disease
+def: "The number of new cases in a given population during a specified period of time divided by the number of people initially at risk." [LGC:lgc]
+synonym: "cumulative incidence of infectious disease" EXACT []
+is_a: IDO:0000070 ! incidence of infectious disease
+created_by: lindsaycowell
+creation_date: 2008-09-06T05:42:07Z
+
+[Term]
+id: IDO:0000059
+name: elevated infectious disease incidence
+is_a: IDO:0000008 ! relational quality of an infectious disease and a host population
+created_by: lindsaycowell
+creation_date: 2008-09-06T06:02:16Z
+
+[Term]
+id: IDO:0000060
+name: infectious disease epidemic
+def: "Increase in the number of new cases in a specific population during a specified period of time." [LGC:lgc]
+is_a: IDO:0000059 ! elevated infectious disease incidence
+created_by: lindsaycowell
+creation_date: 2008-09-06T06:02:41Z
+
+[Term]
+id: IDO:0000061
+name: infectious disease pandemic
+def: "Epidemic over a wide geographical region usually spanning multiple countries or continents." [LGC:lgc]
+is_a: IDO:0000060 ! infectious disease epidemic
+created_by: lindsaycowell
+creation_date: 2008-09-06T06:03:38Z
+
+[Term]
+id: IDO:0000062
+name: herd immunity
+is_a: snap:Quality ! quality
+created_by: lindsaycowell
+creation_date: 2008-09-06T08:44:23Z
+
+[Term]
+id: IDO:0000063
+name: inoculation of host
+def: "The active immunization process by which immunity against a molecule (M) is induced in organism A by introducing into A organism B that expresses molecules sufficiently similar to M that an immune response to B's molecules are cross-reactive to M. See comment." [LGC:lgc]
+comment: Inoculation can refer to introduction of live and not attenuated organism to induce immunity (as opposed to vaccine which introduces killed or attenuated organism). Problem is, can also refer to introduction of organism into cell culture and other things that aren't immunization processes. So, do we take it out, or make it a sibling of immunization and risk having multiple inheritance, or define a narrower term "inoculation of host" to rule out the cell culture and other scenarios in which immunity does not result.
+is_a: IDO:0000068 ! active immunization
+created_by: lindsaycowell
+creation_date: 2008-09-06T09:14:52Z
+
+[Term]
+id: IDO:0000064
+name: variolation
+def: "The inoculation process in which cowpox is introduced into a host organism to induce immunity against smallpox." [LGC:lgc]
+is_a: IDO:0000063 ! inoculation of host
+created_by: lindsaycowell
+creation_date: 2008-09-06T09:15:55Z
+
+[Term]
+id: IDO:0000065
+name: immunization
+def: "The process by which an organism acquires immunity against non-self molecules. See comment." [LGC:lgc]
+comment: Can one acquire immunity against self molecules?\nCan we be more specific and refer to immunity conferred by presence of specific antigen receptors?
+is_a: span:Process ! process
+created_by: lindsaycowell
+creation_date: 2008-09-06T09:19:15Z
+
+[Term]
+id: IDO:0000066
+name: passive immunization
+def: "The immunization process by which immunity is conferred to an organism by molecules not generated by that organism's immune system. Examples include the injection of antibodies and the transfer of maternal antibodies to the fetus." [LGC:lgc]
+is_a: IDO:0000065 ! immunization
+created_by: lindsaycowell
+creation_date: 2008-09-06T09:19:35Z
+
+[Term]
+id: IDO:0000067
+name: vaccination
+def: "The active immunization process by which immunity against a molecule is induced in an organism by its intentional exposure to the molecule, to artificial molecules of the same type (e.g. recombinant protein), or to a killed or attenuated organism or virus of which the molecule is part. Immunity against a molecule can confer immunity against an infectious agent expressing the molecule." [LGC:lgc]
+is_a: IDO:0000068 ! active immunization
+created_by: lindsaycowell
+creation_date: 2008-09-06T09:19:56Z
+
+[Term]
+id: IDO:0000068
+name: active immunization
+def: "The immunization process by which immunity is conferred to an organism by molecules generated by its immune system as a result of exposure to the molecule against which immunity is directed or to a molecule sufficiently similar to elicit a cross-reactive immune response." [LGC:lgc]
+is_a: IDO:0000065 ! immunization
+created_by: lindsaycowell
+creation_date: 2008-09-06T09:29:29Z
+
+[Term]
+id: IDO:0000069
+name: incidence rate of infectious disease
+def: "The incidence proportion divided by the amount of time over which it was measured." [LGC:lgc]
+is_a: IDO:0000070 ! incidence of infectious disease
+created_by: lindsaycowell
+creation_date: 2008-09-06T09:42:27Z
+
+[Term]
+id: IDO:0000070
+name: incidence of infectious disease
+def: "Disease frequency during a period of time." [LGC:lgc]
+is_a: IDO:0000008 ! relational quality of an infectious disease and a host population
+created_by: lindsaycowell
+creation_date: 2008-09-06T09:52:06Z
+
+[Term]
+id: IDO:0000071
+name: mortality rate of infectious disease
+def: "The number of deaths from the infectious disease in a specified population divided by the size of that population, per unit time. Mortality rate is typically expressed in units of deaths per 1000 individuals per year" [LGC:lgc]
+is_a: IDO:0000008 ! relational quality of an infectious disease and a host population
+created_by: lindsaycowell
+creation_date: 2008-09-06T09:55:29Z
+
+[Term]
+id: IDO:0000072
+name: genomic island
+def: "A portion of genetic material acquired by an organism via horizontal transfer." [LGC:lgc]
+is_a: snap:Object ! object
+created_by: lindsaycowell
+creation_date: 2008-09-07T11:01:51Z
+
+[Term]
+id: IDO:0000073
+name: pathogenicity island
+def: "A genomic island that encodes genes, the products of which contribute to virulence." [LGC:lgc]
+is_a: IDO:0000072 ! genomic island
+created_by: lindsaycowell
+creation_date: 2008-09-07T11:02:41Z
+
+[Term]
+id: IDO:0000074
+name: horizontal transfer
+def: "The process by which an organism or virus acquires genetic material from another organism or virus without being the offspring of that organism or virus." [LGC:lgc]
+synonym: "horizontal gene transfer" EXACT []
+synonym: "lateral gene transfer" EXACT []
+is_a: GO:0008150 ! biological process
+created_by: lindsaycowell
+creation_date: 2008-09-07T11:12:23Z
+
+[Term]
+id: IDO:0000075
+name: biological factor
+def: "Contribute to a result or outcome. In biology, participate in biological process. A biological entity necessary for a process to unfold." [LGC:lgc]
+comment: Too general: Does this belong in top-level IDO? It may apply to many \nthings that have nothing to do with infectious disease.\nDefinition needs revision.
+is_a: snap:Role ! role
+created_by: lindsaycowell
+creation_date: 2008-09-07T11:19:07Z
+
+[Term]
+id: IDO:0000076
+name: adhesion factor
+def: "A biological factor that is the degree to which an infectious agent adheres to epithelial surfaces as a step towards infection." [LGC:lgc]
+comment: is adhesion factor a colonization factor?
+synonym: "adhesin" EXACT []
+is_a: IDO:0000075 ! biological factor
+created_by: lindsaycowell
+creation_date: 2008-09-07T11:24:36Z
+
+[Term]
+id: IDO:0000077
+name: colonization factor
+def: "A biological factor that is the degree to which an infectious agent becomes present and multiplies on or within a host without causing cellular injury." [LGC:lgc]
+is_a: IDO:0000075 ! biological factor
+created_by: lindsaycowell
+creation_date: 2008-09-07T11:25:38Z
+
+[Term]
+id: IDO:0000078
+name: virulence factor
+def: "A biological factor that is the degree to which an pathogen causes disease." [LGC:lgc]
+is_a: IDO:0000075 ! biological factor
+created_by: lindsaycowell
+creation_date: 2008-09-07T11:25:57Z
+
+[Term]
+id: IDO:0000079
+name: invasin
+comment: invasin refers to a specific protein (originally), a class of proteins (later on, after more examples were found) and, (maybe) a role.  To reduce the ambiguity, I suggest invasion factor be used for the role.  That new term better fits with the "surrounding" terms that are also whatever factor.\n\nis invasin a colonization factor?
+is_a: IDO:0000078 ! virulence factor
+created_by: lindsaycowell
+creation_date: 2008-09-07T11:27:25Z
+
+[Term]
+id: IDO:0000080
+name: toxin of infectious agent
+is_a: IDO:0000078 ! virulence factor
+created_by: lindsaycowell
+creation_date: 2008-09-07T11:27:58Z
+
+[Term]
+id: IDO:0000081
+name: endotoxin
+def: "A toxin of an infectious agent that is secreted by the agent and released into the surrounding environment only when it dies." [LGC:lgc]
+is_a: IDO:0000080 ! toxin of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-07T11:28:32Z
+
+[Term]
+id: IDO:0000082
+name: exotoxin
+def: "A toxin of an infectious agent that is secreted by the agent into the surrounding medium." [LGC:lgc]
+comment: I wonder if the surrounding medium needs to be a part of the host for the secretion to count as a toxin.
+is_a: IDO:0000080 ! toxin of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-07T11:29:35Z
+
+[Term]
+id: IDO:0000083
+name: opportunisitc pathogen
+def: "A pathogen role played by a continuant that causes disease in hosts that are immunocompromised." [LGC:lgc]
+is_a: IDO:0000155 ! pathogen
+created_by: lindsaycowell
+creation_date: 2008-09-07T12:01:28Z
+
+[Term]
+id: IDO:0000084
+name: immunodeficiency
+synonym: "immune deficiency" EXACT []
+synonym: "immunocompromised" RELATED []
+is_a: snap:Quality ! quality
+created_by: lindsaycowell
+creation_date: 2008-09-07T12:01:55Z
+
+[Term]
+id: IDO:0000085
+name: pathogenesis of infectious disease
+is_a: GO:0008150 ! biological process
+created_by: lindsaycowell
+creation_date: 2008-09-07T12:07:13Z
+
+[Term]
+id: IDO:0000086
+name: horizontal transmission of infectious agent
+def: "The transmission process by which an infectious agent is transferred from a host to a susceptible, uninfected individual where the host is not the parent of the individual to whom the infectious agent is transferred. See comment." [LGC:lgc]
+comment: Could be defined as transfer between individuals of the same age group.
+is_a: IDO:0000038 ! transmission of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-07T12:13:47Z
+
+[Term]
+id: IDO:0000087
+name: vertical transmission of infectious agent
+def: "The transmission process by which an infectious agent is transfered from an infected parent to his or her uninfected offspring during reproduction, fetal development, or birth. See comment." [LGC:lgc]
+comment: I think we should include postnatal transfer via breast milk.
+synonym: "mother-to-child transmission" EXACT []
+is_a: IDO:0000038 ! transmission of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-07T12:14:09Z
+
+[Term]
+id: IDO:0000088
+name: oral-fecal transmission of infectious agent
+def: "The horizontal transmission process that begins with the infectious agent exiting its host via the feces and entering the new host via the mouth." [LGC:lgc]
+is_a: IDO:0000086 ! horizontal transmission of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-07T12:45:47Z
+
+[Term]
+id: IDO:0000089
+name: sexual transmission of infectious agent
+is_a: IDO:0000042 ! direct contact transmission of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-07T12:54:35Z
+
+[Term]
+id: IDO:0000090
+name: monadic quality of infection
+is_a: PATO:0001237 ! monadic quality of continuant
+created_by: lindsaycowell
+creation_date: 2008-09-07T01:34:55Z
+
+[Term]
+id: IDO:0000091
+name: symptomatic quality of host
+def: "A quality inhering in a bearer of the host role by virtue of the fact that the host is infected and has signs or symptoms. See comment." [LGC:lgc]
+comment: These definitions are consistent with how the terms are used (i think) but this is an incorrect usage because "symptomatic" should not imply the presence of signs.
+is_a: snap:Quality ! quality
+created_by: lindsaycowell
+creation_date: 2008-09-07T01:35:49Z
+
+[Term]
+id: IDO:0000092
+name: asymptomatic quality of host
+def: "A quality inhering in a bearer of the host role by virtue of the fact that the host is infected but has no signs or symptoms. See comment." [LGC:lgc]
+comment: The definition is consistent with usage (I think) but "asymptomatic" should not imply the absence of signs.
+is_a: snap:Quality ! quality
+created_by: lindsaycowell
+creation_date: 2008-09-07T01:36:20Z
+
+[Term]
+id: IDO:0000093
+name: relational quality of an infectious disease and a host
+is_a: PATO:0001238 ! relational quality of continuant
+created_by: lindsaycowell
+creation_date: 2008-09-07T02:27:01Z
+
+[Term]
+id: IDO:0000094
+name: relational quality between bearers of the infectious agent and drug roles
+is_a: PATO:0001238 ! relational quality of continuant
+created_by: lindsaycowell
+creation_date: 2008-09-07T03:51:28Z
+
+[Term]
+id: IDO:0000095
+name: infectious disease course
+def: "The total process of realization of the infectious disease (disposition), beginning with the manifestation of the pathological processes and ending with clearance of infection or death of the host." [LGC:lgc]
+is_a: GO:0008150 ! biological process
+created_by: lindsaycowell
+creation_date: 2008-09-08T05:22:20Z
+
+[Term]
+id: IDO:0000096
+name: infection
+def: "A disorder whose physical components are: i) the members of a population of the host's normal microbiota for which the population size is elevated to an extent that is clinically abnormal (e.g. Candida albicans in thrush, ii) the members of a population of the host's normal microbiota that have colonized parts of the host not typically colonized by that species of microbiota (e.g. S. aureus in the blood), or iii) the members of an infectious agent population that have colonized a host and are replicating." [LGC:lgc]
+comment: infectious agent vs pathogen\nclinically abnormal
+is_a: IDO:1111199 ! disorder
+created_by: lindsaycowell
+creation_date: 2008-09-08T08:04:07Z
+
+[Term]
+id: IDO:0000097
+name: monadic quality of infectious disease course
+is_a: PATO:0001239 ! monadic quality of occurrent
+created_by: lindsaycowell
+creation_date: 2008-09-08T09:29:14Z
+
+[Term]
+id: IDO:0000098
+name: at-risk population
+def: "See comment." [LGC:lgc]
+comment: Instances may be defined in terms of geography or by other demographic factors such as age and gender.
+is_a: snap:ObjectAggregate ! object aggregate
+created_by: lindsaycowell
+creation_date: 2008-09-08T09:41:53Z
+
+[Term]
+id: IDO:0000099
+name: diseased population
+def: "An object aggregate composed of members of a specified, at-risk population in whom a disease is realized." [LGC:lgc]
+is_a: snap:ObjectAggregate ! object aggregate
+created_by: lindsaycowell
+creation_date: 2008-09-08T09:42:27Z
+
+[Term]
+id: IDO:0000100
+name: subclinical quality of an infection
+def: "The quality of an infection that inheres in an infection by virtue of the fact that the infected host is asymptomatic." [LGC:lgc]
+synonym: "inapparent" EXACT []
+is_a: IDO:0000090 ! monadic quality of infection
+created_by: lindsaycowell
+creation_date: 2008-09-08T09:56:17Z
+
+[Term]
+id: IDO:0000101
+name: damaging host cells and tissues in subepithelial space
+is_a: GO:0008150 ! biological process
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:36:07Z
+
+[Term]
+id: IDO:0000102
+name: local quality of an infection
+def: "The quality of an infection that inheres in the infection by virtue of the fact that the infection is limited to a small area of the body." [LGC:lgc]
+is_a: IDO:0000090 ! monadic quality of infection
+created_by: lindsaycowell
+creation_date: 2008-09-08T09:57:13Z
+
+[Term]
+id: IDO:0000103
+name: systemic quality of an infection
+def: "The quality of an infection that inheres in the infection by virtue of the fact that the infection is spread throughout the body of the host." [LGC:lgc]
+is_a: IDO:0000090 ! monadic quality of infection
+created_by: lindsaycowell
+creation_date: 2008-09-08T09:57:28Z
+
+[Term]
+id: IDO:0000104
+name: focal quality of an infection
+def: "The quality of an infection that inheres in the infection by virtue of the fact that the infection is local by symptoms are observed in distance parts of the host's body." [LGC:lgc]
+is_a: IDO:0000090 ! monadic quality of infection
+created_by: lindsaycowell
+creation_date: 2008-09-08T09:57:43Z
+
+[Term]
+id: IDO:0000105
+name: primary quality of an infection
+def: "The quality of an infection that inheres in the infection by virtue of the fact that the infection is established in an uninfected host." [LGC:lgc]
+is_a: IDO:0000090 ! monadic quality of infection
+created_by: lindsaycowell
+creation_date: 2008-09-08T09:59:52Z
+
+[Term]
+id: IDO:0000106
+name: secondary quality of an infection
+def: "The quality of an infection that inheres in the infection by virtue of the fact that the infection is established in an infected host." [LGC:lgc]
+is_a: IDO:0000090 ! monadic quality of infection
+created_by: lindsaycowell
+creation_date: 2008-09-08T09:59:52Z
+
+[Term]
+id: IDO:0000107
+name: polymicrobial quality of an infection
+def: "The quality of an infection that inheres in the infection by virtue of the fact that it involves multiple types of commensals or infectious agents. See comment." [LGC:lgc]
+comment: Our definition of infection may prevent this.
+synonym: "mixed quality of infection" EXACT []
+is_a: IDO:0000090 ! monadic quality of infection
+created_by: lindsaycowell
+creation_date: 2008-09-08T09:59:52Z
+
+[Term]
+id: IDO:0000108
+name: acute quality of an infection
+def: "The quality of an infection inhereing in the infection by virtue of the fact that the infection is established rapidly (the infection process unfolds over a short period of time) and progression through the disease course resulting from the infection is rapid." [LGC:lgc]
+is_a: IDO:0000090 ! monadic quality of infection
+created_by: lindsaycowell
+creation_date: 2008-09-08T09:59:52Z
+
+[Term]
+id: IDO:0000109
+name: chronic quality of an infection
+def: "The quality of an infection that inheres in the infection by virtue of the fact that the progression through the disease course resulting from the infection is slow." [LGC:lgc]
+is_a: IDO:0000090 ! monadic quality of infection
+created_by: lindsaycowell
+creation_date: 2008-09-08T09:59:52Z
+
+[Term]
+id: IDO:0000110
+name: subacute quality of an infection
+def: "The quality of an infection that inheres in the infection by virtue of the fact that it is not acute and not chronic." [LGC:lgc]
+is_a: IDO:0000090 ! monadic quality of infection
+created_by: lindsaycowell
+creation_date: 2008-09-08T09:59:52Z
+
+[Term]
+id: IDO:0000111
+name: induction of damaging host immune response
+is_a: IDO:0000101 ! damaging host cells and tissues in subepithelial space
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:36:46Z
+
+[Term]
+id: IDO:0000112
+name: bacteremia
+def: "An infection defined by the presence of bacteria in the blood." [LGC:lgc]
+is_a: IDO:0000096 ! infection
+created_by: lindsaycowell
+creation_date: 2008-09-08T09:59:52Z
+
+[Term]
+id: IDO:0000113
+name: viremia
+def: "An infection defined by the presence of virions in the blood. See comment." [LGC:lgc]
+comment: Should perhaps refer to virus rather than virion.
+is_a: IDO:0000096 ! infection
+created_by: lindsaycowell
+creation_date: 2008-09-08T09:59:52Z
+
+[Term]
+id: IDO:0000114
+name: intracellular quality of an infection
+def: "The quality of an infection that inheres in the infection by virtue of the fact that the members of the infection object aggregate persist intracellularly." [LGC:lgc]
+is_a: IDO:0000090 ! monadic quality of infection
+created_by: lindsaycowell
+creation_date: 2008-09-08T09:59:52Z
+
+[Term]
+id: IDO:0000115
+name: extracellular quality of an infection
+def: "The quality of an infection that inheres in an infection by virtue of the fact that the members of the infection object aggregate persist in the extracellular space." [LGC:lgc]
+is_a: IDO:0000090 ! monadic quality of infection
+created_by: lindsaycowell
+creation_date: 2008-09-08T09:59:52Z
+
+[Term]
+id: IDO:0000116
+name: septicemia
+def: "Bacteremia in which the baceteria are replicating." [LGC:lgc]
+is_a: IDO:0000112 ! bacteremia
+created_by: lindsaycowell
+creation_date: 2008-09-08T11:06:34Z
+
+[Term]
+id: IDO:0000117
+name: symbiont-induced apoptosis
+is_a: IDO:0000101 ! damaging host cells and tissues in subepithelial space
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:37:35Z
+
+[Term]
+id: IDO:0000118
+name: symbiont-induced necrosis
+is_a: IDO:0000101 ! damaging host cells and tissues in subepithelial space
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:40:35Z
+
+[Term]
+id: IDO:0000119
+name: virus-induced cytopathogenesis
+is_a: IDO:0000101 ! damaging host cells and tissues in subepithelial space
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:41:09Z
+
+[Term]
+id: IDO:0000120
+name: symbiont adherence to host cell
+def: "See comment." [LGC:lgc]
+comment: May be subtype of GO:0051825 : adhesion to other organism during symbiotic interaction.
+is_a: GO:0008150 ! biological process
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:44:41Z
+
+[Term]
+id: IDO:0000121
+name: nonspecific adherence to host cell
+is_a: IDO:0000120 ! symbiont adherence to host cell
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:46:16Z
+
+[Term]
+id: IDO:0000122
+name: specific adherence to host cell
+is_a: IDO:0000120 ! symbiont adherence to host cell
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:46:16Z
+
+[Term]
+id: IDO:0000123
+name: afimbrial specific adherence to host cell
+is_a: IDO:0000122 ! specific adherence to host cell
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:47:23Z
+
+[Term]
+id: IDO:0000124
+name: fimbrial specific adherence to host cell
+is_a: IDO:0000122 ! specific adherence to host cell
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:47:23Z
+
+[Term]
+id: IDO:0000125
+name: symbiont evasion of host immune response
+is_a: GO:0008150 ! biological process
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:51:25Z
+
+[Term]
+id: IDO:0000126
+name: antigenic variation
+is_a: IDO:0000125 ! symbiont evasion of host immune response
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:52:29Z
+
+[Term]
+id: IDO:0000127
+name: resist phagocytosis in subepithelial space
+is_a: IDO:0000125 ! symbiont evasion of host immune response
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:52:29Z
+
+[Term]
+id: IDO:0000128
+name: serum resistance
+is_a: IDO:0000125 ! symbiont evasion of host immune response
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:52:29Z
+
+[Term]
+id: IDO:0000129
+name: genetic diversification
+is_a: IDO:0000126 ! antigenic variation
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:53:11Z
+
+[Term]
+id: IDO:0000130
+name: phase variation
+is_a: IDO:0000126 ! antigenic variation
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:53:11Z
+
+[Term]
+id: IDO:0000131
+name: complement resistance
+is_a: IDO:0000128 ! serum resistance
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:53:48Z
+
+[Term]
+id: IDO:0000132
+name: symbiont spread through host
+is_a: GO:0008150 ! biological process
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:55:05Z
+
+[Term]
+id: IDO:0000133
+name: transport by blood
+is_a: IDO:0000132 ! symbiont spread through host
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:55:48Z
+
+[Term]
+id: IDO:0000134
+name: transport by lymph
+is_a: IDO:0000132 ! symbiont spread through host
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:55:48Z
+
+[Term]
+id: IDO:0000135
+name: initiation of infection process
+is_a: GO:0008150 ! biological process
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:57:41Z
+
+[Term]
+id: IDO:0000136
+name: disruption of body surface
+is_a: IDO:0000135 ! initiation of infection process
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:58:20Z
+
+[Term]
+id: IDO:0000137
+name: disruption of normal microbioflora
+is_a: IDO:0000135 ! initiation of infection process
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:58:20Z
+
+[Term]
+id: IDO:0000138
+name: penetration via injury of epithelial barrier
+is_a: IDO:0000139 ! penetration of epithelial barrier
+created_by: lindsaycowell
+creation_date: 2008-09-08T01:59:57Z
+
+[Term]
+id: IDO:0000139
+name: penetration of epithelial barrier
+is_a: GO:0008150 ! biological process
+created_by: lindsaycowell
+creation_date: 2008-09-08T02:00:53Z
+
+[Term]
+id: IDO:0000140
+name: transcytosis
+is_a: IDO:0000139 ! penetration of epithelial barrier
+created_by: lindsaycowell
+creation_date: 2008-09-08T02:01:56Z
+
+[Term]
+id: IDO:0000141
+name: utilization of membranous cell gateway
+is_a: IDO:0000139 ! penetration of epithelial barrier
+created_by: lindsaycowell
+creation_date: 2008-09-08T02:01:56Z
+
+[Term]
+id: IDO:0000142
+name: penetration of host cell
+is_a: GO:0008150 ! biological process
+created_by: lindsaycowell
+creation_date: 2008-09-08T02:02:33Z
+
+[Term]
+id: IDO:0000143
+name: engulfment
+is_a: IDO:0000142 ! penetration of host cell
+created_by: lindsaycowell
+creation_date: 2008-09-08T02:03:24Z
+
+[Term]
+id: IDO:0000144
+name: fusion with host cell membrane
+is_a: IDO:0000142 ! penetration of host cell
+created_by: lindsaycowell
+creation_date: 2008-09-08T02:03:24Z
+
+[Term]
+id: IDO:0000145
+name: membrane invagination
+is_a: IDO:0000142 ! penetration of host cell
+created_by: lindsaycowell
+creation_date: 2008-09-08T02:03:24Z
+
+[Term]
+id: IDO:0000146
+name: passage through cell membrane
+is_a: IDO:0000142 ! penetration of host cell
+created_by: lindsaycowell
+creation_date: 2008-09-08T02:03:24Z
+
+[Term]
+id: IDO:0000147
+name: engulfment by phagocyte
+is_a: IDO:0000143 ! engulfment
+created_by: lindsaycowell
+creation_date: 2008-09-08T02:04:11Z
+
+[Term]
+id: IDO:0000148
+name: engulfment by non-phagocyte
+is_a: IDO:0000143 ! engulfment
+created_by: lindsaycowell
+creation_date: 2008-09-08T02:04:11Z
+
+[Term]
+id: IDO:0000149
+name: epidemiological spread of disease
+is_a: GO:0008150 ! biological process
+created_by: lindsaycowell
+creation_date: 2008-09-08T02:08:21Z
+
+[Term]
+id: IDO:0000150
+name: epidemic spread of disease
+is_a: IDO:0000149 ! epidemiological spread of disease
+created_by: lindsaycowell
+creation_date: 2008-09-08T02:09:00Z
+
+[Term]
+id: IDO:0000151
+name: pandemic spread of disease
+is_a: IDO:0000149 ! epidemiological spread of disease
+created_by: lindsaycowell
+creation_date: 2008-09-08T02:09:00Z
+
+[Term]
+id: IDO:0000152
+name: host of infectious agent
+def: "A host of parasite role played by a continuant supporting the survival and transmission of an infectious agent." [LGC:lgc]
+synonym: "host" BROAD []
+is_a: IDO:0000028 ! host of parasite
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:12:34Z
+
+[Term]
+id: IDO:0000153
+name: carrier of infectious agent
+def: "A host of infectious agent role played by a continuant that has no symptoms of the infectious disease associated with the infectious agent." [LGC:lgc]
+synonym: "carrier" BROAD []
+is_a: IDO:0000152 ! host of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:13:13Z
+
+[Term]
+id: IDO:0000154
+name: chronic carrier of infectious agent
+synonym: "chronic carrier" BROAD []
+is_a: IDO:0000153 ! carrier of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:16:14Z
+
+[Term]
+id: IDO:0000155
+name: pathogen
+def: "A infectious agent role played by a continuant that has the disposition to cause disease." [LGC:lgc]
+is_a: IDO:0000157 ! infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:19:01Z
+
+[Term]
+id: IDO:0000156
+name: opportunicity of infectious agent
+synonym: "opportunistic" RELATED []
+is_a: IDO:0000158 ! monadic quality of bearer of infectious agent role
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:20:03Z
+
+[Term]
+id: IDO:0000157
+name: infectious agent
+def: "A parasite role played by a continuant that has the disposition to spread from one host to another and to survive in its new host." [LGC:lgc]
+is_a: IDO:0000027 ! parasite
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:24:50Z
+
+[Term]
+id: IDO:0000158
+name: monadic quality of bearer of infectious agent role
+def: "A monadic quality of a continuant that inheres_in a continuant entity that has_role infectious agent." [LGC:lgc]
+is_a: PATO:0001237 ! monadic quality of continuant
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:31:57Z
+
+[Term]
+id: IDO:0000159
+name: zoonosis
+def: "Zoonosis is a quality that inheres_in a continuant that has_role infectious agent by virtue of the fact that the continuant transmissible under natural conditions from non-human animals to humans." [LGC:lgc]
+synonym: "zoonotic" RELATED []
+is_a: IDO:0000158 ! monadic quality of bearer of infectious agent role
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:32:37Z
+
+[Term]
+id: IDO:0000160
+name: host range
+is_a: IDO:0000158 ! monadic quality of bearer of infectious agent role
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:37:48Z
+
+[Term]
+id: IDO:0000161
+name: transmissibility of infectious agent
+is_a: IDO:0000013 ! relational quality of infectious agent to host
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:39:52Z
+
+[Term]
+id: IDO:0000162
+name: emergence quality of infectious agent
+is_a: snap:Quality ! quality
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:43:56Z
+
+[Term]
+id: IDO:0000163
+name: prion
+def: "A prion is a protein or protein complex that has_role infectious agent." [LGC:lgc]
+is_a: snap:Object ! object
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:45:11Z
+
+[Term]
+id: IDO:0000164
+name: virion
+def: "A virion is a virus particle, an assembled virus." [LGC:lgc]
+is_a: snap:Object ! object
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:55:00Z
+
+[Term]
+id: IDO:0000165
+name: primary pathogen
+def: "A pathogen role played by a continuant that causes disease in hosts that are immunocompetent." [LGC:lgc]
+is_a: IDO:0000155 ! pathogen
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:03:23Z
+
+[Term]
+id: IDO:0000166
+name: reservoir of infectious agent
+def: "Habitat in which the agent normally lives, grows, and multiplies.\nA site that is playing the role of allowing the survival of an infectious agent." [LGC:lgc]
+synonym: "reservoir" BROAD []
+is_a: snap:Role ! role
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:04:36Z
+
+[Term]
+id: IDO:0000167
+name: fomite
+def: "the object that plays the role of agent of transmission without serving as host." [LGC:lgc]
+is_a: IDO:0000049 ! vehicle of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:07:15Z
+
+[Term]
+id: IDO:0000168
+name: infectivity
+def: "See comment." [LGC:lgc]
+comment: Measured by proportion of exposed who become infected. Does this mean is relational to host population?
+is_a: IDO:0000013 ! relational quality of infectious agent to host
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:10:24Z
+
+[Term]
+id: IDO:0000169
+name: pathogenicity
+def: "See comment." [LGC:lgc]
+comment: Is measured by the proportion of infected who develop clinically apparent disease. Does this mean is relational to host population?
+is_a: IDO:0000013 ! relational quality of infectious agent to host
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:10:38Z
+
+[Term]
+id: IDO:0000170
+name: virulence
+def: "See comment." [LGC:lgc]
+comment: Measured by the proportion of clincally apparent cases that are severe or fatal. Does this mean is relational to host population?
+is_a: IDO:0000013 ! relational quality of infectious agent to host
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:10:59Z
+
+[Term]
+id: IDO:0000171
+name: end reservoir of infectious agent
+is_a: IDO:0000166 ! reservoir of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:16:25Z
+
+[Term]
+id: IDO:0000172
+name: vector of infectious agent
+def: "A transporter role played by a continuant that is living and lacks the disposition \n\ndisposition to acquire the associated infectious disease." [LGC:lgc]
+is_a: IDO:0000018 ! transporter of infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:19:29Z
+
+[Term]
+id: IDO:0000173
+name: tropism
+is_a: IDO:0000158 ! monadic quality of bearer of infectious agent role
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:24:17Z
+
+[Term]
+id: IDO:0000174
+name: contagiousness
+is_a: snap:Quality ! quality
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:28:25Z
+
+[Term]
+id: IDO:0000175
+name: drug resistance
+synonym: "antibiotic resistance" NARROW []
+synonym: "antimicrobial resistance" NARROW []
+is_a: IDO:0000094 ! relational quality between bearers of the infectious agent and drug roles
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:31:35Z
+
+[Term]
+id: IDO:0000176
+name: antibacterial resistance
+is_a: IDO:0000175 ! drug resistance
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:31:55Z
+
+[Term]
+id: IDO:0000178
+name: quality of being coinfected
+is_a: IDO:0000180 ! quality of being infected
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:34:09Z
+
+[Term]
+id: IDO:0000179
+name: dormancy of infectious agent
+def: "Dormancy of infectious agent is a quality that inheres_in a continuant that has_role infectious agent by virtue of the fact that the continuant is not replicating." [LGC:lgc]
+is_a: IDO:0000158 ! monadic quality of bearer of infectious agent role
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:38:29Z
+
+[Term]
+id: IDO:0000180
+name: quality of being infected
+def: "See comment for quality of being colonized." [LGC:lgc]
+is_a: IDO:0000000 ! relational quality between bearers of symbiont roles
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:44:00Z
+
+[Term]
+id: IDO:0000181
+name: endogenous quality of infectious agent
+is_a: IDO:0000013 ! relational quality of infectious agent to host
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:47:36Z
+
+[Term]
+id: IDO:0000182
+name: exogenous quality of infectious agent
+is_a: IDO:0000013 ! relational quality of infectious agent to host
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:47:55Z
+
+[Term]
+id: IDO:0000183
+name: highly exposed persistently seronegative quality
+is_a: IDO:0000030 ! relational quality of host to infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:53:59Z
+
+[Term]
+id: IDO:0000184
+name: immunity
+is_a: IDO:0000030 ! relational quality of host to infectious agent
+created_by: lindsaycowell
+creation_date: 2008-09-05T03:55:30Z
+
+[Term]
+id: IDO:1111111
+name: disease
+def: "A disposition (i) to undergo pathological processes that (ii) exists in an organism because of one or more disorders in that organism." [SS:rs.bs]
+comment: Proposed definition from signs and symptoms workshop.
+is_a: snap:Disposition ! disposition
+
+[Term]
+id: IDO:1111199
+name: disorder
+def: "A causally relatively isolated combination of physical components that is (a) clinically abnormal and (b) maximal, in the sense that it is not a part of some larger combination." [SS:rs.bs]
+comment: Definition proposed in Smith and Scheuermann AMIA paper.\n\nNeed to redefine to avoid use of "clinically abnormal".
+is_a: snap:Object ! object
+
+[Term]
+id: IDO:9999999
+name: infectious disorder
+def: "A disorder of a host whose etiology includes the presence of a pathogen within the host or an abnormal imbalance in the normal resident microbiota." [LGC:lgc]
+comment: Revised from Smith and Scheuermann AMIA paper, which included the definition:\nA disorder whose etiology includes the presence of a pathogenic organism within a host organism or an abnormal imbalance in the normal resident organismal flora.
+is_a: IDO:1111199 ! disorder
+
+[Term]
+id: PATO:0001236
+name: quality of occurrent
+namespace: quality
+is_a: snap:Quality ! quality
+created_by: lindsaycowell
+creation_date: 2008-09-05T08:44:23Z
+
+[Term]
+id: PATO:0001237
+name: monadic quality of continuant
+namespace: quality
+is_a: PATO:0001241 ! quality of continuant
+created_by: lindsaycowell
+creation_date: 2008-09-05T08:36:51Z
+
+[Term]
+id: PATO:0001238
+name: relational quality of continuant
+namespace: quality
+is_a: PATO:0001241 ! quality of continuant
+created_by: lindsaycowell
+creation_date: 2008-09-05T08:38:38Z
+
+[Term]
+id: PATO:0001239
+name: monadic quality of occurrent
+namespace: quality
+is_a: PATO:0001236 ! quality of occurrent
+created_by: lindsaycowell
+creation_date: 2008-09-05T08:45:50Z
+
+[Term]
+id: PATO:0001240
+name: relational quality of occurrent
+namespace: quality
+is_a: PATO:0001236 ! quality of occurrent
+created_by: lindsaycowell
+creation_date: 2008-09-05T08:47:01Z
+
+[Term]
+id: PATO:0001241
+name: quality of continuant
+namespace: quality
+is_a: snap:Quality ! quality
+created_by: lindsaycowell
+creation_date: 2008-09-05T08:35:23Z
+
+[Term]
+id: snap:Disposition
+name: disposition
+namespace: BFO
+is_a: bfo:Entity ! entity
+
+[Term]
+id: snap:Function
+name: function
+namespace: BFO
+is_a: bfo:Entity ! entity
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:06:01Z
+
+[Term]
+id: snap:Object
+name: object
+namespace: BFO
+is_a: bfo:Entity ! entity
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:53:50Z
+
+[Term]
+id: snap:ObjectAggregate
+name: object aggregate
+namespace: BFO
+is_a: snap:Object ! object
+created_by: lindsaycowell
+creation_date: 2008-09-08T08:08:31Z
+
+[Term]
+id: snap:Quality
+name: quality
+namespace: BFO
+is_a: bfo:Entity ! entity
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:02:22Z
+
+[Term]
+id: snap:Role
+name: role
+namespace: BFO
+is_a: bfo:Entity ! entity
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:03:56Z
+
+[Term]
+id: span:Process
+name: process
+namespace: BFO
+is_a: bfo:Entity ! entity
+created_by: lindsaycowell
+creation_date: 2008-09-05T02:08:21Z
+
