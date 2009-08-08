@@ -5,19 +5,21 @@
 	 (workbook (get-java-field xls "hssfworkbook" t))
 	 (sheets (loop for n below (#"getNumberOfSheets" workbook)
 		      collect (list (#"getSheetName" workbook n) (#"getSheetAt" workbook n))))
-	 (termdefs (loop for sheet in sheets append (get-sheet (second sheet) (first sheet)))))
+	 (termdefs (loop for sheet in (butlast sheets) append (get-sheet (second sheet) (first sheet)))))
     (setq @ termdefs)
+    (setq @@ sheets)
     (print-db (check-isas termdefs))
     (check-historical termdefs)))
 
 (defun get-sheet (sheet sheet-name)
   (destructuring-bind (headers . rows)
       (loop for rowno below (#"getPhysicalNumberOfRows" sheet)
+	 with nocells = (#"getPhysicalNumberOfCells" (#"getRow" sheet 0))
 	 for row = (#"getRow" sheet rowno)
 	 when row
 	 collect
 	 (list sheet-name rowno
-	       (loop for colno below (#"getPhysicalNumberOfCells" row)
+	       (loop for colno below nocells
 		  for cell = (#"getCell" row colno)
 		  collect (and cell (#"toString" cell)))))
     (let ((headerkeys (mapcar (lambda(s)(intern (string-upcase s)'keyword)) (third headers))))
@@ -26,6 +28,10 @@
 	   (append `((:sheet ,sheet) (:row ,(1+ rowno)))
 		   (loop for key in headerkeys
 		      for cell in row
+		      if (and (equal key :synonym) cell)
+		      do (if (equal cell "")
+			       (setq cell nil)
+			       (setq cell (mapcar (lambda(e) (string-trim " " e)) (split-at-regex cell "[;,]"))))
 		      collect (list key cell)))))))
 
 (defun check-isas (termdefs)
@@ -44,19 +50,24 @@
 (defun check-historical (termdefs)
   (let ((historical (historical-ido-terms)))
     (map nil 'print
-     (loop for entry in termdefs
-	for term = (second (assoc :term entry))
-	for id = (second (assoc :id entry))
-	when (and id entry (not (equal term "")) (not (equal id "")) (second (assoc id historical :test 'equal)))
-	collect (list id term (second (assoc id historical :test 'equal)))))
-    (loop for (id name) in historical
-       for in-sheet = (find name termdefs :key (lambda(e) (second (assoc :term e)))  :test 'equal)
-       when in-sheet 
-       do 
-       (format t "historical ~a : ~s -> ~a - ~a row ~a~%" id name (or (second (assoc :id in-sheet)) "no id")
-	       (second (assoc :sheet in-sheet))
-	       (second (assoc :row in-sheet)))
-       )))
+	 (loop for entry in termdefs
+	    for term = (second (assoc :term entry))
+	    for id = (second (assoc :id entry))
+	    when (and id entry (not (equal term "")) (not (equal id "")) (second (assoc id historical :test 'equal)))
+	    collect (list id term (second (assoc id historical :test 'equal)))))
+    (map nil 'princ (mapcar 'cdr (sort 
+		     (loop for (id name) in historical
+			for in-sheet = (find-if (lambda(e) (or (equal name (second (assoc :term e)))
+							       (member name (second (assoc :synonym e)) :test 'equal)))
+						termdefs)
+			if in-sheet 
+			collect (cons name
+				      (format nil "historical ~a : ~s -> ~a - ~a row ~a~%" id name (or (second (assoc :id in-sheet)) "no id")
+					      (second (assoc :sheet in-sheet))
+					      (second (assoc :row in-sheet))))
+			else collect (cons name
+					   (format nil "historical ~a : ~s - no mapping, deprecate?~%" id name))
+			) 'string-lessp :key 'car)))))
 
 (defun historical-ido-terms ()
   (let ((kb (load-kb-jena "ido:ido-core;historical;IDO.owl")))
