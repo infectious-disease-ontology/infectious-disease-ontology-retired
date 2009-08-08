@@ -1,4 +1,5 @@
 ; (add-directory-jars-to-class-path "/Users/alanr/Downloads/2009-08-06/poi-3.2-FINAL" t)
+;; (load "~/lsw/biopax/proto/obo.lisp")
 
 (defun ido-to-owl (&key (file "ido:ido-core;IDO-term-list.xls"))
   (let* ((xls (new 'hssf (namestring (truename file))))
@@ -67,10 +68,11 @@
 					      (second (assoc :row in-sheet))))
 			else collect (cons name
 					   (format nil "historical ~a : ~s - no mapping, deprecate?~%" id name))
-			) 'string-lessp :key 'car)))))
+			) 'string-lessp :key 'car)))
+    ))
 
 (defun historical-ido-terms ()
-  (let ((kb (load-kb-jena "ido:ido-core;historical;IDO.owl")))
+  (let ((kb (load-kb-jena "ido:ido-core;historical;IDO-1-3-oboconv.owl")))
     (let ((*current-labels* (rdfs-labels kb)))
       (mapcar (lambda(e)
 		(list (#"replaceAll" (#"replaceAll" (uri-full (first e)) ".*#" "") "_" ":")
@@ -79,7 +81,15 @@
 		   (remove-if-not (lambda(e) (search "IDO#" (uri-full e)))
 				  (descendants !owl:Thing kb))
 		   collect (list class (gethash class *current-labels*)))))))
-	    
+
+(defun ido-2008-terms ()
+  (let ((obo (make-instance 'obo :path "ido:ido-core;historical;IDO-2009-05-15.obo")))
+    (read-obo obo)
+    (loop for record in (terms obo) 
+       for id = (getf (cdr record) :id)
+       for name = (getf (cdr record) :name)
+       when (search "IDO:" id)
+       collect (list id name))))
 
 (defparameter *ido-external-terms*
   (eval-uri-reader-macro
