@@ -1,28 +1,37 @@
 ; (add-directory-jars-to-class-path "/Users/alanr/Downloads/2009-08-06/poi-3.2-FINAL" t)
 ;; (load "~/lsw/biopax/proto/obo.lisp")
 
-(defun ido-to-owl (&key (file "ido:ido-core;IDO-term-list.xls"))
+(defun ido-to-owl (&key (file "ido:ido-core;IDO-editors-worksheet.xls"))
   (let* ((xls (new 'hssf (namestring (truename file))))
 	 (workbook (get-java-field xls "hssfworkbook" t))
 	 (sheets (loop for n below (#"getNumberOfSheets" workbook)
-		      collect (list (#"getSheetName" workbook n) (#"getSheetAt" workbook n))))
-	 (termdefs (loop for sheet in (butlast sheets) append (get-sheet (second sheet) (first sheet)))))
+		    collect (list (#"getSheetName" workbook n) (#"getSheetAt" workbook n))))
+	 (termdefs (loop for sheet in sheets
+		      when (member (car sheet) 
+				   '("Roles" "Dispositions" "Qualities" "Processes" "Objects"	 
+				     "Object Aggregates" "Temporal Intervals" "Sites" "Defined Classes")
+				   :test 'equal)
+		      append (get-sheet (second sheet) (first sheet)))))
     (setq @ termdefs)
     (setq @@ sheets)
     (print-db (check-isas termdefs))
-    (check-historical termdefs)))
+					;(check-historical termdefs)
+    ))
 
 (defun get-sheet (sheet sheet-name)
   (destructuring-bind (headers . rows)
       (loop for rowno below (#"getPhysicalNumberOfRows" sheet)
-	 with nocells = (#"getPhysicalNumberOfCells" (#"getRow" sheet 0))
+	 with nocells = (loop for row below (#"getPhysicalNumberOfRows" sheet)
+			   maximize (or (and (not (#"getRow" sheet row)) 0)
+					(#"getPhysicalNumberOfCells" (#"getRow" sheet row))))
 	 for row = (#"getRow" sheet rowno)
-	 when row
-	 collect
-	 (list sheet-name rowno
-	       (loop for colno below nocells
-		  for cell = (#"getCell" row colno)
-		  collect (and cell (#"toString" cell)))))
+	 for potential = (and row 
+			      (list sheet-name rowno
+				    (loop for colno below nocells
+				       for cell = (#"getCell" row colno)
+				       collect (and cell (#"toString" cell)))))
+	 for thereyet = (or thereyet (member "Term" (third potential) :test 'equalp))
+	 when (and thereyet row) collect potential)
     (let ((headerkeys (mapcar (lambda(s)(intern (string-upcase s)'keyword)) (third headers))))
       (loop for (sheet rowno row) in rows
 	 collect
@@ -41,7 +50,10 @@
 	    for term = (second (assoc :term entry))
 	    for isa = (second (assoc :is_a entry))
 	    for inheresin = (second (assoc :inheres_in entry))
-	    when (and entry (not (equal term "")))
+	    when (and entry term (not (equal term "")))
+	    when (and (find :is_a entry :key 'car)
+		      (null isa))
+	    do (warn "Missing is-a ~a" entry)
 	    collect (list term isa)
 	    when inheresin
 	    collect (list term )
