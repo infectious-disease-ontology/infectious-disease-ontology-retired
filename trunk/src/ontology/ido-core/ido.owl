@@ -23,6 +23,7 @@
     <dc:contributor>Alan Ruttenberg</dc:contributor>
     <dc:contributor>Barry Smith</dc:contributor>
     <dc:creator>Albert Goldfain</dc:creator>
+    <dc:creator>Alexander Diehl</dc:creator>
     <dc:creator>Lindsay Cowell</dc:creator>
     <dc:date rdf:datatype="&xsd;date">2009-08-13</dc:date>
     <rdfs:comment xml:lang="en">The core Infectious Disease Ontology is an ontology of entities generally relevant to both the biomedical and clinical aspects of infectious diseases, such as 'pathogen', 'host', 'vector', and 'vaccine'.  The structure of IDO adheres to the Basic Formal Ontology.  Terms in IDO that are within the scope of other OBO Foundry ontologies, such as the Gene Ontology, are derived from those ontologies.  Other terms are defined as much as possible as cross-products of terms from Foundry ontologies. For more information, see http://www.infectiousdiseaseontology.org/Home.html</rdfs:comment>
@@ -1399,6 +1400,7 @@
   <owl:Class rdf:about="&obo;IDO_0000400">
     <obo:IAO_0000115 xml:lang="en">A role borne by an organism by virtue of the fact that it is participating in the process of symbiosis (GO:0044403).  The role is realized in the process of symbiosis.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">symbiont role</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
@@ -1407,6 +1409,7 @@
   <owl:Class rdf:about="&obo;IDO_0000401">
     <obo:IAO_0000115 xml:lang="en">A symbiont role borne by an organism by virtue of the fact that it is participating in a process of symbiosis (GO:0044403) from which both symbionts derive a growth, survival, or fitness advantage.  The role is realized in the processes that result in the growth, survival, or fitness advantage of either organism.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">mutualist role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000400"/>
@@ -1415,6 +1418,7 @@
   <owl:Class rdf:about="&obo;IDO_0000402">
     <obo:IAO_0000115 xml:lang="en">A symbiont role borne by an organism by virtue of the fact that it is participating in a process of symbiosis (GO:0044403) with an organism from which it can derive a growth, survival, or fitness advantage, but the other organism is neither advantaged nor disadvantaged by the symbiosis.  The role is realized in the processes that result in the commensal's growth, survival, or fitness advantage.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">commensal role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000400"/>
@@ -1423,6 +1427,7 @@
   <owl:Class rdf:about="&obo;IDO_0000403">
     <obo:IAO_0000115 xml:lang="en">A symbiont role borne by an organism by virtue of the fact that it is participating in a process of symbiosis (GO:0044403) with an organism from which it can derive a growth, survival, or fitness advantage while that organism's growth, survival, or fitness is reduced.  The role is realized in the processes that result in the parasite's growth, survival, or fitness advantage or in the other organism's growth, survival, or fitness reduction.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">parasite role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000400"/>
@@ -1431,6 +1436,7 @@
   <owl:Class rdf:about="&obo;IDO_0000404">
     <obo:IAO_0000115 xml:lang="en">A parasite role borne by an organism (x) of type X that has the infectious disposition relative to an organism of type Y, by virtue of the fact that 1) x is participating in symbiosis (GO:0044403) with an organism of type Y, and 2) a disease disposition for an infectious disease that can be caused by X can be realized in Y.  The infectious agent role is realized in the processes that result in establishment and maintenance of the infection, such as breach of the host epithelial barriers, replication in the host, and evasion of the host's immune system.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">infectious agent role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000403"/>
@@ -1439,6 +1445,7 @@
   <owl:Class rdf:about="&obo;IDO_0000405">
     <obo:IAO_0000115 xml:lang="en">A role borne by an organism (x) by virtue of the fact that it has the pathogenic disposition relative to organisms of type Y, and 2) x, one of its parts, or one of its products and an organism (y) of type Y have spatiotemporal locations which allow processes resulting in disease or death of y to occur.  The role is realized in y's disease course.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">pathogen role</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
@@ -1447,6 +1454,7 @@
   <owl:Class rdf:about="&obo;IDO_0000406">
     <obo:IAO_0000115 xml:lang="en">A pathogen role borne by an organism by virtue of the fact that it causes disease or death only in organisms whose defenses against pathogens are compromised.  This includes individuals who are immunocompromised or who have damaged barriers that normally protect against infection (e.g. skin).</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">opportunistic pathogen role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000405"/>
@@ -1455,6 +1463,7 @@
   <owl:Class rdf:about="&obo;IDO_0000407">
     <obo:IAO_0000115 xml:lang="en">A pathogen role borne by an organism by virtue of the fact that causes disease or death in organisms that have intact defenses against pathogens.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">primary pathogen role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000405"/>
@@ -1463,6 +1472,7 @@
   <owl:Class rdf:about="&obo;IDO_0000408">
     <obo:IAO_0000115 xml:lang="en">A symbiont role borne by an organism by virtue of the fact that it is participating in a process of symbiosis (GO:0044403), it is the larger of the organisms participating in the symbiosis, and it provides an environment or nutrient resources in or on itself for the survival of its partner in symbiosis.  The role is realized in the processes in which the host makes the relevant resources available to its partner in symbiosis.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">host role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000400"/>
@@ -1471,6 +1481,7 @@
   <owl:Class rdf:about="&obo;IDO_0000409">
     <obo:IAO_0000115 xml:lang="en">A host role borne by an organism by virtue of the fact that it is participating in a process of symbiosis (GO:0044403) with a partner that, while in the host, reaches developmental maturity and reproduces sexually, if it is a sexually reproducing organism.  The role is realized in the developmental and reproduction processes of the host's partner in symbiosis.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">definitve host role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000408"/>
@@ -1479,6 +1490,7 @@
   <owl:Class rdf:about="&obo;IDO_0000410">
     <obo:IAO_0000115 xml:lang="en">A host role borne by an organism by virtue of the fact that it is participating in a process of symbiosis (GO:0044403) with a partner that utilizes the host to undergo a developmental stage transition, and the host is required for continuation of the partner's life cycle.  The role is realized in the developmental processes of the host's partner in symbiosis.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">intermediate host role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000408"/>
@@ -1487,6 +1499,7 @@
   <owl:Class rdf:about="&obo;IDO_0000411">
     <obo:IAO_0000115 xml:lang="en">A host role borne by an organism by virtue of the fact that it is participating in a process of symbiosis (GO:0044403) with a partner that utilizes the host to undergo a developmental stage transition, but the host is not required for continuation of the partner's life cycle.  The role is realized in the developmental processes of the host's partner in symbiosis.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">paratenic host role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000408"/>
@@ -1495,6 +1508,7 @@
   <owl:Class rdf:about="&obo;IDO_0000412">
     <obo:IAO_0000115 xml:lang="en">A host role borne by an organism by virtue of the fact that it is participating in a process of symbiosis (GO:0044403) with a partner that has the infectious disposition but the host cannot transmit (TRANS:0000000) the partner to its definitive host.  The role is realized during the entire process of symbiosis.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">dead-end host role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000408"/>
@@ -1503,6 +1517,7 @@
   <owl:Class rdf:about="&obo;IDO_0000413">
     <obo:IAO_0000115 xml:lang="en">A host role borne by an organism by virtue of the fact that it is participating in a symbiosis process (GO:0044403) with an organism which derives from the host a growth, survival, or fitness advantage while the host's growth, survival, or fitness is reduced.  The partner in symbiosis is playing the parasite role.  The role is realized in the processes that result in the parasite's growth, survival, or fitness advantage or in the host's growth, survival, or fitness reduction.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">host of parasite role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000408"/>
@@ -1511,6 +1526,7 @@
   <owl:Class rdf:about="&obo;IDO_0000414">
     <obo:IAO_0000115 xml:lang="en">A host of parasite role borne by an organism of type X by virtue of the fact that 1) it is host to an organism of another type (Y) that has the infectious disposition relative to organisms of type X, and 2) a disease disposition for an infectious disease that can be caused by Y can be realized in X.  The infectious organism bears the infectious agent role.  The host of infectious agent role is realized in processes in which an infection is being established and maintained in the host, the same processes in which the infectious agent role is realized.  </obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">host of infectious agent role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000413"/>
@@ -1519,6 +1535,7 @@
   <owl:Class rdf:about="&obo;IDO_0000415">
     <obo:IAO_0000115 xml:lang="en">A host role borne by an organism (x) by virtue of the fact that it is participating in a process of symbiosis (GO:0044403) with an organism (y) that has the pathogenic disposition to organisms of type Z; x may be of type Z or another type.  In the symbiosis process, y is bearer of the pathogen role.  The role is realized in the processes that result in disease or death of an organism of type Z. </obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">host of pathogen role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000408"/>
@@ -1527,6 +1544,7 @@
   <owl:Class rdf:about="&obo;IDO_0000416">
     <obo:IAO_0000115 xml:lang="en">A host of infectious agent role borne by an organism by virtue of the fact that it has no symptoms of the infectious disease caused by the infectious agent for which it is host.  The role is realized during a subprocess of symbiosis in which no symptoms exist.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">carrier of infectious agent role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000414"/>
@@ -1535,6 +1553,7 @@
   <owl:Class rdf:about="&obo;IDO_0000417">
     <obo:IAO_0000115 xml:lang="en">A role borne by a material entity by virtue of the fact that the entity has (1) a part which is the location of an organism that has the infectious disposition and (2) the capability to transfer (either actively or passively) the infectious organism from one location to another.  The role is realized in processes that transfer the infectious organism from one location to another.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">transporter of infectious organism role</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
@@ -1543,6 +1562,7 @@
   <owl:Class rdf:about="&obo;IDO_0000418">
     <obo:IAO_0000115 xml:lang="en">A transporter of infectious organism role borne by an organism (x) by virtue of the fact that 1) it is active in the transmission of an infectious organism (y) to a host organism (z) while carrying out a process that is part of its normal life history (e.g. moving from place to place), 2) y has the infectious disposition relative to organisms of type Z, 3) x is not an organism of type Z, 4) z is an organism of type Z, 5) and x does not itself cause an infectious disease caused by Y in Z.  The role is realized in the transmission process (TRANS:0000000).</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">vector of infectious organism role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000417"/>
@@ -1551,6 +1571,7 @@
   <owl:Class rdf:about="&obo;IDO_0000419">
     <obo:IAO_0000115 xml:lang="en">A vector of infectious organism role borne by an organism by virtue of the fact that the infectious organism does not multiply in or on the vector.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">mechanical vector of infectious organism role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000418"/>
@@ -1559,6 +1580,7 @@
   <owl:Class rdf:about="&obo;IDO_0000420">
     <obo:IAO_0000115 xml:lang="en">A vector of infectious organism role borne by an organism by virtue of the fact that the infectious organism multiplies in or on the vector.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">biological vector of infectious organism role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000418"/>
@@ -1567,6 +1589,7 @@
   <owl:Class rdf:about="&obo;IDO_0000421">
     <obo:IAO_0000115 xml:lang="en">A transporter of infectious organism role borne by a material entity by virtue of the fact that the entitiy is either not alive or is not a complete organism.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">vehicle of infectious organism role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000417"/>
@@ -1575,6 +1598,7 @@
   <owl:Class rdf:about="&obo;IDO_0000422">
     <obo:IAO_0000115 xml:lang="en">A vehicle of infectious organism role borne by a material entity by virtue of the fact that the entity is living or contains living cells other than those that have the infectious disposition.   Examples include blood, serum, tissue, or fresh produce.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">biological vehicle of infectious organism role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000421"/>
@@ -1583,6 +1607,7 @@
   <owl:Class rdf:about="&obo;IDO_0000423">
     <obo:IAO_0000115 xml:lang="en">A vehicle of infectious organism role borne by a material entity by virtue of the fact that the entity is not alive.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">fomite role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000421"/>
@@ -1591,6 +1616,7 @@
   <owl:Class rdf:about="&obo;IDO_0000424">
     <obo:IAO_0000115 xml:lang="en">A role borne by a material entity by virtue of the fact that it is a habitat for an organism with the infectious disposition and in which the organism can persist and multiply and from which the infectious organism can be transmitted.  The role is realized in the life and multiplication processes of the infectious organism and in the transmission process (TRANS:0000000).  If the material entity bearing the reservoir role is an organism, then this organism also bears the host role.  The organism may also bear the vector role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">reservoir of infectious organism role</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
@@ -1599,6 +1625,7 @@
   <owl:Class rdf:about="&obo;IDO_0000425">
     <obo:IAO_0000115 xml:lang="en">A role borne by a protein or macromolecular complex by virtue of the fact that it 1) is produced by an organism (x) that has the pathogenic disposition to organisms of type Y and 2) has the capability to participate in a process that improves survival of x in an organism of type Y, improves transmission (TRANS:0000000) of x, and/or causes disease in organisms of type Y.  The role is realized in the those processes.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">virulence factor role</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
@@ -1607,6 +1634,7 @@
   <owl:Class rdf:about="&obo;IDO_0000426">
     <obo:IAO_0000115 xml:lang="en">A virulence factor role borne by a protein or macromolecular complex by virtue of the fact that it causes I) malfunction of cells, ii) damage to extracellular matrix, or iii) damage of cells to a degree that can result in cell death.  The role is realized in a process that is part of the disease course for a disease caused by the pathogen.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">toxin of pathogen role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000425"/>
@@ -1615,6 +1643,7 @@
   <owl:Class rdf:about="&obo;IDO_0000427">
     <obo:IAO_0000115 xml:lang="en">A toxin of pathogen role borne by a protein or macromolecular complex by virtue of the fact that it is secreted by a pathogenic organism and damages cells or extracellular matrix by a direct enzymatic process.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">exotoxin role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000426"/>
@@ -1623,6 +1652,7 @@
   <owl:Class rdf:about="&obo;IDO_0000428">
     <obo:IAO_0000115 xml:lang="en">A exotoxin role borne by a protein or macromolecular complex by virtue of the fact that it is secreted by a pathogenic organism during symbiosis into the host intestine and damages cells of the host intestinal mucosa.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">enterotoxin role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000427"/>
@@ -1631,6 +1661,7 @@
   <owl:Class rdf:about="&obo;IDO_0000429">
     <obo:IAO_0000115 xml:lang="en">A toxin of pathogen role borne by a protein or protein complex by virtue of the fact that it is released from a cell that is a pathogenic organism only upon cytolysis.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">endotoxin role</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000426"/>
@@ -1639,6 +1670,7 @@
   <owl:Class rdf:about="&obo;IDO_0000430">
     <obo:IAO_0000115 xml:lang="en">A role borne by an anatomical entity (FMA ID) by virtue of the fact that 1) the anatomical entity is part of an organism (x) of type X, 2) x is participating in a process of establishing an infection in x, and 3) the anatomical entity serves as the site through which infectious organism enters x.  The role is realized in the process by which the infectious organism enters x.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">portal of entry of infectious organism role</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
@@ -1647,6 +1679,7 @@
   <owl:Class rdf:about="&obo;IDO_0000431">
     <obo:IAO_0000115 xml:lang="en">A role borne by an anatomical entity (FMA ID) by virtue of the fact that 1) the anatomical entity is part of an organism (x) of type X, 2) x is participating in a process of transmitting x, and 3) the anatomical entity serves as the site through which infectious organism exits x.  The role is realized in the process by which the infectious organism exits x.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">portal of exit of infectious organism role</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
@@ -1655,6 +1688,7 @@
   <owl:Class rdf:about="&obo;IDO_0000432">
     <obo:IAO_0000115 xml:lang="en">A role borne by a material entity that has the antimicrobial disposition by virtue of the fact it is in contact with a non-living object.  The role is realized in the killing and/or growth inhibition of microorganisms on the non-living object.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">disinfectant role</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
@@ -1663,6 +1697,7 @@
   <owl:Class rdf:about="&obo;IDO_0000433">
     <obo:IAO_0000115 xml:lang="en">A role borne by a material entity that has the antimicrobial disposition by virtue of the fact that it is in contact with an anatomical entity of a living organism.  The role is realized in the killing and/or growth inhibition of microorganisms on the anatomical entity. </obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">antiseptic role</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
@@ -1671,6 +1706,7 @@
   <owl:Class rdf:about="&obo;IDO_0000434">
     <obo:IAO_0000115 xml:lang="en">A role borne by an infection by virtue of the fact that, at the time the process of establishing the infection begins, there is no other infection in the organism.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">primary infection role</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
@@ -1679,6 +1715,7 @@
   <owl:Class rdf:about="&obo;IDO_0000435">
     <obo:IAO_0000115 xml:lang="en">A role borne by an infection by virtue of the fact that 1) the infection is composed of infectious organisms of type X, and 2) at the time the process of establishing the infection begins, the host already has an infection composed of organisms that are not of type X.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">secondary infection role</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
@@ -1687,14 +1724,16 @@
   <owl:Class rdf:about="&obo;IDO_0000436">
     <obo:IAO_0000115 xml:lang="en">A disease (OGMS:0000031) that inheres in an organism, has as its physical basis an infectious disorder (or infection), and is realized in an infectious disease course.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">infectious disease</rdfs:label>
-    <rdfs:subClassOf rdf:resource="&obo;OGMS_0000063"/>
+    <rdfs:subClassOf rdf:resource="&obo;OGMS_0000031"/>
   </owl:Class>
 
   <owl:Class rdf:about="&obo;IDO_0000437">
     <obo:IAO_0000115 xml:lang="en">A disposition inhering in a protein or macromolecular complex by virtue of the fact that it has the capability to bind (GO:0005488) to a part of a host organism during symbiosis (GO:0044403) resulting in adherence of the organism producing the protein or complex to host cell surfaces or extracellular matrix (GO BP adherence to host GO:0044406).  The disposition is realized in the adherence to host process.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">adhesion factor disposition</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
@@ -1703,6 +1742,7 @@
   <owl:Class rdf:about="&obo;IDO_0000438">
     <obo:IAO_0000115 xml:lang="en">A disposition inhering in a protein or macromolecular complex by virtue of the fact that 1) it has the capability to participate in processes that facilitate the breach of host epithelial barriers or entry into and survival in host cells, and 2) the processes would not occur without such a particular protein or macromolecular complex as a participant.  The disposition is realized in these processes.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">invasion factor disposition</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
@@ -1711,6 +1751,7 @@
   <owl:Class rdf:about="&obo;IDO_0000439">
     <obo:IAO_0000115 xml:lang="en">A disposition that inheres in a material entity by virtue of the fact that the entity can kill or inhibit the growth of microorganisms.  The disposition is realized in the killing and growth inhibiting processes.  The disposition could be a function or a capability.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">antimicrobial disposition</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
@@ -1719,6 +1760,7 @@
   <owl:Class rdf:about="&obo;IDO_0000440">
     <obo:IAO_0000115 xml:lang="en">An antimicrobial disposition that, when realized, results in the death or inhibited growth of viruses.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">antiviral disposition</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000439"/>
@@ -1727,6 +1769,7 @@
   <owl:Class rdf:about="&obo;IDO_0000441">
     <obo:IAO_0000115 xml:lang="en">An antimicrobial disposition that, when realized, results in the death or inhibited growth of fungal organisms.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">antifungal disposition</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000439"/>
@@ -1735,6 +1778,7 @@
   <owl:Class rdf:about="&obo;IDO_0000442">
     <obo:IAO_0000115 xml:lang="en">An antimicrobial disposition that, when realized, results in the death or inhibited growth of bacteria.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000118 xml:lang="en">antibacterial disposition</obo:IAO_0000118>
     <rdfs:label xml:lang="en">antibiotic disposition</rdfs:label>
@@ -1744,6 +1788,7 @@
   <owl:Class rdf:about="&obo;IDO_0000443">
     <obo:IAO_0000115 xml:lang="en">A disposition that inheres in a material entity by virtue of the fact that the entity can kill or inhibit the growth of eukaryotic parasites.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">antiparasitic disposition</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
@@ -1752,6 +1797,7 @@
   <owl:Class rdf:about="&obo;IDO_0000444">
     <obo:IAO_0000115 xml:lang="en">A disposition that inheres in a material entity (x) by virtue of the fact that the entity has a part (e.g. a gene product), which itself has a disposition 1) to ensure a physiologic response of a certain degree to an entity with the capability to damage x, or 2) to prevent the completion of some process caused by an entity with the capabiity to damage x.  The realization of the disposition protects x from or mitigates the damaging effects of the entity with the capability to damage x.  The protective resistance disposition is manifested during a biological process.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">protective resistance</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
@@ -1760,6 +1806,7 @@
   <owl:Class rdf:about="&obo;IDO_0000445">
     <obo:IAO_0000115 xml:lang="en">A protective resistance that inheres in a material entity, is realized when the entity is exposed to a drug, and protects the entity from damaging effects of the drug by interfering with the realization of the drug's function.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">drug resistance</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000444"/>
@@ -1768,6 +1815,7 @@
   <owl:Class rdf:about="&obo;IDO_0000446">
     <obo:IAO_0000115 xml:lang="en">A protective resistance that inheres in an organism (x) of type X by virtue of the fact that 1) in symbiosis between an organism of type X and an organism of type Y, X have the capability to play the host of infectious agent role, and Y have the capability to play the infectious agent role, and 2) x has a part with a disposition, the realization of which prevents an essential subprocess of the processes of establishing or maintaining infection or protects the host from damaging effects of the infection.  The prevention or protection is not of type immune system process (GO:0002376).</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">host resistance to infectious organism</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000444"/>
@@ -1776,6 +1824,7 @@
   <owl:Class rdf:about="&obo;IDO_0000447">
     <obo:IAO_0000115 xml:lang="en">A protective resistance that inheres in a population of organisms by virtue of the fact that a sufficient number of members of the population have immunity to an infectious organism thereby reducing transmission (TRANS:0000000) and protecting non-immune members from the infectious organism population.  The population in which an instance of herd immunity inheres is composed of members that are organisms of the same type, X, have the capability to play the host of infectious agent role in symbiosis with an organism that has the infectious disposition relative to X, and are frequent participants in processes that would transmit the infectious organism between members of the population.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">herd immunity to infectious organism</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000444"/>
@@ -1784,6 +1833,7 @@
   <owl:Class rdf:about="&obo;IDO_0000448">
     <obo:IAO_0000115 xml:lang="en">A protective resistance that inheres in an organism (x) of type X by virtue of the fact that 1) in symbiosis between an organism of type X and an organism of type Y, X have the capability to play the host of infectious agent role, and Y have the capability to play the infectious agent role, 2) organisms of type X have an immune system, and 3) x has immune system components that can participate in processes of the type immune response (GO:0006955) that lead to protection of x from the damaging effects of infectious organisms of type Y.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000118 xml:lang="en">protective immunity to infectious organism</obo:IAO_0000118>
     <rdfs:label xml:lang="en">immunity to infectious organism</rdfs:label>
@@ -1793,6 +1843,7 @@
   <owl:Class rdf:about="&obo;IDO_0000449">
     <obo:IAO_0000115 xml:lang="en">An immunity to infectious organism that prevents the infectious organism from establishing an infection or results in elimination of the infectious organism from the host organism.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">sterilizing immunity to infectious organism</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000448"/>
@@ -1801,6 +1852,7 @@
   <owl:Class rdf:about="&obo;IDO_0000450">
     <obo:IAO_0000115 xml:lang="en">A disposition inhering in an organism (x) relative to an organism of a different type (Y) by virtue of the fact that organism x has the capability to cause disease or death, either directly or indirectly, in organisms of type Y.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">pathogenic disposition of x relative to Y</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
@@ -1809,6 +1861,7 @@
   <owl:Class rdf:about="&obo;IDO_0000451">
     <obo:IAO_0000115 xml:lang="en">A disposition inhering in an organism (x) by virtue of the fact that it has the infectious disposition relative to organisms of type Y, and during symbiosis (GO:0044403), the x can initiate processes, the result of which is penetration of the epithelial barriers of some Y.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">invasive disposition</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
@@ -1817,6 +1870,7 @@
   <owl:Class rdf:about="&obo;IDO_0000452">
     <obo:IAO_0000115 xml:lang="en">A pathogenic disposition inhering in an organism (x) relative to an organism of a different type (Y) by virtue of the fact that x has the capability 1) to be transmitted, either directly or indirectly, to organisms of type Y, 2) to persist and multiply in any organism of type Y, and 2) to establish an infection in any organism of type Y.  The disposition is realized in the process of establishing an infection.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">infectious disposition of x relative to Y</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000450"/>
@@ -1825,6 +1879,7 @@
   <owl:Class rdf:about="&obo;IDO_0000453">
     <obo:IAO_0000115 xml:lang="en">A disposition inhering in an organism (x) of type X by virtue of the fact that 1) x has the infectious disposition relative to organisms of type Y, Y are not human, and Y have the capability to play the host of infectious agent role in symbiosis with X, 2) x has the infectious disposition relative to humans, and humans have the capability to play the host of infectious agent role in symbiosis with X, and 3) x can be transmitted directly from some Y to some human.  The infectious disease caused by the infectious organism may be different in Y and in humans.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">zoonotic disposition</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
@@ -1833,6 +1888,7 @@
   <owl:Class rdf:about="&obo;IDO_0000454">
     <obo:IAO_0000115 xml:lang="en">A disposition inhering in an organism (x) of type X by virtue of the fact that 1) x has the infectious disposition relative to organisms of type Y, Y are not human, and Y have the capability to play the host of infectious agent role in symbiosis with X, 2) x has the infectious disposition relative to humans, and humans have the capability to play the host of infectious agent role in symbiosis with X, and 3) x can be transmitted directly from some human to some Y.  The infectious disease caused by the infectious organism may be different in Y and in humans.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">reverse zoonotic disposition</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
@@ -1841,6 +1897,7 @@
   <owl:Class rdf:about="&obo;IDO_0000455">
     <obo:IAO_0000115 xml:lang="en">a capability inhering in a population in virtue of the individual capabilities of the members of that population.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">collective capability</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Capability"/>
@@ -1849,6 +1906,7 @@
   <owl:Class rdf:about="&obo;IDO_0000456">
     <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism with an immune system by virtue of the fact that the organism's immunocompetence is reduced as a result of substances, such as drugs, or infections that interfere with one or more immune system processes (GO:0002376).</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">immunosuppressed</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -1857,6 +1915,7 @@
   <owl:Class rdf:about="&obo;IDO_0000457">
     <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism with an immune system and is the degree to which the organism's immune system is capable of mounting an adequate immune response (GO:0006955).</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">immunocompetence</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -1865,6 +1924,7 @@
   <owl:Class rdf:about="&obo;IDO_0000458">
     <obo:IAO_0000115 xml:lang="en">A quality inhering in a bearer of the host of infectious agent role by virtue of the fact that the host's infectious disease is at a stage during which the infectious organism causing the disease is easily transmitted from one host to another.  'Easily' refers to the fact that transimission is likely as a result of pathological processes, like coughing and sneezing, that are a manifestation of the disease during a particular stage.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">contagious quality</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -1873,6 +1933,7 @@
   <owl:Class rdf:about="&obo;IDO_0000459">
     <obo:IAO_0000115 xml:lang="en">A quality inhering in an organism by virtue of the fact that the organism is the bearer of the host role in a symbiosis process (GO:0044403).</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">colonized quality of host</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -1881,6 +1942,7 @@
   <owl:Class rdf:about="&obo;IDO_0000460">
     <obo:IAO_0000115 xml:lang="en">A quality inhering in an organism by virtue of the fact that the organism is the bearer of the host of infectious parasite role in a symbiosis process (GO:0044403) with an organism that has the infectious disposition and that has established an infection in the host.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">infected quality of host</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000459"/>
@@ -1889,6 +1951,7 @@
   <owl:Class rdf:about="&obo;IDO_0000461">
     <obo:IAO_0000115 xml:lang="en">A quality inhering in an organism by virtue of the fact that the organism is the bearer of the host of infectious parasite role in a symbiosis process (GO:0044403) with organisms of at least two different types that have the infectious disposition and that have established an infection in the host.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">co-infected quality</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000460"/>
@@ -1897,6 +1960,7 @@
   <owl:Class rdf:about="&obo;IDO_0000462">
     <obo:IAO_0000115 xml:lang="en">A quality inhering in an organism by virtue of the fact that the organism has a disorder, the conferred disease disposition is realized, and the organism has symptoms of the disease.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">symptomatic quality</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -1905,6 +1969,7 @@
   <owl:Class rdf:about="&obo;IDO_0000463">
     <obo:IAO_0000115 xml:lang="en">A quality inhering in an organism with the infectious disposition and that is the likelihood that the organism will undergo a transmission process (TRANS:0000000).</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000118 xml:lang="en">communicability</obo:IAO_0000118>
     <obo:IAO_0000118 xml:lang="en">infectiousness</obo:IAO_0000118>
@@ -1915,6 +1980,7 @@
   <owl:Class rdf:about="&obo;IDO_0000464">
     <obo:IAO_0000115 xml:lang="en">A quality inhering in an organism that has the infectious disposition relative to organisms of type Y and is the likelihood that organisms of type Y that are exposed to the infectious organism become infected.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">infectivity</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -1923,6 +1989,7 @@
   <owl:Class rdf:about="&obo;IDO_0000465">
     <obo:IAO_0000115 xml:lang="en">A quality inhering in an organism that has the infectious disposition and is the degree to which infections from the organism lead to realization of the disease caused by the organism.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">pathogenicity of infectious organism</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -1931,6 +1998,7 @@
   <owl:Class rdf:about="&obo;IDO_0000466">
     <obo:IAO_0000115 xml:lang="en">A quality inhering in an organism that has the pathogenic disposition and is the degree to which realizations of the disease caused by the organism become severe or fatal. </obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">virulence</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -1939,6 +2007,7 @@
   <owl:Class rdf:about="&obo;IDO_0000467">
     <obo:IAO_0000115 xml:lang="en">A quality inhering in a material entity (x) that is the degree to which another material entity can harm x.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">susceptibility</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -1947,6 +2016,7 @@
   <owl:Class rdf:about="&obo;IDO_0000468">
     <obo:IAO_0000115 xml:lang="en">A susceptibility that inheres in an organism (x) of type X relative to an organism of type Y 1) by virtue of the fact that Y have the infectious disposition relative to X, and X have the capability to bear the host of infectious agent role in symbiosis with some Y, and is 2) the likelihood that x will participate in a symbiosis process (GO:0044403) with some Y in which it plays the host of infectious agent role, or 3) the degree to which x can be harmed by participation in the symbiosis process or by pathoglocial processes that are the realization of an infectious disease caused by Y.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">susceptibility to infectious organism</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000467"/>
@@ -1955,6 +2025,7 @@
   <owl:Class rdf:about="&obo;IDO_0000469">
     <obo:IAO_0000115 xml:lang="en">A susceptibility that inheres in a material entity that is alive and is the degree to which the entity can be harmed or inhibited from surviving by a drug of a certain type.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">drug susceptibility</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000467"/>
@@ -1963,6 +2034,7 @@
   <owl:Class rdf:about="&obo;IDO_0000470">
     <obo:IAO_0000115 xml:lang="en">A drug susceptibility that inheres in an infectious organism and is the degree to which the organism can be harmed or inhibited from surviving by a drug of a certain type.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">drug susceptibility of infectious organism</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000469"/>
@@ -1971,6 +2043,7 @@
   <owl:Class rdf:about="&obo;IDO_0000471">
     <obo:IAO_0000115 xml:lang="en">A quality that inheres in an infection by virtue of the fact that its component pathogenic organisms are of multiple different types.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">polymicrobial quality</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -1979,6 +2052,7 @@
   <owl:Class rdf:about="&obo;IDO_0000472">
     <obo:IAO_0000115 xml:lang="en">A quality that inheres in an infection by virtue of the fact that the individual organisms of which the infection is composed persist in the extracellular space of the host.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">extracellular quality of infection</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -1987,6 +2061,7 @@
   <owl:Class rdf:about="&obo;IDO_0000473">
     <obo:IAO_0000115 xml:lang="en">A quality that inheres in an infection by virtue of the fact that the individual organisms of which the infection is composed persist intracellularly, inside host cells.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">intracellular quality of infection</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -1995,6 +2070,7 @@
   <owl:Class rdf:about="&obo;IDO_0000474">
     <obo:IAO_0000115 xml:lang="en">A quality that inheres in an infection by virtue of the fact that the organisms comprising the infection are distributed throughout the host, including multiple host organs and/or systems (e.g. circulatory system).</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">systemic quality of infection</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -2003,6 +2079,7 @@
   <owl:Class rdf:about="&obo;IDO_0000475">
     <obo:IAO_0000115 xml:lang="en">A quality that inheres in an infection by virtue of the fact that the organisms comprising the infection are limited to a relatively small area of the host's body.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">local quality of infection</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -2011,6 +2088,7 @@
   <owl:Class rdf:about="&obo;IDO_0000476">
     <obo:IAO_0000115 xml:lang="en">A quality that inheres in an infection by virtue of the fact that the infection is local but symptoms are observed in distance parts of the host's body.  Focal infections result from the dissemination of toxic products of the organisms comprising the infection.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">focal quality of infection</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -2019,6 +2097,7 @@
   <owl:Class rdf:about="&obo;IDO_0000477">
     <obo:IAO_0000115 xml:lang="en">A quality that inheres in an infection by virtue of the fact that the infection is established rapidly (the infection process unfolds over a short period of time), the disease disposition is realized soon after the infection process begins, and progression through the disease course resulting from the infection is rapid.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">acute quality of an infection</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -2027,6 +2106,7 @@
   <owl:Class rdf:about="&obo;IDO_0000478">
     <obo:IAO_0000115 xml:lang="en">A quality that inheres in an infection by virtue of the fact that the progression through the disease course resulting from the infection is slow.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">chronic quality of an infection</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -2035,6 +2115,7 @@
   <owl:Class rdf:about="&obo;IDO_0000479">
     <obo:IAO_0000115 xml:lang="en">A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role in symbiosis with organisms of the type that cause infectious disease X and 2) is the number of realizations of the infectious disease for which the infectious disease course (the realization of the disease) begins during a specified period of time.  Incidence is used as a measure of risk.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">incidence of infectious disease X</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -2043,6 +2124,7 @@
   <owl:Class rdf:about="&obo;IDO_0000480">
     <obo:IAO_0000115 xml:lang="en">A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role for organisms of type X and 2) is the number of organisms in the population that begin bearing the host role for the infectious organism during a specified period of time.  Incidence is used as a measure of risk.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">incidence of infection X</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -2051,6 +2133,7 @@
   <owl:Class rdf:about="&obo;IDO_0000481">
     <obo:IAO_0000115 xml:lang="en">A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role in symbiosis with organisms of the type that cause infectious disease X and 2) is the incidence of infectious disease X divided by the number of members of the population in which the infectious disease course had not begun at the beginning of the specified period of time. </obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000118 xml:lang="en">cumulative incidence of infectious disease</obo:IAO_0000118>
     <rdfs:label xml:lang="en">incidence proportion of infectious disease X</rdfs:label>
@@ -2060,6 +2143,7 @@
   <owl:Class rdf:about="&obo;IDO_0000482">
     <obo:IAO_0000115 xml:lang="en">A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role for organisms of type X and 2) is the incidence of infection X divided by the number of members of the population that are not infected at the beginning of the specified period of time. </obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000118 xml:lang="en">cumulative incidence of infection</obo:IAO_0000118>
     <rdfs:label xml:lang="en">incidence proportion of infection X</rdfs:label>
@@ -2069,6 +2153,7 @@
   <owl:Class rdf:about="&obo;IDO_0000483">
     <obo:IAO_0000115 xml:lang="en">A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role in symbiosis with organisms of the type that cause infectious disease X and 2) is the incidence proportion if infectious disease X divided by the period of time over which the incidence was measured.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">incidence rate of infectious disease X</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -2077,6 +2162,7 @@
   <owl:Class rdf:about="&obo;IDO_0000484">
     <obo:IAO_0000115 xml:lang="en">A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role for organisms of type X and 2) is the incidence proportion of infection X divided by the period of time over which the incidence was measured.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">incidence rate of infection X</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -2085,6 +2171,7 @@
   <owl:Class rdf:about="&obo;IDO_0000485">
     <obo:IAO_0000115 xml:lang="en">A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role in symbiosis with organisms of the type that cause infectious disease X and 2) is the number of realizations of infectious disease X that exist at a specified time.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">prevalence of infectious disease X</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -2093,6 +2180,7 @@
   <owl:Class rdf:about="&obo;IDO_0000486">
     <obo:IAO_0000115 xml:lang="en">A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role for organisms of type X and 2) is the number of organisms in the population that bear the host of infectious agent role for the infectious organism at a specified time.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">prevalence of infection X</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -2101,6 +2189,7 @@
   <owl:Class rdf:about="&obo;IDO_0000487">
     <obo:IAO_0000115 xml:lang="en">A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role in symbiosis with organisms of the type that cause infectious disease X and 2) is the number of organisms in the population who have, at any point during their lives, been bearers of infectious disease X and experienced realization of the disease.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">lifetime prevalence of infectious disease X</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -2109,6 +2198,7 @@
   <owl:Class rdf:about="&obo;IDO_0000488">
     <obo:IAO_0000115 xml:lang="en">A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role for organisms of type X and 2) is the number of organisms in the population that have antibody specific for the infectious organism in their serum at a specified time.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">seroprevalence of infection X</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -2117,6 +2207,7 @@
   <owl:Class rdf:about="&obo;IDO_0000489">
     <obo:IAO_0000115 xml:lang="en">A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role in symbiosis with organisms of the type that cause infectious disease X and 2) is the proportion of deaths in the population resulting from the disease over a specified period of time.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">mortality rate of infectious disease X</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -2125,6 +2216,7 @@
   <owl:Class rdf:about="&obo;IDO_0000490">
     <obo:IAO_0000115 xml:lang="en">A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role in symbiosis with organisms of the type that cause infectious disease X, 2) by virtue of the fact that infections of the organism type that causes infectious disease X are maintained in the population without the need for transmission into the population from hosts that are not members of the population.  Infectious diseases that are typical or common to a particular population are referred to as endemic.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000118 xml:lang="en">endemicity</obo:IAO_0000118>
     <rdfs:label xml:lang="en">endemic quality of infectious disease X</rdfs:label>
@@ -2134,6 +2226,7 @@
   <owl:Class rdf:about="&obo;IDO_0000491">
     <obo:IAO_0000115 xml:lang="en">A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role in symbiosis with organisms of the type that cause infectious disease X and 2) that is the prevalence of infectious disease X that is typical for the specified population. </obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">endemic level of infectious disease X</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000485"/>
@@ -2142,6 +2235,7 @@
   <owl:Class rdf:about="&obo;IDO_0000492">
     <obo:IAO_0000115 xml:lang="en">A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role in symbiosis with organisms of the type that cause infectious disease X and 2) that is the incidence rate of infectious disease X that is typical for the specified population. </obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">endemic rate of infectious disease X</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000483"/>
@@ -2150,6 +2244,7 @@
   <owl:Class rdf:about="&obo;IDO_0000493">
     <obo:IAO_0000115 xml:lang="en">A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role in symbiosis with organisms of the type that cause infectious disease X, 2) by virtue of the fact that the endemic level of infectious disease X is persistently high in the population.  A hyper-endemic disease affects all age groups equally.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">hyper-endemic quality of infectious disease X</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000490"/>
@@ -2158,6 +2253,7 @@
   <owl:Class rdf:about="&obo;IDO_0000494">
     <obo:IAO_0000115 xml:lang="en">A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role in symbiosis with organisms of the type that cause infectious disease X, 2) by virtue of the fact that infections of the infectious organism that causes disease X occur in the population with a fluctuating prevalence. </obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">sporadic quality of infectious disease X</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
@@ -2166,6 +2262,7 @@
   <owl:Class rdf:about="&obo;IDO_0000495">
     <obo:IAO_0000115 xml:lang="en">A disease course that is the total process of realization of the infectious disease (disposition), beginning with the manifestation of pathological processes caused by the infectious disorder and ending with 1) clearance of the infectious disorder, 2) long-term control of the infection by the host's immune response accompanied by the resolution of symptoms, or 3) death of the host.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">infectious disease course</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;OGMS_0000063"/>
@@ -2174,6 +2271,7 @@
   <owl:Class rdf:about="&obo;IDO_0000496">
     <obo:IAO_0000115 xml:lang="en">An infectious disease course during which there is a long period in which the host of infectious agent in whom the disease disposition has been realized does not progress to a more severe form of disease.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">long-term nonprogressing infectious disease course</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000495"/>
@@ -2182,6 +2280,7 @@
   <owl:Class rdf:about="&obo;IDO_0000497">
     <obo:IAO_0000115 xml:lang="en">A process by which an organism acquires immunity to an infectious organism.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">immunization against infectious organism</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
@@ -2190,6 +2289,7 @@
   <owl:Class rdf:about="&obo;IDO_0000498">
     <obo:IAO_0000115 xml:lang="en">An immunization process that begins with exposure of an organism to antigen and results in immunity against an infectious organism.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000118 xml:lang="en">inoculation</obo:IAO_0000118>
     <rdfs:label xml:lang="en">active immunization against infectious organism</rdfs:label>
@@ -2199,6 +2299,7 @@
   <owl:Class rdf:about="&obo;IDO_0000499">
     <obo:IAO_0000115 xml:lang="en">An active immunization process that begins with exposure of an organism to a vaccine.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">vaccination</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000498"/>
@@ -2207,6 +2308,7 @@
   <owl:Class rdf:about="&obo;IDO_0000500">
     <obo:IAO_0000115 xml:lang="en">An active immunization process in which smallpox is introduced in the form of a scab from a pustule into an organism to induce immunity against smallpox.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">variolation</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000498"/>
@@ -2215,6 +2317,7 @@
   <owl:Class rdf:about="&obo;IDO_0000501">
     <obo:IAO_0000115 xml:lang="en">An immunization process that begins with transfer to an organism of molecules not produced by that organism and that confer immunity against an infectious organism or product of an infectious organism.  Examples include the injection of antibodies and the transfer of maternal antibodies to the fetus.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">passive immunization</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000497"/>
@@ -2223,6 +2326,7 @@
   <owl:Class rdf:about="&obo;IDO_0000502">
     <obo:IAO_0000115 xml:lang="en">A process in which there is a relatively significant increase in the incidence of infectious disease X, relative to the endemic level of infectious disease X, in an organism population located in a geographicaly connected region.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">infectious disease epidemic</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
@@ -2231,14 +2335,25 @@
   <owl:Class rdf:about="&obo;IDO_0000503">
     <obo:IAO_0000115 xml:lang="en">A process in which multiple infectious disease epidemics of the same infectious disease affect organism populations located in different geographic regions, including different countries and continents, and unfold over overlapping periods of time.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">infectious disease pandemic</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
   </owl:Class>
 
+  <owl:Class rdf:about="&obo;IDO_0000504">
+    <obo:IAO_0000115 xml:lang="en">A disorder of a host whose etiology includes the presence of a pathogen within the host, colonization by the normal resident microbiota of host anatomical locations not part of the microbiota's typical habitat, or a symptomatic overgrowth of at least one species of the normal resident microbiota.</obo:IAO_0000115>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
+    <rdfs:label xml:lang="en">infectious disorder</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&obo;OGMS_0000045"/>
+  </owl:Class>
+
   <owl:Class rdf:about="&obo;IDO_0000505">
     <obo:IAO_0000115 xml:lang="en">An infection defined by the presence of virions in the blood.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">viremia</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000517"/>
@@ -2247,6 +2362,7 @@
   <owl:Class rdf:about="&obo;IDO_0000506">
     <obo:IAO_0000115 xml:lang="en">An infection defined by the presence of bacteria in the blood.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">bacteremia</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000517"/>
@@ -2255,6 +2371,7 @@
   <owl:Class rdf:about="&obo;IDO_0000507">
     <obo:IAO_0000115 xml:lang="en">A bacteremia in which the baceteria are replicating.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">septicemia</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000506"/>
@@ -2263,6 +2380,7 @@
   <owl:Class rdf:about="&obo;IDO_0000508">
     <obo:IAO_0000115 xml:lang="en">An object that is a virus particle, an assembled virus.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">virion</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Object"/>
@@ -2271,6 +2389,7 @@
   <owl:Class rdf:about="&obo;IDO_0000509">
     <obo:IAO_0000115 xml:lang="en">An aggregation of organisms of the same type that are members of the population because they meet a set of criteria, such as being present in a specified geographic region during a specified period of time.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">organism population</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
@@ -2279,6 +2398,7 @@
   <owl:Class rdf:about="&obo;IDO_0000510">
     <obo:IAO_0000115 xml:lang="en">An organism population whose members participate in processes of transmitting organic material and, in so doing, increase the likelihood of spreading infections agents between members of the organism population.  The processes are understood to be canonical life activities for the organism type.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">transmissibility community</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000509"/>
@@ -2287,6 +2407,7 @@
   <owl:Class rdf:about="&obo;IDO_0000511">
     <obo:IAO_0000115 xml:lang="en">An transmissibility community whose members are playing the host of infectious agent role for the same type of infectious organism.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000118 xml:lang="en">host of infectious agent population</obo:IAO_0000118>
     <obo:IAO_0000118 xml:lang="en">host population</obo:IAO_0000118>
@@ -2297,6 +2418,7 @@
   <owl:Class rdf:about="&obo;IDO_0000512">
     <obo:IAO_0000115 xml:lang="en">An infected population in whose members the infectious disease caused by the infectious organism is realized.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">diseased population</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000511"/>
@@ -2305,6 +2427,7 @@
   <owl:Class rdf:about="&obo;IDO_0000513">
     <obo:IAO_0000115 xml:lang="en">An organism population whose members have the infectious disposition.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">infectious organism population</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000509"/>
@@ -2313,6 +2436,7 @@
   <owl:Class rdf:about="&obo;IDO_0000514">
     <obo:IAO_0000115 xml:lang="en">An organism population whose members lack any protective resistance disposition to a specific infectious organism.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000118 xml:lang="en">at-risk population</obo:IAO_0000118>
     <rdfs:label xml:lang="en">susceptible population</rdfs:label>
@@ -2322,6 +2446,7 @@
   <owl:Class rdf:about="&obo;IDO_0000515">
     <obo:IAO_0000115 xml:lang="en">An object aggregate of organisms the members of which typically participate in non-parasitic symbiosis with X.  These can participate in parasitic symbiosis when x is immunocompromised or has damaged barriers that normally protect against infection (e.g. skin). </obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000118 xml:lang="en">normal resident microflora</obo:IAO_0000118>
     <rdfs:label xml:lang="en">collection of all normal resident microbiota of an organism of type X</rdfs:label>
@@ -2331,6 +2456,7 @@
   <owl:Class rdf:about="&obo;IDO_0000516">
     <obo:IAO_0000115 xml:lang="en">An infectious organism population with a certain configuration quality (OGMS:0000039) (distributed across a spatial region (e.g., anatomical location in a host) in a particular way). Put e.g. In comments</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">configured infectious organism population</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_0000513"/>
@@ -2339,13 +2465,15 @@
   <owl:Class rdf:about="&obo;IDO_0000517">
     <obo:IAO_0000115 xml:lang="en">A population of infectious organisms (of type X) located within an organism site of organism y, such that (1) X has the infectious disposition relative to Y, (2) y has the capability to bear the host of infectious agent role for x, and (3) the population of infectious organisms have the collective capability to cause disease when occupying a particular part of the site.  [END]                                                        [Maybe include what follows as a term  'microbiota infection'?](3) if part of a configuration of normal resident microbiota for organism type Y has the capability to be a part of an infection when the configuration part (1) occupies anatomical sites that are not part of its typical habitat such that the configuration part has the collective capability to cause disease when occupying that site (e.g., Staph aureus moving from the skin to the blood), or (2) acquires the collective capability via a process of overgrowth.   </obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">infection</rdfs:label>
-    <rdfs:subClassOf rdf:resource="&obo;OGMS_0000048"/>
+    <rdfs:subClassOf rdf:resource="&obo;IDO_0000504"/>
   </owl:Class>
 
   <owl:Class rdf:about="&obo;IDO_0000518">
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">latent period</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Occurrent"/>
@@ -2353,6 +2481,7 @@
 
   <owl:Class rdf:about="&obo;IDO_0000519">
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">incubation period</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Occurrent"/>
@@ -2360,6 +2489,7 @@
 
   <owl:Class rdf:about="&obo;IDO_0000520">
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">period of communicability</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Occurrent"/>
@@ -2367,6 +2497,7 @@
 
   <owl:Class rdf:about="&obo;IDO_0000521">
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">dormancy period</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Occurrent"/>
@@ -2375,6 +2506,7 @@
   <owl:Class rdf:about="&obo;IDO_0000522">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the symbiont role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">symbiont</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2383,6 +2515,7 @@
   <owl:Class rdf:about="&obo;IDO_0000523">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the symbiont role and that can only reach developmental maturity, replicate, or persist by playing the symbiont role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">obligatory symbiont</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2391,6 +2524,7 @@
   <owl:Class rdf:about="&obo;IDO_0000524">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the mutualist role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">mutualist</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2399,6 +2533,7 @@
   <owl:Class rdf:about="&obo;IDO_0000525">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the commensal role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">commensal</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2407,6 +2542,7 @@
   <owl:Class rdf:about="&obo;IDO_0000526">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the parasite role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">parasite</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2415,6 +2551,7 @@
   <owl:Class rdf:about="&obo;IDO_0000527">
     <obo:IAO_0000115 xml:lang="en">An organism with the infectious disposition.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">infectious agent</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2423,6 +2560,7 @@
   <owl:Class rdf:about="&obo;IDO_0000528">
     <obo:IAO_0000115 xml:lang="en">An organism with the pathogenic disposition.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">pathogen</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2431,6 +2569,7 @@
   <owl:Class rdf:about="&obo;IDO_0000529">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the opportunistic pathogen role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">opportunistic pathogen</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2439,6 +2578,7 @@
   <owl:Class rdf:about="&obo;IDO_0000530">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the primary pathogen role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">primary pathogen</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2447,6 +2587,7 @@
   <owl:Class rdf:about="&obo;IDO_0000531">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the host role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">host</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2455,6 +2596,7 @@
   <owl:Class rdf:about="&obo;IDO_0000532">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the definitive host role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000118 xml:lang="en">primary host</obo:IAO_0000118>
     <rdfs:label xml:lang="en">definitive host</rdfs:label>
@@ -2464,6 +2606,7 @@
   <owl:Class rdf:about="&obo;IDO_0000533">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the intermediate host role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000118 xml:lang="en">secondary host</obo:IAO_0000118>
     <rdfs:label xml:lang="en">intermediate host</rdfs:label>
@@ -2473,6 +2616,7 @@
   <owl:Class rdf:about="&obo;IDO_0000534">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the paratenic host role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">paratenic host</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2481,6 +2625,7 @@
   <owl:Class rdf:about="&obo;IDO_0000535">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the dead-end host role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000118 xml:lang="en">incidental host</obo:IAO_0000118>
     <rdfs:label xml:lang="en">dead-end host</rdfs:label>
@@ -2490,6 +2635,7 @@
   <owl:Class rdf:about="&obo;IDO_0000536">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the host of parasite role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">host of parasite</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2498,6 +2644,7 @@
   <owl:Class rdf:about="&obo;IDO_0000537">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the host of infectious agent role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">host of infectious agent</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2506,6 +2653,7 @@
   <owl:Class rdf:about="&obo;IDO_0000538">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the host of pathogen role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">host of pathogen</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2514,6 +2662,7 @@
   <owl:Class rdf:about="&obo;IDO_0000539">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the carrier of infectious agent role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">carrier of infectious agent</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2522,6 +2671,7 @@
   <owl:Class rdf:about="&obo;IDO_0000540">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the vector of infectious organism role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">vector of infectious organism</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2530,6 +2680,7 @@
   <owl:Class rdf:about="&obo;IDO_0000541">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the mechanical vector of infectious organism role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">mechanical vector of infectious organism</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2538,6 +2689,7 @@
   <owl:Class rdf:about="&obo;IDO_0000542">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the biological vector of infectious organism role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">biological vector of infectious organism</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2546,6 +2698,7 @@
   <owl:Class rdf:about="&obo;IDO_0000543">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the vehicle of infectious organism role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">vehicle of infectious organism</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2554,6 +2707,7 @@
   <owl:Class rdf:about="&obo;IDO_0000544">
     <obo:IAO_0000115 xml:lang="en">An organism bearing the fomite role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">fomite</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2562,6 +2716,7 @@
   <owl:Class rdf:about="&obo;IDO_0000545">
     <obo:IAO_0000115 xml:lang="en">A material entity bearing the reservoir of infectious organism role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">reservoir of infectious organism</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099997"/>
@@ -2570,6 +2725,7 @@
   <owl:Class rdf:about="&obo;IDO_0000546">
     <obo:IAO_0000115 xml:lang="en">A material entity bearing the end reservoir of infectious organism role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000118 xml:lang="en">dead-end reservoir of infectious organism</obo:IAO_0000118>
     <rdfs:label xml:lang="en">end reservoir of infectious organism</rdfs:label>
@@ -2579,6 +2735,7 @@
   <owl:Class rdf:about="&obo;IDO_0000547">
     <obo:IAO_0000115 xml:lang="en">A protein or macromolecular complex bearing the virulence factor role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">virulence factor</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099996"/>
@@ -2587,6 +2744,7 @@
   <owl:Class rdf:about="&obo;IDO_0000548">
     <obo:IAO_0000115 xml:lang="en">A protein or macromolecular complex bearing the invasion factor role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000118 xml:lang="en">invasin</obo:IAO_0000118>
     <rdfs:label xml:lang="en">invasion factor</rdfs:label>
@@ -2596,6 +2754,7 @@
   <owl:Class rdf:about="&obo;IDO_0000549">
     <obo:IAO_0000115 xml:lang="en">A protein or macromolecular complex bearing the toxin of pathogen role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">toxin of pathogen</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099996"/>
@@ -2604,6 +2763,7 @@
   <owl:Class rdf:about="&obo;IDO_0000550">
     <obo:IAO_0000115 xml:lang="en">A protein or macromolecular complex bearing the exotoxin role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">exotoxin</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099996"/>
@@ -2612,6 +2772,7 @@
   <owl:Class rdf:about="&obo;IDO_0000551">
     <obo:IAO_0000115 xml:lang="en">A protein or macromolecular complex bearing the enterotoxin role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">enterotoxin</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099996"/>
@@ -2620,6 +2781,7 @@
   <owl:Class rdf:about="&obo;IDO_0000552">
     <obo:IAO_0000115 xml:lang="en">A protein or macromolecular complex bearing the endotoxin role, in particular LPS.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">endotoxin</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099996"/>
@@ -2628,6 +2790,7 @@
   <owl:Class rdf:about="&obo;IDO_0000553">
     <obo:IAO_0000115 xml:lang="en">An anatomical entity bearing the portal of entry of infectious agent role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">portal of entry of infectious agent</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099997"/>
@@ -2636,6 +2799,7 @@
   <owl:Class rdf:about="&obo;IDO_0000554">
     <obo:IAO_0000115 xml:lang="en">An anatomical entity bearing the portal of exit of infectious agent role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">portal of exit of infectious agent</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099997"/>
@@ -2644,6 +2808,7 @@
   <owl:Class rdf:about="&obo;IDO_0000555">
     <obo:IAO_0000115 xml:lang="en">A material entity bearing the disinfectant role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">disinfectant</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099997"/>
@@ -2652,6 +2817,7 @@
   <owl:Class rdf:about="&obo;IDO_0000556">
     <obo:IAO_0000115 xml:lang="en">A material entity bearing the antiseptic role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">antiseptic</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099997"/>
@@ -2660,6 +2826,7 @@
   <owl:Class rdf:about="&obo;IDO_0000557">
     <obo:IAO_0000115 xml:lang="en">A protein or macromolecular complex bearing the adhesion factor disposition.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000118 xml:lang="en">adhesin</obo:IAO_0000118>
     <rdfs:label xml:lang="en">adhesion factor</rdfs:label>
@@ -2669,6 +2836,7 @@
   <owl:Class rdf:about="&obo;IDO_0000558">
     <obo:IAO_0000115 xml:lang="en">A material entity bearing the antimicrobial disposition.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">antimicrobial</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099997"/>
@@ -2677,6 +2845,7 @@
   <owl:Class rdf:about="&obo;IDO_0000559">
     <obo:IAO_0000115 xml:lang="en">A material entity bearing the antiviral disposition.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">antiviral</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099997"/>
@@ -2685,6 +2854,7 @@
   <owl:Class rdf:about="&obo;IDO_0000560">
     <obo:IAO_0000115 xml:lang="en">A material entity bearing the antifungal disposition.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">antifungal</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099997"/>
@@ -2693,6 +2863,7 @@
   <owl:Class rdf:about="&obo;IDO_0000561">
     <obo:IAO_0000115 xml:lang="en">A material entity bearing the antiparasitic disposition.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">antiparasitic</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099997"/>
@@ -2701,6 +2872,7 @@
   <owl:Class rdf:about="&obo;IDO_0000562">
     <obo:IAO_0000115 xml:lang="en">A material entity bearing the antibiotic disposition.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">antibiotic</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099997"/>
@@ -2709,6 +2881,7 @@
   <owl:Class rdf:about="&obo;IDO_0000563">
     <obo:IAO_0000115 xml:lang="en">A material entity bearing an antimicrobial disposition that is realized in a process of killing microorganisms.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000118 xml:lang="en">microbicidal [entity]</obo:IAO_0000118>
     <rdfs:label xml:lang="en">microbicide</rdfs:label>
@@ -2718,6 +2891,7 @@
   <owl:Class rdf:about="&obo;IDO_0000564">
     <obo:IAO_0000115 xml:lang="en">A material entity bearing an antiviral disposition that is realized in a process of killing viruses.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">viricide</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099997"/>
@@ -2726,6 +2900,7 @@
   <owl:Class rdf:about="&obo;IDO_0000565">
     <obo:IAO_0000115 xml:lang="en">A material entity bearing an antimicrobial disposition that is realized in a process of inhibiting the growth of microorganisms.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">microbistatic</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099997"/>
@@ -2734,6 +2909,7 @@
   <owl:Class rdf:about="&obo;IDO_0000566">
     <obo:IAO_0000115 xml:lang="en">An infection bearing the primary infection role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">primary infection</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099995"/>
@@ -2742,14 +2918,16 @@
   <owl:Class rdf:about="&obo;IDO_0000567">
     <obo:IAO_0000115 xml:lang="en">An infection bearing the secondar infection role.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">secondary infection</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099995"/>
   </owl:Class>
 
   <owl:Class rdf:about="&obo;IDO_0000568">
-    <obo:IAO_0000115 xml:lang="en">An infectious disease realization that has as its physical basis an infection composed of microorganims that have the zoonotic disposition.</obo:IAO_0000115>
+    <obo:IAO_0000115 xml:lang="en">An infectious disease that has as its physical basis an infection composed of microorganims that have the zoonotic disposition.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">zoonosis</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099994"/>
@@ -2758,6 +2936,7 @@
   <owl:Class rdf:about="&obo;IDO_0000569">
     <obo:IAO_0000115 xml:lang="en">A quality inhering in a bearer of the host role by virtue of the fact that the host is infected but has no signs or symptoms; has infection but lacks symptoms, or disease is realzied by lakcs symptoms</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">aymptomatic</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099993"/>
@@ -2766,6 +2945,7 @@
   <owl:Class rdf:about="&obo;IDO_0000570">
     <obo:IAO_0000115 xml:lang="en">A quality that inheres in an infection by virtue of the fact that the host is asymptomatic.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">subclinical</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099993"/>
@@ -2774,6 +2954,7 @@
   <owl:Class rdf:about="&obo;IDO_0000571">
     <obo:IAO_0000115 xml:lang="en">A quality that inheres in a bearer by virtue of the fact that the bearer has low susceptibility to some entity.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">resistance quality</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099993"/>
@@ -2782,6 +2963,7 @@
   <owl:Class rdf:about="&obo;IDO_0000572">
     <obo:IAO_0000115 xml:lang="en">carrier of infectious agent that has_quality chronic</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">chronic carrier of infectious agent</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099997"/>
@@ -2790,6 +2972,7 @@
   <owl:Class rdf:about="&obo;IDO_0000573">
     <obo:IAO_0000115 xml:lang="en">A host of infectious agent role played by a material entity by virtue of the fact that it has symptoms of the infectious disease associated with the infectious agent</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">symptomatic host of infectious agent</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099992"/>
@@ -2797,54 +2980,61 @@
 
   <owl:Class rdf:about="&obo;IDO_0000574">
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
-    <rdfs:label xml:lang="en">invasin</rdfs:label>
-    <rdfs:subClassOf rdf:resource="&obo;IDO_9099996"/>
+    <rdfs:label xml:lang="en">obsolete_invasin</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
   </owl:Class>
 
   <owl:Class rdf:about="&obo;IDO_0000575">
     <obo:IAO_0000115 xml:lang="en">A latent infection is a phase in certain viruses' life cycles in which after initial infection, virus production ceases; some proteins are being made that actively suppress other genes of virus.  So therefore not dormant.  Virus latency is not to be confused with clinical latency during the incubation period when a virus is not dormant</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">viral latency</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099991"/>
   </owl:Class>
 
   <owl:Class rdf:about="&obo;IDO_0000576">
-    <obo:IAO_0000115 xml:lang="en">An immunity to infectious agent realized in an innate immune response (GO:0045087).</obo:IAO_0000115>
+    <obo:IAO_0000115 xml:lang="en">An immunity to infectious organism realized in an innate immune response (GO:0045087).</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">innate immunity to infectious agent</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099990"/>
   </owl:Class>
 
   <owl:Class rdf:about="&obo;IDO_0000577">
-    <obo:IAO_0000115 xml:lang="en">An immunity to infectious realized in an adaptive immune response (GO:0002250).</obo:IAO_0000115>
+    <obo:IAO_0000115 xml:lang="en">An immunity to infectious organism realized in an adaptive immune response (GO:0002250).</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">adaptive immunity to infectious agent</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099990"/>
   </owl:Class>
 
   <owl:Class rdf:about="&obo;IDO_0000578">
-    <obo:IAO_0000115 xml:lang="en">An immunity to infectious agent realized in a humoral immune response (GO:0006959).</obo:IAO_0000115>
+    <obo:IAO_0000115 xml:lang="en">An immunity to infectious organism realized in a humoral immune response (GO:0006959).</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">humoral immunity to infectious agent</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099990"/>
   </owl:Class>
 
   <owl:Class rdf:about="&obo;IDO_0000579">
-    <obo:IAO_0000115 xml:lang="en">An immunity to infectious agent realized in an immune response (GO:0006955) whose participants are T cells or other cells of the immune system.</obo:IAO_0000115>
+    <obo:IAO_0000115 xml:lang="en">An immunity to infectious organism realized in an immune response (GO:0006955) whose participants are T cells or other cells of the immune system.</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">cell-mediated immunity to infectious agent</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099990"/>
   </owl:Class>
 
   <owl:Class rdf:about="&obo;IDO_0000580">
-    <obo:IAO_0000115 xml:lang="en">An immunity to infectious agent that results from a passive immunization (IDO:0000066).</obo:IAO_0000115>
+    <obo:IAO_0000115 xml:lang="en">An immunity to infectious organism that results from a passive immunization (IDO:0000066).</obo:IAO_0000115>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">passive immunity</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099990"/>
@@ -2852,6 +3042,7 @@
 
   <owl:Class rdf:about="&obo;IDO_0000581">
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">antibiotic resistance</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099991"/>
@@ -2859,6 +3050,7 @@
 
   <owl:Class rdf:about="&obo;IDO_0000582">
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">long-term non-progressor</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099997"/>
@@ -2866,6 +3058,7 @@
 
   <owl:Class rdf:about="&obo;IDO_0000583">
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
+    <obo:IAO_0000117 rdf:datatype="&xsd;string">Alexander Diehl</obo:IAO_0000117>
     <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
     <rdfs:label xml:lang="en">emerging pathogen</rdfs:label>
     <rdfs:subClassOf rdf:resource="&obo;IDO_9099998"/>
@@ -2946,15 +3139,8 @@
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
   </owl:Class>
 
+  <owl:Class rdf:about="&obo;OGMS_0000031"/>
   <owl:Class rdf:about="&obo;OGMS_0000045"/>
-  <owl:Class rdf:about="&obo;OGMS_0000048">
-    <obo:IAO_0000115 xml:lang="en">A disorder of a host whose etiology includes the presence of a pathogen within the host, colonization by the normal resident microbiota of host anatomical locations not part of the microbiota's typical habitat, or a symptomatic overgrowth of at least one species of the normal resident microbiota.</obo:IAO_0000115>
-    <obo:IAO_0000117 rdf:datatype="&xsd;string">Albert Goldfain</obo:IAO_0000117>
-    <obo:IAO_0000117 rdf:datatype="&xsd;string">Lindsay Cowell</obo:IAO_0000117>
-    <rdfs:label xml:lang="en">infectious disorder</rdfs:label>
-    <rdfs:subClassOf rdf:resource="&obo;OGMS_0000045"/>
-  </owl:Class>
-
   <owl:Class rdf:about="&obo;OGMS_0000063"/>
   <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
   <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Capability">

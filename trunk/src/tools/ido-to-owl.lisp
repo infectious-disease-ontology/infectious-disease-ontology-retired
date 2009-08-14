@@ -80,7 +80,7 @@
 		 (make-uri nil (format nil "obo:IDO_~7,'0d" (round (read-from-string newid))))))
 
        )
-    (setf (gethash "infectious disorder" table) !obo:OGMS_0000048)
+;    (setf (gethash "infectious disorder" table) !obo:OGMS_0000048)
     (setq *ido-term-to-uri* table)
     ))
 
@@ -95,6 +95,7 @@
        (ontology-annotation !rdfs:seeAlso !<http://www.infectiousdiseaseontology.org/Home.html>)
        (ontology-annotation !dc:creator "Lindsay Cowell")
        (ontology-annotation !dc:creator "Albert Goldfain")
+       (ontology-annotation !dc:creator "Alexander Diehl")
        (ontology-annotation !dc:contributor "Barry Smith")
        (ontology-annotation !dc:contributor "Alan Ruttenberg")
        (ontology-annotation !<http://protege.stanford.edu/plugins/owl/protege#defaultLanguage> "en")
@@ -151,10 +152,11 @@
 		  (not (and uri isa-uri)))
 	       (progn (warn "Whoops - need uri (~a) and isa-url (~s) - ~a" uri isa-uri entry)
 		      nil)
-	       (list* (apply 'class uri :partial isa-uri
+	       (list* (apply 'class uri :partial (if (#"matches" term "^obsolete_.*") !oboinowl:ObsoleteClass isa-uri)
 			    (label (literal term :|@en|))
 			    (annotation !obo:IAO_0000117 "Lindsay Cowell")
 			    (annotation !obo:IAO_0000117 "Albert Goldfain")
+			    (annotation !obo:IAO_0000117 "Alexander Diehl")
 			    (when definition (annotation !obo:IAO_0000115 (literal (safe-annotation-string definition 'definition) :|@en|)))
 			    (loop for syn in synonyms collect  
 				 (annotation !obo:IAO_0000118 (literal syn :|@en|))))
@@ -255,7 +257,7 @@
      ("disposition"  !<http://www.ifomis.org/bfo/1.1/snap#Disposition>)
      ("occurrent"  !<http://www.ifomis.org/bfo/1.1/span#Occurrent>)
      ("object"  !<http://www.ifomis.org/bfo/1.1/snap#Object>)
-     ("disease" !obo:OGMS_0000063)
+     ("disease" !obo:OGMS_0000031)
      ("disorder" !obo:OGMS_0000045)
      ("capability" !<http://www.ifomis.org/bfo/1.1/snap#Capability>)
 
