@@ -133,6 +133,8 @@
 	  for term = (second (assoc :term entry))
 	  for uri = (gethash term *ido-term-to-uri*)
 	  for definedclass? = (equal (second (assoc :sheet entry)) "Defined Classes")
+	  for id = (second (assoc :id entry))
+	  for hasid? = (and id (not (equal id "")) (search "IDO:" id))
 	  for isa-uri =
 	  (cond (definedclass?
 		 (second (assoc (second (assoc :is_a entry)) *ido-defined-classes* :test 'equalp)))
@@ -149,14 +151,39 @@
 		  (not (and uri isa-uri)))
 	       (progn (warn "Whoops - need uri (~a) and isa-url (~s) - ~a" uri isa-uri entry)
 		      nil)
-	       (list (apply 'class uri :partial isa-uri
+	       (list* (apply 'class uri :partial isa-uri
 			    (label (literal term :|@en|))
 			    (annotation !obo:IAO_0000117 "Lindsay Cowell")
 			    (annotation !obo:IAO_0000117 "Albert Goldfain")
 			    (when definition (annotation !obo:IAO_0000115 (literal (safe-annotation-string definition 'definition) :|@en|)))
 			    (loop for syn in synonyms collect  
-				 (annotation !obo:IAO_0000118 (literal syn :|@en|)))))
-	       )))
+				 (annotation !obo:IAO_0000118 (literal syn :|@en|))))
+		      (and hasid?
+			   (list (class (make-uri (#"replaceAll" id "IDO:" "http://purl.obolibary.org/obo/IDO_"))
+			     :partial !oboinowl:ObsoleteClass
+			     (label (literal (format nil "_obsolete_~a" term) :|@en|))
+			     (when definition (annotation !obo:IAO_0000115 (literal (safe-annotation-string (format nil "'~a'-~a: ~a" term id definition) 'definition) :|@en|)))
+			     (annotation !obo:IAO_0000116 (literal (format nil "id for '~a'-~a replaced by ~a (ID collision)" term id (uri-full uri)) :|@en|)))))
+
+		     )
+	       )
+	    )
+       (loop for (id term definition) in (historical-ido-terms)
+	    collect
+	    (class (make-uri (#"replaceAll" id "IDO:" "http://purl.obolibary.org/obo/IDO_"))
+	      :partial !oboinowl:ObsoleteClass
+		   (label (literal (format nil "_obsolete_~a" term) :|@en|))
+		   (when (and definition (not (equal definition "")))
+		     (annotation !obo:IAO_0000115 (literal
+						   (safe-annotation-string
+						    (format nil "'~a'-~a: ~a" definition
+							    (#"replaceAll" id "IDO:" "ID[O]:")
+							    definition) 'definition) :|@en|)))
+		   (annotation !obo:IAO_0000116 (literal (format nil "id '~a'-~a from IDO 2007. May have replacement - TBD" term
+								 (#"replaceAll" id "IDO:" "ID[O]:")
+								 id) :|@en|))
+		   ))
+       )
 ;    (princ (abstract-syntax ido))
     (write-rdfxml ido)))
 
@@ -183,16 +210,21 @@
 			) 'string-lessp :key 'car)))
     ))
 
-(defun historical-ido-terms ()
+(defun historical-ido-terms (&optional id-is-uri)
   (let ((kb (load-kb-jena "ido:ido-core;historical;IDO-1-3-oboconv.owl")))
     (let ((*current-labels* (rdfs-labels kb)))
       (mapcar (lambda(e)
-		(list (#"replaceAll" (#"replaceAll" (uri-full (first e)) ".*#" "") "_" ":")
-p		      (second e)))
+		(list (if id-is-uri
+			  (first e)
+			  (#"replaceAll" (#"replaceAll" (uri-full (first e)) ".*#" "") "_" ":"))
+		      (second e) (third e)))
 	      (loop for class in
 		   (remove-if-not (lambda(e) (search "IDO#" (uri-full e)))
 				  (descendants !owl:Thing kb))
-		   collect (list class (gethash class *current-labels*)))))))
+		   collect (list class
+				 (gethash class *current-labels*)
+				 (rdfs-comment class kb)
+				 ))))))
 
 (defun ido-2008-terms ()
   (let ((obo (make-instance 'obo :path "ido:ido-core;historical;IDO-2009-05-15.obo")))
