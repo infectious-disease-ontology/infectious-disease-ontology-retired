@@ -9,6 +9,10 @@
 						       '("src" "ontology" :wild-inferiors))
 				    :name :wild
 				    :type :wild))
+	("immunology;**;*.*" ,(make-pathname :directory (append (butlast (pathname-directory *load-pathname*) 2)
+						       '("src" "ontology" :wild-inferiors))
+				    :name :wild
+				    :type :wild))
 	("tools;**;*.*" ,(make-pathname :directory (append (butlast (pathname-directory *load-pathname*) 2)
 						       '("src" :wild-inferiors))
 				    :name :wild
@@ -24,6 +28,8 @@
     :licence "BSD"
     :components
     ((:file "ido-to-owl")
+     (:file "spreadsheet")
+     (:file "pathway-to-owl")
      (:file "obo")
      (:jar-directory "lib" :pathname "ido:lib;java;poi-3-2-FINAL;")
      )
