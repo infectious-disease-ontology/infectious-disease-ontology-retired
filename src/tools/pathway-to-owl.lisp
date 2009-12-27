@@ -1,9 +1,36 @@
 (defvar *ido-term-to-uri* (make-hash-table :test 'equalp))
 
+(defclass parsed-sheet ()
+  ((sheet-book :accessor sheet-book :initarg :sheet-book :initform nil)
+   (sheet-name :accessor sheet-name :initarg :sheet-name :initform nil) 
+   (parsed-blocks :accessor parsed-blocks :initarg :parsed-blocks :initform nil)
+   (sheet-rows :accessor sheet-rows :initarg :sheet-rows :initform nil)
+   (java-sheet :accessor java-sheet :initarg :java-sheet :initform nil)))
+
+(defmethod print-object ((o parsed-sheet) stream)
+  (let ((*print-case* :downcase))
+    (print-unreadable-object (o stream :type t :identity nil)
+      (format stream "~a in ~a - ~a blocks"
+	      (sheet-name o)
+	      (book-path (sheet-book o))
+	      (length (parsed-blocks o))))))
+
+(defclass parsed-book ()
+  ((book-path :accessor book-path :initarg :book-path :initform nil)
+   (parsed-sheets :accessor parsed-sheets :initarg :parsed-sheets :initform nil)
+   (parsed-blocks :accessor parsed-blocks :initarg :parsed-blocks :initform nil)))
+
+(defmethod print-object ((o parsed-book) stream)
+  (let ((*print-case* :downcase))
+    (print-unreadable-object (o stream :type t :identity nil)
+      (format stream "~s - ~a sheets, ~a blocks"
+	      (book-path o)
+	      (length (parsed-sheets o))
+	      (length (parsed-blocks o))))))
+
 (defclass parsed-cells ()
-  ((in-workbook :accessor in-workbook :initarg :in-workbook :initform nil)
-   (in-sheet :accessor in-sheet :initarg :in-sheet :initform nil)
-   (in-row :accessor in-row :initarg :in-row :initform nil)
+  ((in-sheet :accessor in-sheet :initarg :in-sheet :initform nil)
+   (first-row :accessor first-row :initarg :first-row :initform nil)
    (start-cell :accessor start-cell :initarg :start-cell :initform nil)
    (end-cell :accessor end-cell :initarg :end-cell :initform nil)))
 
@@ -14,7 +41,7 @@
   (let ((*print-case* :downcase))
     (print-unreadable-object (object stream :type t :identity nil)
       (format stream "~a:[~a-~a]@~a ~a"
-	      (in-sheet object) (start-cell object) (end-cell object) (in-row object)
+	      (sheet-name (in-sheet object)) (start-cell object) (end-cell object) (first-row object)
 	      (print-summary object)))))
 
 (defclass parsed-block (parsed-cells)
@@ -64,8 +91,8 @@
     (:evidence "Evidence for"	"Title"	"Evidence Code"	"Pubmed id")
     ))
 
-(defun find-block (block-type sheet sheet-name)
-  (loop for row in sheet
+(defun find-block (block-type sheet)
+  (loop for row in (sheet-rows sheet)
      for rowcount from 1 with found-row
      with collecting
      with headers = (cdr (assoc block-type *blocks*))
@@ -84,24 +111,33 @@
 	       (if (stringp e) (string-trim " " e) e))
 	     (subseq row found (+ found (length headers))))
      into rows
-     finally (progn 
-	       (and found (print (setq @ (make-instance 'parsed-block :in-sheet sheet-name :in-row found-row :start-cell found :end-cell (1- (+ found (length headers)))
-				     :block-rows rows :block-type block-type))))
-	       (return-from find-block rows))))
+     finally
+     (return-from find-block
+       (and found (make-instance 'parsed-block :in-sheet sheet :first-row found-row :start-cell found :end-cell (1- (+ found (length headers)))
+				 :block-rows rows :block-type block-type )))))
 
-(defun locate-blocks-in-sheets (file types &optional within-sheets)
-  (loop for (sheet-name sheet) in (list-sheets :file file)
-     for found = (and (or (null within-sheets) (member sheet-name within-sheets :test 'equalp))
-		      (loop for type in types
-			 for found = (find-block type
-						 (get-sheet-as-row-lists sheet) sheet-name)
-			 when found collect (list type found)))
-     when found collect      
-     (list sheet-name found)))
+(defun locate-blocks-in-sheets (book types &optional within-sheets)
+  (setf (parsed-blocks book)
+	(loop
+	   for (sheet-name sheet) in (list-sheets :file (book-path book))
+	   for parsed-sheet =
+	   (or (find sheet-name (parsed-sheets book) :test 'equalp :key 'sheet-name)
+	       (let ((new 
+		      (make-instance 'parsed-sheet :sheet-rows (get-sheet-as-row-lists sheet) :sheet-book book :sheet-name sheet-name
+				     :java-sheet sheet)))
+		 (push new (parsed-sheets book))
+		 new))
+	   for found = (and (or (null within-sheets) (member sheet-name within-sheets :test 'equalp))
+			    (loop for type in types
+			       for found = (find-block type parsed-sheet)
+			       when found collect found))
+	   do (setf (parsed-blocks parsed-sheet) found)
+	   append found 
+	   )))
 
 ;(locate-blocks-in-sheets "ido:immunology;ido-s4lps-tlr4.xls" '(:handles :processes) '("TLR4MyD88"))
 
-(defun check-processes-use-only-defined-handles (complexes handles processes in-sheet)
+(defun check-processes-use-only-defined-handles (complexes handles processes)
   (loop for (process) in processes
        for parsed = (parse-process process)
        when (eq (car parsed) :notparsed) do (print parsed)
@@ -133,23 +169,25 @@
 (defun parse-complex (name parts)
   ;; name, parts -> (:parsed|:notparsed (name) (:assembly|:union list-of-products))
   (unless (and (stringp name) (stringp parts))
-    (return (list :notparsed (list name) (list parts)) :notstrings))
+    (return-from parse-complex (list :notparsed (list name) (list parts) :notstrings)))
   (setq name (string-trim " " name))
   (setq parts (string-trim " " parts))
   (unless (#"matches" name "^[A-Za-z0-9-]+$")
-    (return (list :notparsed (list name) (list parts)) :bad-name))
+    (return-from parse-complex (list :notparsed (list name) (list parts) :bad-name)))
   (unless (#"matches" parts "^(([A-Za-z0-9-]+?)\\s*([+,]|(\\bor\\b))\\s*)*([A-Za-z0-9-]+?)\\s*$")
-    (return (list :notparsed (list name) (list parts) :bad-parts)))
+    (return-from parse-complex (list :notparsed (list name) (list parts) :bad-parts)))
   (list :parsed (list name) (list* (if (#"matches" parts ".*\\bor\\b.*") :union :assembly) (split-at-regex parts "\\s*([+,]|(\\bor\\b))\\s*"))))
 
 (defun test ()
-  (let ((found (locate-blocks-in-sheets "ido:immunology;ido-s4lps-tlr4.xlsx" '(:handles :processes :complexes))))
-    (let ((handles (loop for (sheet blocks) in found append (second (assoc :handles blocks))))
-	  (processes (append (second (assoc :processes (second (car found))))))
-	  (complexes (loop for (sheet blocks) in found append (second (assoc :complexes blocks)))))
-      (print-db processes)
-      (print-db complexes)
-      (check-processes-use-only-defined-handles complexes handles processes))))
+  (let* ((book (make-instance 'parsed-book :book-path "ido:immunology;ido-s4lps-tlr4.xlsx"))
+	 (found (locate-blocks-in-sheets book '(:handles :processes :complexes)))
+	 (handles (mapcan 'block-rows (remove :handles found :key 'block-type :test-not 'eq)))
+	 (processes (mapcan 'block-rows (remove :processes found :key 'block-type :test-not 'eq)))
+	 (complexes (mapcan 'block-rows (remove :complexes found :key 'block-type :test-not 'eq))))
+    (print-db processes)
+    (print-db complexes)
+    (check-processes-use-only-defined-handles complexes handles processes)
+    book))
 
 
 
