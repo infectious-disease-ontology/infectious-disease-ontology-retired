@@ -48,6 +48,9 @@ Example:
 || TLR4-02 || LPS recognition and signaling via TLR4 || 5/22/09 || 6/24/09 || Anna Maria; Alan||
 || Uses entities from  || TLR4-01 ||  ||  || ||
 
+ So if I understood correctly I need only to put from which spreedsheet id i took the entity but not list which one?
+Anna Maria
+
 == Handle block ==
 Column headers: *handle*, *Entities*, *Kind*, *class*, *super(s)*
 
