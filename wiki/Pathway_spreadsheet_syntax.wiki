@@ -2,11 +2,21 @@ This page describes the syntax for pathway spreadsheets.
 
 = Introduction =
 
-Each spreadsheet is an excel workbook with possibly multiple sheets. Within each sheet there are a number of blocks. 
+The goal of the IDO pathway project is to build an OWL representation of molecular immunology consistent with the principles of the OBO foundry, and based on previous work by the [http://groups.google.com/group/biopax-obo BioPAX-OBO] group.
+
+Because curating such information using standard OWL editing tools is tedious and error prone, and because we may want to evolve the OWL representation during development, we are curating the information about the molecular immunology pathways in Excel spreadsheets. A script reads these spreadsheets and translates them to OWL.  We hope that this will be a more comfortable process. 
+
+The format of the spreadsheet is a compromise between ease of use and supplying all information needed to generate an OWL representation that maximally connects to the OBO Foundry ontologies.
+
+= Spreadsheet organization =
+
+Each spreadsheet is actually an excel workbook with possibly multiple sheets. Within each sheet there are a number of blocks. 
 
 A block is a rectangular region of a spreadsheet that is labeled with a known set of column headers. Subsequent rows are considered to be part of the block until either
  * The first cell of a row is blank
  * Another set of column headers is found in the row
+
+Any cells in a workbook that are not interpreted as a block are ignored.
 
 Font and cell styles are _currently_ ignored.
 
@@ -55,13 +65,41 @@ Example:
 || IRK4 || IRAK4 || Gene product || PRO:000001780 ||  ||
 || IRK1 || IRAK1 || Gene product || PRO:000001782 ||  ||
 
+== Process block ==
+Column headers *processes*, *realizes*,*part_of*,*class*,*super(s)*,*binding domains*
+
+The purpose of process blocks are to define processes, which are typically expressed as reactions with a set of substrates and a set of products. 
+
+ * *processes*:  See below for more detailed specification. Typically of the form n a + m b -> p c + q d, where a,b,c,d are handles, n,m,p,q are (optional) stoichiometry. Each handle should name a class of material entity.
+ * *realizes*: An optional list of names of functions or dispositions and what they inhere in. See below for more detail on syntax.
+ * *part_of*: An optional handle naming a process that this process is always  part of. See below for more detail on syntax.
+ * *class*:  If this process already has an identifier (e.g. it is named in GO, the OBO style identifier for that process
+ * *super(s)*: If the process has an obvious most specific superclass in GO, the OBO style identifier for that process
+ * *binding domains*: Many processes in IDO involve the formation of protein complexes.  This cell provides information about which domains (parts) of the constituent proteins contain the binding sites. See below for more detail on syntax.
+
+Details on syntax: Documention TBD.
+
+Example:
+
+|| *processes* || *realizes* || *part_of* || *class* || *super(s)* || *binding domains* ||
+|| rlps2-tm+IRK4->rlps-tmIRK4 || ddb of MyD88 in rlps2-tm and of IRK4 || ddp located in pcyto ||  ||  || DD of Myd88 and DD of IRK4 ||
+|| rlps-tmIRK4+ IRK1-> rlps-tmIRK4IRK1 || ddb of MyD88 and of IRK1 || ddplocated in pcyto ||  ||  || DD of Myd88 and DD of IRK1 ||
+
+== Evidence block ==
+
+Documentation TBD
+
+== Protein complex block ==
+
+Documentation TBD
+
 == Implementation ==
 
 The raw spreadsheet parsing is done by the Apache POI libraries: http://poi.apache.org/
 
 The lisp code for finding blocks and creating the object oriented representation is in the LSW subversion repository: http://mumble.net:8080/svn/lsw/trunk/read-ms-docs/
 
-The IDO specific blocks and logic are in the IDO repository: https://infectious-disease-ontology.googlecode.com/svn/trunk/src/tools/pathway-to-owl.lisp
+The IDO specific blocks and logic are in the IDO repository: http://infectious-disease-ontology.googlecode.com/svn/trunk/src/tools/pathway-to-owl.lisp
 
 == Notes ==
 
@@ -70,5 +108,3 @@ The IDO specific blocks and logic are in the IDO repository: https://infectious-
  * I expect "Last edited" to be unreliable. Would be nice if excel recorded such metadata automatically.
 
 Alan Ruttenberg
-
-
