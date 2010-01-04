@@ -1,0 +1,23 @@
+This page describes the syntax for pathway spreadsheets.
+
+Each spreadsheet is an excel workbook with possibly multiple sheets. Within each sheet there are a number of blocks.
+
+A block is a rectangular region of a spreadsheet that is labeled with a known set of column headers. Subsequent rows are considered to be part of the block until either
+* The first cell of a row is blank
+* Another set of column headers is found in the row
+
+== Sheet information block ==
+Column headers: *Spreadsheet id*,	*About*, *Date Created*, *Last edited*, *Editors*
+
+This block can have 1 or more rows. The first row supplies the information specified by the headers.
+
+ * Spreadsheet id: A string uniquely labeling this sheet within the workbook. 
+ * About: Documenting, in plain english,  what has been recorded on the sheet
+ * Date Created: The date the sheet was created. 
+ * Last Edited: The date the sheet was last edited
+ * Editors: A list of names of editors, separated by ";"
+
+Subsequent rows are interpreted as properties/values with the first column being the property name and the second column being the value.
+
+Currently only one property is understood:
+ * Uses entities from: A list of spreadsheet ids which define the scope of handle lookup within the sheet. When resolving handles, first the handles on the current sheet will be searched, then the handles on each subsequent sheet listed will be searched, until a match is found.
