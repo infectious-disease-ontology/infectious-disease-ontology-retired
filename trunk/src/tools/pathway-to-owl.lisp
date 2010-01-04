@@ -209,11 +209,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Debugging code
 
-(defun translate-pathway ()
-  (get-sheets :file "ido:immunology;ido-s4lps-tlr4.xls"))
-
-;(locate-blocks-in-sheets "ido:immunology;ido-s4lps-tlr4.xls" '(:handles :processes) '("TLR4MyD88"))
-
 (defun check-processes-use-only-defined-handles (complexes handles processes)
   (loop for (process) in processes
        for parsed = (parse-process process)
@@ -235,38 +230,16 @@
 	    do (format t "~%Did't find ~s from ~s~%" term (append (second parsed) (third parsed)))))
   )
 
-(defun parse-process (string)
-  ;; x + y + x -> a + b -> (:parsed|:notparsed list-of-substrates list-of-products)
-  (setq string (string-trim " " string))
-  (cond ((#"matches" string "^(([A-Za-z0-9-]+?)\\s*\\+\\s*)*([A-Za-z0-9-]+?)\\s*(->)\\s*(([A-Za-z0-9-]+?)\\s*\\+\\s*)*([A-Za-z0-9-]+?)\\s*$")
-	 (list* :parsed (mapcar (lambda(e) (split-at-regex e "\\s*\\+\\s*"))
-			       (split-at-regex string "\\s*->\\s*"))))
-	(t (list :notparsed string))))
-
-(defun parse-complex (name parts)
-  ;; name, parts -> (:parsed|:notparsed (name) (:assembly|:union list-of-products))
-  (unless (and (stringp name) (stringp parts))
-    (return-from parse-complex (list :notparsed (list name) (list parts) :notstrings)))
-  (setq name (string-trim " " name))
-  (setq parts (string-trim " " parts))
-  (unless (#"matches" name "^[A-Za-z0-9-]+$")
-    (return-from parse-complex (list :notparsed (list name) (list parts) :bad-name)))
-  (unless (#"matches" parts "^(([A-Za-z0-9-]+?)\\s*([+,]|(\\bor\\b))\\s*)*([A-Za-z0-9-]+?)\\s*$")
-    (return-from parse-complex (list :notparsed (list name) (list parts) :bad-parts)))
-  (list :parsed (list name) (list* (if (#"matches" parts ".*\\bor\\b.*") :union :assembly) (split-at-regex parts "\\s*([+,]|(\\bor\\b))\\s*"))))
-
 (defun test ()
-  (let* ((book (make-instance 'ido-pathway-book :book-path "ido:immunology;ido-s4lps-tlr4.xlsx"))
-	 (found (locate-blocks-in-sheets book (mapcar 'car (block-types book))))
-	 (handles (apply 'append (mapcar 'block-rows (remove 'parsed-handle-block found :key 'type-of :test-not 'eq))))
-	 (processes (apply 'append (mapcar 'block-rows (remove 'parsed-process-block found :key 'type-of :test-not 'eq))))
-	 (complexes (apply 'append (mapcar 'block-rows (remove 'parsed-complex-block found :key 'type-of :test-not 'eq)))))
-    (print-db processes)
-    (print-db complexes)
-    (check-processes-use-only-defined-handles complexes handles processes)
+  (let* ((book (make-instance 'ido-pathway-book :book-path "ido:immunology;ido-s4lps-tlr4.xlsx")))
+    (locate-blocks-in-sheets book (mapcar 'car (block-types book)))
+    (parse-book book)
+    (report-some-processes book)
+    (report-parse-results book)
     book))
 
 (defun report-some-processes (book)
+  (format t "Processes that pass first level syntax check~%")
   (loop for bl in (remove 'parsed-process-block (parsed-blocks book) :key 'type-of :test-not 'eq)
      do 
      (loop for p in (parsed-rows bl)
