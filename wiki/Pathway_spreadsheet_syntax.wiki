@@ -55,8 +55,20 @@ Example:
 || IRK4 || IRAK4 || Gene product || PRO:000001780 ||  ||
 || IRK1 || IRAK1 || Gene product || PRO:000001782 ||  ||
 
+== Implementation ==
 
+The raw spreadsheet parsing is done by the Apache POI libraries: http://poi.apache.org/
 
+The lisp code for finding blocks and creating the object oriented representation is in the LSW subversion repository: http://mumble.net:8080/svn/lsw/trunk/read-ms-docs/
 
+The IDO specific blocks and logic are in the IDO repository: https://infectious-disease-ontology.googlecode.com/svn/trunk/src/tools/pathway-to-owl.lisp
+
+== Notes ==
+
+ * Don't remember why the "super(s)" column has the possibility of being plural. We use multiple inheritance.
+ * Should the spreadsheet id be dropped in favor of just using the sheet name that Excel lets you set?
+ * I expect "Last edited" to be unreliable. Would be nice if excel recorded such metadata automatically.
+
+Alan Ruttenberg
 
 
