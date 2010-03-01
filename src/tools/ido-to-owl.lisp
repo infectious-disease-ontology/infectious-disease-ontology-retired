@@ -121,9 +121,9 @@
 	    (class id :partial !obo:IDO_9999999 )
 	    )
        (class !<http://www.ifomis.org/bfo/1.1/snap#Capability> :partial !<http://www.ifomis.org/bfo/1.1/snap#RealizableEntity>)
-       (class !<http://purl.obofoundry.org/obo/GO#GO_0005575> :partial !<http://www.ifomis.org/bfo/1.1/snap#MaterialEntity>
+       (class !<http://purl.org/obo/owl/GO#GO_0005575> :partial !<http://www.ifomis.org/bfo/1.1/snap#MaterialEntity>
 	      (label "cellular component"))
-       (class !<http://purl.obofoundry.org/obo/GO#GO_0005615> :partial !<http://www.ifomis.org/bfo/1.1/snap#Site>
+       (class !<http://purl.org/obo/owl/GO#GO_0005615> :partial !<http://www.ifomis.org/bfo/1.1/snap#Site>
 	      (label "extracellular space")
 	      (restriction !oborel:part_of (some-values-from !obo:OBI_0100026)))
        (class !obo:OBI_0100026 :partial !snap:MaterialEntity
@@ -267,8 +267,8 @@
      ("colonized quality?" !obo:IDO_0000459)
      ("infected quality?" !obo:IDO_0000460)
      ("role" !<http://www.ifomis.org/bfo/1.1/snap#Role>)
-     ("cellular component" !<http://purl.obofoundry.org/obo/GO#GO_0005575>)
-     ("extracellular space" !<http://purl.obofoundry.org/obo/GO#GO_0005615>)
+     ("cellular component" !<http://purl.org/obo/owl/GO#GO_0005575>)
+     ("extracellular space" !<http://purl.org/obo/owl/GO#GO_0005615>)
      )))
 
 (defparameter *ido-defined-classes*
