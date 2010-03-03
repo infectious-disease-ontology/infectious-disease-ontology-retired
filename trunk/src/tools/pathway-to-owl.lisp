@@ -50,6 +50,7 @@
 
 (defmethod after-all-sheets-parsed ((b ido-pathway-book))
   (classify-handles b)
+  (verify-process-handles b)
   (map nil 'after-all-sheets-parsed (parsed-sheets b))
   (map nil 'after-all-sheets-parsed (parsed-blocks b)))
 
@@ -123,6 +124,13 @@
 		      (push (format nil "don't understand handle '~a' kind: '~a' id:'~a' description:'~a'"  (handle row) (handle-kind row)
 			      class (handle-description row)) (parse-errors row))))))
        finally (return (values byprefix no-class)))))
+
+(defmethod verify-process-handles ((book ido-pathway-book))
+  (loop for block in (remove 'parsed-process-block (parsed-blocks book) :test-not 'eq :key 'type-of)
+     append
+       (map nil 'verify-process-handles (parsed-rows block))))
+
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;  Blocks
@@ -222,6 +230,13 @@
 	       (setf (process-substrates p) (mapcar #'with-stoichiometry (first parsed))
 		     (process-products p) (mapcar #'with-stoichiometry (second parsed)))))
 	    (t (setf (parse-errors p) (list "didn't match expected form")))))))
+
+(defmethod verify-process-handles ((p parsed-process))
+  (loop for (nil handle) in (append (process-substrates p) (process-products p))
+       for found = (lookup-handle (in-sheet (in-block p))  handle)
+       unless found do (format t "Didn't find handle ~a from ~a~%" handle p)))
+
+
 
 (defmethod print-summary ((o parsed-process))
   (format nil "~s" (car (cell-list o))))
