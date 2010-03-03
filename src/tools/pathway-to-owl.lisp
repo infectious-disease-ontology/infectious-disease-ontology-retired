@@ -45,10 +45,16 @@
      do
      (loop for block in (parsed-blocks b)
 	when (typep block block-type)
-	do (parse-block block))))
+	do (parse-block block)))
+  (after-all-sheets-parsed b))
+
+(defmethod after-all-sheets-parsed ((b ido-pathway-book))
+  (classify-handles b)
+  (map nil 'after-all-sheets-parsed (parsed-sheets b))
+  (map nil 'after-all-sheets-parsed (parsed-blocks b)))
 
 (defmethod block-types ((book ido-pathway-book))
-  (loop for class in (system:class-direct-subclasses (find-class 'ido-pathway-block))
+  (loop for class in (remove-duplicates (system:class-direct-subclasses (find-class 'ido-pathway-block)) :key 'class-name)
        collect (list* (class-name class) (class-slot-value class 'block-headers))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -56,18 +62,41 @@
 
 (defclass ido-pathway-sheet (parsed-sheet)
   ((lookup-table :accessor lookup-table :initarg :lookup-table :initform (make-hash-table :test 'equalp))
-   (handle-lookup-sheets :accessor handle-lookup-sheets)
+   (handle-lookup-sheets )
    ))
 
+(defmethod after-all-sheets-parsed ((s ido-pathway-sheet))
+  (handle-lookup-sheets s))
+
+(defmethod handle-lookup-sheets ((s ido-pathway-sheet))
+  (if (slot-boundp s 'handle-lookup-sheets )
+      (slot-value s 'handle-lookup-sheets)
+      (let* ((info-block (find 'parsed-sheet-info-block (parsed-blocks s) :key 'type-of))
+	     (uses (and info-block (remove nil (cdr (find "uses entities from" (block-rows info-block) :key 'car :test 'equalp))))))
+	(setf (slot-value s 'handle-lookup-sheets)
+	      (loop for used in uses
+		 for sheet =  (find used (parsed-sheets (sheet-book s)) :key
+				    (lambda(s) (let ((info (find 'parsed-sheet-info-block (parsed-blocks s) :key 'type-of)))
+						 (and info (sheet-id info))))
+				    :test 'equal)
+		 if (not sheet) do (push (format nil "Didn't find sheet ~a listed as uses entities from in ~a" used s) (parse-errors sheet))
+		 else collect sheet)))))
+		   
 (defmethod clear-handles ((s ido-pathway-sheet))
   (setf (lookup-table s) (make-hash-table :test 'equalp)))
 
 (defmethod add-handle ((s ido-pathway-sheet) name object)
-  (if (gethash name (lookup-table s))
-      (let ((error (format nil "Duplicate handle ~s in ~a:~a,~a" name s object (gethash name (lookup-table s)))))
-	(push error (parse-errors object))
-	(push error (parse-errors (gethash name (lookup-table s)))))
-      (setf (gethash name (lookup-table s)) object)))
+  (let ((existing (gethash name (lookup-table s))))
+    (setq @ (list name object existing))
+    (if (and existing
+	     (eq (in-sheet (in-block existing)) (in-sheet (in-block object)))
+	     (eql (in-row existing) (in-row object)))
+	(setf (gethash name (lookup-table s)) object)
+	(if existing
+	    (let ((error (format nil "Duplicate handle ~s in ~a:~a,~a" name s object (gethash name (lookup-table s)))))
+	      (push error (parse-errors object))
+	      (push error (parse-errors (gethash name (lookup-table s)))))
+	    (setf (gethash name (lookup-table s)) object)))))
 
 (defmethod lookup-handle ((s ido-pathway-sheet) name)
   (or (gethash name (lookup-table s))
@@ -75,11 +104,30 @@
 	 for found = (gethash name (lookup-table sheet))
 	 do (return-from lookup-handle found))))
 
+(defmethod classify-handles ((book ido-pathway-book))
+  (loop for block in (remove 'parsed-handle-block (parsed-blocks book) :test-not 'eq :key 'type-of)
+     with no-class with byprefix = (make-hash-table :test 'equal)
+     do
+       (loop
+	  for row in (parsed-rows block) 
+	  for class = (handle-class row)
+	  if (null class)
+	  do (push row no-class)
+	  else do
+	    (let ((simple (car (all-matches class "^(\\S+):(\\d+)$" 1 2))))
+	      (if simple
+		  (incf (gethash (car simple) byprefix 0))
+		(if (#"matches" class "^(PFAM:){0,}PF\\d+$")
+		    (incf (gethash "pfam" byprefix 0))
+		    (unless (is-sole-product-of-reaction book (handle row))
+		      (push (format nil "don't understand handle '~a' kind: '~a' id:'~a' description:'~a'"  (handle row) (handle-kind row)
+			      class (handle-description row)) (parse-errors row))))))
+       finally (return (values byprefix no-class)))))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;  Blocks
 
 (defclass ido-pathway-block (parsed-block))
-
 
 (defmethod block-headers ((s symbol))
   (block-headers (mop::class-prototype (find-class s))))
@@ -103,7 +151,20 @@
 
 (defclass parsed-sheet-info-block (ido-pathway-block)
   ((block-headers :accessor block-headers :allocation :class :initform '("Spreadsheet id" "About" "Date Created" "Last edited" "Editors"))
-   ))
+   (sheet-id :accessor sheet-id :initform nil :initarg :sheet-id )
+   (uses-handles-from :accessor uses-handles-from :initform nil :initarg :uses-handles-from)))
+
+(defmethod parse-block ((i parsed-sheet-info-block))
+  (let ((id (caar (block-rows i))))
+;    (print-db i (in-sheet i) id)
+    (when (null id)
+      (setf (parse-errors id) (format nil "No id given for sheet ~a" i)))
+    (setf (sheet-id i) id)))
+
+
+
+;;(defmethod parse-block ((b parse-sheet-info-block))
+;;  (let ((by-column (first (block-rows b))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Groups of cells
@@ -119,15 +180,18 @@
    (handle-description :accessor handle-description :initarg :handle-description :initform nil)
    (handle-kind :accessor handle-kind :initarg :handle-kind :initform nil)
    (handle-class :accessor handle-class :initarg :handle-class :initform nil)
-   (handle-super :accessor handle-super :initarg :handle-super :initform nil))
-  )
+   (handle-super :accessor handle-super :initarg :handle-super :initform nil)
+  ))
 
 (defmethod parse-row ((h parsed-handle))
   (let ((cell-list (cell-list h)))
     (setf (handle h) (first cell-list) (handle-description h) (second cell-list) 
 	  (handle-kind h) (third cell-list) (handle-class h) (fourth cell-list)
 	  (handle-super h) (fifth cell-list)))
-  (add-handle (in-sheet (in-block h)) (handle h) h))
+  (add-handle (in-sheet (in-block h)) (handle h) h)
+;  (if (handle-class h)
+;      (if (#"matches" "^((GO:\\d+)|(PRO:\\d+)|$
+  )
 
 (defmethod print-summary ((o parsed-handle))
   (format nil "~s" (handle o)))
@@ -248,3 +312,37 @@
 						  collect (if (equal (car p) 1) (second p) (format nil "~a ~a" (car p) (second p))))
 					       (loop for p in (process-products p)
 						  collect (if (equal (car p) 1) (second p) (format nil "~a ~a" (car p) (second p))))))))
+
+(defun report-handles (book)
+  (loop for block in (remove 'parsed-handle-block (parsed-blocks bk) :test-not 'eq :key 'type-of)
+       with kinds
+     do
+       (loop for  row in (parsed-rows block) 
+	  do (format t "~a	~a	~a	~a	~a~%"
+		     (sheet-name (in-sheet block))
+		     (handle row)
+		     (handle-kind row)
+		     (handle-class row)
+		     (handle-description row))
+	    (pushnew (handle-kind row) kinds :test 'equalp))
+       finally (format t "Kinds: ~{~a~^~% ~}" kinds)))
+
+
+(defun is-sole-product-of-reaction (book handle)
+  (loop for block in (remove 'parsed-process-block (parsed-blocks book) :test-not 'eq :key 'type-of)
+     thereis
+     (loop for process in (parsed-rows block)
+	for products = (process-products process)
+	thereis (and (= (length products) 1) (equalp (second (car products)) handle)))))
+
+(defun processes-mentioning-handle (book handle)
+  (loop for block in (remove 'parsed-process-block (parsed-blocks book) :test-not 'eq :key 'type-of)
+     thereis
+     (loop for process in (parsed-rows block)
+	for products = (process-products process)
+	  when (or (find handle (process-substrates process) :key 'second :test 'equalp)
+		   (find handle (process-products process) :key 'second :test 'equalp))
+	  do (print process))))
+				    
+
+	      
