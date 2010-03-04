@@ -51,6 +51,7 @@
 (defmethod after-all-sheets-parsed ((b ido-pathway-book))
   (classify-handles b)
   (verify-process-handles b)
+  (parse-realizations b)
   (map nil 'after-all-sheets-parsed (parsed-sheets b))
   (map nil 'after-all-sheets-parsed (parsed-blocks b)))
 
@@ -129,6 +130,11 @@
   (loop for block in (remove 'parsed-process-block (parsed-blocks book) :test-not 'eq :key 'type-of)
      append
        (map nil 'verify-process-handles (parsed-rows block))))
+
+(defmethod parse-realizations ((book ido-pathway-book))
+  (loop for block in (remove 'parsed-process-block (parsed-blocks book) :test-not 'eq :key 'type-of)
+     append
+       (map nil 'parse-realizations (parsed-rows block))))
 
 
 
@@ -219,24 +225,33 @@
 
 (defmethod parse-row ((p parsed-process))
   ;; x + y + x -> a + b -> (:parsed|:notparsed list-of-substrates list-of-products)
-  (let ((string (string-trim " " (car (cell-list p)))))
+  (let ((reaction-string (string-trim " " (car (cell-list p)))))
     (flet ((with-stoichiometry (piece)
 	     (destructuring-bind (stoichiometry entity) (car (all-matches piece "((\\d+\\s+){0,1})([A-Za-z0-9-]+)" 1 3))
 	       (list (if (equal stoichiometry "") 1 (parse-integer stoichiometry )) entity))))
-      (cond ((#"matches" string "^(((\\d+\\s+){0,1}[A-Za-z0-9-]+?)\\s*\\+\\s*)*((\\d+\\s+){0,1}[A-Za-z0-9-]+?)\\s*(->)\\s*(((\\d+\\s+){0,1}[A-Za-z0-9-]+?)\\s*\\+\\s*)*((\\d+\\s+){0,1}[A-Za-z0-9-]+?)\\s*$")
+      (cond ((#"matches" reaction-string "^(((\\d+\\s+){0,1}[A-Za-z0-9-]+?)\\s*\\+\\s*)*((\\d+\\s+){0,1}[A-Za-z0-9-]+?)\\s*(->)\\s*(((\\d+\\s+){0,1}[A-Za-z0-9-]+?)\\s*\\+\\s*)*((\\d+\\s+){0,1}[A-Za-z0-9-]+?)\\s*$")
 	     (let ((parsed
 		    (mapcar (lambda(e) (split-at-regex e "\\s*\\+\\s*"))
-			    (split-at-regex string "\\s*->\\s*"))))
+			    (split-at-regex reaction-string "\\s*->\\s*"))))
 	       (setf (process-substrates p) (mapcar #'with-stoichiometry (first parsed))
 		     (process-products p) (mapcar #'with-stoichiometry (second parsed)))))
 	    (t (setf (parse-errors p) (list "didn't match expected form")))))))
+
+(defmethod parse-realizations ((p parsed-process))
+  (let ((string (second (cell-list p))))
+    (and string
+	 (let ((realizations (split-at-regex string "\\s+(;|(and))\\s+")))
+	   (loop for r in realizations
+		for matches = (all-matches r "^\\s*([A-Za-z0-9-]+)\\s+of\\s+(\\S+)(\\s+part of\\s+([A-Za-z0-9-]+)){0,1}\\s*$"
+					   1 2 4 )
+		do (if (null matches)
+		       (push (format nil "Don't recognize form of realizations expression: '~a'" r) (parse-errors p))
+		       (push matches (process-realizes p))))))))
 
 (defmethod verify-process-handles ((p parsed-process))
   (loop for (nil handle) in (append (process-substrates p) (process-products p))
        for found = (lookup-handle (in-sheet (in-block p))  handle)
        unless found do (format t "Didn't find handle ~a from ~a~%" handle p)))
-
-
 
 (defmethod print-summary ((o parsed-process))
   (format nil "~s" (car (cell-list o))))
