@@ -31,11 +31,18 @@
 (defmethod lookup-handle ((b ido-pathway-book) name)
   (let ((results 
 	 (loop for sheet in (parsed-sheets b)
-	      for found = (lookup-handle sheet b name)
+	      for found = (lookup-handle sheet name)
 	      when found collect found)))
-    (if (null (cdr found))
-	(car found)
-	(error "handled defined more than once, ~s: ~s" name found))))
+    (if (null (cdr results))
+	(car results)
+	(progn
+	  (warn "handled defined more than once, ~s: ~s" name found)
+	  results))))
+
+(defmethod where-is-handle ((b ido-pathway-book) name)
+  (loop for sheet in (parsed-sheets b)
+     for found = (lookup-handle sheet name)
+     when found collect sheet))
 
 (defmethod parse-book ((b ido-pathway-book) &key (handles? t))
   (when handles? 
@@ -64,7 +71,8 @@
 
 (defclass ido-pathway-sheet (parsed-sheet)
   ((lookup-table :accessor lookup-table :initarg :lookup-table :initform (make-hash-table :test 'equalp))
-   (handle-lookup-sheets )
+   (handle-lookup-sheets)
+   (sheet-id :accessor sheet-id :initform "")
    ))
 
 (defmethod after-all-sheets-parsed ((s ido-pathway-sheet))
@@ -74,15 +82,29 @@
   (if (slot-boundp s 'handle-lookup-sheets )
       (slot-value s 'handle-lookup-sheets)
       (let* ((info-block (find 'parsed-sheet-info-block (parsed-blocks s) :key 'type-of))
-	     (uses (and info-block (remove nil (cdr (find "uses entities from" (block-rows info-block) :key 'car :test 'equalp))))))
+	     (uses (and info-block
+			(apply 'append (mapcar (lambda(e) (split-at-regex e "\\s*[,;]\\s*")) 
+					       (remove nil (cdr (find "uses entities from" (block-rows info-block) :key 'car :test 'equalp))))))))
+	(setf (sheet-id s) (and info-block (sheet-id info-block)))
 	(setf (slot-value s 'handle-lookup-sheets)
 	      (loop for used in uses
-		 for sheet =  (find used (parsed-sheets (sheet-book s)) :key
-				    (lambda(s) (let ((info (find 'parsed-sheet-info-block (parsed-blocks s) :key 'type-of)))
-						 (and info (sheet-id info))))
-				    :test 'equal)
-		 if (not sheet) do (push (format nil "Didn't find sheet ~a listed as uses entities from in ~a" used s) (parse-errors sheet))
+		 for sheet =  (or (find used (parsed-sheets (sheet-book s)) :key
+					(lambda(s) (let ((info (find 'parsed-sheet-info-block (parsed-blocks s) :key 'type-of)))
+						     (and info (sheet-id info))
+						     ))
+					:test 'equalp)
+				  (find used (parsed-sheets (sheet-book s)) :key 'sheet-name :test 'equalp))
+		 if (not sheet) do (push (format nil "Didn't find sheet ~a listed as uses entities from in ~a~%" used s) (parse-errors s))
 		 else collect sheet)))))
+
+(defmethod print-object ((o parsed-sheet) stream)
+  (let ((*print-case* :downcase))
+    (print-unreadable-object (o stream :type t :identity nil)
+      (format stream "~a[~a] in ~a - ~a blocks"
+	      (sheet-name o)
+	      (sheet-it o)
+	      (book-path (sheet-book o))
+	      (length (parsed-blocks o))))))
 		   
 (defmethod clear-handles ((s ido-pathway-sheet))
   (setf (lookup-table s) (make-hash-table :test 'equalp)))
@@ -104,7 +126,7 @@
   (or (gethash name (lookup-table s))
       (loop for sheet in (handle-lookup-sheets s)
 	 for found = (gethash name (lookup-table sheet))
-	 do (return-from lookup-handle found))))
+	 when found do (return-from lookup-handle found))))
 
 (defmethod classify-handles ((book ido-pathway-book))
   (loop for block in (remove 'parsed-handle-block (parsed-blocks book) :test-not 'eq :key 'type-of)
@@ -116,7 +138,7 @@
 	  if (null class)
 	  do (push row no-class)
 	  else do
-	    (let ((simple (car (all-matches class "^(\\S+):(\\d+)$" 1 2))))
+	    (let ((simple (car (all-matches class "^(\\S+):(\\d+|submitted)$" 1 2))))
 	      (if simple
 		  (incf (gethash (car simple) byprefix 0))
 		(if (#"matches" class "^(PFAM:){0,}PF\\d+$")
@@ -242,16 +264,30 @@
     (and string
 	 (let ((realizations (split-at-regex string "\\s+(;|(and))\\s+")))
 	   (loop for r in realizations
-		for matches = (all-matches r "^\\s*([A-Za-z0-9-]+)\\s+of\\s+(\\S+)(\\s+part of\\s+([A-Za-z0-9-]+)){0,1}\\s*$"
-					   1 2 4 )
-		do (if (null matches)
-		       (push (format nil "Don't recognize form of realizations expression: '~a'" r) (parse-errors p))
-		       (push matches (process-realizes p))))))))
+	      for matches = (all-matches r "^\\s*([A-Za-z0-9-]+)\\s+of\\s+(\\S+)(\\s+((part of)|(in)|)\\s+([A-Za-z0-9-]+)){0,1}\\s*$"
+					 1 2 7 )
+	      do (if (null matches)
+		     (push (format nil "Don't recognize form of realizations expression: '~a'" r) (parse-errors p))
+		     (progn
+		       (push matches (process-realizes p))
+		       (loop for match in matches
+			    do
+			    (loop for element in match
+			       when (and element (not (lookup-handle (in-sheet (in-block p)) element)))
+			       do
+				 (push (format nil "Didn't find handle for realization element '~a' in '~a'" element r) (parse-errors p))))
+		     )))))))
 
 (defmethod verify-process-handles ((p parsed-process))
   (loop for (nil handle) in (append (process-substrates p) (process-products p))
        for found = (lookup-handle (in-sheet (in-block p))  handle)
-       unless found do (format t "Didn't find handle ~a from ~a~%" handle p)))
+       unless (or found (equal handle "0")) do
+       (let ((somewhere (where-is-handle (sheet-book (in-sheet (in-block p))) handle)))
+	 (format t "Didn't find handle ~a from ~a~a~%" handle p
+		 (if somewhere
+		     (format nil " did you mean to use handles from ~{~a~^ or ~}" somewhere)
+		     "")
+		 ))))
 
 (defmethod print-summary ((o parsed-process))
   (format nil "~s" (car (cell-list o))))
