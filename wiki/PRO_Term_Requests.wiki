@@ -2,7 +2,7 @@
 
 = Introduction =
 
-This page is used to coordinate the submission of term requests to the Protein Ontology.  Before making a term request, please check the list below to see whether the term you need has already been requested.  If it has not, please add the term to the list and make your request.
+This page is used to coordinate the submission of term requests to the Protein Ontology.  Before making a term request, please check the list below to see whether the term you need has already been requested.  If it has not, please add the term to the list and make your request.  Once you receive a PRO ID for your requested term, please remove the term from the list.
 
 
 = Details =
