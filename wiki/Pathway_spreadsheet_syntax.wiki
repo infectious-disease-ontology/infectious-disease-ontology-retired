@@ -1,4 +1,4 @@
-This page describes the syntax for pathway spreadsheets.
+#summary This page describes the syntax for pathway spreadsheets.
 
 = Introduction =
 
