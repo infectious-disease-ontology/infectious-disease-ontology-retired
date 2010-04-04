@@ -10,10 +10,12 @@
 	  (setf (gethash class table) (make-instance class))))))
 
 (defmethod class-slot-value ((class symbol) slot)
-  (slot-value (mop::class-prototype (find-class class)) slot))
+  (class-slot-value (find-class class)) slot)
 
 (defmethod class-slot-value ((class standard-class) slot)
-  (slot-value (mop::class-prototype class) slot))
+  (if (slot-boundp (mop::class-prototype class) slot)
+      (slot-value (mop::class-prototype class) slot)
+      (slot-value (initialize-instance (mop::class-prototype class)) slot)))
 
 #+abcl (defmethod print-object :around ((o t) s)
   (multiple-value-bind (value errorp)
@@ -66,6 +68,35 @@
   (loop for class in (remove-duplicates (system:class-direct-subclasses (find-class 'ido-pathway-block)) :key 'class-name)
        collect (list* (class-name class) (class-slot-value class 'block-headers))))
 
+(defmethod blocks-of-type  ((book ido-pathway-book) type)
+  (remove type (parsed-blocks book) :test-not 'eq :key 'type-of))
+
+(defmethod foreach-row-in-block-type ((book ido-pathway-book) type fn)
+  (loop for block in (blocks-of-type book type)
+       do (loop for raw-row in (block-rows block) for row in (parsed-rows block) do (funcall fn row))))
+
+(defmethod write-external.owl ((book ido-pathway-book))
+  (let ((axioms nil))
+    (foreach-row-in-block-type 
+		 book 'parsed-handle-block 
+		 (lambda(e)
+		   (unless (or (not (uri-p (handle-uri e)))
+			       (equal (handle-class e) "submitted"))
+		     (multiple-value-bind (ont-uri ont-name) (term-ontology e)
+		       (when (member ont-name '("CHEBI" "GO" "SO" "PATO") :test 'equal)
+			 (setq axioms
+			       (append 
+				`((declaration (class ,(handle-uri e)))
+				  (subclassof ,(handle-uri e) ,(mireot-parent-term e))
+				  (annotationassertion !obo:IAO_0000412 ,(handle-uri e) ,ont-uri))
+				axioms)))))))
+    (with-ontology external (:about !obo:ido/external.owl :base !obo: :eval t)
+       axioms
+      (write-rdfxml external "ido:immunology;external.owl"))))
+    
+
+  
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Sheets
 
@@ -102,7 +133,7 @@
     (print-unreadable-object (o stream :type t :identity nil)
       (format stream "~a[~a] in ~a - ~a blocks"
 	      (sheet-name o)
-	      (sheet-it o)
+	      (sheet-id o)
 	      (book-path (sheet-book o))
 	      (length (parsed-blocks o))))))
 		   
@@ -129,7 +160,7 @@
 	 when found do (return-from lookup-handle found))))
 
 (defmethod classify-handles ((book ido-pathway-book))
-  (loop for block in (remove 'parsed-handle-block (parsed-blocks book) :test-not 'eq :key 'type-of)
+  (loop for block in (blocks-of-type book 'parsed-handle-block)
      with no-class with byprefix = (make-hash-table :test 'equal)
      do
        (loop
@@ -149,15 +180,14 @@
        finally (return (values byprefix no-class)))))
 
 (defmethod verify-process-handles ((book ido-pathway-book))
-  (loop for block in (remove 'parsed-process-block (parsed-blocks book) :test-not 'eq :key 'type-of)
+  (loop for block in (blocks-of-type book 'parsed-process-block)
      append
        (map nil 'verify-process-handles (parsed-rows block))))
 
 (defmethod parse-realizations ((book ido-pathway-book))
-  (loop for block in (remove 'parsed-process-block (parsed-blocks book) :test-not 'eq :key 'type-of)
+  (loop for block in (blocks-of-type book 'parsed-process-block)
      append
        (map nil 'parse-realizations (parsed-rows block))))
-
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -217,6 +247,7 @@
    (handle-kind :accessor handle-kind :initarg :handle-kind :initform nil)
    (handle-class :accessor handle-class :initarg :handle-class :initform nil)
    (handle-super :accessor handle-super :initarg :handle-super :initform nil)
+   (handle-uri :accessor handle-uri :initarg :handle-uri :initform nil)
   ))
 
 (defmethod parse-row ((h parsed-handle))
@@ -231,6 +262,113 @@
 
 (defmethod print-summary ((o parsed-handle))
   (format nil "~s" (handle o)))
+
+(defmethod handle-uri :around ((o parsed-handle))
+  (or (call-next-method) (setf (handle-uri o) (compute-handle-uri o))))
+
+(defun legacy-uri (prefix id handle)
+  (cond ((#"matches" id "^\\d+$")
+         (make-uri (format nil "http://purl.org/obo/owl/~a#~a_~a" prefix prefix id)))
+	((equal id "submitted")
+	 (make-uri (make-uri (format nil "http://purl.org/obo/owl/~a#submitted_~a" prefix (string-downcase handle)))))
+	(t (error "Don't know how to make uri for ~a:~a (~a)" prefix id handle))))
+
+(defun obolibrary-uri (prefix id handle)
+  (cond ((#"matches" id "^\\d+$")
+         (make-uri (format nil "http://purl.obolibrary.org/obo/~a_~a" prefix id)))
+	((equal id "submitted")
+	 (make-uri (make-uri (format nil "http://purl.obolibrary.org/obo/~a_submitted_~a" prefix (string-downcase handle)))))
+	(t (error "Don't know how to make uri for ~a:~a (~a)" prefix id handle))))
+
+(defun pfam-defined-protein-part-uri (id)
+  (make-uri (format nil "http://purl.obolibrary.org/obo/PF_~a"  id)))
+
+'(with-open-file (f "~/Downloads/2010-04-04/pfamA.txt")
+	   (loop for line = (read-line f nil :eof)	
+		repeat 5
+		for fields = (mapcar (lambda(e) (#"replaceAll" e "(^')|('$)" "")) (split-at-char line #\tab))
+	      do (print (cons (nth 4 fields) (nth 8 fields) ))))
+
+(defmethod compute-handle-uri ((o parsed-handle))
+  (let ((handle (handle o))
+	(desc (handle-description o))
+	(type (handle-kind o))
+	(id (handle-class o))
+	(super (handle-super o)))
+    (flet ((compute-uri (base prefix id handle)
+	     (cond ((#"matches" id "^\\d+$")
+		    (make-uri (format nil "http://purl.obolibrary.org/obo/~a_~a" prefix id)))
+		   ((equal id "submitted")
+		    (make-uri (format nil "http://purl.obolibrary.org/obo/~a_submitted_~a" prefix (string-downcase handle))))
+		   (t (error "")))))
+      (unless (null id)
+	(destructuring-bind (prefix id) (or (car (all-matches id "(.*):(.*)" 1 2))
+					    (car (all-matches id "(PF)(.*)" 1 2))) ; handle PF without "PFAM" prefix.
+	  (cond ((equal prefix "GO")
+		 (assert (or (#"matches" id "^\\d+") (equal id "submitted")) (id) "GO id GO:~a malformed" id)
+		 (legacy-uri "GO" id handle)) 
+		((equal prefix "PRO")
+		 (obolibrary-uri "PRO" id handle))
+		((equal prefix "MI")
+					;("compr" "competitor" "role" "MI:0941" NIL) 
+					;("compb" "competition binding" "process" "MI:0405" NIL) 
+		 ;; not used
+		 (warn "Not translating MI term MI:~a" id)
+		 )
+		((equal prefix "PMID") (warn "~a ~a" handle id))
+		((equal prefix "SO")
+		 (legacy-uri "SO" id handle)
+		 ;; http://www.cbrc.jp/htbin/bget_tfmatrix?M00258 - ISRE. What gene is ISRE upstream of?
+					;("ISREdnas" "double strand dna sequence transcript_bound_by_protein" "double strand dna sequence   bound by protein" "SO:0000279" NIL)
+					; fixme
+		 )
+		((or (equal prefix "PF") (equal prefix "PFAM"))
+		 (pfam-defined-protein-part-uri (#"replaceFirst" id "PF" "")))
+		((equal prefix "PATO")
+		 (legacy-uri "PATO" id handle))
+		((equal prefix "MOD"))
+					; ("Thrp" "O-phospho L-threonin" "modified aminoacid" "MOD:00047" NIL)  -> CHEBI:37525
+		((equal prefix "CHEBI")
+		 (legacy-uri "CHEBI" id handle)
+		 )
+		(t (error ""))))))))
+
+(defmethod term-ontology ((o parsed-handle))
+  (let ((name (caar (all-matches (uri-full (handle-uri o)) "(GO|SO|PATO|CHEBI)_" 1))))
+    (and name
+	 (return-from term-ontology (values (make-uri (format nil "http://purl.org/obo/owl/~a" name)) name))))
+  (let ((name (caar (all-matches (uri-full (handle-uri o)) "(IDO|PRO|PFAM|OGMS)_" 1))))
+    (and name
+	 (values (make-uri (format nil "http://purl.obolibrary.org/obo/~a" name)) name))))
+
+(defvar *mireot-parent-terms*
+  '((:protein "PRO" !obo:PRO_000000001 !snap:MaterialEntity)
+    (:molecular-function "GO" !oboont:GO#GO_0003674 !snap:Function)
+    (:cellular-component "GO" !oboont:GO#GO_0005575 !snap:MaterialEntity)
+    (:biological-process "GO" !oboont:GO#GO_0008150 !span:ProcessualEntity)
+    (:molecular-entity "CHEBI" !oboont:CHEBI#CHEBI_23367 !snap:MaterialEntity)
+    (:domain "PFAM" !obo:PRO_000018263 !snap:MaterialEntity)  ; amino acid chain. Should there be a term "domain"? SO:0000417 is POLYPEPTIDE_DOMAIN
+    (:quality "PATO" !snap:Quality)
+    (:protein-complex "GO" !oboont:GO#GO_0043234 !snap:MaterialEntity)))
+
+
+(defmethod mireot-parent-term ((o parsed-handle))
+  (multiple-value-bind (ont-uri ont-name) (term-ontology o)
+    (cond ((member ont-name '("PRO" "CHEBI" "PFAM" "PATO") :test 'equal)
+	   (third (find ont-name *mireot-parent-terms* :test 'equal :key 'second)))
+	  ((equal ont-name "GO")
+	   (let ((type (handle-kind o)))
+	     (cond ((member type '("function" "molecular function") :test 'equalp)
+		    (third (assoc :molecular-function *mireot-parent-terms*)))
+		   ((member type '("process" "biological process") :test 'equalp)
+		    (third (assoc :biological-process *mireot-parent-terms*)))
+		   ((member type '("CC" "GO CC" "cellular component") :test 'equalp)
+		    (third (assoc :cellular-component *mireot-parent-terms*)))
+		   ((equalp type "complex")
+		    (third (assoc :protein-complex *mireot-parent-terms*)))
+		   )))
+	  (t (error "Don't know parent for ~a" o)))))
+	   
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
 ;; Processes
@@ -360,17 +498,19 @@
 	    do (format t "~%Did't find ~s from ~s~%" term (append (second parsed) (third parsed)))))
   )
 
-(defun test ()
-  (let* ((book (make-instance 'ido-pathway-book :book-path "ido:immunology;ido-s4lps-tlr4.xlsx")))
+(defun check-pathway-spreadsheet-syntax (&key (path "ido:immunology;ido-s4lps-tlr4.xlsx"))
+  (let* ((book (make-instance 'ido-pathway-book :book-path path)))
     (locate-blocks-in-sheets book (mapcar 'car (block-types book)))
     (parse-book book)
     (report-some-processes book)
     (report-parse-results book)
     book))
 
+;(test)
+
 (defun report-some-processes (book)
   (format t "Processes that pass first level syntax check~%")
-  (loop for bl in (remove 'parsed-process-block (parsed-blocks book) :key 'type-of :test-not 'eq)
+  (loop for bl in (blocks-of-type book 'parsed-process-block)
      do 
      (loop for p in (parsed-rows bl)
 	when (not (parse-errors p)) do (format t "~{~a~^ + ~} -> ~{~a~^ + ~}~%"
@@ -380,7 +520,7 @@
 						  collect (if (equal (car p) 1) (second p) (format nil "~a ~a" (car p) (second p))))))))
 
 (defun report-handles (book)
-  (loop for block in (remove 'parsed-handle-block (parsed-blocks bk) :test-not 'eq :key 'type-of)
+  (loop for block in (blocks-of-type book 'parsed-handle-block)
        with kinds
      do
        (loop for  row in (parsed-rows block) 
@@ -395,14 +535,14 @@
 
 
 (defun is-sole-product-of-reaction (book handle)
-  (loop for block in (remove 'parsed-process-block (parsed-blocks book) :test-not 'eq :key 'type-of)
+  (loop for block in (blocks-of-type book 'parsed-process-block)
      thereis
      (loop for process in (parsed-rows block)
 	for products = (process-products process)
 	thereis (and (= (length products) 1) (equalp (second (car products)) handle)))))
 
 (defun processes-mentioning-handle (book handle)
-  (loop for block in (remove 'parsed-process-block (parsed-blocks book) :test-not 'eq :key 'type-of)
+  (loop for block in (blocks-of-type book 'parsed-process-block)
      thereis
      (loop for process in (parsed-rows block)
 	for products = (process-products process)
