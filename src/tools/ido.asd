@@ -3,22 +3,23 @@
 
 (in-package :asdf)
 
+
 (setf (logical-pathname-translations "ido")
       `(
 	("ido-core;**;*.*" ,(make-pathname :directory (append (butlast (pathname-directory *load-pathname*) 2)
-						       '("src" "ontology" :wild-inferiors))
+						       '("src" "ontology" "ido-core" :wild-inferiors))
 				    :name :wild
 				    :type :wild))
 	("immunology;**;*.*" ,(make-pathname :directory (append (butlast (pathname-directory *load-pathname*) 2)
-						       '("src" "ontology" :wild-inferiors))
+						       '("src" "ontology" "immunology" :wild-inferiors))
 				    :name :wild
 				    :type :wild))
-	("tools;**;*.*" ,(make-pathname :directory (append (butlast (pathname-directory *load-pathname*) 2)
-						       '("src" :wild-inferiors))
+	("tools;**;*.*" ,(make-pathname :directory (append (pathname-directory *load-pathname*)
+						       '(:wild-inferiors))
 				    :name :wild
 				    :type :wild))
 	("lib;**;*.*" ,(make-pathname :directory (append (butlast (pathname-directory *load-pathname*) 2)
-						       '( :wild-inferiors))
+						       '("lib" :wild-inferiors))
 				    :name :wild
 				    :type :wild))
 	))
@@ -28,11 +29,12 @@
     :licence "BSD"
     :components
     ((:file "ido-to-owl")
-     (:file "spreadsheet")
      (:file "pathway-to-owl")
      (:file "obo")
-     (:jar-directory "lib" :pathname "ido:lib;java;poi-3-2-FINAL;")
+     (:module "obi"
+	      :components
+	      ((:file "create-external-derived")))
      )
-    :depends-on (owl))
+    :depends-on (owlapi3 read-ms-docs))
 
 ;;;; eof

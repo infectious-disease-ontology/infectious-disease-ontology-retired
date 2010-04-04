@@ -13,7 +13,7 @@
 				   '("Roles" "Dispositions" "Qualities" "Processes" "Objects"	 
 				     "Object Aggregates" "Temporal Intervals" "Sites" "Defined Classes")
 				   :test 'equal)
-		      append (get-sheet (second sheet) (first sheet)))))
+		      append (get-ido-sheet (second sheet) (first sheet)))))
     (setq @ termdefs)
     (setq @@ sheets)
     (make-ido-term-to-uri termdefs)
@@ -22,7 +22,7 @@
     (make-ido-owl termdefs)
     ))
 
-(defun get-sheet (sheet sheet-name)
+(defun get-ido-sheet (sheet sheet-name)
   (destructuring-bind (headers . rows)
       (loop for rowno from (#"getFirstRowNum" sheet) to (#"getLastRowNum" sheet) 
 	 with nocells = (loop for row below (#"getPhysicalNumberOfRows" sheet)
