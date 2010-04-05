@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/ido/pathway-external.owl#"
-     xml:base="http://purl.obolibrary.org/obo/ido/pathway-external.owl"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/ido/dev/pathway-external.owl#"
+     xml:base="http://purl.obolibrary.org/obo/ido/dev/pathway-external.owl"
      xmlns:PATO="http://purl.org/obo/owl/PATO#"
      xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
      xmlns:owl2="http://purl.org/obo/owl/"
@@ -14,7 +14,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:PRO="http://purl.org/obo/owl/PRO#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/pathway-external.owl"/>
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/dev/pathway-external.owl"/>
     
 
 
@@ -73,14 +73,6 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/CHEBI#CHEBI_9160">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/obo/owl/GO#GO:0032991 -->
-
-    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032991">
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
     </owl:Class>
     
 
@@ -337,6 +329,14 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0031593">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0032991 -->
+
+    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032991">
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
     </owl:Class>
     
 
@@ -1905,14 +1905,6 @@
     
 
 
-    <!-- http://purl.org/obo/owl/GO#GO_0032991 -->
-
-    <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0032991">
-        <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
-    </rdf:Description>
-    
-
-
     <!-- http://purl.org/obo/owl/GO#GO_0000060 -->
 
     <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0000060">
@@ -2165,6 +2157,14 @@
 
     <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0031593">
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0032991 -->
+
+    <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0032991">
+        <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/SO"/>
     </rdf:Description>
     
 
