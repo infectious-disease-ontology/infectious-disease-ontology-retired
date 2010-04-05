@@ -25,8 +25,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Books
 
-(defvar *ido-term-to-uri* (make-hash-table :test 'equalp))
-
 (defclass ido-pathway-book (parsed-book)
   ((sheet-type :initform 'ido-pathway-sheet)))
 
@@ -38,8 +36,8 @@
     (if (null (cdr results))
 	(car results)
 	(progn
-	  (warn "handled defined more than once, ~s: ~s" name found)
-	  results))))
+	  (warn "handled defined more than once, ~s: ~s" name (remove-duplicates results))
+	  (remove-duplicates results)))))
 
 (defmethod where-is-handle ((b ido-pathway-book) name)
   (loop for sheet in (parsed-sheets b)
@@ -389,7 +387,9 @@
    (process-supers :accessor process-supers :initarg :process-supers :initform nil)
    (binding-domains :accessor binding-domains :initarg :binding-domains :initform nil)
    (process-substrates :accessor process-substrates :initarg :process-substrates :initform nil)
-   (process-products :accessor process-products :initarg :process-products :initform nil)))
+   (process-products :accessor process-products :initarg :process-products :initform nil)
+   (process-uri :accessor process-uri :initarg :process-uri :initform nil)
+   ))
 
 (defmethod parse-row ((p parsed-process))
   ;; x + y + x -> a + b -> (:parsed|:notparsed list-of-substrates list-of-products)
