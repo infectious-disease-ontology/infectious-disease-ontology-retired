@@ -123,19 +123,30 @@
 	     (setq axioms
 		   (append 
 		    `((declaration (class ,(handle-uri e)))
-		      (subclassof ,(handle-uri e) ,(mireot-parent-term e))
-		      (annotationassertion !obo:IAO_0000412 ,(handle-uri e) ,ont-uri))
-		    axioms)))))))
-    (with-ontology external (:about !obo:ido/pathway-external.owl :base !obo: :eval t)
-	axioms
-      (write-rdfxml external "ido:immunology;pathway-external.owl"))))
+		      (sub-class-of ,(handle-uri e) ,(mireot-parent-term e))
+		      (annotation-assertion !obo:IAO_0000412 ,(handle-uri e) ,ont-uri)
+		      (annotation-assertion !obo:IAO_0000116 ,(handle-uri e)
+					    ,(format nil "from row ~a of ~a in sheet ~a from workbook ~a"
+						     (in-row e)
+						     (string-downcase (string (type-of (in-block e))))
+						     (sheet-name (in-sheet (in-block e)))
+						     (pathname-name (book-path (sheet-book (in-sheet (in-block e))))))))
+		    (if (#"matches" (handle-class e) ".*submitted.*")
+			`((annotation-assertion !rdfs:label ,(handle-uri e) ,(handle-description e))))
+		    axioms)
+		   ))))))
+    (with-ontology external (:about !obo:ido/dev/pathway-external.owl :base !obo: :eval t)
+	`((imports !obo:iao/ontology-metadata.owl) ,@axioms)
+      (write-rdfxml external "ido:immunology;proto;pathway-external.owl"))))
 
 ;; doesn't yet run in owlapi3 - run in older
 
 (defmethod create-externalDerived.owl ((book ido-pathway-book))
-  (create-external-derived :kb (load-kb-jena "ido:immunology;external.owl")
-			   :output-path "ido:immunology;pathway-external-derived.owl"
+  (create-external-derived :kb (load-kb-jena "ido:immunology;proto;pathway-external.owl")
+			   :output-path "ido:immunology;proto;pathway-external-derived.owl"
 			   :templates-path "ido:tools;immunology-external-templates.txt"))
+
+'(create-external-derived :kb (load-kb-jena "/Users/alanr/repos/infectious-disease-ontology/trunk/src/ontology/immunology/proto/pathway-external.owl") :output-path "/Users/alanr/repos/infectious-disease-ontology/trunk/src/ontology/immunology/proto/pathway-external-derived.owl" :templates-path "~/repos/infectious-disease-ontology/trunk/src/tools/immunology-external-templates.txt" :ontology-uri (uri-full !obo:ido/dev/pathway-external-derived.owl))
 
 (defmethod owl-axioms-for-processes ((book ido-pathway-book))
   (loop for bl in (blocks-of-type book 'parsed-process-block)
@@ -144,16 +155,27 @@
 	    append
 	    (owl-axioms p))))
 
+(def-uri-alias "realizes" !obi:OBI_0000308)
+(def-uri-alias "substrate-disposition" !obi:IDO_0009001)
+(def-uri-alias "product-disposition" !obi:IDO_0009002)
+(def-uri-alias "inheres-in" !<http://purl.org/obo/owl/OBO_REL#inheres_in>)
+
 (defmethod write-pathway.owl ((book ido-pathway-book))
-  (with-ontology spreadsheet (:about !obo:ido/pathway.owl :eval t)
-      `((imports !obo:ido/pathway-external.owl)
-	(imports !obo:ido/pathway-external-derived.owl)
+  (with-ontology spreadsheet (:about !obo:ido/dev/pathway.owl :eval t)
+      `((imports !obo:ido/dev/pathway-external.owl)
+	(imports !obo:ido/dev/pathway-defs.owl)
+	(imports !obo:ido/dev/pathway-external-derived.owl)
 	(imports !bfo:)
 	(imports !obo:iao/ontology-metadata.owl)
 	(imports !oborel:)
 	(declaration (object-property !oborel:has_participant))
+	(declaration (object-property !inheres-in))
+	(declaration (object-property !realizes))
+	(annotation-assertion !rdfs:label !inheres-in "inheres in")
+	(annotation-assertion !rdfs:label !oborel:has_participant "has participant")
+	(annotation-assertion !rdfs:label !realizes "realizes")
 	,@(owl-axioms-for-processes book))
-    (write-rdfxml spreadsheet "ido:immunology;pathway.owl")))
+    (write-rdfxml spreadsheet "ido:immunology;proto;pathway.owl")))
 
 
 (defvar *immunology-uri-id-counter* 10000)
@@ -175,6 +197,19 @@
 	  always (and handle (handle-uri handle)))))
 
 
+(defun process-realizes-that-inheres-in (process realizable bearer)
+  `(sub-class-of ,process
+		 (object-some-values-from
+		  !realizes
+		  (object-intersection-of
+		   ,realizable
+		   (object-some-values-from !inheres-in ,bearer)))))
+
+(defun has-participant-with-stoichiometry (process stoichiometry entity)
+  (if (equal stoichiometry 1)
+      `(sub-class-of ,process (object-some-values-from !oborel:has_participant ,entity))
+      `(sub-class-of ,process (object-min-cardinality ,stoichiometry !oborel:has_participant ,entity))))
+
 (defmethod owl-axioms ((p parsed-process))
   (let ((label 
 	 (format nil "~{~a~^ + ~} -> ~{~a~^ + ~}"
@@ -189,11 +224,15 @@
 	   `((declaration (class ,uri))
 	     (annotation-assertion !rdfs:label ,uri ,label)
 	     ,@(loop for (stoichiometry handle) in (append (process-substrates p) (process-products p))
-		 for entity = (and handle (lookup-handle (in-sheet (in-block p)) handle))
-
-		 collect (if (equal stoichiometry 1)
-			     `(sub-class-of ,uri (object-some-values-from !oborel:has_participant ,(handle-uri entity)))
-			     `(sub-class-of ,uri (object-min-cardinality ,stoichiometry !oborel:has_participant ,(handle-uri entity)))))
+		  for entity = (and handle (lookup-handle (in-sheet (in-block p)) handle))
+		  collect (has-participant-with-stoichiometry uri stoichiometry (handle-uri entity))
+		  append (when (and (member handle (process-substrates p) :key 'second :test 'equal)
+				    (not (member handle (process-products p) :key 'second :test 'equal)))
+			   (list (process-realizes-that-inheres-in uri !substrate-disposition (handle-uri entity))))
+		  append 
+		    (when (and (not (member handle (process-substrates p) :key 'second :test 'equal))
+			       (member handle (process-products p) :key 'second :test 'equal))
+		      (list (process-realizes-that-inheres-in uri !product-disposition (handle-uri entity)))))
 	     (sub-class-of ,uri !span:ProcessualEntity))))))
 
-	    
+
