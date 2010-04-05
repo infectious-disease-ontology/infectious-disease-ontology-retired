@@ -38,8 +38,8 @@
     xmlns:chebi="http://purl.org/obo/owl/CHEBI#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
-  xml:base="http://purl.obolibrary.org/obo/ido/pathway-external-derived.owl">
-  <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/pathway-external-derived.owl"/>
+  xml:base="http://purl.obolibrary.org/obo/ido/dev/pathway-external-derived.owl">
+  <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/dev/pathway-external-derived.owl"/>
   <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051649">
     <obi:IAO_0000111 xml:lang="en">establishment of localization in cell</obi:IAO_0000111>
     <obi:IAO_0000115 xml:lang="en">The directed movement of a substance or cellular entity, such as a protein complex or organelle, to a specific location within, or in the membrane of, a cell.</obi:IAO_0000115>
@@ -2387,7 +2387,6 @@
     <rdfs:label xml:lang="en">protein K48-linked ubiquitination</rdfs:label>
     <obi:IAO_0000115 xml:lang="en">A protein ubiquitination process in which a polymer of ubiquitin, formed by linkages between lysine residues at position 48 of the ubiquitin monomers, is added to a protein. K48-linked ubiquitination targets the substrate protein for degradation.</obi:IAO_0000115>
   </owl:Class>
-  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032991"/>
   <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016301">
     <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     <rdfs:subClassOf>

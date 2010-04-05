@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/ido/pathway.owl#"
-     xml:base="http://purl.obolibrary.org/obo/ido/pathway.owl"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/ido/dev/pathway.owl#"
+     xml:base="http://purl.obolibrary.org/obo/ido/dev/pathway.owl"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
@@ -12,10 +12,10 @@
      xmlns:PRO="http://purl.org/obo/owl/PRO#"
      xmlns:SO="http://purl.org/obo/owl/SO#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/pathway.owl">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/dev/pathway.owl">
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/ontology-metadata.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/pathway-external-derived.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/pathway-external.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/dev/pathway-external-derived.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/dev/pathway-external.owl"/>
         <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1#"/>
         <owl:imports rdf:resource="http://www.obofoundry.org/ro/ro.owl#"/>
     </owl:Ontology>
@@ -76,13 +76,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000001780"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps-tmirk4"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps-tmirk4"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000001780"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -97,6 +97,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps-tmirk4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000001782"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -104,12 +110,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps-tmirk4irk1"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps-tmirk4"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -124,13 +124,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps-tmirk4irk1p"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps-tmirk4irk1"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps-tmirk4irk1"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps-tmirk4irk1p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -166,13 +166,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002382"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps-tmirk4irk1pptf6"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps-tmirk4irk1pptf6"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002382"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -220,7 +220,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1pptf6"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003141"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -232,7 +232,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003141"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1pptf6"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -247,7 +247,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1pptf6pelti"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003286"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -259,7 +259,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003286"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1pptf6pelti"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -274,6 +274,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000016963"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1pptf6k63ubpelti"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -281,12 +287,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1pptf6pelti"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000016963"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -307,6 +307,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000016963"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1pptf6k63ubpelti"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -314,12 +320,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1pptf6pubpel"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000016963"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -340,13 +340,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1pptf6pubpelp"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1pptf6pubpel"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1pptf6pubpel"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1pptf6pubpelp"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -361,13 +361,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1ubpptf6pubpelp"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1pptf6pubpelp"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1pptf6pubpelp"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1ubpptf6pubpelp"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -382,6 +382,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1ubpptf6pubpelpikbk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0008385"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -389,12 +395,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1ubpptf6pubpelp"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1ubpptf6pubpelpikbk"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -436,13 +436,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_ikbspnfkb"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000016963"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000016963"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_ikbspnfkb"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -463,6 +463,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_nfkb"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_ikbspk48ubnfkb"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -470,12 +476,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_ikbspk48ub"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_nfkb"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -490,12 +490,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_nfkbimpalpha4"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -503,6 +497,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_nfkb"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_nfkbimpalpha4"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -517,7 +517,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_nfkbimpalpha4"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_9160"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -535,7 +535,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_9160"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_nfkbimpalpha4"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -604,12 +604,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2-tt-trf3-tank63ub-ikke"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -617,6 +611,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2-tt-trf3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2-tt-trf3-tank63ub-ikke"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -706,13 +706,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003260"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf3p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf3p"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003260"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -727,12 +727,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf7p"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003260"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -740,6 +734,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003280"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf7p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -754,13 +754,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000013875"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pp65"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pp65"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000013875"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -781,6 +781,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf3pimpalpha4"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -788,12 +794,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf3p"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -841,13 +841,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf7pirf7p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf7pirf7p"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -862,12 +862,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf7p"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf7pimpalpha4"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -875,6 +869,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf7p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -889,12 +889,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf3p"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#submitted_isrednas"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -902,6 +896,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf3pisrednas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf3p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -916,6 +916,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000001773"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_16412"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -923,12 +929,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#submitted_lbplps"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000001773"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -949,6 +949,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#submitted_lbplps"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#submitted_cslps"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -956,12 +962,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002147"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#submitted_lbplps"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -976,7 +976,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_r2lps"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0046696"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -988,13 +988,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#submitted_lbplps"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_r2lps"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0046696"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#submitted_lbplps"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1016,13 +1016,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_r1lps"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_r1lps"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1037,7 +1037,8 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2"/>
+                <owl:onClass rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002149"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1049,8 +1050,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:onClass rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002149"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1062,6 +1062,12 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0010101">
         <rdfs:label>rlps2 + tirappip2 -&gt; rlps2-tirap + pip2</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2-tirap"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
@@ -1078,12 +1084,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tirappip2"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2-tirap"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1104,13 +1104,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000001750"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000001750"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1125,13 +1125,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2-tm"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000001740"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000001740"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2-tm"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1158,13 +1158,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000001749"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2-tt"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2-tt"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000001749"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1179,13 +1179,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000000103"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk3p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk3p"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000000103"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1212,13 +1212,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk3pmapk1"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk3p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk3p"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk3pmapk1"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1233,7 +1233,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk6p"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk6pmapk1"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1245,7 +1245,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk6pmapk1"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk6p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1260,7 +1260,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk6p"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000000454"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1272,7 +1272,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000000454"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk6p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1287,6 +1287,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000000454"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_impalpha"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1294,12 +1300,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mapk1pimpalpha"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000000454"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1314,7 +1314,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk4pjnk"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002206"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1326,7 +1326,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002206"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk4pjnk"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1341,12 +1341,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk4pjnk"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk4p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1354,6 +1348,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_jnkp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk4pjnk"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1374,13 +1374,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk7p"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002206"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002206"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk7p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1395,12 +1395,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk7p"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_jnkp"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1408,6 +1402,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk7pjnk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_mkk7p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1422,12 +1422,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_jnkpimpalpha"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_jnkp"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1435,6 +1429,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_impalpha"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_jnkpimpalpha"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1455,13 +1455,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2-tms"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_myd88s"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_myd88s"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2-tms"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1503,6 +1503,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000001784"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps-tmirk4irkm"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1510,12 +1516,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps-tmirk4"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000001784"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1530,12 +1530,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_cyld"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1pptf6k63ubpelti"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1543,6 +1537,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irk1pptf6pelti"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_cyld"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1584,13 +1584,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002110"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2-tirap"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2-tirap"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002110"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1611,7 +1611,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2-tirapp"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tirappsocs1"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1629,7 +1629,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tirappsocs1"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_rlps2-tirapp"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1650,13 +1650,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tirappsocs1"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000016963"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000016963"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tirappsocs1"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
