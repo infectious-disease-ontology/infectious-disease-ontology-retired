@@ -28,14 +28,15 @@
     :name "Infectious disease ontology"
     :licence "BSD"
     :components
-    ((:file "ido-to-owl")
-     (:file "pathway-to-owl")
+    ((:file "obo")
+     (:file "ido-to-owl")
      (:file "parse-pathway-spreadsheet")
-     (:file "obo")
+     (:file "pathway-to-owl")
      (:module "obi"
 	:components
 	((:file "create-external-derived")))
      )
-    :depends-on (owlapi3 read-ms-docs))
+    :depends-on (owlapi3 read-ms-docs)
+    :serial t)
 
 ;;;; eof
