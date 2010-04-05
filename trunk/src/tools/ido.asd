@@ -30,10 +30,11 @@
     :components
     ((:file "ido-to-owl")
      (:file "pathway-to-owl")
+     (:file "parse-pathway-spreadsheet")
      (:file "obo")
      (:module "obi"
-	      :components
-	      ((:file "create-external-derived")))
+	:components
+	((:file "create-external-derived")))
      )
     :depends-on (owlapi3 read-ms-docs))
 
