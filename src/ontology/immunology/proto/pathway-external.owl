@@ -107,7 +107,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0000060">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <obo:IAO_0000116>handle pint from row 41 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle pint from row 40 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -187,7 +187,7 @@
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0004842">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
         <obo:IAO_0000116>handle udpla from row 96 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
-        <obo:IAO_0000116>handle E3l from row 104 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle E3l from row 105 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -262,6 +262,16 @@
     
 
 
+    <!-- http://purl.org/obo/owl/GO#GO_0006461 -->
+
+    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006461">
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
+        <obo:IAO_0000116>handle pca from row 98 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/obo/owl/GO#GO_0006468 -->
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006468">
@@ -276,8 +286,8 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006511">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <obo:IAO_0000116>handle 0.0d0 from row 118 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000116>handle ubdpcp from row 88 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle 0.0d0 from row 119 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -317,7 +327,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008139">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
-        <obo:IAO_0000116>handle nlsb from row 105 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle nlsb from row 106 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -356,7 +366,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016301">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
-        <obo:IAO_0000116>handle Ka from row 99 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle Ka from row 100 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -377,7 +387,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019900">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
-        <obo:IAO_0000116>handle Kb from row 98 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle Kb from row 99 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -407,7 +417,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0030506">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
-        <obo:IAO_0000116>handle ankb from row 106 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle ankb from row 107 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -417,7 +427,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0031593">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
-        <obo:IAO_0000116>handle pubb from row 103 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle pubb from row 104 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -428,16 +438,6 @@
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032991">
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/SO"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/obo/owl/GO#GO_0033256 -->
-
-    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0033256">
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0005575"/>
-        <obo:IAO_0000116>handle IRF3p+p65-&gt;IRF3pp65 from row 67 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
-        <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
 
@@ -472,11 +472,11 @@
     
 
 
-    <!-- http://purl.org/obo/owl/GO#GO_0035362 -->
+    <!-- http://purl.org/obo/owl/GO#GO_0035370 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0035362">
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <obo:IAO_0000116>handle ISREbinding from row 24 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0035370">
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0005575"/>
+        <obo:IAO_0000116>handle Ubc13-Uev1A from row 66 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -506,8 +506,8 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042803">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
-        <obo:IAO_0000116>handle phom from row 32 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000116>handle phom from row 39 of parsed-handle-block in sheet TLR401 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle phom from row 31 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -517,7 +517,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043130">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
-        <obo:IAO_0000116>handle ubb from row 102 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle ubb from row 103 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -546,7 +546,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043496">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <obo:IAO_0000116>handle phomp from row 37 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle phomp from row 36 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -556,7 +556,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043497">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <obo:IAO_0000116>handle phetp from row 38 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle phetp from row 37 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -576,7 +576,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044197">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
-        <obo:IAO_0000116>handle rhdb from row 107 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle rhdb from row 108 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -616,7 +616,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0046982">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
-        <obo:IAO_0000116>handle phet from row 33 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle phet from row 32 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -636,9 +636,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0055131">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <obo:IAO_0000116>handle RLb from row 108 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
-        <obo:IAO_0000116>handle zfbd from row 86 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle RLb from row 109 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -648,7 +646,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0065004">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <obo:IAO_0000116>handle pDca from row 40 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle pDca from row 39 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -688,7 +686,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0070628">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
-        <obo:IAO_0000116>handle protsb from row 109 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle protsb from row 110 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -718,7 +716,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0071523">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <obo:IAO_0000116>handle tirdbp from row 34 of parsed-handle-block in sheet TLR401 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle tirdp from row 34 of parsed-handle-block in sheet TLR401 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -758,17 +756,27 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0071534">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <obo:IAO_0000116>handle trafdbp from row 78 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle trafdp from row 78 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/obo/owl/GO#GO_0071535 -->
+    <!-- http://purl.org/obo/owl/GO#GO_0071536 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0071535">
+    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0071536">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
         <obo:IAO_0000116>handle RLbp from row 82 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0071537 -->
+
+    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0071537">
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
+        <obo:IAO_0000116>handle zfbd from row 86 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -818,7 +826,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_2880558">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
-        <obo:IAO_0000116>handle trafdb from row 31 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle trafdb from row 30 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -840,7 +848,7 @@
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#submitted_isreb">
         <rdfs:label>ISRE binding activity</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
-        <obo:IAO_0000116>handle ISREb from row 34 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle ISREb from row 33 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -879,22 +887,11 @@
     
 
 
-    <!-- http://purl.org/obo/owl/GO#submitted_ubc13-uev1a -->
-
-    <owl:Class rdf:about="http://purl.org/obo/owl/GO#submitted_ubc13-uev1a">
-        <rdfs:label>UBC13-Uev1A complex</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0005575"/>
-        <obo:IAO_0000116>handle Ubc13-Uev1A from row 66 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
-        <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/obo/owl/PATO#PATO_0000648 -->
 
     <owl:Class rdf:about="http://purl.org/obo/owl/PATO#PATO_0000648">
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
-        <obo:IAO_0000116>handle ob from row 101 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle ob from row 102 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PATO"/>
     </owl:Class>
     
@@ -904,7 +901,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/PATO#PATO_0001505">
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
-        <obo:IAO_0000116>handle sf from row 100 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle sf from row 101 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PATO"/>
     </owl:Class>
     
@@ -1570,6 +1567,7 @@
         <rdfs:label>IRF3p+p65</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/PRO#PRO_000000001"/>
         <obo:IAO_0000116>handle IRF3pp65 from row 14 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle IRF3pp65 from row 67 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PRO"/>
     </owl:Class>
     
@@ -2142,7 +2140,7 @@
     <owl:Class rdf:about="http://purl.org/obo/owl/PRO#submitted_rlps2-tt-trf3">
         <rdfs:label>rlps2-tt+traf3</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/PRO#PRO_000000001"/>
-        <obo:IAO_0000116>handle rlps2-tt-trf3 from row 25 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle rlps2-tt-trf3 from row 24 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PRO"/>
     </owl:Class>
     
@@ -2153,7 +2151,7 @@
     <owl:Class rdf:about="http://purl.org/obo/owl/PRO#submitted_rlps2-tt-trf3-tank63ub">
         <rdfs:label>rlps2-tt-trf3+TANKK63ub</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/PRO#PRO_000000001"/>
-        <obo:IAO_0000116>handle rlps2-tt-trf3-tank63ub from row 29 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle rlps2-tt-trf3-tank63ub from row 28 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PRO"/>
     </owl:Class>
     
@@ -2164,7 +2162,7 @@
     <owl:Class rdf:about="http://purl.org/obo/owl/PRO#submitted_rlps2-tt-trf3-tank63ub-ikke">
         <rdfs:label>rlps2-tt-trf3-tank63ub+IKKe</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/PRO#PRO_000000001"/>
-        <obo:IAO_0000116>handle rlps2-tt-trf3-tank63ub-IKKe from row 27 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle rlps2-tt-trf3-tank63ub-IKKe from row 26 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PRO"/>
     </owl:Class>
     
@@ -2175,7 +2173,7 @@
     <owl:Class rdf:about="http://purl.org/obo/owl/PRO#submitted_rlps2-tt-trf3-tbk1-tank-ikke">
         <rdfs:label>rlps2-tt+traf3+TBK1-tank-Ikke</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/PRO#PRO_000000001"/>
-        <obo:IAO_0000116>handle rlps2-tt-trf3-TBK1-tank-IKKe from row 26 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle rlps2-tt-trf3-TBK1-tank-IKKe from row 25 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PRO"/>
     </owl:Class>
     
@@ -2186,7 +2184,7 @@
     <owl:Class rdf:about="http://purl.org/obo/owl/PRO#submitted_rlps2-tt-trf3-tbk1-tankk63ub-ikke">
         <rdfs:label>rpls2-tt-trf3-TBK1-tankk63ub-IKKe tank ubiquitinqted</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/PRO#PRO_000000001"/>
-        <obo:IAO_0000116>handle rlps2-tt-trf3-TBK1-tankk63ub-IKKe from row 28 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle rlps2-tt-trf3-TBK1-tankk63ub-IKKe from row 27 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PRO"/>
     </owl:Class>
     
@@ -2296,7 +2294,7 @@
     <owl:Class rdf:about="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke">
         <rdfs:label>TBK1-Tank-IKKe, tank in the complex is  ubiquitinated</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/PRO#PRO_000000001"/>
-        <obo:IAO_0000116>handle TBK1tankk63ubIKKe from row 30 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle TBK1tankk63ubIKKe from row 29 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PRO"/>
     </owl:Class>
     
@@ -2401,12 +2399,11 @@
     
 
 
-    <!-- http://purl.org/obo/owl/SO#submitted_isrednas -->
+    <!-- http://purl.org/obo/owl/SO#SO_0000279 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/SO#submitted_isrednas">
-        <rdfs:label>Interferon stimulated response element</rdfs:label>
+    <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000279">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0032991"/>
-        <obo:IAO_0000116>handle ISREdnas from row 39 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle ISREdnas from row 38 of parsed-handle-block in sheet TLR403 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/SO"/>
     </owl:Class>
 </rdf:RDF>
