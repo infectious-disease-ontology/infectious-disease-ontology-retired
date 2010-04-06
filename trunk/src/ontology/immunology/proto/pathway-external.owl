@@ -216,7 +216,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005634">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0005575"/>
-        <obo:IAO_0000116>handle rlps-tt-trf3+TBK1-tank-IKKe-&gt; rlps2-tt-trf3-TBK1-tank-IKKe from row 62 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle nuc from row 62 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -226,7 +226,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005737">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0005575"/>
-        <obo:IAO_0000116>handle rlps2-tt-trf3-TBK1-tank-IKKe+ub-&gt;  rlps2-tt-trf3-TBK1-tankk63ub-IKKe from row 63 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle cyto from row 63 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -246,7 +246,7 @@
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005938">
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0005575"/>
-        <obo:IAO_0000116>handle rlps2-tt-trf3-tank63ub-&gt;rlps2-tt-trf3+TBK1tank63ubIKKe from row 64 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
+        <obo:IAO_0000116>handle pcyto from row 64 of parsed-handle-block in sheet TLR402 from workbook IDO-S4LPS-TLR4</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
