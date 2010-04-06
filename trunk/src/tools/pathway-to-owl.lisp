@@ -103,6 +103,24 @@
 		   )))
 	  (t (error "Don't know parent for ~a" o)))))
 
+(defmethod spreadsheet-source-editor-note ((e parsed-handle))
+  `(annotation-assertion !obo:IAO_0000116 ,(handle-uri e)
+			 ,(format nil "handle ~a from row ~a of ~a in sheet ~a from workbook ~a"
+				  (handle e)
+				  (in-row e)
+				  (string-downcase (string (type-of (in-block e))))
+				  (sheet-name (in-sheet (in-block e)))
+				  (pathname-name (book-path (sheet-book (in-sheet (in-block e))))))))
+
+(defmethod spreadsheet-source-editor-note ((e parsed-process))
+  `(annotation-assertion !obo:IAO_0000116 ,(process-uri e)
+			 ,(format nil "process ~a from row ~a of ~a in sheet ~a from workbook ~a"
+				  (car (cell-list e))
+				  (in-row e)
+				  (string-downcase (string (type-of (in-block e))))
+				  (sheet-name (in-sheet (in-block e)))
+				  (pathname-name (book-path (sheet-book (in-sheet (in-block e))))))))
+
 (defmethod write-external.owl ((book ido-pathway-book))
   (let ((axioms 
 	 (loop for (kind where term parent) in *mireot-parent-terms*
@@ -115,9 +133,7 @@
     (foreach-row-in-block-type 
      book 'parsed-handle-block 
      (lambda(e)
-       (unless (or (not (uri-p (handle-uri e)))
-		   ;(equal (handle-class e) "submitted")
-		   )
+       (unless (not (uri-p (handle-uri e)))
 	 (multiple-value-bind (ont-uri ont-name) (term-ontology e)
 	   (when (member ont-name '("CHEBI" "GO" "SO" "PATO" "PRO") :test 'equal)
 	     (setq axioms
@@ -125,12 +141,7 @@
 		    `((declaration (class ,(handle-uri e)))
 		      (sub-class-of ,(handle-uri e) ,(mireot-parent-term e))
 		      (annotation-assertion !obo:IAO_0000412 ,(handle-uri e) ,ont-uri)
-		      (annotation-assertion !obo:IAO_0000116 ,(handle-uri e)
-					    ,(format nil "from row ~a of ~a in sheet ~a from workbook ~a"
-						     (in-row e)
-						     (string-downcase (string (type-of (in-block e))))
-						     (sheet-name (in-sheet (in-block e)))
-						     (pathname-name (book-path (sheet-book (in-sheet (in-block e))))))))
+		      ,(spreadsheet-source-editor-note e))
 		    (if (#"matches" (handle-class e) ".*submitted.*")
 			`((annotation-assertion !rdfs:label ,(handle-uri e) ,(handle-description e))))
 		    axioms)
@@ -167,9 +178,9 @@
 	(imports !obo:ido/dev/pathway-external-derived.owl)
 	(imports !bfo:)
 	(imports !obo:iao/ontology-metadata.owl)
-	(imports !oborel:)
+	(imports !<http://www.obofoundry.org/ro/ro.owl>)
 	(declaration (object-property !oborel:has_participant))
-	(declaration (object-property !inheres-in))
+	(declaration (annotation !rdfs:label  "inheres in") (object-property !inheres-in))
 	(declaration (object-property !realizes))
 	(annotation-assertion !rdfs:label !inheres-in "inheres in")
 	(annotation-assertion !rdfs:label !oborel:has_participant "has participant")
@@ -196,8 +207,7 @@
 	  for handle = (lookup-handle (in-sheet (in-block p))  (second e))
 	  always (and handle (handle-uri handle)))))
 
-
-(defun process-realizes-that-inheres-in (process realizable bearer)
+(defun process-realizes-that-inheres-in-axiom (process realizable bearer)
   `(sub-class-of ,process
 		 (object-some-values-from
 		  !realizes
@@ -205,10 +215,28 @@
 		   ,realizable
 		   (object-some-values-from !inheres-in ,bearer)))))
 
-(defun has-participant-with-stoichiometry (process stoichiometry entity)
+(defun has-participant-with-stoichiometry-axiom (process stoichiometry entity)
   (if (equal stoichiometry 1)
       `(sub-class-of ,process (object-some-values-from !oborel:has_participant ,entity))
-      `(sub-class-of ,process (object-min-cardinality ,stoichiometry !oborel:has_participant ,entity))))
+      `(sub-class-of ,process (object-exact-cardinality ,stoichiometry !oborel:has_participant ,entity))))
+
+(defmethod process-curated-realizations-axioms ((p parsed-process))
+  (if (loop for realizes in (process-realizes p) always
+	   (loop for handle in realizes
+	      always (or (null handle)
+			 (and (lookup-handle p handle)
+			      (handle-uri (lookup-handle p handle))))))
+      (loop for realizes in (process-realizes p)
+	   collect
+	   (destructuring-bind (realizable bearer bearer-whole) realizes
+	     (process-realizes-that-inheres-in-axiom
+	      (process-uri p) (handle-uri (lookup-handle p realizable))
+	      (if bearer-whole 
+		  `(object-intersection-of
+		    ,(handle-uri (lookup-handle p bearer))
+		    (object-some-values-from !oborel:part_of ,(handle-uri (lookup-handle p bearer-whole))))
+		  (handle-uri (lookup-handle p bearer))))))
+      (warn "Not generating OWL for realizations for ~a because there are parse errors or not all handles are defined" p)))
 
 (defmethod owl-axioms ((p parsed-process))
   (let ((label 
@@ -225,14 +253,16 @@
 	     (annotation-assertion !rdfs:label ,uri ,label)
 	     ,@(loop for (stoichiometry handle) in (append (process-substrates p) (process-products p))
 		  for entity = (and handle (lookup-handle (in-sheet (in-block p)) handle))
-		  collect (has-participant-with-stoichiometry uri stoichiometry (handle-uri entity))
+		  collect (has-participant-with-stoichiometry-axiom uri stoichiometry (handle-uri entity))
 		  append (when (and (member handle (process-substrates p) :key 'second :test 'equal)
 				    (not (member handle (process-products p) :key 'second :test 'equal)))
-			   (list (process-realizes-that-inheres-in uri !substrate-disposition (handle-uri entity))))
+			   (list (process-realizes-that-inheres-in-axiom uri !substrate-disposition (handle-uri entity))))
 		  append 
 		    (when (and (not (member handle (process-substrates p) :key 'second :test 'equal))
 			       (member handle (process-products p) :key 'second :test 'equal))
-		      (list (process-realizes-that-inheres-in uri !product-disposition (handle-uri entity)))))
+		      (list (process-realizes-that-inheres-in-axiom uri !product-disposition (handle-uri entity)))))
+	     ,@(process-curated-realizations-axioms p)
+	     ,(spreadsheet-source-editor-note p)
 	     (sub-class-of ,uri !span:ProcessualEntity))))))
 
 
