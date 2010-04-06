@@ -59,6 +59,7 @@
   (classify-handles b)
   (verify-process-handles b)
   (parse-realizations b)
+  (parse-process-part-of b)
   (map nil 'after-all-sheets-parsed (parsed-sheets b))
   (map nil 'after-all-sheets-parsed (parsed-blocks b)))
 
@@ -194,6 +195,13 @@
   (loop for block in (blocks-of-type book 'parsed-process-block)
      append
        (map nil 'parse-realizations (parsed-rows block))))
+
+(defmethod parse-process-part-of ((book ido-pathway-book))
+  (loop for block in (blocks-of-type book 'parsed-process-block)
+     append
+       (map nil 'parse-part-of (parsed-rows block))))
+
+
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -424,6 +432,18 @@
 			  do
 			  (push (format nil "Didn't find handle for realization element '~a' in '~a'" element r) (parse-errors p)))
 		       )))))))
+
+(defmethod parse-part-of ((p parsed-process))
+  (let ((string (third (cell-list p))))
+    (unless (#"matches" string "\\s*")
+      (let ((split (split-at-regex string "\\s+")))
+	(let ((process (first split)) ;; cheating
+	      (location (car (last (cdr split)))))
+	  (unless (lookup-handle p process)
+	    (format t "Didn't find process handle for '~a' in '~a' for ~a~%" process string p))
+	  (unless (or (not location) (lookup-handle p location))
+	    (format t "Didn't find location handle for '~a' in '~a' for ~a~%" location string p))
+	  (setf (process-part-of p) (list process location)))))))
 
 (defmethod verify-process-handles ((p parsed-process))
   (loop for (nil handle) in (append (process-substrates p) (process-products p))

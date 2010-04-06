@@ -170,6 +170,7 @@
 (def-uri-alias "substrate-disposition" !obi:IDO_0009001)
 (def-uri-alias "product-disposition" !obi:IDO_0009002)
 (def-uri-alias "inheres-in" !<http://purl.org/obo/owl/OBO_REL#inheres_in>)
+(def-uri-alias "occurs-in" !<http://purl.org/obo/owl/OBO_REL#occurs_in>)
 
 (defmethod write-pathway.owl ((book ido-pathway-book))
   (with-ontology spreadsheet (:about !obo:ido/dev/pathway.owl :eval t)
@@ -181,6 +182,7 @@
 	(imports !<http://www.obofoundry.org/ro/ro.owl>)
 	(declaration (object-property !oborel:has_participant))
 	(declaration (annotation !rdfs:label  "inheres in") (object-property !inheres-in))
+	(declaration (annotation !rdfs:label  "occurs in") (object-property !occurs-in))
 	(declaration (object-property !realizes))
 	(annotation-assertion !rdfs:label !inheres-in "inheres in")
 	(annotation-assertion !rdfs:label !oborel:has_participant "has participant")
@@ -238,6 +240,16 @@
 		  (handle-uri (lookup-handle p bearer))))))
       (warn "Not generating OWL for realizations for ~a because there are parse errors or not all handles are defined" p)))
 
+(defmethod process-part-located-in-axiom ((p parsed-process))
+  (destructuring-bind (larger-process location) (process-part-of p)
+    (let ((larger-process-uri (and (lookup-handle p larger-process) (handle-uri (lookup-handle p larger-process))))
+	  (location-uri (and (lookup-handle p location) (handle-uri (lookup-handle p location)))))
+      (append
+       (when larger-process-uri
+	 `((sub-class-of ,(process-uri p) (object-some-values-from !oborel:part_of ,larger-process-uri))))
+       (when location-uri 
+	 `((sub-class-of ,(process-uri p) (object-some-values-from !roproposed:occurs_in ,location-uri))))))))
+
 (defmethod owl-axioms ((p parsed-process))
   (let ((label 
 	 (format nil "~{~a~^ + ~} -> ~{~a~^ + ~}"
@@ -262,6 +274,7 @@
 			       (member handle (process-products p) :key 'second :test 'equal))
 		      (list (process-realizes-that-inheres-in-axiom uri !product-disposition (handle-uri entity)))))
 	     ,@(process-curated-realizations-axioms p)
+	     ,@(process-part-located-in-axiom p)
 	     ,(spreadsheet-source-editor-note p)
 	     (sub-class-of ,uri !span:ProcessualEntity))))))
 
