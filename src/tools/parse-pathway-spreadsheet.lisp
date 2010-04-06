@@ -243,6 +243,9 @@
 
 (defclass ido-pathway-cells (parsed-cells))
 
+(defmethod lookup-handle ((c parsed-cells) handle)
+  (lookup-handle (in-sheet (in-block c)) handle))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Handles
@@ -410,19 +413,17 @@
     (and string
 	 (let ((realizations (split-at-regex string "\\s+(;|(and))\\s+")))
 	   (loop for r in realizations
-	      for matches = (all-matches r "^\\s*([A-Za-z0-9-]+)\\s+of\\s+(\\S+)(\\s+((part of)|(in)|)\\s+([A-Za-z0-9-]+)){0,1}\\s*$"
-					 1 2 7 )
+	      for matches = (car (all-matches r "^\\s*([A-Za-z0-9-]+)\\s+of\\s+(\\S+)(\\s+((part of)|(in)|)\\s+([A-Za-z0-9-]+)){0,1}\\s*$"
+					      1 2 7 ))
 	      do (if (null matches)
 		     (push (format nil "Don't recognize form of realizations expression: '~a'" r) (parse-errors p))
 		     (progn
 		       (push matches (process-realizes p))
-		       (loop for match in matches
-			    do
-			    (loop for element in match
-			       when (and element (not (lookup-handle (in-sheet (in-block p)) element)))
-			       do
-				 (push (format nil "Didn't find handle for realization element '~a' in '~a'" element r) (parse-errors p))))
-		     )))))))
+		       (loop for element in matches
+			  when (and element (not (lookup-handle (in-sheet (in-block p)) element)))
+			  do
+			  (push (format nil "Didn't find handle for realization element '~a' in '~a'" element r) (parse-errors p)))
+		       )))))))
 
 (defmethod verify-process-handles ((p parsed-process))
   (loop for (nil handle) in (append (process-substrates p) (process-products p))
