@@ -88,8 +88,23 @@
 
 (defmethod mireot-parent-term ((o parsed-handle))
   (multiple-value-bind (ont-uri ont-name) (term-ontology o)
-    (cond ((member ont-name '("PRO" "CHEBI" "PFAM" "PATO" "SO") :test 'equal)
+    (cond ((member ont-name '("CHEBI" "PFAM" "PATO" "SO") :test 'equal)
 	   (third (find ont-name *mireot-parent-terms* :test 'equal :key 'second)))
+	  ((equal ont-name "PRO")
+	   (let ((type (handle-kind o)))
+	     (cond ((search "complex" type :test #'char=)
+		    (third (assoc :protein-complex *mireot-parent-terms*)))
+		   ((member type '("protein" "gene product") :test 'equalp)
+		    (third (assoc :protein *mireot-parent-terms*)))
+		   ((equal type "post transcriptional modification")
+		    (if (or (find #\- (handle o)) (find #\+ (handle-description o)) (>= (length (handle o)) 12))
+			(progn
+			  (format t "for ~a annotated ptm assuming complex~%" o)
+			  (third (assoc :protein-complex *mireot-parent-terms*)))
+			(progn
+			  (format t "for ~a annotated ptm assuming protein~%" o)
+			  (third (assoc :protein *mireot-parent-terms*)))))
+		   (t (error "don't know what ~a as type means in ~a" type o)))))
 	  ((equal ont-name "GO")
 	   (let ((type (handle-kind o)))
 	     (cond ((member type '("function" "molecular function") :test 'equalp)
@@ -97,7 +112,11 @@
 		   ((member type '("process" "biological process") :test 'equalp)
 		    (third (assoc :biological-process *mireot-parent-terms*)))
 		   ((member type '("CC" "GO CC" "cellular component") :test 'equalp)
-		    (third (assoc :cellular-component *mireot-parent-terms*)))
+		    (if (or (find #\+ (handle-description o)) (search "complex" (handle-description o)))
+			(progn
+			  (format t "assuming ~a is complex rather than only cellular component~%" o)
+			  (third (assoc :protein-complex *mireot-parent-terms*)))
+			(third (assoc :cellular-component *mireot-parent-terms*))))
 		   ((equalp type "complex")
 		    (third (assoc :protein-complex *mireot-parent-terms*)))
 		   )))
@@ -171,6 +190,9 @@
 (def-uri-alias "product-disposition" !obi:IDO_0009002)
 (def-uri-alias "inheres-in" !<http://purl.org/obo/owl/OBO_REL#inheres_in>)
 (def-uri-alias "occurs-in" !<http://purl.org/obo/owl/OBO_REL#occurs_in>)
+(def-uri-alias "has-output" !<http://purl.org/obo/owl/OBO_REL#has-output>)
+(def-uri-alias "has-participant" !oborel:has_participant)
+(def-uri-alias "biological-process" !oboont:GO#GO_0008150)
 
 (defmethod write-pathway.owl ((book ido-pathway-book))
   (with-ontology spreadsheet (:about !obo:ido/dev/pathway.owl :eval t)
@@ -180,16 +202,17 @@
 	(imports !bfo:)
 	(imports !obo:iao/ontology-metadata.owl)
 	(imports !<http://www.obofoundry.org/ro/ro.owl>)
-	(declaration (object-property !oborel:has_participant))
+	(declaration (object-property !has-participant))
+	(declaration (object-property !results-in))
 	(declaration (annotation !rdfs:label  "inheres in") (object-property !inheres-in))
 	(declaration (annotation !rdfs:label  "occurs in") (object-property !occurs-in))
 	(declaration (object-property !realizes))
+	(sub-object-property-of !has-output !has-participant)
 	(annotation-assertion !rdfs:label !inheres-in "inheres in")
 	(annotation-assertion !rdfs:label !oborel:has_participant "has participant")
 	(annotation-assertion !rdfs:label !realizes "realizes")
 	,@(owl-axioms-for-processes book))
     (write-rdfxml spreadsheet "ido:immunology;proto;pathway.owl")))
-
 
 (defvar *immunology-uri-id-counter* 10000)
 
@@ -217,10 +240,20 @@
 		   ,realizable
 		   (object-some-values-from !inheres-in ,bearer)))))
 
-(defun has-participant-with-stoichiometry-axiom (process stoichiometry entity)
+(defun has-participant-with-stoichiometry-axiom (process stoichiometry entity &optional product?)
   (if (equal stoichiometry 1)
-      `(sub-class-of ,process (object-some-values-from !oborel:has_participant ,entity))
-      `(sub-class-of ,process (object-exact-cardinality ,stoichiometry !oborel:has_participant ,entity))))
+      `(sub-class-of ,process (object-some-values-from ,(if product? !has-output !oborel:has_participant) ,entity))
+      `(sub-class-of ,process (object-exact-cardinality ,stoichiometry ,(if product? !has-output !oborel:has_participant) ,entity))))
+
+(defmethod only-has-protein-participants-axiom ((p parsed-process))
+  `(sub-class-of
+    ,(process-uri p)
+    (object-all-values-from
+     !oborel:has_participant
+     (object-union-of 
+      ,@(mapcar (lambda(e) (handle-uri (lookup-handle p e))) (union (mapcar 'second (process-substrates p))
+								    (mapcar 'second (process-products p))))
+      (object-complement-of !oboont:PRO#PRO_000000001)))))
 
 (defmethod process-curated-realizations-axioms ((p parsed-process))
   (if (loop for realizes in (process-realizes p) always
@@ -263,19 +296,17 @@
 	 (let ((uri (process-uri p)))
 	   `((declaration (class ,uri))
 	     (annotation-assertion !rdfs:label ,uri ,label)
-	     ,@(loop for (stoichiometry handle) in (append (process-substrates p) (process-products p))
+	     ,@(loop for (stoichiometry handle) in (process-substrates p)
 		  for entity = (and handle (lookup-handle (in-sheet (in-block p)) handle))
 		  collect (has-participant-with-stoichiometry-axiom uri stoichiometry (handle-uri entity))
-		  append (when (and (member handle (process-substrates p) :key 'second :test 'equal)
-				    (not (member handle (process-products p) :key 'second :test 'equal)))
-			   (list (process-realizes-that-inheres-in-axiom uri !substrate-disposition (handle-uri entity))))
-		  append 
-		    (when (and (not (member handle (process-substrates p) :key 'second :test 'equal))
-			       (member handle (process-products p) :key 'second :test 'equal))
-		      (list (process-realizes-that-inheres-in-axiom uri !product-disposition (handle-uri entity)))))
+		  append (list (process-realizes-that-inheres-in-axiom uri !substrate-disposition (handle-uri entity))))
+	     ,@(loop for (stoichiometry handle) in (process-products p)
+		  for entity = (and handle (lookup-handle (in-sheet (in-block p)) handle))
+		  collect (has-participant-with-stoichiometry-axiom uri stoichiometry (handle-uri entity) t))
 	     ,@(process-curated-realizations-axioms p)
 	     ,@(process-part-located-in-axiom p)
+	     ,(only-has-protein-participants-axiom p)
 	     ,(spreadsheet-source-editor-note p)
-	     (sub-class-of ,uri !span:ProcessualEntity))))))
+	     (sub-class-of ,uri !biological-process))))))
 
 
