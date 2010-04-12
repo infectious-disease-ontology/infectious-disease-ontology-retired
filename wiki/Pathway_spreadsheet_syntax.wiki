@@ -102,7 +102,10 @@ The raw spreadsheet parsing is done by the Apache POI libraries: http://poi.apac
 
 The lisp code for finding blocks and creating the object oriented representation is in the LSW subversion repository: http://mumble.net:8080/svn/lsw/trunk/read-ms-docs/
 
-The IDO specific blocks and logic are in the IDO repository: http://infectious-disease-ontology.googlecode.com/svn/trunk/src/tools/pathway-to-owl.lisp
+The IDO specific blocks and logic are in the IDO repository: 
+ * http://infectious-disease-ontology.googlecode.com/svn/trunk/src/tools/parse-pathway-spreadsheet.lisp
+Translation to OWL, once parsed, is at
+ * http://infectious-disease-ontology.googlecode.com/svn/trunk/src/tools/pathway-to-owl.lisp
 
 == Notes ==
 
