@@ -86,7 +86,7 @@ Example:
 
 || *processes* || *realizes* || *part_of* || *class* || *super(s)* || *binding domains* ||
 || rlps2-tm+IRK4->rlps-tmIRK4 || ddb of MyD88 in rlps2-tm and of IRK4 || ddp located in pcyto ||  ||  || DD of Myd88 and DD of IRK4 ||
-|| rlps-tmIRK4+ IRK1-> rlps-tmIRK4IRK1 || ddb of MyD88 and of IRK1 || ddplocated in pcyto ||  ||  || DD of Myd88 and DD of IRK1 ||
+|| rlps-tmIRK4+ IRK1-> rlps-tmIRK4IRK1 || ddb of MyD88 and of IRK1 || ddp located in pcyto ||  ||  || DD of Myd88 and DD of IRK1 ||
 
 == Evidence block ==
 
