@@ -161,7 +161,7 @@
 			    (loop for syn in synonyms collect  
 				 (annotation !obo:IAO_0000118 (literal syn :|@en|))))
 		      (and hasid?
-			   (list (class (make-uri (#"replaceAll" id "IDO:" "http://purl.obolibary.org/obo/IDO_"))
+			   (list (class (make-uri (#"replaceAll" id "IDO:" "http://purl.obolibrary.org/obo/IDO_"))
 			     :partial !oboinowl:ObsoleteClass
 			     (label (literal (format nil "_obsolete_~a" term) :|@en|))
 			     (when definition (annotation !obo:IAO_0000115 (literal (safe-annotation-string (format nil "'~a'-~a: ~a" term id definition) 'definition) :|@en|)))
@@ -172,7 +172,7 @@
 	    )
        (loop for (id term definition) in (historical-ido-terms)
 	    collect
-	    (class (make-uri (#"replaceAll" id "IDO:" "http://purl.obolibary.org/obo/IDO_"))
+	    (class (make-uri (#"replaceAll" id "IDO:" "http://purl.obolibrary.org/obo/IDO_"))
 	      :partial !oboinowl:ObsoleteClass
 		   (label (literal (format nil "_obsolete_~a" term) :|@en|))
 		   (when (and definition (not (equal definition "")))
