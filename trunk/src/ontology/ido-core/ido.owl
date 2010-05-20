@@ -14,7 +14,7 @@
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
      xmlns:GO="http://purl.org/obo/owl/GO#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido.owl">
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-08-13</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-09-19</dc:date>
         <dc:creator>Lindsay Cowell</dc:creator>
         <protege:defaultLanguage>en</protege:defaultLanguage>
         <dc:contributor>Barry Smith</dc:contributor>
