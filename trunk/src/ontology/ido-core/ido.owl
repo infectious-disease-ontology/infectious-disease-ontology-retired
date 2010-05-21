@@ -4,17 +4,20 @@
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
+     xmlns:CHEBI="http://purl.org/obo/owl/CHEBI#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:CARO="http://purl.org/obo/owl/CARO#"
+     xmlns:NCBITaxon="http://purl.org/obo/owl/NCBITaxon#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:GO="http://purl.org/obo/owl/GO#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido.owl">
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-09-19</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-05-19</dc:date>
         <dc:creator>Lindsay Cowell</dc:creator>
         <protege:defaultLanguage>en</protege:defaultLanguage>
         <dc:contributor>Barry Smith</dc:contributor>
@@ -22,7 +25,7 @@
         <dc:contributor>Alan Ruttenberg</dc:contributor>
         <dc:creator>Albert Goldfain</dc:creator>
         <rdfs:comment xml:lang="en">The core Infectious Disease Ontology is an ontology of entities generally relevant to both the biomedical and clinical aspects of infectious diseases, such as &#39;pathogen&#39;, &#39;host&#39;, &#39;vector&#39;, and &#39;vaccine&#39;.  The structure of IDO adheres to the Basic Formal Ontology.  Terms in IDO that are within the scope of other OBO Foundry ontologies, such as the Gene Ontology, are derived from those ontologies.  Other terms are defined as much as possible as cross-products of terms from Foundry ontologies. For more information, see http://www.infectiousdiseaseontology.org/Home.html</rdfs:comment>
-        <rdfs:comment xml:lang="en">Version 1</rdfs:comment>
+        <rdfs:comment xml:lang="en">This ontology is in early development. Expect it to change.</rdfs:comment>
         <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ogms.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/dev/ontology-metadata.owl"/>
@@ -2032,7 +2035,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000436">
         <rdfs:label xml:lang="en">infectious disease</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_9099994"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
         <obo:IAO_0000115 xml:lang="en">A disease whose physical basis is an infectious disorder.</obo:IAO_0000115>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
@@ -2297,6 +2299,33 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IDO_0000456 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000456">
+        <rdfs:label xml:lang="en">immunosuppressed organism</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism that is experiencing pregnancy-induced or pathologic immunosuppression.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Formal definition: A quality that inheres in an organism with an immune system by virtue of the fact that the organism&#39;s immunocompetence is reduced as a result of substances, such as drugs, or infections that interfere with one or more immune system processes (GO:0002376).</obo:IAO_0000116>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000457 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000457">
+        <rdfs:label xml:lang="en">immunocompetent host</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism that has immunocompetence.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000458 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000458">
@@ -2307,6 +2336,60 @@
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000116 xml:lang="en">Formal definition: A quality inhering in a bearer of the host of infectious agent role by virtue of the fact that the host&#39;s infectious disease is at a stage during which the infectious organism causing the disease is easily transmitted from one host to another.  &#39;Easily&#39; refers to the fact that transimission is likely as a result of pathological processes, like coughing and sneezing, that are a manifestation of the disease during a particular stage.</obo:IAO_0000116>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000459 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000459">
+        <rdfs:label xml:lang="en">colonized host</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000531"/>
+        <obo:IAO_0000115 xml:lang="en">A host that contains a colony in or on its extended organism.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000460 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000460">
+        <rdfs:label xml:lang="en">infected host</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000531"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A host that has an infection in or on its extended organism.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000116 xml:lang="en">Formal definition: A quality inhering in an organism by virtue of the fact that the organism is the bearer of the host of infectious parasite role in a symbiosis process (GO:0044403) with an organism that has the infectious disposition and that has established an infection in the host.</obo:IAO_0000116>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000461 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000461">
+        <rdfs:label xml:lang="en">co-infected host</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000460"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infected host that has two infections with different species of infectious agents as part.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Formal definition: A quality inhering in an organism by virtue of the fact that the organism is the bearer of the host of infectious parasite role in a symbiosis process (GO:0044403) with organisms of at least two different types that have the infectious disposition and that have established an infection in the host.</obo:IAO_0000116>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000462 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000462">
+        <rdfs:label xml:lang="en">symptomatic host</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000531"/>
+        <obo:IAO_0000115 xml:lang="en">A host exhibiting disease symptoms.</obo:IAO_0000115>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -2406,6 +2489,87 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IDO_0000471 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000471">
+        <rdfs:label xml:lang="en">complex infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection comprised of infectious organisms from different species.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">mixed infection</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">polymicrobial infection</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000472 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000472">
+        <rdfs:label xml:lang="en">extracellular infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection for which the infectious agents that are part of the infection persist in the extracellular space of the host.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000473 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000473">
+        <rdfs:label xml:lang="en">intracellular infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection for which the infectious agents that are part of the infection persist inside host cells.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000474 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000474">
+        <rdfs:label xml:lang="en">systemic infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection for which the infectious agents that are part of the infection are distributed throughout the host.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Formal definition: A quality that inheres in an infection by virtue of the fact that the organisms comprising the infection are distributed throughout the host, including multiple host organs and/or systems (e.g. circulatory system).</obo:IAO_0000116>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000475 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000475">
+        <rdfs:label xml:lang="en">local infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection for which the infectious agents that are part of the infection are limited to a relatively small area of the host&#39;s body.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000476 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000476">
+        <rdfs:label xml:lang="en">focal infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000475"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A local infection for which symptoms are observed in parts of the host&#39;s extended organism that are distant from the infection.</obo:IAO_0000115>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000477 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000477">
@@ -2415,6 +2579,20 @@
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An infectious disease course that begins soon after infection is established and progresses rapidly to severe stages.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000478 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000478">
+        <rdfs:label xml:lang="en">_obsolete_chronic quality of infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an infection in virtue of the fact that the infection persists for an extended period of time.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">persistent infection</obo:IAO_0000118>
     </owl:Class>
     
 
@@ -2754,6 +2932,167 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IDO_0000504 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000504">
+        <rdfs:label xml:lang="en">infectious disorder</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection that is clinically abnormal.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000505 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000505">
+        <rdfs:label xml:lang="en">viremia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection that has as part virus particles located in the blood.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000116 xml:lang="en">Formal definition: An infection defined by the presence of virions in the blood.</obo:IAO_0000116>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000506 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000506">
+        <rdfs:label xml:lang="en">bacteremia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection that has as part bacteria located in the blood.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Formal definition: An infection defined by the presence of bacteria in the blood.</obo:IAO_0000116>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000507 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000507">
+        <rdfs:label xml:lang="en">_obsolete_septicemia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A bacteremia in which the baceteria are replicating.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000508 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000508">
+        <rdfs:label xml:lang="en">virion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_10239"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A virus that is in its assembled state consisting of genomic material (DNA or RNA) surrounded by coating molecules.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000509 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000509">
+        <rdfs:label xml:lang="en">organism population</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <obo:IAO_0000115 xml:lang="en">A population of organisms.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000511 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000511">
+        <rdfs:label xml:lang="en">infected population</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism population whose members have an infection.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000512 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000512">
+        <rdfs:label xml:lang="en">diseased population</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000511"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infected population in whose members the infectious disease caused by the infectious agent is being realized.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000513 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000513">
+        <rdfs:label xml:lang="en">infectious organism population</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism population whose members each have an infectious disposition.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000514 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000514">
+        <rdfs:label xml:lang="en">susceptible population</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism population whose members are not infected with an infectious agent and who lack immunity to the infectious agent.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">at-risk population</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000515 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000515">
+        <rdfs:label xml:lang="en">normal resident microbiota population</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism population whose members are particpating in non-parasitic symbiosis with a particular host.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Formal definition: An infectious organism population (IDO:0000513) (1) that is not part of any infection (IDO:0000586), (2) whose members are participating in a process of symbiosis (GO:0044403) with the same host, and (3) whose members are organisms of types among the normal resident microbiota for the type of host organism.</obo:IAO_0000116>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">normal resident microflora population</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000516 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000516">
+        <rdfs:label xml:lang="en">_obsolete_configured infectious organism population</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infectious organism population with a certain configuration quality (OGMS:0000039) (distributed across a spatial region (e.g., anatomical location in a host) in a particular way). Put e.g. In comments</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000519 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000519">
@@ -2780,15 +3119,767 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IDO_0000522 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000522">
+        <rdfs:label xml:lang="en">symbiont</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism bearing the symbiont role.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000523 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000523">
+        <rdfs:label xml:lang="en">obligatory symbiont</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism that can only reach developmental maturity, replicate, or persist in symbiosis.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000524 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000524">
+        <rdfs:label xml:lang="en">mutualist</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000522"/>
+        <obo:IAO_0000115 xml:lang="en">A symbiont bearing the mutualist role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000525 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000525">
+        <rdfs:label xml:lang="en">commensal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000522"/>
+        <obo:IAO_0000115 xml:lang="en">A symbiont bearing the commensal role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000526 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000526">
+        <rdfs:label xml:lang="en">parasite</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000522"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A symbiont bearing the parasite role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000527 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000527">
+        <rdfs:label xml:lang="en">infectious organism</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000596"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infectious agent that is an organism.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000528 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000528">
+        <rdfs:label xml:lang="en">pathogen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A material entity with a pathogenic disposition.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000530 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000530">
+        <rdfs:label xml:lang="en">primary pathogen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000596"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infectious agent with the primary infectious disposition.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000531 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000531">
+        <rdfs:label xml:lang="en">host</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism bearing the host role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000532 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000532">
+        <rdfs:label xml:lang="en">definitive host</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000531"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A host bearing the definitive host role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">primary host</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000533 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000533">
+        <rdfs:label xml:lang="en">intermediate host</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000531"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A host bearing the intermediate host role.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">secondary host</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000534 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000534">
+        <rdfs:label xml:lang="en">paratenic host</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000531"/>
+        <obo:IAO_0000115 xml:lang="en">A host bearing the paratenic host role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000535 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000535">
+        <rdfs:label xml:lang="en">dead-end host</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000531"/>
+        <obo:IAO_0000115 xml:lang="en">A host bearing the dead-end host role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">incidental host</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000536 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000536">
+        <rdfs:label xml:lang="en">parasite host</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000531"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A host bearing the parasite host role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000537 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000537">
+        <rdfs:label xml:lang="en">infectious agent host</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000531"/>
+        <obo:IAO_0000115 xml:lang="en">A host bearing the infectious agent host role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000538 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000538">
+        <rdfs:label xml:lang="en">pathogen host</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000531"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A host bearing the pathogen host role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000539 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000539">
+        <rdfs:label xml:lang="en">infectious agent carrier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000537"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infectious agent host bearing the infectious agent carrier role.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000540 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000540">
+        <rdfs:label xml:lang="en">infectious agent vector</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism bearing the infectious agent vector role.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000541 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000541">
+        <rdfs:label xml:lang="en">mechanical vector of infectious agent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000540"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infectious agent vector bearing the mechanical vector of infectious agent role.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000542 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000542">
+        <rdfs:label xml:lang="en">biological vector of infectious agent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000540"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infectious agent vector bearing the biological vector of infectious agent role.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000543 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000543">
+        <rdfs:label xml:lang="en">vehicle of infectious agent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A material entity bearing the infectious agent vehicle role.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000544 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000544">
+        <rdfs:label xml:lang="en">fomite</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An material entity bearing the fomite role.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000545 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000545">
+        <rdfs:label xml:lang="en">infectious agent reservoir</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A material entity bearing the infectious agent reservoir role.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000546 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000546">
+        <rdfs:label xml:lang="en">end reservoir of infectious agent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <obo:IAO_0000115 xml:lang="en">A material entity bearing the end reservoir of infectious agent role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">dead-end reservoir of infectious agent</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000547 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000547">
+        <rdfs:label xml:lang="en">virulence factor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A biological macromolecule produced by a pathogen and that has the virulence factor disposition.</obo:IAO_0000115>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000548 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000548">
+        <rdfs:label xml:lang="en">invasion factor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A biological macromolecule that has the invasion disposition.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">invasin</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000549 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000549">
+        <rdfs:label xml:lang="en">toxin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A biological macromolecule bearing the toxin disposition.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000550 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000550">
+        <rdfs:label xml:lang="en">exotoxin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000549"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A biological macromolecule bearing the exotoxin disposition.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000551 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000551">
+        <rdfs:label xml:lang="en">enterotoxin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000550"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A biological macromolecule bearing the enterotoxin disposition.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000552 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000552">
+        <rdfs:label xml:lang="en">endotoxin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000549"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A biological macromolecule bearing the endotoxin role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000553 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000553">
+        <rdfs:label xml:lang="en">infectious agent portal of entry</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CARO#CARO_0000000"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An anatomical entity bearing the infectious agent portal of entry role.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000554 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000554">
+        <rdfs:label xml:lang="en">infectious agent portal of exit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CARO#CARO_0000000"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An anatomical entity bearing the infectious agent portal of exit role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000555 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000555">
+        <rdfs:label xml:lang="en">disinfectant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A material entity bearing the disinfectant role.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000556 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000556">
+        <rdfs:label xml:lang="en">antiseptic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <obo:IAO_0000115 xml:lang="en">A material entity bearing the antiseptic role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000557 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000557">
+        <rdfs:label xml:lang="en">adhesion factor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A biological macromolecule that has the adhesion disposition.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">adhesin</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">adhesion molecule</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000558 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000558">
+        <rdfs:label xml:lang="en">antimicrobial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A material entity with the antimicrobial disposition.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000559 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000559">
+        <rdfs:label xml:lang="en">antiviral</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000558"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An antimicrobial bearing the antiviral disposition.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000560 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000560">
+        <rdfs:label xml:lang="en">antifungal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000558"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An antimicrobial bearing the antifungal disposition.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000561 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000561">
+        <rdfs:label xml:lang="en">antiparasitic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000558"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An antimicrobial bearing the antiparasitic disposition.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000562 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000562">
+        <rdfs:label xml:lang="en">antibiotic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000558"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An antimicrobial bearing the antibiotic disposition.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000563 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000563">
+        <rdfs:label xml:lang="en">microbicide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000558"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An antimicrobial whose antimicrobial disposition is realized in a process of killing microorganisms.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">microbicidal [entity]</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000564 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000564">
+        <rdfs:label xml:lang="en">viricide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000559"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An antiviral whose antiviral disposition is realized in a process of killing viruses.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000565 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000565">
+        <rdfs:label xml:lang="en">microbistatic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000558"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An antimicrobial whose antimicrobial disposition is realized in a process of inhibiting the growth of microorganisms.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000566 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000566">
+        <rdfs:label xml:lang="en">primary infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection bearing the primary infection role.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000567 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000567">
+        <rdfs:label xml:lang="en">secondary infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection bearing the secondary infection role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000568 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000568">
+        <rdfs:label xml:lang="en">zoonosis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000436"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infectious disease that has as its physical basis an infection composed of infectious agents that have the zoonotic disposition.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000569 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000569">
+        <rdfs:label xml:lang="en">aymptomatic host of infectious agent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000537"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infectious agent host who has no symptoms of the infectious disease associated with the infectious agent.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000570 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000570">
+        <rdfs:label xml:lang="en">subclinical infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection that is part of an asymptomatic host.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000571 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000571">
+        <rdfs:label xml:lang="en">resistant entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A material entity that has the resistance disposition.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000572 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000572">
+        <rdfs:label xml:lang="en">chronic carrier of infectious agent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000539"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infectious agent carrier who has been bearer of the infectious agent carrier role for an extended period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000573 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000573">
+        <rdfs:label xml:lang="en">symptomatic host of infectious agent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000537"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infectious agent host who has symptoms of the infectious disease associated with the infectious agent</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000574 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000574">
+        <rdfs:label xml:lang="en">_obsolete_invasin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">synonym of invasion factor</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000575 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000575">
+        <rdfs:label xml:lang="en">_obsolete_viral latency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en"></obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000576 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000576">
+        <rdfs:label xml:lang="en">innate immunity to infectious agent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000448"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An immunity to infectious agent realized in an innate immune response.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000577 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000577">
+        <rdfs:label xml:lang="en">adaptive immunity to infectious agent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000448"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An immunity to infectious agent realized in an adaptive immune response.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000578 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000578">
+        <rdfs:label xml:lang="en">humoral immunity to infectious agent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000448"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An immunity to infectious agent realized in a humoral immune response.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000579 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000579">
+        <rdfs:label xml:lang="en">cell-mediated immunity to infectious agent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000448"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An immunity to infectious agent realized in an immune response whose participants are T cells or other cells of the immune system.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000580 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000580">
+        <rdfs:label xml:lang="en">_obsolete_passive immunity to infectious agent</rdfs:label>
         <rdfs:label xml:lang="en">passive immunity to infectious agent</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000448"/>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An immunity to infectious agent that inheres in an organism in virtue of antibodies not produced by that organism.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An immunity to infectious organism that results from a passive immunization (IDO:0000066).</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2802,6 +3893,33 @@
         <obo:IAO_0000115 xml:lang="en">A resistance to drug that mitigates the damaging effects of an antibiotic.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000582 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000582">
+        <rdfs:label xml:lang="en">long-term non-progressor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism experiencing a long-term non-progressing infectious disease course.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000583 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000583">
+        <rdfs:label xml:lang="en">emerging pathogen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000596"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infectious agent whose infection incidence is increasing following its first introduction into a new host population.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Formal definition: An infectious agent whose incidence is increasing following its first introduction into a new host population.</obo:IAO_0000116>
     </owl:Class>
     
 
@@ -2832,6 +3950,19 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IDO_0000586 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000586">
+        <rdfs:label xml:lang="en">infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <obo:IAO_0000115 xml:lang="en">A part of an extended organism that itself has as part a population of one or more infectious agents and that is (1) clinically abnormal in virtue of the presence of this population, or (2) such that clinical abnormality is a likely consequence of transmission of the infectious agent, an offspring of the infectious agent, or a member of the infectious agent population to a canonical host.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000587 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000587">
@@ -2858,6 +3989,20 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IDO_0000589 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000589">
+        <rdfs:label xml:lang="en">immunodeficient host</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000531"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A host that has an immunodeficiency.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">immunocompromised host</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000590 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000590">
@@ -2868,6 +4013,32 @@
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">persistent infectious disease course</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000591 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000591">
+        <rdfs:label xml:lang="en">_obsolete_communicable disposition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infectious disposition to be transmitted directly from one human host to another.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000592 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000592">
+        <rdfs:label xml:lang="en">immune population</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism population whose members have acquired immunity to an infectious agent.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2898,6 +4069,32 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IDO_0000595 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000595">
+        <rdfs:label xml:lang="en">potential host of infectious agent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism that has the capability to bear the host of infectious agent role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000596 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000596">
+        <rdfs:label xml:lang="en">infectious agent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000528"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A pathogen whose pathogenic disposition is an infectious disposition.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000597 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000597">
@@ -2916,8 +4113,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000598">
         <rdfs:label xml:lang="en">host living with infected household contact</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000597"/>
+        <obo:IAO_0000115 xml:lang="en">A host exposure to environment with infectious agent where the environment is a household that also has an infected host</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Alan Ruttenberg 2010/05/20- Tentative definition. Needs review by Bjoern</obo:IAO_0000116>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en"></obo:IAO_0000115>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
     </owl:Class>
@@ -2931,8 +4129,9 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000597"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en"></obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A host exposure to environment with infectious agent where the environment is an area in which an infectious agent is endemic</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000116 xml:lang="en">Alan Ruttenberg 2010/05/20- Tentative definition. Needs review by Bjoern</obo:IAO_0000116>
     </owl:Class>
     
 
@@ -2945,7 +4144,8 @@
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">accidental exposure</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A host exposure to environment with infectious agent where the exposure is accidental and the environment is a laboratory and where the infectious agent has infectious to human disposition.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Alan Ruttenberg 2010/05/20- Tentative definition. Needs review by Bjoern</obo:IAO_0000116>
     </owl:Class>
     
 
@@ -2955,9 +4155,10 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000601">
         <rdfs:label xml:lang="en">host coming into contact with vector of infectious agent</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000597"/>
+        <obo:IAO_0000115 xml:lang="en">A host exposure to environment with infectious agent where the environment contains a infectious agent vector.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en"></obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Alan Ruttenberg 2010/05/20- Tentative definition. Needs review by Bjoern</obo:IAO_0000116>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     </owl:Class>
     
@@ -2968,9 +4169,10 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000602">
         <rdfs:label xml:lang="en">host exposure to substance that might have infectious agent</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000597"/>
+        <obo:IAO_0000115 xml:lang="en">A host exposure to environment with infectious agent where the environment contains a material entity that has been assessed to confer a risk of infection.</obo:IAO_0000115>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en"></obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Alan Ruttenberg 2010/05/20- Tentative definition. Needs review by Bjoern</obo:IAO_0000116>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
     </owl:Class>
     
@@ -2999,6 +4201,19 @@
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An establishment in host process in which an organism establishes itself in a host.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Establishment of one organism in the extended organism of another (the host) involves at least one of (1) movement of the organism to a location within the host in which the organism can persist, or (2) adherence or attachment of the organism to part of the host.</obo:IAO_0000116>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000605 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000605">
+        <rdfs:label xml:lang="en">_obsolete_biological object colony</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A biological object or group of biological objects in close spatial proximity.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3097,6 +4312,71 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IDO_0000613 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000613">
+        <rdfs:label xml:lang="en">_obsolete_biological object</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">primitive</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000614 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000614">
+        <rdfs:label xml:lang="en">_obsolete_replicating biological material entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A biological material entity that is capable of replication.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000615 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000615">
+        <rdfs:label xml:lang="en">colony</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism population persisting in a site it has colonized.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000616 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000616">
+        <rdfs:label xml:lang="en">infectious agent colony</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000615"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A colony that is an infectious agent or a population of infectious agents.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000617 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000617">
+        <rdfs:label xml:lang="en">immunodeficiency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000045"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A disorder of an immune system component that results in defective functioning of the immune system.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000618 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000618">
@@ -3171,12 +4451,15 @@
     <!-- http://purl.obolibrary.org/obo/IDO_0000624 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000624">
+        <rdfs:label xml:lang="en">_obsolete_contagiousness quality</rdfs:label>
         <rdfs:label xml:lang="en">host range</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#GenericallyDependentContinuant"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A generically dependent continuant that is the set of organism types whose instances have as one of their canonical dispositions, the disposition to bear the host role for a colony of a certain type.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an infection and is the likelihood that infectious agents part of the infection will spread to other hosts.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3208,6 +4491,33 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IDO_0000627 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000627">
+        <rdfs:label xml:lang="en">acute infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000504"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infectious disorder that is the physical basis for an unfolding acute infectious disease course.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000628 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000628">
+        <rdfs:label xml:lang="en">chronic infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection that persists for an extended period of time.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">persistent infection</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000629 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000629">
@@ -3221,6 +4531,33 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IDO_0000630 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000630">
+        <rdfs:label xml:lang="en">hospital-acquired infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection resulting from a transmission process that unfolds in a hospital.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">nosocomial infection</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000631 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000631">
+        <rdfs:label xml:lang="en">community-acquired infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection resulting from a transmission process that does not unfold in a health care facility.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000632 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000632">
@@ -3230,6 +4567,19 @@
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A toxin disposition that is the disposition to interfere with the function of host nerve cells.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000633 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000633">
+        <rdfs:label xml:lang="en">metatstatic infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection established as a result of spread from another infection in a non-adjacent location in the extended organism of the host.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -3273,6 +4623,76 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IDO_0000638 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000638">
+        <rdfs:label xml:lang="en">nursing-home acquired</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection resulting from a transmission process that unfolds in a nursing home.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000639 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000639">
+        <rdfs:label xml:lang="en">infectious human pathogen</rdfs:label>
+        <rdfs:label xml:lang="en">primary immunodeficiency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000596"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000617"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An immunodeficiency that exists in an organism because of a genetic predisposition.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An infectious agent with a capability to infect human hosts.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">congenital immunodeficiency</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000640 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000640">
+        <rdfs:label xml:lang="en">acquired immunodeficiency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000617"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An immunodeficiency that is not caused by a genetic predisposition.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000642 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000642">
+        <rdfs:label xml:lang="en">simple infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection comprised of infectious organism all of the same species.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000643 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000643">
+        <rdfs:label xml:lang="en">re-emerging pathogen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000596"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infectious agent whose infection incidence is increasing in a host population as a result of changes in the biology of the host or pathogen, or changes in their interactions.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Formal definition: An infectious agent whose incidence is increasing in a host population as a result of changes in its underlying epidemiology.</obo:IAO_0000116>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000644 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000644">
@@ -3282,6 +4702,72 @@
         <obo:IAO_0000115 xml:lang="en">An immunosuppression induced by progesterone and other factors upregulated in pregnant women.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000645 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000645">
+        <rdfs:label xml:lang="en">candidiasis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection that has as part organisms of the Genus Candida.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000646 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000646">
+        <rdfs:label xml:lang="en">trichomoniasis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection that has as part organisms of the Species Trichomonas vaginalis.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000647 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000647">
+        <rdfs:label xml:lang="en">leptospirosis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection that has as part organisms of the Genus Leptospira.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000648 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000648">
+        <rdfs:label xml:lang="en">Shigellosis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000627"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An acute infection located in the bowel and that has as part organisms of the Genus Shigella.</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">bacillary dysentery</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000649 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000649">
+        <rdfs:label xml:lang="en">amebiasis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection located in the colon and that has as part organisms of the Species Entamoeba histolytica</obo:IAO_0000115>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -3299,101 +4785,10 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_9099991 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_9099991">
-        <rdfs:label xml:lang="en">_defined disposition</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_9999999"/>
-        <obo:IAO_0000116>placeholder</obo:IAO_0000116>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDO_9099992 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_9099992">
-        <rdfs:label xml:lang="en">_defined role</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_9999999"/>
-        <obo:IAO_0000116>placeholder</obo:IAO_0000116>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDO_9099993 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_9099993">
-        <rdfs:label xml:lang="en">_defined quality</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_9999999"/>
-        <obo:IAO_0000116>placeholder</obo:IAO_0000116>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDO_9099994 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_9099994">
-        <rdfs:label xml:lang="en">_defined infectious disease</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_9999999"/>
-        <obo:IAO_0000116>placeholder</obo:IAO_0000116>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDO_9099995 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_9099995">
-        <rdfs:label xml:lang="en">_defined infection</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_9099995"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_9999999"/>
-        <obo:IAO_0000116>placeholder</obo:IAO_0000116>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDO_9099996 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_9099996">
-        <rdfs:label xml:lang="en">_defined cellular component</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_9999999"/>
-        <obo:IAO_0000116>placeholder</obo:IAO_0000116>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDO_9099997 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_9099997">
-        <rdfs:label xml:lang="en">_defined material entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_9999999"/>
-        <obo:IAO_0000116>placeholder</obo:IAO_0000116>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDO_9099998 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_9099998">
-        <rdfs:label xml:lang="en">_defined organism</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_9999999"/>
-        <obo:IAO_0000116>placeholder</obo:IAO_0000116>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDO_9999999 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_9999999">
-        <rdfs:label>_defined class</rdfs:label>
-        <obo:IAO_0000116>placeholder</obo:IAO_0000116>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OBI_0100026 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0100026">
         <rdfs:label xml:lang="en">organism</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_9099998"/>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
         <obo:IAO_0000115>An organism is material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.</obo:IAO_0000115>
         <obo:OBI_0000283 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
@@ -3401,11 +4796,28 @@
     
 
 
+    <!-- http://purl.org/obo/owl/CARO#CARO_0000000 -->
+
+    <rdf:Description rdf:about="http://purl.org/obo/owl/CARO#CARO_0000000">
+        <rdfs:label>anatomical entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/obo/owl/CHEBI#CHEBI_23367 -->
+
+    <rdf:Description rdf:about="http://purl.org/obo/owl/CHEBI#CHEBI_23367">
+        <rdfs:label>molecular entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.org/obo/owl/GO#GO_0005575 -->
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005575">
         <rdfs:label>cellular component</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_9099996"/>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
     </owl:Class>
     
@@ -3426,42 +4838,11 @@
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#Capability -->
+    <!-- http://purl.org/obo/owl/NCBITaxon#NCBITaxon_10239 -->
 
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Capability">
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#RealizableEntity"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ifomis.org/bfo/1.1/snap#Disposition -->
-
-    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#Disposition">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_9099991"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.ifomis.org/bfo/1.1/snap#MaterialEntity -->
-
-    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_9099997"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.ifomis.org/bfo/1.1/snap#Quality -->
-
-    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#Quality">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_9099993"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.ifomis.org/bfo/1.1/snap#Role -->
-
-    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#Role">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_9099992"/>
+    <rdf:Description rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_10239">
+        <rdfs:label>Viruses</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
     </rdf:Description>
 </rdf:RDF>
 
