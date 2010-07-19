@@ -26,7 +26,7 @@
 
 (defsystem :ido
     :name "Infectious disease ontology"
-    :licence "BSD"
+    :license "BSD"
     :components
     ((:file "obo")
      (:file "ido-to-owl")
@@ -36,7 +36,7 @@
 	:components
 	((:file "create-external-derived")))
      )
-    :depends-on (owlapi3 read-ms-docs)
+    :depends-on (owl2 read-ms-docs)
     :serial t)
 
 ;;;; eof

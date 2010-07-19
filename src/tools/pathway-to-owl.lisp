@@ -1,4 +1,4 @@
-(defvar *ido-term-to-uri* (make-hash-table :test 'equalp))
+q(defvar *ido-term-to-uri* (make-hash-table :test 'equalp))
 
 (defmethod handle-uri :around ((o parsed-handle))
   (or (call-next-method) (setf (handle-uri o) (compute-handle-uri o))))
@@ -6,14 +6,14 @@
 (defun legacy-uri (prefix id handle)
   (cond ((#"matches" id "^\\d+$")
          (make-uri (format nil "http://purl.org/obo/owl/~a#~a_~a" prefix prefix id)))
-	((equal id "submitted")
+	((or (equal id "submitted") (equal id "tosubmit"))
 	 (make-uri (make-uri (format nil "http://purl.org/obo/owl/~a#submitted_~a" prefix (string-downcase handle)))))
 	(t (error "Don't know how to make uri for ~a:~a (~a)" prefix id handle))))
 
 (defun obolibrary-uri (prefix id handle)
   (cond ((#"matches" id "^\\d+$")
          (make-uri (format nil "http://purl.obolibrary.org/obo/~a_~a" prefix id)))
-	((equal id "submitted")
+	((or (equal id "submitted") (equal id "tosubmit"))
 	 (make-uri (make-uri (format nil "http://purl.obolibrary.org/obo/~a_submitted_~a" prefix (string-downcase handle)))))
 	(t (error "Don't know how to make uri for ~a:~a (~a)" prefix id handle))))
 
@@ -29,14 +29,14 @@
     (flet ((compute-uri (base prefix id handle)
 	     (cond ((#"matches" id "^\\d+$")
 		    (make-uri (format nil "http://purl.obolibrary.org/obo/~a_~a" prefix id)))
-		   ((equal id "submitted")
+		   ((or (equal id "submitted") (equal id "tosubmit"))
 		    (make-uri (format nil "http://purl.obolibrary.org/obo/~a_submitted_~a" prefix (string-downcase handle))))
-		   (t (error "")))))
+		   (t (error "compute-uri base ~a prefix ~a id ~a handle ~a" base prefix id handle)))))
       (unless (null id)
 	(destructuring-bind (prefix id) (or (car (all-matches id "(.*):(.*)" 1 2))
 					    (car (all-matches id "(PF)(.*)" 1 2))) ; handle PF without "PFAM" prefix.
 	  (cond ((equal prefix "GO")
-		 (assert (or (#"matches" id "^\\d+") (equal id "submitted")) (id) "GO id GO:~a malformed" id)
+		 (assert (or (#"matches" id "^\\d+") (equal id "submitted")  (equal id "tosubmit")) (id) "GO id GO:~a malformed" id)
 		 (legacy-uri "GO" id handle)) 
 		((equal prefix "PRO")
 		 (legacy-uri "PRO" id handle))
@@ -44,9 +44,9 @@
 					;("compr" "competitor" "role" "MI:0941" NIL) 
 					;("compb" "competition binding" "process" "MI:0405" NIL) 
 		 ;; not used
-		 (warn "Not translating MI term MI:~a" id)
+		 (format t "warning: Not translating MI term MI:~a~%" id)
 		 )
-		((equal prefix "PMID") (warn "~a ~a" handle id))
+		((equal prefix "PMID") (format t  "warning: ~a ~a~%" handle id))
 		((equal prefix "SO")
 		 (legacy-uri "SO" id handle)
 		 ;; http://www.cbrc.jp/htbin/bget_tfmatrix?M00258 - ISRE. What gene is ISRE upstream of?
@@ -62,7 +62,11 @@
 		((equal prefix "CHEBI")
 		 (legacy-uri "CHEBI" id handle)
 		 )
-		(t (error ""))))))))
+		((equal prefix "MGI")
+		 (legacy-uri "MGI" id handle)
+		 (warn "MGI id!")
+		 )
+		(t (error "compute-handle-uri prefix ~a" prefix))))))))
 
 (defmethod term-ontology ((o parsed-handle))
   (let ((name (caar (all-matches (uri-full (handle-uri o)) "(GO|SO|PATO|CHEBI|PRO)(_|#)" 1 2))))
@@ -83,8 +87,6 @@
     (:protein-complex "GO" !oboont:GO#GO_0043234 !snap:MaterialEntity)
     (:protein-complex "SO" !oboont:GO#GO_0032991 !snap:MaterialEntity) ; for now only one
     ))
-
-
 
 (defmethod mireot-parent-term ((o parsed-handle))
   (multiple-value-bind (ont-uri ont-name) (term-ontology o)
@@ -122,6 +124,10 @@
 		   )))
 	  (t (error "Don't know parent for ~a" o)))))
 
+(defmethod entity-symbolic-type ((o parsed-handle))
+  (car (find (mireot-parent-term o) *mireot-parent-terms* :key 'third)))
+
+
 (defmethod spreadsheet-source-editor-note ((e parsed-handle))
   `(annotation-assertion !obo:IAO_0000116 ,(handle-uri e)
 			 ,(format nil "handle ~a from row ~a of ~a in sheet ~a from workbook ~a"
@@ -133,14 +139,14 @@
 
 (defmethod spreadsheet-source-editor-note ((e parsed-process))
   `(annotation-assertion !obo:IAO_0000116 ,(process-uri e)
-			 ,(format nil "process ~a from row ~a of ~a in sheet ~a from workbook ~a"
-				  (car (cell-list e))
+			 ,(format nil "process ~{~a~^, ~} from row ~a of ~a in sheet ~a from workbook ~a"
+				  (mapcar (lambda(e) (or e "")) (cell-list e))
 				  (in-row e)
 				  (string-downcase (string (type-of (in-block e))))
 				  (sheet-name (in-sheet (in-block e)))
 				  (pathname-name (book-path (sheet-book (in-sheet (in-block e))))))))
 
-(defmethod write-external.owl ((book ido-pathway-book))
+(defmethod write-external.owl ((book ido-pathway-book) &key (destdir "ido:immunology;proto;"))
   (let ((axioms 
 	 (loop for (kind where term parent) in *mireot-parent-terms*
 	    unless (or (member where '("PFAM") :test 'equal)
@@ -161,13 +167,13 @@
 		      (sub-class-of ,(handle-uri e) ,(mireot-parent-term e))
 		      (annotation-assertion !obo:IAO_0000412 ,(handle-uri e) ,ont-uri)
 		      ,(spreadsheet-source-editor-note e))
-		    (if (#"matches" (handle-class e) ".*submitted.*")
+		    (if (#"matches" (handle-class e) ".*(submitted|tosubmit).*")
 			`((annotation-assertion !rdfs:label ,(handle-uri e) ,(handle-description e))))
 		    axioms)
 		   ))))))
     (with-ontology external (:about !obo:ido/dev/pathway-external.owl :base !obo: :eval t)
 	`((imports !obo:iao/ontology-metadata.owl) ,@axioms)
-      (write-rdfxml external "ido:immunology;proto;pathway-external.owl"))))
+      (write-rdfxml external (merge-pathnames (format nil "~a-pathway-external.owl" (#"replaceAll" (pathway-name book) "\\s+" "-")) destdir)))))
 
 ;; doesn't yet run in owlapi3 - run in older
 
@@ -194,7 +200,7 @@
 (def-uri-alias "has-participant" !oborel:has_participant)
 (def-uri-alias "biological-process" !oboont:GO#GO_0008150)
 
-(defmethod write-pathway.owl ((book ido-pathway-book))
+(defmethod write-pathway.owl ((book ido-pathway-book) &key (destdir "ido:immunology;proto;"))
   (with-ontology spreadsheet (:about !obo:ido/dev/pathway.owl :eval t)
       `((imports !obo:ido/dev/pathway-external.owl)
 	(imports !obo:ido/dev/pathway-defs.owl)
@@ -203,7 +209,7 @@
 	(imports !obo:iao/ontology-metadata.owl)
 	(imports !<http://www.obofoundry.org/ro/ro.owl>)
 	(declaration (object-property !has-participant))
-	(declaration (object-property !results-in))
+	(declaration (object-property !occurs-in))
 	(declaration (annotation !rdfs:label  "inheres in") (object-property !inheres-in))
 	(declaration (annotation !rdfs:label  "occurs in") (object-property !occurs-in))
 	(declaration (object-property !realizes))
@@ -212,7 +218,7 @@
 	(annotation-assertion !rdfs:label !oborel:has_participant "has participant")
 	(annotation-assertion !rdfs:label !realizes "realizes")
 	,@(owl-axioms-for-processes book))
-    (write-rdfxml spreadsheet "ido:immunology;proto;pathway.owl")))
+    (write-rdfxml spreadsheet (merge-pathnames  (format nil "~a-pathway.owl" (#"replaceAll" (pathway-name book) "\\s+" "-")) destdir))))
 
 (defvar *immunology-uri-id-counter* 10000)
 
@@ -253,7 +259,7 @@
      (object-union-of 
       ,@(mapcar (lambda(e) (handle-uri (lookup-handle p e))) (union (mapcar 'second (process-substrates p))
 								    (mapcar 'second (process-products p))))
-      (object-complement-of !oboont:PRO#PRO_000000001)))))
+      (object-complement-of (object-union-of !oboont:PRO#PRO_000000001 !oboont:GO#GO_0043234 ))))))
 
 (defmethod process-curated-realizations-axioms ((p parsed-process))
   (if (loop for realizes in (process-realizes p) always
@@ -271,7 +277,7 @@
 		    ,(handle-uri (lookup-handle p bearer))
 		    (object-some-values-from !oborel:part_of ,(handle-uri (lookup-handle p bearer-whole))))
 		  (handle-uri (lookup-handle p bearer))))))
-      (warn "Not generating OWL for realizations for ~a because there are parse errors or not all handles are defined" p)))
+      (format t  "warning: Not generating OWL for realizations for ~a because there are parse errors or not all handles are defined~%" p)))
 
 (defmethod process-part-located-in-axiom ((p parsed-process))
   (destructuring-bind (larger-process location) (process-part-of p)
@@ -285,14 +291,18 @@
 
 (defmethod owl-axioms ((p parsed-process))
   (let ((label 
-	 (format nil "~{~a~^ + ~} -> ~{~a~^ + ~}"
+	 (format nil "~{~a~^ + ~} -> ~{~a~^ + ~}~a"
 		 (loop for p in (process-substrates p)
 		    collect (if (equal (car p) 1) (second p) (format nil "~a ~a" (car p) (second p))))
 		 (loop for p in (process-products p)
-		    collect (if (equal (car p) 1) (second p) (format nil "~a ~a" (car p) (second p)))))))
+		    collect (if (equal (car p) 1) (second p) (format nil "~a ~a" (car p) (second p))))
+		 (if (lookup-handle p (second (process-part-of p)))
+		     (format nil " in ~a" (second (process-part-of p)))
+		     "")
+		 )))
     (if  (or (parse-errors p)
 	     (not (all-participant-handles-defined?  p)))
-	 (warn "Not generating OWL for ~a because there are parse errors or not all handles are defined" label)
+	 (format t  "warning Not generating OWL for ~a because there are parse errors or not all handles are defined~%" label)
 	 (let ((uri (process-uri p)))
 	   `((declaration (class ,uri))
 	     (annotation-assertion !rdfs:label ,uri ,label)
@@ -309,4 +319,9 @@
 	     ,(spreadsheet-source-editor-note p)
 	     (sub-class-of ,uri !biological-process))))))
 
+;~/Downloads/2010-05-26/pro_wv.obo
 
+
+;;; decision: Aggregates of (each type of) molecule. Aggregates of processes (each tab is a pathway). The aggregate continuants are participants of the aggregate processes. The GO processes are at the aggregate levels, e.g. the SARM+ reaction is part of a GO negative regulation of..
+;; is_component_process_of
+;; is_grain_of 
