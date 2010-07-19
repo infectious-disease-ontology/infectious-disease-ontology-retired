@@ -26,7 +26,9 @@
 ;; Books
 
 (defclass ido-pathway-book (parsed-book)
-  ((sheet-type :initform 'ido-pathway-sheet)))
+  ((sheet-type :initform 'ido-pathway-sheet)
+   (pathway-name :accessor pathway-name :initarg :pathway-name)
+   ))
 
 (defmethod lookup-handle ((b ido-pathway-book) name)
   (let ((results 
@@ -36,7 +38,7 @@
     (if (null (cdr results))
 	(car results)
 	(progn
-	  (warn "handled defined more than once, ~s: ~s" name (remove-duplicates results))
+	  (format t "warning handled defined more than once, ~s: ~s" name (remove-duplicates results))
 	  (remove-duplicates results)))))
 
 (defmethod where-is-handle ((b ido-pathway-book) name)
@@ -45,6 +47,7 @@
      when found collect sheet))
 
 (defmethod parse-book ((b ido-pathway-book) &key (handles? t))
+  (locate-blocks-in-sheets b (mapcar 'car (block-types b)))
   (when handles? 
     (loop for sheet in (parsed-sheets b) do (clear-handles sheet)))
   (loop for block-type in (append (if handles? '(parsed-handle-block) nil)
@@ -64,7 +67,7 @@
   (map nil 'after-all-sheets-parsed (parsed-blocks b)))
 
 (defmethod block-types ((book ido-pathway-book))
-  (loop for class in (remove-duplicates (system:class-direct-subclasses (find-class 'ido-pathway-block)) :key 'class-name)
+  (loop for class in (remove-duplicates (mop::class-direct-subclasses (find-class 'ido-pathway-block)) :key 'class-name)
        collect (list* (class-name class) (class-slot-value class 'block-headers))))
 
 (defmethod blocks-of-type  ((book ido-pathway-book) type)
@@ -74,35 +77,6 @@
   (loop for block in (blocks-of-type book type)
        do (loop for raw-row in (block-rows block) for row in (parsed-rows block) do (funcall fn row))))
 
-(defmethod write-external.owl ((book ido-pathway-book))
-  (let ((axioms 
-	 (loop for (kind where term parent) in *mireot-parent-terms*
-	    unless (or (member where '("PRO" "PFAM") :test 'equal)
-		       (null parent))
-	    append
-	    `((declaration (class ,term))
-	      (subclassof ,term ,parent)
-	      (annotationassertion !obo:IAO_0000412 ,term ,(make-uri (format nil "http://purl.org/obo/owl/~a" where)))))))
-    (foreach-row-in-block-type 
-     book 'parsed-handle-block 
-     (lambda(e)
-       (unless (or (not (uri-p (handle-uri e)))
-		   (equal (handle-class e) "submitted"))
-	 (multiple-value-bind (ont-uri ont-name) (term-ontology e)
-	   (when (member ont-name '("CHEBI" "GO" "SO" "PATO") :test 'equal)
-	     (setq axioms
-		   (append 
-		    `((declaration (class ,(handle-uri e)))
-		      (subclassof ,(handle-uri e) ,(mireot-parent-term e))
-		      (annotationassertion !obo:IAO_0000412 ,(handle-uri e) ,ont-uri))
-		    axioms)))))))
-    (map nil 'print axioms)
-    (with-ontology external (:about !obo:ido/external.owl :base !obo: :eval t)
-	axioms
-      (write-rdfxml external "ido:immunology;external.owl"))))
-    
-
-  
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Sheets
@@ -201,7 +175,10 @@
      append
        (map nil 'parse-part-of (parsed-rows block))))
 
-
+(defmethod parse-bindings ((book ido-pathway-book))
+  (loop for block in (blocks-of-type book 'parsed-process-block)
+     append
+       (map nil 'parse-binding-domains (parsed-rows block))))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -286,14 +263,14 @@
 (defun legacy-uri (prefix id handle)
   (cond ((#"matches" id "^\\d+$")
          (make-uri (format nil "http://purl.org/obo/owl/~a#~a_~a" prefix prefix id)))
-	((equal id "submitted")
+	((or (equal id "submitted") (equal id "tosubmit"))
 	 (make-uri (make-uri (format nil "http://purl.org/obo/owl/~a#submitted_~a" prefix (string-downcase handle)))))
 	(t (error "Don't know how to make uri for ~a:~a (~a)" prefix id handle))))
 
 (defun obolibrary-uri (prefix id handle)
   (cond ((#"matches" id "^\\d+$")
          (make-uri (format nil "http://purl.obolibrary.org/obo/~a_~a" prefix id)))
-	((equal id "submitted")
+	((or (equal id "submitted") (equal id "tosubmit"))
 	 (make-uri (make-uri (format nil "http://purl.obolibrary.org/obo/~a_submitted_~a" prefix (string-downcase handle)))))
 	(t (error "Don't know how to make uri for ~a:~a (~a)" prefix id handle))))
 
@@ -306,7 +283,7 @@
 		for fields = (mapcar (lambda(e) (#"replaceAll" e "(^')|('$)" "")) (split-at-char line #\tab))
 	      do (print (cons (nth 4 fields) (nth 8 fields) ))))
 
-(defmethod compute-handle-uri ((o parsed-handle))
+'(defmethod compute-handle-uri ((o parsed-handle))
   (let ((handle (handle o))
 	(desc (handle-description o))
 	(type (handle-kind o))
@@ -315,7 +292,7 @@
     (flet ((compute-uri (base prefix id handle)
 	     (cond ((#"matches" id "^\\d+$")
 		    (make-uri (format nil "http://purl.obolibrary.org/obo/~a_~a" prefix id)))
-		   ((equal id "submitted")
+		   ((or (equal id "submitted") (equal id "tosubmit"))
 		    (make-uri (format nil "http://purl.obolibrary.org/obo/~a_submitted_~a" prefix (string-downcase handle))))
 		   (t (error "")))))
       (unless (null id)
@@ -330,9 +307,9 @@
 					;("compr" "competitor" "role" "MI:0941" NIL) 
 					;("compb" "competition binding" "process" "MI:0405" NIL) 
 		 ;; not used
-		 (warn "Not translating MI term MI:~a" id)
+		 (format t  "warning: Not translating MI term MI:~a~%" id)
 		 )
-		((equal prefix "PMID") (warn "~a ~a" handle id))
+		((equal prefix "PMID") (format t "warning: ~a ~a~%" handle id))
 		((equal prefix "SO")
 		 (legacy-uri "SO" id handle)
 		 ;; http://www.cbrc.jp/htbin/bget_tfmatrix?M00258 - ISRE. What gene is ISRE upstream of?
@@ -435,7 +412,7 @@
 
 (defmethod parse-part-of ((p parsed-process))
   (let ((string (third (cell-list p))))
-    (unless (#"matches" string "\\s*")
+    (unless (or (not string) (#"matches" string "\\s*"))
       (let ((split (split-at-regex string "\\s+")))
 	(let ((process (first split)) ;; cheating
 	      (location (car (last (cdr split)))))
@@ -455,6 +432,14 @@
 		     (format nil " did you mean to use handles from ~{~a~^ or ~}" somewhere)
 		     "")
 		 ))))
+
+(defmethod parse-binding-domains ((p parsed-process))
+  (let ((string (sixth (cell-list p))))
+    (setq string (and string (#"replaceAll" string "^\\s*(.*?)\\s*$" "$1")))
+    (unless (or (not string) (#"matches" string "\\s*"))
+      (when string
+	(print-db p)
+	(print-db string (lookup-handle p string))))))
 
 (defmethod print-summary ((o parsed-process))
   (format nil "~s" (car (cell-list o))))
@@ -527,9 +512,9 @@
 	    do (format t "~%Did't find ~s from ~s~%" term (append (second parsed) (third parsed)))))
   )
 
-(defun check-pathway-spreadsheet-syntax (&key (path "ido:immunology;ido-s4lps-tlr4.xlsx"))
-  (let* ((book (make-instance 'ido-pathway-book :book-path path)))
-    (locate-blocks-in-sheets book (mapcar 'car (block-types book)))
+(defun check-pathway-spreadsheet-syntax (&key (path "ido:immunology;ido-s4lps-tlr4.xlsx") (name "tlr4"))
+  (let* ((book (make-instance 'ido-pathway-book :book-path path :pathway-name name)))
+;    (locate-blocks-in-sheets book (mapcar 'car (block-types book)))
     (parse-book book)
     (report-some-processes book)
     (report-parse-results book)
@@ -581,3 +566,96 @@
 				    
 
 	      
+(defmethod determine-complex-constituents ((book parsed-book))
+  (let ((complex-to-constituents (setq @ (make-hash-table :test 'equalp)))
+	(complex-done? (setq @@ (make-hash-table :test 'equalp)))
+	(did-something nil))
+    (flet ((update (substrates products substrate-types product-types)
+	     (let ((product (second (car products))))
+	       (unless (gethash product complex-done?)
+		 (loop for (number substrate) in substrates
+		    for substrate-type in substrate-types
+		    with completed = (length substrates)
+		    with product = (second (car products))
+		    do (cond ((or (eq substrate-type :protein) (eq substrate-type :molecular-entity))
+			      (unless (member substrate (gethash product complex-to-constituents) :test 'equalp)
+				(setq did-something t)
+				(push substrate (gethash product complex-to-constituents)))
+			      (decf completed))
+			     ((eq substrate-type :protein-complex)
+			      (when (gethash substrate-type complex-done?)
+				(dolist (member (gethash substrate-type complex-to-constituents))
+				  (unless (member member (gethash product complex-to-constituents) :test 'equalp)
+				    (push member (gethash product complex-to-constituents))
+				    (setq did-something t)))
+				(decf completed)
+				))
+			     (t (error "shouldn't be here")))
+		    (when (zerop completed)
+		      (setf (gethash product complex-done?) t)))))))
+    
+
+      (foreach-row-in-block-type 
+       book
+       'parsed-complex-block
+       (lambda(e) (update (mapcar (lambda(p) (list 1 p)) (complex-elements e))
+			  (list (list 1 (handle e)))
+			  (loop for handle in (complex-elements e)
+			     collect (entity-symbolic-type (lookup-handle (in-sheet (in-block e)) handle)))
+			  (list :protein-complex))))
+
+      (foreach-row-in-block-type 
+       (first books)
+       'parsed-handle-block
+       (lambda(e) 
+	 (when (eq (ignore-errors (entity-symbolic-type e)) :protein-complex)
+	   (when (#"matches" (second (cell-list e)) "[A-Za-z0-9]*(\\s*\\+[A-Za-z0-9]*)+")
+	     (let ((constituents (split-at-regex (string-trim " " (second (cell-list e))) "\\s*\\+\\s*")))
+	       (if (loop for handle in constituents
+			for found = (lookup-handle (in-sheet (in-block e)) handle)
+			unless found do (format t "Can't find handle ~a from ~a" handle e)
+		      always found)
+		   (update (mapcar (lambda(p) (list 1 p)) constituents)
+			   (list (list 1 (handle e)))
+			   (loop for handle in constituents
+			      collect (entity-symbolic-type (lookup-handle (in-sheet (in-block e)) handle)))
+			   (list :protein-complex)))
+		   )))))
+      (loop  do
+	   (setq did-something nil)
+	   (sleep .1) (princ ".")
+	   (foreach-row-in-block-type 
+	    book
+	    'parsed-process-block
+	    (lambda (b)
+	      (when (and
+		     (= (length (process-products b)) 1)
+		     (> (length (process-substrates b)) 1
+			))
+		(let ((substrate-types
+		       (mapcar (lambda(e)
+				 (entity-symbolic-type (lookup-handle (in-sheet (in-block b)) (second e))))
+			       (process-substrates b)))
+		      (product-types 
+		       (mapcar (lambda(e)
+				 (entity-symbolic-type (lookup-handle (in-sheet (in-block b)) (second e))))
+			       (process-products b))))
+
+		  ;; for any protein on the left add it as constituent of the complex on the right.
+		  ;; any complex on the left that we know the constituents, add to the right
+		  ;; if any complexes left then we're not done - hopefully on next iteration
+
+		  (update (process-substrates b) (process-products b) substrate-types product-types)
+		
+		  (assert (null (set-difference (remove-duplicates substrate-types)
+						'(:molecular-entity :protein-complex :protein)))
+			  ()
+			  "Funny reaction ~a" b)
+		  (assert (equal product-types '(:protein-complex)) ()
+			  "Funny reaction ~a - looks like it should form a complex" b)
+		  ))))
+
+	   while did-something
+	   ))))
+
+  

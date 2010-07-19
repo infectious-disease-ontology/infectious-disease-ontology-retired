@@ -4,20 +4,20 @@
 (defvar *ido-term-to-uri* (make-hash-table :test 'equalp))
 
 (defun ido-to-owl (&key (file "ido:ido-core;IDO-editors-worksheet.xls"))
-  (let* ((xls (new 'hssf (namestring (truename file))))
-	 (workbook (get-java-field xls "hssfworkbook" t))
-	 (sheets (loop for n below (#"getNumberOfSheets" workbook)
-		    collect (list (#"getSheetName" workbook n) (#"getSheetAt" workbook n))))
+  (let* ((sheets (list-sheets :file file))
 	 (termdefs (loop for sheet in sheets
 		      when (member (car sheet) 
-				   '("Roles" "Dispositions" "Qualities" "Processes" "Objects"	 
-				     "Object Aggregates" "Temporal Intervals" "Sites" "Defined Classes")
+				   '("Role" "Disposition" "Quality" "Process" "GDC" "Material Entity"	 
+				     "Temporal Interval" "Defined Class"
+				     "Population_DC" "Pathogen_DC" "Host_DC" "Infection_DC" "Treatment_DC" 
+
+				     )
 				   :test 'equal)
 		      append (get-ido-sheet (second sheet) (first sheet)))))
     (setq @ termdefs)
     (setq @@ sheets)
     (make-ido-term-to-uri termdefs)
-    (print-db (check-isas termdefs))
+;;    (print-db (check-isas termdefs))
     ;;(check-historical termdefs)
     (make-ido-owl termdefs)
     ))
@@ -74,6 +74,7 @@
        for newid = (second (assoc :new-id entry))
        when (and term (not (equal term "")))
        do
+;	 (print-db term newid (assoc :is_a entry))
        (if (not newid)
 	   (warn "Missing id for term ~a" term )
 	   (setf (gethash term table)
@@ -85,109 +86,140 @@
     ))
 
 (defun make-ido-owl (termdefs)
-  (with-ontology ido (:about "http://purl.obolibrary.org/obo/ido.owl" :base "http://purl.obolibrary.org/obo/ido.owl")
-      ((owl-imports !<http://www.ifomis.org/bfo/1.1>)
-       (owl-imports !<http://purl.obolibrary.org/obo/iao/dev/ontology-metadata.owl>)
-       (owl-imports !<http://purl.obolibrary.org/obo/ogms.owl>)
-       (owl-imports !<http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl>)
-       (ontology-annotation !rdfs:comment (literal "The core Infectious Disease Ontology is an ontology of entities generally relevant to both the biomedical and clinical aspects of infectious diseases, such as 'pathogen', 'host', 'vector', and 'vaccine'.  The structure of IDO adheres to the Basic Formal Ontology.  Terms in IDO that are within the scope of other OBO Foundry ontologies, such as the Gene Ontology, are derived from those ontologies.  Other terms are defined as much as possible as cross-products of terms from Foundry ontologies. For more information, see http://www.infectiousdiseaseontology.org/Home.html" :|@en|))
-       (ontology-annotation !rdfs:comment (literal "This ontology is in early development. Expect it to change." :|@en|))
-       (ontology-annotation !rdfs:seeAlso !<http://www.infectiousdiseaseontology.org/Home.html>)
-       (ontology-annotation !dc:creator "Lindsay Cowell")
-       (ontology-annotation !dc:creator "Albert Goldfain")
-       (ontology-annotation !dc:creator "Alexander Diehl")
-       (ontology-annotation !dc:contributor "Barry Smith")
-       (ontology-annotation !dc:contributor "Alan Ruttenberg")
-       (ontology-annotation !<http://protege.stanford.edu/plugins/owl/protege#defaultLanguage> "en")
-       (annotation-property !obo:IAO_0000115 (label "definition"))
-       (annotation-property !obo:IAO_0000117 (label "definition editor"))
-       (annotation-property !obo:IAO_0000119 (label "definition source"))
-       (annotation-property !obo:IAO_0000116 (label "editor note"))
-       (annotation-property !obo:IAO_0000118 (label "alternative term"))
-       (annotation-property !obo:OBI_0000283 (label "imported from"))
-       (annotation-property !<http://protege.stanford.edu/plugins/owl/protege#defaultLanguage>)
-       (object-property !oborel:part_of)
-       (ontology-annotation !dc:date (literal "2009-08-13" !xsd:date))
-       (class !obo:IDO_9999999 (label "_defined class") :partial
-	      (annotation !obo:IAO_0000116 "placeholder"))
-       (loop for (term id) in *ido-defined-classes* collect
-	    (class id (label (literal (format nil "_defined ~a" term) :|@en|))
-		   (annotation !obo:IAO_0000116 "placeholder")
-		   :partial
-		   (or (gethash term *ido-term-to-uri*)
-		       (second (assoc term *ido-external-terms* :test 'equalp)))
-		   )
-	    collect
-	    (class id :partial !obo:IDO_9999999 )
+  (with-ontology ido (:about "http://purl.obolibrary.org/obo/ido.owl" :base "http://purl.obolibrary.org/obo/ido.owl" :collecting t)
+      ((asq
+	(imports !<http://www.ifomis.org/bfo/1.1>)
+	(imports !<http://purl.obolibrary.org/obo/iao/dev/ontology-metadata.owl>)
+	(imports !<http://purl.obolibrary.org/obo/ogms.owl>)
+	(imports !<http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl>)
+	(annotation-assertion  !rdfs:comment !obo:ido.owl "The core Infectious Disease Ontology is an ontology of entities generally relevant to both the biomedical and clinical aspects of infectious diseases, such as 'pathogen', 'host', 'vector', and 'vaccine'.  The structure of IDO adheres to the Basic Formal Ontology.  Terms in IDO that are within the scope of other OBO Foundry ontologies, such as the Gene Ontology, are derived from those ontologies.  Other terms are defined as much as possible as cross-products of terms from Foundry ontologies. For more information, see http://www.infectiousdiseaseontology.org/Home.html@en")
+	(annotation-assertion !rdfs:comment !obo:ido.owl "This ontology is in early development. Expect it to change.@en")
+	(annotation-assertion !rdfs:seeAlso !obo:ido.owl !<http://www.infectiousdiseaseontology.org/Home.html>)
+	(annotation-assertion !dc:creator !obo:ido.owl "Lindsay Cowell")
+	(annotation-assertion !dc:creator !obo:ido.owl "Albert Goldfain")
+	(annotation-assertion !dc:creator !obo:ido.owl "Alexander Diehl")
+	(annotation-assertion !dc:contributor !obo:ido.owl "Barry Smith")
+	(annotation-assertion !dc:contributor !obo:ido.owl "Alan Ruttenberg")
+	(annotation-assertion !<http://protege.stanford.edu/plugins/owl/protege#defaultLanguage> !obo:ido.owl "en")
+	(declaration (annotation-property !obo:IAO_0000115))
+	(declaration (annotation-property !obo:IAO_0000117))
+	(declaration (annotation-property !obo:IAO_0000119))
+	(declaration (annotation-property !obo:IAO_0000116))
+	(declaration (annotation-property !obo:IAO_0000118))
+	(declaration (annotation-property !obo:OBI_0000283))
+	(declaration (annotation-property !<http://protege.stanford.edu/plugins/owl/protege#defaultLanguage>))
+	(declaration (object-property !oborel:part_of))
+	(annotation-assertion !dc:date !obo:ido.owl (:literal "2010-05-19" !xsd:date))
+;	(declaration (class  !obo:IDO_9999999))
+;	(annotation-assertion !rdfs:label !obo:IDO_9999999 "_defined class")
+;	(annotation-assertion !obo:IAO_0000116 !obo:IDO_9999999 "placeholder"))
+;       (loop for (term id) in *ido-defined-classes*
+;	  do
+;	  (as `(declaration (class ,id)))
+;	  (as `(annotation-assertion !rdfs:label ,id ,(format nil "_defined ~a@en" term)))
+;	  (as `(annotation-assertion !obo:IAO_0000116 ,id  "placeholder"))
+;	    (as `(subclass-of ,(or (gethash term *ido-term-to-uri*)
+;					    (second (assoc term *ido-external-terms* :test 'equalp))
+;					    (second (assoc term *ido-defined-classes* :test 'equalp)))
+;			       ,id))
+;	  (as `(subclass-of ,id !obo:IDO_9999999))
+	  )
+       (asq
+	(declaration (class !<http://purl.org/obo/owl/GO#GO_0005575> ))
+	(subclass-of !<http://purl.org/obo/owl/GO#GO_0005575> !snap:MaterialEntity)
+	(annotation-assertion !rdfs:label !<http://purl.org/obo/owl/GO#GO_0005575> "cellular component")
+	(declaration (class !<http://purl.org/obo/owl/GO#GO_0005615> ))
+	(subclass-of !<http://purl.org/obo/owl/GO#GO_0005615> !snap:MaterialEntity)
+	(subclass-of !<http://purl.org/obo/owl/CARO#CARO_0000000> !snap:MaterialEntity)
+	(annotation-assertion !rdfs:label !<http://purl.org/obo/owl/CARO#CARO_0000000> "anatomical entity")
+	(subclass-of !<http://purl.org/obo/owl/CHEBI#CHEBI_23367> !snap:MaterialEntity)
+	(annotation-assertion !rdfs:label !<http://purl.org/obo/owl/CHEBI#CHEBI_23367> "molecular entity")
+	(annotation-assertion !rdfs:label !<http://purl.org/obo/owl/GO#GO_0005615> "extracellular space")
+	(subclass-of !<http://purl.org/obo/owl/GO#GO_0005615> (object-some-values-from !oborel:part_of !obo:OBI_0100026))
+	(declaration (class !obo:OBI_0100026))
+	(subclass-of !obo:OBI_0100026 !snap:MaterialEntity)
+	(subclass-of !<http://purl.org/obo/owl/NCBITaxon#NCBITaxon_10239> !obo:OBI_0100026 )
+	(annotation-assertion !rdfs:label !<http://purl.org/obo/owl/NCBITaxon#NCBITaxon_10239> "Viruses")
+	(annotation-assertion !rdfs:label !obo:OBI_0100026 "organism@en")
+	(annotation-assertion !<http://purl.obolibrary.org/obo/OBI_0000283> !obo:OBI_0100026 !<http://purl.obolibrary.org/obo/obi.owl>)
+	(annotation-assertion !obo:IAO_0000115 !obo:OBI_0100026 "An organism is material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs."))
+
+       (loop for (id (term) definition) in (historical-ido-terms)
+	    for uri = (make-uri (#"replaceAll" id "IDO:" "http://purl.obolibrary.org/obo/IDO_"))
+	    do
+	    (as
+	     `(declaration (class ,uri))
+	     `(subclass-of ,uri !oboinowl:ObsoleteClass)
+	     `(annotation-assertion !rdfs:label ,uri ,(format nil "_obsolete_~a@en" term)))
+	    (when (and definition (not (equal definition "")))
+	      (as
+	       `(annotation-assertion !obo:IAO_0000115 ,uri 
+				      ,(format nil "'~a'-~a: ~a@en" definition
+					       (#"replaceAll" id "IDO:" "ID[O]:")
+					       definition))
+	       `(annotation-assertion !obo:IAO_0000116 ,uri ,(format nil "id '~a'-~a from IDO 2007. May have replacement - TBD@en" term
+							   (#"replaceAll" id "IDO:" "ID[O]:")
+							   id) )))
 	    )
-       (class !<http://www.ifomis.org/bfo/1.1/snap#Capability> :partial !<http://www.ifomis.org/bfo/1.1/snap#RealizableEntity>)
-       (class !<http://purl.org/obo/owl/GO#GO_0005575> :partial !<http://www.ifomis.org/bfo/1.1/snap#MaterialEntity>
-	      (label "cellular component"))
-       (class !<http://purl.org/obo/owl/GO#GO_0005615> :partial !<http://www.ifomis.org/bfo/1.1/snap#Site>
-	      (label "extracellular space")
-	      (restriction !oborel:part_of (some-values-from !obo:OBI_0100026)))
-       (class !obo:OBI_0100026 :partial !snap:MaterialEntity
-	      (label (literal "organism" :|@en|))
-	      (annotation !<http://purl.obolibrary.org/obo/OBI_0000283> !<http://purl.obolibrary.org/obo/obi.owl>)
-	      (annotation !obo:IAO_0000115 "An organism is material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs."))
        (loop for entry in termdefs
 	  for term = (second (assoc :term entry))
 	  for uri = (gethash term *ido-term-to-uri*)
 	  for definedclass? = (equal (second (assoc :sheet entry)) "Defined Classes")
 	  for id = (second (assoc :id entry))
 	  for hasid? = (and id (not (equal id "")) (search "IDO:" id))
+	  for deprecated = (#"matches" (or (second (assoc :is_a  entry)) "")
+				       "^((obsolete)|(deprecate)|(deprecated)).*")
+	  for dont = (or (not (second (assoc :is_a entry)))
+			 (#"matches" (second (assoc :is_a  entry)) "^((pending)|(merge to)).*"))
 	  for isa-uri =
 	  (cond (definedclass?
 		 (second (assoc (second (assoc :is_a entry)) *ido-defined-classes* :test 'equalp)))
 		(t (or (gethash (second (assoc :is_a entry)) *ido-term-to-uri*)
 		       (second (assoc (second (assoc :is_a entry))
 				      *ido-external-terms* :test 'equalp)))))
-	  for definition = (second (assoc :definition entry))
+	  for definition = (second (assoc :natural-language-definition entry))
+	  for formal-definition = (second (assoc :formal-definition entry))
+	  for comment = (second (assoc :comments entry))
 	  for is_a = (second (assoc :is_a entry))
 	  for synonyms = (second (assoc :synonym entry))
-	  when (and term (not (equal term "")))
-	  append
-	    (if  (and
-		  (not definedclass?)
-		  (not (and uri isa-uri)))
-	       (progn (warn "Whoops - need uri (~a) and isa-url (~s) - ~a" uri isa-uri entry)
-		      nil)
-	       (list* (apply 'class uri :partial (if (#"matches" term "^obsolete_.*") !oboinowl:ObsoleteClass isa-uri)
-			    (label (literal term :|@en|))
-			    (annotation !obo:IAO_0000117 "Lindsay Cowell")
-			    (annotation !obo:IAO_0000117 "Albert Goldfain")
-			    (annotation !obo:IAO_0000117 "Alexander Diehl")
-			    (when definition (annotation !obo:IAO_0000115 (literal (safe-annotation-string definition 'definition) :|@en|)))
-			    (loop for syn in synonyms collect  
-				 (annotation !obo:IAO_0000118 (literal syn :|@en|))))
-		      (and hasid?
-			   (list (class (make-uri (#"replaceAll" id "IDO:" "http://purl.obolibrary.org/obo/IDO_"))
-			     :partial !oboinowl:ObsoleteClass
-			     (label (literal (format nil "_obsolete_~a" term) :|@en|))
-			     (when definition (annotation !obo:IAO_0000115 (literal (safe-annotation-string (format nil "'~a'-~a: ~a" term id definition) 'definition) :|@en|)))
-			     (annotation !obo:IAO_0000116 (literal (format nil "id for '~a'-~a replaced by ~a (ID collision)" term id (uri-full uri)) :|@en|)))))
-
-		     )
+	    do (print-db term uri definedclass? id hasid? isa-uri definition is_a synonyms deprecated dont)
+	  when (and term (not (equal term "")) (not dont))
+	  do
+	    (print-db term uri definedclass? id hasid? isa-uri definition is_a synonyms deprecated)
+	    (if (and (not definedclass?) (not (and uri isa-uri)) (not deprecated))
+		(progn (warn "Whoops - need uri (~a) and isa-url (~s) - ~a" uri isa-uri entry) nil)
+		(progn
+		  (as
+		   `(declaration (class , uri))
+		   `(subclass-of ,uri ,(if (or deprecated(#"matches" term "^_{0,1}obsolete_.*")) !oboinowl:ObsoleteClass isa-uri))
+		   `(annotation-assertion !rdfs:label ,uri ,(format nil "~a~a@en" (if deprecated "_obsolete_" "") term))
+		   `(annotation-assertion !obo:IAO_0000117 ,uri "Lindsay Cowell")
+		   `(annotation-assertion !obo:IAO_0000117 ,uri "Albert Goldfain")
+		   `(annotation-assertion !obo:IAO_0000117 ,uri "Alexander Diehl"))
+		  (when definition
+		    (as `(annotation-assertion !obo:IAO_0000115 ,uri ,(format nil "~a@en"  definition))))
+		  (when (and formal-definition (not (#"matches" formal-definition "\\s*")))
+		    (as `(annotation-assertion !obo:IAO_0000116 ,uri ,(format nil "Formal definition: ~a@en" formal-definition))))
+		  (when (and comment (not (#"matches" comment "\\s*")))
+		    (as `(annotation-assertion !obo:IAO_0000116 ,uri ,(format nil "~a@en" comment))))
+		  (loop for syn in synonyms do
+		       (as `(annotation-assertion !obo:IAO_0000118 ,uri ,(format nil "~a@en" syn))))
+		  (and hasid?
+		       (let ((uri (make-uri (#"replaceAll" id "IDO:" "http://purl.obolibrary.org/obo/IDO_"))))
+			
+			 (as `(declaration (class ,uri))
+			     `(subclass-of ,uri !oboinowl:ObsoleteClass)
+			     `(annotation-assertion !rdfs:label ,uri ,(format nil "_obsolete_~a@en" term)))
+			 (when definition
+			   (as `(annotation-assertion !obo:IAO_0000115 ,uri ,(format nil "'~a'-~a: ~a~en" term id definition))))
+			 (as `(annotation-assertion !obo:IAO_0000116 ,uri ,(format nil "id for '~a'-~a replaced by ~a (ID collision)@en" term id (uri-full uri))))))
+		  ))
 	       )
 	    )
-       (loop for (id term definition) in (historical-ido-terms)
-	    collect
-	    (class (make-uri (#"replaceAll" id "IDO:" "http://purl.obolibrary.org/obo/IDO_"))
-	      :partial !oboinowl:ObsoleteClass
-		   (label (literal (format nil "_obsolete_~a" term) :|@en|))
-		   (when (and definition (not (equal definition "")))
-		     (annotation !obo:IAO_0000115 (literal
-						   (safe-annotation-string
-						    (format nil "'~a'-~a: ~a" definition
-							    (#"replaceAll" id "IDO:" "ID[O]:")
-							    definition) 'definition) :|@en|)))
-		   (annotation !obo:IAO_0000116 (literal (format nil "id '~a'-~a from IDO 2007. May have replacement - TBD" term
-								 (#"replaceAll" id "IDO:" "ID[O]:")
-								 id) :|@en|))
-		   ))
-       )
-;    (princ (abstract-syntax ido))
-    (write-rdfxml ido)))
+       ido
+       ))
+
+(defvar *historical-ido* nil)
 
 (defun check-historical (termdefs)
   (let ((historical (historical-ido-terms)))
@@ -213,20 +245,22 @@
     ))
 
 (defun historical-ido-terms (&optional id-is-uri)
-  (let ((kb (load-kb-jena "ido:ido-core;historical;IDO-1-3-oboconv.owl")))
-    (let ((*current-labels* (rdfs-labels kb)))
-      (mapcar (lambda(e)
-		(list (if id-is-uri
-			  (first e)
-			  (#"replaceAll" (#"replaceAll" (uri-full (first e)) ".*#" "") "_" ":"))
-		      (second e) (third e)))
-	      (loop for class in
-		   (remove-if-not (lambda(e) (search "IDO#" (uri-full e)))
-				  (descendants !owl:Thing kb))
-		   collect (list class
-				 (gethash class *current-labels*)
-				 (rdfs-comment class kb)
-				 ))))))
+  (or *historical-ido*
+      (setq *historical-ido*
+	    (let ((kb (load-ontology "ido:ido-core;historical;IDO-1-3-oboconv.owl")))
+	      (let ((*current-labels* (rdfs-labels kb)))
+		(mapcar (lambda(e)
+			  (list (if id-is-uri
+				    (first e)
+				    (#"replaceAll" (#"replaceAll" (uri-full (first e)) ".*#" "") "_" ":"))
+				(second e) (third e)))
+			(loop for class in
+			     (remove-if-not (lambda(e) (search "IDO#" (uri-full e)))
+					    (descendants !owl:Thing kb))
+			     collect (list class
+					   (gethash class *current-labels*)
+					   (rdfs-comment class kb)
+					   ))))))))
 
 (defun ido-2008-terms ()
   (let ((obo (make-instance 'obo :path "ido:ido-core;historical;IDO-2009-05-15.obo")))
@@ -240,35 +274,32 @@
 (defparameter *ido-external-terms*
   (eval-uri-reader-macro
    '(("object aggregate"  !<http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate>)
-					;"active immunization against smallpox" 
      ("process" !span:Process)
+     ("processual entity" !span:ProcessualEntity)
      ("disease course(OGMS:0000063)" !obo:OGMS_0000063)
-     ("material entity that is alive" !obo:OBI_0100026) ; organism
-;     "organism that has the capability to bear the host role" 
+     ("disease course" !obo:OGMS_0000063)
+     ("material entity that is alive" !obo:OBI_0100026 !obo:obi.owl) ; organism
      ("material entity" !<http://www.ifomis.org/bfo/1.1/snap#MaterialEntity>)
-     ("organism"   !obo:OBI_0100026)
-;     "organism that is the bearer of the host of infectious parasite role" 
-;     "organism that is the bearer of the host role" 
-;     "organism that is the bearer of the host of infectious agent role" 
-;     "organism with an immune system"
-;     "organism that has the pathogenic disposition" 
-;     "organism that has the infectious disposition" 
+     ("organism"   !obo:OBI_0100026 !obo:obi.owl)
      ("quality"  !<http://www.ifomis.org/bfo/1.1/snap#Quality>)
      ("disposition"  !<http://www.ifomis.org/bfo/1.1/snap#Disposition>)
      ("occurrent"  !<http://www.ifomis.org/bfo/1.1/span#Occurrent>)
+     ("temporal interval"  !<http://www.ifomis.org/bfo/1.1/span#TemporalInterval>)
+     ("generically dependent continuant"  !<http://www.ifomis.org/bfo/1.1/snap#GenericallyDependentContinuant>)
      ("object"  !<http://www.ifomis.org/bfo/1.1/snap#Object>)
      ("disease" !obo:OGMS_0000031)
      ("disorder" !obo:OGMS_0000045)
-     ("capability" !<http://www.ifomis.org/bfo/1.1/snap#Capability>)
-
      ("quality?" !<http://www.ifomis.org/bfo/1.1/snap#Quality>)
      ("site?" !<http://www.ifomis.org/bfo/1.1/snap#Site>)
      ("site" !<http://www.ifomis.org/bfo/1.1/snap#Site>)
      ("colonized quality?" !obo:IDO_0000459)
      ("infected quality?" !obo:IDO_0000460)
      ("role" !<http://www.ifomis.org/bfo/1.1/snap#Role>)
-     ("cellular component" !<http://purl.org/obo/owl/GO#GO_0005575>)
-     ("extracellular space" !<http://purl.org/obo/owl/GO#GO_0005615>)
+     ("cellular component" !<http://purl.org/obo/owl/GO#GO_0005575> !oboont:GO)
+     ("extracellular space" !<http://purl.org/obo/owl/GO#GO_0005615>  !oboont:GO)
+     ("anatomical entity" !<http://purl.org/obo/owl/CARO#CARO_0000000>)
+     ("molecular entity" !<http://purl.org/obo/owl/CHEBI#CHEBI_23367>)
+     ("virus" !<http://purl.org/obo/owl/NCBITaxon#NCBITaxon_10239>)
      )))
 
 (defparameter *ido-defined-classes*
@@ -280,4 +311,8 @@
     ("quality"  !obo:IDO_9099993)
     ("role" !obo:IDO_9099992)
     ("disposition" !obo:IDO_9099991)
-    ("immunity to infectious organism" !obo:IDO_9099990))))
+			   )))
+
+(defparameter *ido-noise-classes* 
+  (append *obo-noise-classes* (list !obo:IDO_9999999 !obi:OBI_0000449 !obi:OBI_0000233 !obi:OBI_0000683 !obi:OBI_0600065 !snap:Object !snap:FiatObjectPart !snap:SpatialRegion !span:ProcessBoundary !span:ProcessualContext !span:FiatProcessPart !span:ProcessAggregate !span:SpatiotemporalRegion !owl:Nothing !snap:ObjectBoundary !snap:Site )
+	  (mapcar 'second *ido-defined-classes*)))
