@@ -24,6 +24,7 @@ idspace: VO http://purl.obolibrary.org/obo/VO "Vaccine Ontology"
 idspace: SO http://purl.org/obo/owl/SO# "Sequence Ontology"
 idspace: HPO http://purl.org/obo/owl/HP# "Human Phenotype Ontology"
 remark: This file is a subset of IDO adequate for indexing using the OLS service. It does not include all logical assertions present in the OWL file, which can be obtained at http://purl.obolibrary.org/obo/ido.owl
+remark: This is the version of 2010-05-26
 
 [Term]
 id: IDO:0000528
