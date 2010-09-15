@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.buffalo.edu/~ag33/ido-axioms.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.buffalo.edu/~ag33/ido-axioms.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.obolibrary.org/obo/ido.owl</Import>
+    <Import>http://purl.org/obo/owl/ro_proposed</Import>
+    <Import>http://purl.org/obo/owl/ro</Import>
+    <Import>http://purl.obolibrary.org/obo/ogms.owl</Import>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000472"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_part"/>
+            <ObjectIntersectionOf>
+                <Class IRI="http://purl.obolibrary.org/obo/IDO_0000596"/>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#contained_in"/>
+                    <Class IRI="http://purl.org/obo/owl/GO#GO_0005615"/>
+                </ObjectAllValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000504"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000586"/>
+            <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000045"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000544"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_role"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000423"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000545"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_role"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000424"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000548"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000438"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000549"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000426"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000550"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000427"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000553"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_role"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000430"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000554"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_role"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000431"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000555"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_role"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000432"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000556"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_role"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000433"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000557"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000437"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000559"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000440"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000560"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000441"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000561"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000443"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000562"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000439"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000566"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_role"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000434"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000567"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_role"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000435"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000570"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#part_of"/>
+            <ObjectIntersectionOf>
+                <ObjectComplementOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_quality"/>
+                        <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000020"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_role"/>
+                    <Class IRI="http://purl.obolibrary.org/obo/IDO_0000629"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#part_of"/>
+            <ObjectIntersectionOf>
+                <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000087"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_part"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000596"/>
+                        <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000084"/>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000627"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#part_of"/>
+            <ObjectIntersectionOf>
+                <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000087"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#participates_in"/>
+                    <Class IRI="http://purl.obolibrary.org/obo/IDO_0000477"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <DisjointClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000472"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000473"/>
+    </DisjointClasses>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000471</IRI>
+        <Literal>DL needs &#39;different species&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000474</IRI>
+        <Literal>DL needs &#39;distributed throughout&#39; </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000475</IRI>
+        <Literal>DL needs &#39;relatively small area&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000505</IRI>
+        <Literal>DL needs FMA term.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000506</IRI>
+        <Literal>DL needs FMA term.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000546</IRI>
+        <Literal>DL needs &#39;end reservoir of infectious agent role&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000547</IRI>
+        <Literal>DL: Needs &#39;product of&#39; relation.  It is a product of this process:
+production and has_participant some (has_role some pathogen and has_disposition some &#39;virulence factor disposition&#39;)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000552</IRI>
+        <Literal>IDO Error endotoxin role =&gt; endotoxin disposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000563</IRI>
+        <Literal>DL needs &#39;process of killing microorganisms&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000564</IRI>
+        <Literal>DL needs &#39;process of killing viruses&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000565</IRI>
+        <Literal>DL needs &#39;process of inhibiting the growth of microorganisms&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000617</IRI>
+        <Literal>DL needs immune system component (FMA?) and defective functioning (OGMS?)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000628</IRI>
+        <Literal>DL needs &#39;extended period of time&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000630</IRI>
+        <Literal>DL needs &#39;hospital&#39; (OGMS?)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000631</IRI>
+        <Literal>DL needs &#39;health care facility&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000633</IRI>
+        <Literal>DL needs &#39;another infection in a non-adjacent location&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000638</IRI>
+        <Literal>DL needs nursing home (OGMS?)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000642</IRI>
+        <Literal>needs &#39;species&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000645</IRI>
+        <Literal>DL needs NCBI taxonomy term.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000646</IRI>
+        <Literal>DL needs NCBI taxonomy terms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000647</IRI>
+        <Literal>DL needs NCBI Taxonomy term.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000648</IRI>
+        <Literal>DL needs NCBI taxonomy term.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000649</IRI>
+        <Literal>DL needs NCBI taxonomy term.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0.1451) http://owlapi.sourceforge.net -->
+
