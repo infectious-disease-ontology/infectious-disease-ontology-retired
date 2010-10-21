@@ -38,8 +38,8 @@
     xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
     xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
     xmlns:chebi="http://purl.org/obo/owl/CHEBI#"
-  xml:base="http://purl.obolibrary.org/obo/obi/externalDerived.owl">
-  <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/obi/externalDerived.owl"/>
+  xml:base="http://purl.obolibrary.org/obo/ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway-external-derived.owl">
+  <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway-external-derived.owl"/>
   <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016579">
     <obi:IAO_0000115 xml:lang="en">The removal of one or more ubiquitin moieties from a protein.</obi:IAO_0000115>
     <obi:IAO_0000111 xml:lang="en">protein deubiquitination</obi:IAO_0000111>

@@ -8,7 +8,6 @@
     xmlns:dc="http://purl.org/dc/elements/1.1/"
   xml:base="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl">
   <owl:Ontology rdf:about=""/>
-  <owl:Ontology rdf:about="http://purl.org/dc/elements/1.1/"/>
   <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights">
     <rdfs:comment xml:lang="en-US">Information about rights held in and over the resource.</rdfs:comment>
     <rdfs:label xml:lang="en-US">Rights Management</rdfs:label>

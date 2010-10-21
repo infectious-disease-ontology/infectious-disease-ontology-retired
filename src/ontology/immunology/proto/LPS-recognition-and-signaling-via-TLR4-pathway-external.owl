@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="obo:ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway-external.owl#"
-     xml:base="obo:ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway-external.owl"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway-external.owl#"
+     xml:base="http://purl.obolibrary.org/obo/ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway-external.owl"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
      xmlns:CHEBI="http://purl.org/obo/owl/CHEBI#"
@@ -14,7 +14,7 @@
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:GO="http://purl.org/obo/owl/GO#">
-    <owl:Ontology rdf:about="obo:ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway-external.owl">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway-external.owl">
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/ontology-metadata.owl"/>
     </owl:Ontology>
     
