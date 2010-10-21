@@ -39,7 +39,7 @@
     xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
     xmlns:chebi="http://purl.org/obo/owl/CHEBI#"
   xml:base="http://purl.obolibrary.org/obo/obi/externalDerived.owl">
-  <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/obi/externalDerived.owl"/>
+  <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/dev/dsRNA-recognition-and-signaling-via-TLR3-pathway-external-derived.owl"/>
   <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006913">
     <obi:IAO_0000115 xml:lang="en">The directed movement of molecules between the nucleus and the cytoplasm.</obi:IAO_0000115>
     <rdfs:subClassOf>

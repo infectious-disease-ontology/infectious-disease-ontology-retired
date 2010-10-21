@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="obo:ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway.owl#"
-     xml:base="obo:ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway.owl"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway.owl#"
+     xml:base="http://purl.obolibrary.org/obo/ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway.owl"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:CHEBI="http://purl.org/obo/owl/CHEBI#"
