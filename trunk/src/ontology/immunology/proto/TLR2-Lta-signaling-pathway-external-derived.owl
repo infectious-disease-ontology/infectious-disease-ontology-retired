@@ -38,8 +38,8 @@
     xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
     xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
     xmlns:chebi="http://purl.org/obo/owl/CHEBI#"
-  xml:base="http://purl.obolibrary.org/obo/ido/dev/dsRNA-recognition-and-signaling-via-TLR3-pathway-external-derived.owl">
-  <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/dev/dsRNA-recognition-and-signaling-via-TLR3-pathway-external-derived.owl"/>
+  xml:base="http://purl.obolibrary.org/obo/ido/dev/TLR2-Lta-signaling-pathway-external-derived.owl">
+  <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/dev/TLR2-Lta-signaling-pathway-external-derived.owl"/>
   <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043226">
     <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     <rdfs:label xml:lang="en">organelle</rdfs:label>
