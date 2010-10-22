@@ -49,7 +49,7 @@
         <dc:contributor rdf:datatype="&rdf;PlainLiteral">Barry Smith</dc:contributor>
         <dc:creator rdf:datatype="&rdf;PlainLiteral">Lindsay Cowell</dc:creator>
         <protege:defaultLanguage rdf:datatype="&rdf;PlainLiteral">en</protege:defaultLanguage>
-        <rdfs:comment xml:lang="en">The core Infectious Disease Ontology is an ontology of entities generally relevant to both the biomedical and clinical aspects of infectious diseases, such as &#39;pathogen&#39;, &#39;host&#39;, &#39;vector&#39;, and &#39;vaccine&#39;.  The structure of IDO adheres to the Basic Formal Ontology.  Terms in IDO that are within the scope of other OBO Foundry ontologies, such as the Gene Ontology, are derived from those ontologies.  Other terms are defined as much as possible as cross-products of terms from Foundry ontologies. For more information, see http://www.infectiousdiseaseontology.org/Home.html</rdfs:comment>
+        <rdfs:comment xml:lang="en">The core Infectious Disease Ontology is an ontology of entities generally relevant to both the biomedical and clinical aspects of infectious diseases, including terms such as &#39;pathogen&#39;, &#39;host&#39;, &#39;vector&#39;, and &#39;vaccine&#39;.  The structure of IDO adheres to the Basic Formal Ontology.  Terms in IDO that are within the scope of other OBO Foundry ontologies, such as the Gene Ontology, are derived from those ontologies.  Other terms are defined as cross-products of terms from Foundry ontologies to the extent possible. For more information, see http://www.infectiousdiseaseontology.org/Home.html</rdfs:comment>
         <rdfs:comment xml:lang="en">This ontology is in early development. Expect it to change.</rdfs:comment>
         <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl"/>
         <owl:imports rdf:resource="&obo;ogms.owl"/>
@@ -72,15 +72,15 @@
     <owl:AnnotationProperty rdf:about="&protege;defaultLanguage"/>
     <owl:AnnotationProperty rdf:about="&rdfs;label"/>
     <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
-    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000116"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
     <owl:AnnotationProperty rdf:about="&obo;OBI_0000283"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000119"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000117"/>
-    <owl:AnnotationProperty rdf:about="&dc;date"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000118"/>
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
     
 
 
@@ -2417,7 +2417,7 @@
 
     <owl:Class rdf:about="&obo;IDO_0000457">
         <rdfs:label xml:lang="en">immunocompetent host</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+        <rdfs:subClassOf rdf:resource="&obo;IDO_0000531"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An organism that has immunocompetence.</obo:IAO_0000115>
@@ -2431,6 +2431,7 @@
     <owl:Class rdf:about="&obo;IDO_0000458">
         <rdfs:label xml:lang="en">contagiousness</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Disposition"/>
+        <rdfs:comment>Highly contagious infections, those with a relatively high likelihood of spread, are referred to as contagious and are those for which spread is likely as a result of data-to-day activities of the host.</rdfs:comment>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <rdfs:comment>The disposition is realized in a horizontal transmission process.</rdfs:comment>
@@ -2500,6 +2501,7 @@
         <rdfs:label xml:lang="en">infectious agent transmissibility</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <rdfs:comment>The transmissibility quality varies with both the type of organism being transmitted and the type of organism to which transmission is happening.</rdfs:comment>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A quality that inheres in an infectious agent and is the likelihood that the infectious agent will undergo a horizontal transmission process.</obo:IAO_0000115>
@@ -2514,9 +2516,9 @@
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <rdfs:comment>This quality is measured by the proportion of exposed who become infected.</rdfs:comment>
         <obo:IAO_0000115 xml:lang="en">A quality that inheres in an infectious agent and is the liklihood that the infectious disposition will be realized upon exposure of a susceptible organism.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000116 xml:lang="en">Formal definition: A quality inhering in an organism that has the infectious disposition relative to organisms of type Y and is the likelihood that organisms of type Y that are exposed to the infectious organism become infected.</obo:IAO_0000116>
     </owl:Class>
     
 
@@ -2526,9 +2528,9 @@
     <owl:Class rdf:about="&obo;IDO_0000466">
         <rdfs:label xml:lang="en">virulence</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+        <rdfs:comment>This quality is measured by the proportion of clinically apparent cases that are severe or fatal.</rdfs:comment>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A quality that inheres in an infectious agent and is the degree to which realizations of the infectious disease caused by the infectious agent become severe or fatal. </obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Formal definition: A quality inhering in an organism that has the pathogenic disposition and is the degree to which realizations of the disease caused by the organism become severe or fatal. </obo:IAO_0000116>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
     </owl:Class>
@@ -2540,11 +2542,11 @@
     <owl:Class rdf:about="&obo;IDO_0000467">
         <rdfs:label xml:lang="en">susceptibility</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+        <rdfs:comment>Low susceptibility is often referred to as resistance.  In this sense, resistance is a quality.</rdfs:comment>
         <obo:IAO_0000115 xml:lang="en">A quality that inheres in an entity and is the degree to which it can be harmed by another entity.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000116 xml:lang="en">Formal definition: A quality inhering in a material entity (x) that is the degree to which another material entity can harm x.</obo:IAO_0000116>
     </owl:Class>
     
 
@@ -2558,7 +2560,6 @@
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A susceptibility that inheres in an organism and is the degree to which it can be harmed by an infectious agent.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Formal definition: A susceptibility that inheres in an organism (x) of type X relative to an organism of type Y 1) by virtue of the fact that Y have the infectious disposition relative to X, and X have the capability to bear the host of infectious agent role in symbiosis with some Y, and is 2) the likelihood that x will participate in a symbiosis process (GO:0044403) with some Y in which it plays the host of infectious agent role, or 3) the degree to which x can be harmed by participation in the symbiosis process or by pathoglocial processes that are the realization of an infectious disease caused by Y.</obo:IAO_0000116>
     </owl:Class>
     
 
@@ -2704,7 +2705,7 @@
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000116 xml:lang="en">Formal definition: A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role in symbiosis with organisms of the type that cause infectious disease X and 2) is the number of realizations of the infectious disease for which the infectious disease course (the realization of the disease) begins during a specified period of time.  </obo:IAO_0000116>
+        <rdfs:comment>A particular instance of infectious disease incidence will depend on a type of infectious disease, a population, and a period of time.  Incidence is used as a measure of risk.  Actual measures of incidence are based only on reported cases and usually specify a time interval and geographic location.  Other constraints may include population demographics.  These constraints will vary with the context of the incidence measure.</rdfs:comment>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the number of realizations of an infectious disease for which the infectious disease course begins during a specified period of time.</obo:IAO_0000115>
     </owl:Class>
@@ -2718,8 +2719,8 @@
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <rdfs:comment>A particular instance of infection incidence will depend on a type of infectious agent, a population, and a period of time.  Incidence is used as a measure of risk.  Actual measures of incidence are based only on reported cases and usually specify a time interval and geographic location.  Other constraints may include population demographics.  These constraints will vary with the context of the incidence measure.</rdfs:comment>
         <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the number of organisms in the population that become infected with an infectious agent during a specified period of time.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Formal definition: A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role for organisms of type X and 2) is the number of organisms in the population that begin bearing the host role for the infectious organism during a specified period of time.</obo:IAO_0000116>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     </owl:Class>
     
@@ -2730,9 +2731,10 @@
     <owl:Class rdf:about="&obo;IDO_0000481">
         <rdfs:label xml:lang="en">infectious disease incidence proportion</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
-        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the infectious disease incidence divided by the number of members of the population in which the infectious disease course had not begun at the beginning of the specified period of time. </obo:IAO_0000115>
+        <rdfs:comment>An instance of infectious disease incidence proportion is measured by dividing a measure of an instance of infectious disease incidence by the number of members of the population in which the infectious disease course had not begun at the beginning of the specified period of time over which the incidence was measured.</rdfs:comment>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the proportion of members of the population not experiencing an infectious disease course at the beginning of a specified period of time in whom the infectious disease begins during the specified period of time. </obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">cumulative incidence of infectious disease</obo:IAO_0000118>
     </owl:Class>
@@ -2744,10 +2746,11 @@
     <owl:Class rdf:about="&obo;IDO_0000482">
         <rdfs:label xml:lang="en">infection incidence proportion</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
-        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the infection incidence divided by the number of members of the population that are not infected at the beginning of the specified period of time. </obo:IAO_0000115>
+        <rdfs:comment>An instance of infection incidence proportion is measured by dividing a measure of an instance of infection incidence by the number of members of the population not infected at the beginning of the specified period of time over which the incidence was measured.</rdfs:comment>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the proportion of members of the population not experiencing an infectious disease course at the beginning of a specified period of time in whom the infectious disease begins during the specified period of time. </obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">cumulative incidence of infection</obo:IAO_0000118>
     </owl:Class>
     
@@ -2758,8 +2761,9 @@
     <owl:Class rdf:about="&obo;IDO_0000483">
         <rdfs:label xml:lang="en">infectious disease incidence rate</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
-        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the infectious disease incidence proportion divided by the period of time over which the incidence was measured.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the infectious disease incidence proportion per unit time.</obo:IAO_0000115>
+        <rdfs:comment>An instance of infectious disease incidence rate is measured by dividing a measure of an instance of the infectious disease incidence proportion by the length of the period of time over which the incidence was measured.</rdfs:comment>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
     </owl:Class>
@@ -2772,8 +2776,9 @@
         <rdfs:label xml:lang="en">infection incidence rate</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <rdfs:comment>An instance of infection incidence rate is measured by dividing a measure of an instance of infection incidence proportion by the length of the period of time over which the incidence was measured.</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the infection incidence proportion per unit time.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the incidence proportion of infection divided by the period of time over which the incidence was measured.</obo:IAO_0000115>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
     </owl:Class>
     
@@ -2786,6 +2791,7 @@
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <rdfs:comment>Prevalence is sometimes defined as a proportion with total population size in the denominator.  A particular instance of infectious disease prevalence will depend on a type of infectious disease, a population, and a period of time.  Actual measures of prevalence are based only on reported cases and usually specify a time interval and geographic location.  Other constraints may include population demographics.</rdfs:comment>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the number of realizations of an infectious disease in the population at a specified time.</obo:IAO_0000115>
     </owl:Class>
@@ -2801,6 +2807,7 @@
         <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the number of organisms in the population infected with an infectious agent at a specified time.</obo:IAO_0000115>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <rdfs:comment>Prevalence is sometimes defined as a proportion with total population size in the denominator.  A particular instance of infection prevalence will depend on a type of infectious agent, a population, and a period of time.  Actual measures of prevalence are based only on reported cases and usually specify a time interval and geographic location.  Other constraints may include population demographics.</rdfs:comment>
     </owl:Class>
     
 
@@ -2814,6 +2821,7 @@
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the number of organisms in the population who have, at any point during their lives, been bearers of an infectious disease and experienced realization of the disease.</obo:IAO_0000115>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <rdfs:comment>Prevalence is sometimes defined as a proportion with total population size in the denominator.  A particular instance of infectious disease lifetime prevalence will depend on a type of infectious disease and a population.  Actual measures of prevalence are based only on reported cases and usually specify a geographic location.  Other constraints may include population demographics.</rdfs:comment>
     </owl:Class>
     
 
@@ -2825,6 +2833,7 @@
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <rdfs:comment>Prevalence is sometimes defined as a proportion with total population size in the denominator.  A particular instance of infectious agent seroprevalence will depend on a type of infectious agent and a population.  Actual measures of seroprevalence are based only on tested individuals and usually specify a geographic location.  Other constraints may include population demographics.</rdfs:comment>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the number of organisms in the population that have antibody specific for an infectious agent in their serum at a specified time.</obo:IAO_0000115>
     </owl:Class>
@@ -2837,9 +2846,10 @@
         <rdfs:label xml:lang="en">infectious disease mortality rate</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the proportion of deaths in the population resulting from an infectious disease over a specified period of time.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <rdfs:comment>A particular instance of infectious disease mortality rate will depend on a type of infectious disease and a population.  Actual measures of mortality rate are based only on reported cases and usually specify a geographic location.  Other constraints may include population demographics.  Mortality rate is typically expressed in units of deaths per 1000 individuals per year.</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the per capita number of deaths in the population resulting from an infectious disease over a specified period of time.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2853,7 +2863,7 @@
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population in virtue of the fact that infections of the type that causes an infectious disease are maintained in the population via intra-population transmission or by transmission from a local reservoir.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000116 xml:lang="en">Formal definition: A quality that 1) inheres in a pre-speciified organism population whose members have the capability to play the host of infectious agent role in symbiosis with organisms of the type that cause infectious disease X, 2) by virtue of the fact that infections of the organism type that causes infectious disease X are maintained in the population without the need for transmission into the population from hosts that are not members of the population.  Infectious diseases that are typical or common to a particular population are referred to as endemic.</obo:IAO_0000116>
+        <rdfs:comment>A particular instance of infectious disease endemicity will depend on a type of infectious agent and a population.  The population may be specified by temporal, geographic, or demographic constraints.  Infectious diseases that are typical or common to a particular population are referred to as endemic.</rdfs:comment>
     </owl:Class>
     
 
@@ -2864,9 +2874,10 @@
         <rdfs:label xml:lang="en">infectious disease endemic level</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000485"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <rdfs:comment>Infectious disease endemic level is relational to previous prevalences of the disease.</rdfs:comment>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the infectious disease prevalence that is typical for an infectious disease in that organism population. </obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An infectious disease prevalence that is typical for an infectious disease in an organism population. </obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2878,8 +2889,9 @@
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000483"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the infectious disease incidence rate that is typical for an infectious disease in that organism population. </obo:IAO_0000115>
+        <rdfs:comment>Infectious disease endemic rate is relational to previous infectious disease incidence rates of the disease.</rdfs:comment>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infectious disease incidence rate that is typical for an infectious disease in an organism population. </obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2892,7 +2904,8 @@
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An infectious disease endemicity quality that inheres in an organism population in virtue of the fact that the infectious disease endemic level for an infectious disease is persistently high in the population.  </obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An infectious disease endemicity that inheres in an organism population in virtue of the fact that the infectious disease endemic level for an infectious disease is persistently high in the population.  </obo:IAO_0000115>
+        <rdfs:comment>Hyper-endemic infectious diseases may have high endemic levels only in certain seasons.  A hyper-endemic disease affects all age groups equally.</rdfs:comment>
     </owl:Class>
     
 
@@ -2900,11 +2913,12 @@
     <!-- http://purl.obolibrary.org/obo/IDO_0000494 -->
 
     <owl:Class rdf:about="&obo;IDO_0000494">
-        <rdfs:label xml:lang="en">infectious disease sporadicicity</rdfs:label>
+        <rdfs:label xml:lang="en">infectious disease sporadicity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
-        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population by virtue of the fact that infections of the infectious agent that causes a certain type of infectious disease occur in the population with a fluctuating prevalence.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population by virtue of the fact that realizations of an infectious disease occur in the population with a fluctuating prevalence.</obo:IAO_0000115>
+        <rdfs:comment>Sporadic quality of infectious disease is relational to previous prevalence of the disease.</rdfs:comment>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
     </owl:Class>
     
@@ -2918,7 +2932,6 @@
         <obo:IAO_0000115 xml:lang="en">A disease course that is the realization of an infectious disease.</obo:IAO_0000115>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000116 xml:lang="en">Formal definition: A disease course (OGMS:0000063) that is the total process of realization of an infectious disease (IDO:0000436), beginning with the manifestation of pathological processes caused by an infection (IDO:0000586) and ending with 1) clearance of the infection, 2) long-term control of the infection by the host&#39;s immune response accompanied by the resolution of symptoms, or 3) death of the host.</obo:IAO_0000116>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     </owl:Class>
     
@@ -2956,7 +2969,7 @@
         <rdfs:label xml:lang="en">active immunization against infectious agent</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000497"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An immunization process that begins with exposure of an organism to antigen and results in immunity against an infectious agent.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An immunization that begins with exposure of an organism to antigen and results in immunity against an infectious agent.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">inoculation</obo:IAO_0000118>
@@ -2971,7 +2984,7 @@
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000498"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An active immunization process that begins with exposure of an organism to a vaccine and results in immunity against an infectious agent.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An active immunization that begins with exposure of an organism to a vaccine.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     </owl:Class>
     
@@ -2984,7 +2997,7 @@
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000498"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An active immunization process that begins with exposure to smallpox in the form of a scab from a pustule and results in immunity against smallpox.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An active immunization that begins with exposure to smallpox in the form of a scab from a pustule and results in immunity against smallpox.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     </owl:Class>
     
@@ -2997,7 +3010,7 @@
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000497"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An immunization process that begins with transfer to an organism of molecules not produced by that organism and that confer immunity against an infectious agent.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An immunization that begins with transfer to an organism of molecules not produced by that organism and that confer immunity against an infectious agent.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Examples include the injection of antibodies and the transfer of maternal antibodies to the fetus.</obo:IAO_0000116>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     </owl:Class>
@@ -3024,8 +3037,8 @@
     <owl:Class rdf:about="&obo;IDO_0000503">
         <rdfs:label xml:lang="en">infectious disease pandemic</rdfs:label>
         <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
-        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A process in which multiple infectious disease epidemics of the same type of infectious disease unfold over overlapping periods of time and affect organism populations located in different geographic regions, including different countries and continents.</obo:IAO_0000115>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
     </owl:Class>
@@ -3104,6 +3117,7 @@
     <owl:Class rdf:about="&obo;IDO_0000509">
         <rdfs:label xml:lang="en">organism population</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <rdfs:comment>The organism population may be delineated by spatio-temporal proximity or by demographic criteria such as age.</rdfs:comment>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A population of organisms.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
@@ -3174,7 +3188,6 @@
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An organism population whose members are particpating in non-parasitic symbiosis with a particular host.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000116 xml:lang="en">Formal definition: An infectious organism population (IDO:0000513) (1) that is not part of any infection (IDO:0000586), (2) whose members are participating in a process of symbiosis (GO:0044403) with the same host, and (3) whose members are organisms of types among the normal resident microbiota for the type of host organism.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">normal resident microflora population</obo:IAO_0000118>
     </owl:Class>
     
@@ -3301,12 +3314,6 @@
 
     <owl:Class rdf:about="&obo;IDO_0000528">
         <rdfs:label xml:lang="en">pathogen</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
-                <owl:someValuesFrom rdf:resource="&obo;IDO_0000450"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
@@ -3621,7 +3628,7 @@
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A biological macromolecule bearing the endotoxin role.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A biological macromolecule bearing the endotoxin disposition.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3945,8 +3952,8 @@
     <!-- http://purl.obolibrary.org/obo/IDO_0000577 -->
 
     <owl:Class rdf:about="&obo;IDO_0000577">
-        <rdfs:label xml:lang="en">adaptive immunity to infectious agent</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IDO_0000448"/>
+        <rdfs:label xml:lang="en">_obsolete_adaptive immunity to infectious agent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An immunity to infectious agent realized in an adaptive immune response.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
@@ -3988,15 +3995,15 @@
     <!-- http://purl.obolibrary.org/obo/IDO_0000580 -->
 
     <owl:Class rdf:about="&obo;IDO_0000580">
-        <rdfs:label xml:lang="en">_obsolete_passive immunity to infectious agent</rdfs:label>
         <rdfs:label xml:lang="en">passive immunity to infectious agent</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000448"/>
-        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An immunity to infectious agent that inheres in an organism in virtue of antibodies not produced by that organism.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">An immunity to infectious organism that results from a passive immunization (IDO:0000066).</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <rdfs:comment xml:lang="en">Passive immunity results from a passive immunization.</rdfs:comment>
+        <rdfs:comment>The protective antibodies are typically introduced by injection, breast feeding, or by passing from the placenta to the fetus.</rdfs:comment>
+        <rdfs:comment>The disposition is realized in a neutralizing process carried out by the antibodies.</rdfs:comment>
     </owl:Class>
     
 
@@ -4036,7 +4043,6 @@
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An infectious agent whose infection incidence is increasing following its first introduction into a new host population.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Formal definition: An infectious agent whose incidence is increasing following its first introduction into a new host population.</obo:IAO_0000116>
     </owl:Class>
     
 
@@ -4209,6 +4215,7 @@
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A pathogen whose pathogenic disposition is an infectious disposition.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <rdfs:comment>The term infectious agent refers to infectious organisms and prion proteins.</rdfs:comment>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
     </owl:Class>
     
@@ -4263,7 +4270,7 @@
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A host exposure to environment with infectious agent where the exposure is accidental and the environment is a laboratory and where the infectious agent has infectious to human disposition.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A host exposure to environment with infectious agent where the exposure is accidental and the environment is a laboratory and where the infectious agent has is infectious in humans.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Alan Ruttenberg 2010/05/20- Tentative definition. Needs review by Bjoern</obo:IAO_0000116>
     </owl:Class>
     
@@ -4277,7 +4284,7 @@
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A host exposure to environment with infectious agent where the environment contains a infectious agent vector.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A host exposure to environment with infectious agent where the environment contains an infectious agent vector.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Alan Ruttenberg 2010/05/20- Tentative definition. Needs review by Bjoern</obo:IAO_0000116>
     </owl:Class>
     
@@ -4380,13 +4387,11 @@
 
     <owl:Class rdf:about="&obo;IDO_0000609">
         <rdfs:label xml:lang="en">colonization of human anterior nares</rdfs:label>
-        <rdfs:label xml:lang="en">colonization of human perineum</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000650"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A colonization of human process in which the colonized site is the anterior nares.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">A colonization of human process in which the colonized site is the perineum.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -4412,7 +4417,7 @@
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An immunosuppression process which unfolds as part of the natural self-regulation of an immune response.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An immunosuppression which unfolds as part of the natural self-regulation of an immune response.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -4426,7 +4431,7 @@
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An immunosuppression process which arises as the result of a disorder.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Immunosuppressive disorders include those that result from infection, stress, malnutrition, and treatments such as chemotherapy or calcineurin inhibition.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Disorders that result in immunosuppressive include those that result from infection, stress, malnutrition, and treatments such as chemotherapy or calcineurin inhibition.</obo:IAO_0000116>
     </owl:Class>
     
 
@@ -4475,10 +4480,10 @@
     <owl:Class rdf:about="&obo;IDO_0000616">
         <rdfs:label xml:lang="en">infectious agent colony</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000615"/>
-        <obo:IAO_0000115 xml:lang="en">A colony that is an infectious agent or a population of infectious agents.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A colony whose members are infectious agents.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -4556,14 +4561,12 @@
 
     <owl:Class rdf:about="&obo;IDO_0000623">
         <rdfs:label xml:lang="en">communicability</rdfs:label>
-        <rdfs:label xml:lang="en">normal resident microbiota</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;GenericallyDependentContinuant"/>
-        <obo:IAO_0000115 xml:lang="en">A generically dependent continuant that is the set of organism types whose instances have as one of their canonical dispositions, the disposition to form a non-parasitic colony in organisms of a particular type.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="&obo;IDO_0000452"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <rdfs:comment>The disposition is realized in a direct, horizontal transmission process between members of the same Species.</rdfs:comment>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An infectious disposition to be transmitted directly from one organism to another of the same species by horizontal transmission.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An infectious disposition to be transmitted directly from one organism to another of the same Species by horizontal transmission.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">normal resident microflora</obo:IAO_0000118>
     </owl:Class>
     
 
@@ -4599,10 +4602,10 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&GO;GO_0051234"/>
+        <obo:IAO_0000115 xml:lang="en">A process in which a material entity reaches a site in an organism in which it can survive, grow, multiply, or mature.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A process starting when a material entity is in a host and during which it reaches a site in the host in which it can survive, grow, multiply, or mature.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">An organism begins bearing a particular host role as soon as the extended organism contains the relevant material entity, regardless of that entity&#39;s location in the extended organism.  An establishment process is any process by which the entity reaches a location in the extended organism in which it can persist and continue its lifecycle.  For example, an organism is host to a virus as soon as any part of the extended organism is occupied by virus particles.  During an establishment process, virus particles enter host cells of the relevant type, and viral DNA is integrated into host DNA.</obo:IAO_0000116>
     </owl:Class>
     
@@ -4771,15 +4774,11 @@
 
     <owl:Class rdf:about="&obo;IDO_0000639">
         <rdfs:label xml:lang="en">infectious human pathogen</rdfs:label>
-        <rdfs:label xml:lang="en">primary immunodeficiency</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000596"/>
-        <rdfs:subClassOf rdf:resource="&obo;IDO_0000617"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An immunodeficiency that exists in an organism because of a genetic predisposition.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">An infectious agent with a capability to infect human hosts.</obo:IAO_0000115>
-        <obo:IAO_0000118 xml:lang="en">congenital immunodeficiency</obo:IAO_0000118>
     </owl:Class>
     
 
@@ -4819,7 +4818,6 @@
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An infectious agent whose infection incidence is increasing in a host population as a result of changes in the biology of the host or pathogen, or changes in their interactions.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Formal definition: An infectious agent whose incidence is increasing in a host population as a result of changes in its underlying epidemiology.</obo:IAO_0000116>
     </owl:Class>
     
 
@@ -4911,6 +4909,19 @@
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A colonization of host process in which the host is of Species Homo sapiens.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000652 -->
+
+    <owl:Class rdf:about="&obo;IDO_0000652">
+        <rdfs:label>colonization of human perineum</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IDO_0000650"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alex Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115>A colonization of human process in which the colonized site is a perineum.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     </owl:Class>
     
