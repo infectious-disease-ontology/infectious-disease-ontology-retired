@@ -72,15 +72,15 @@
     <owl:AnnotationProperty rdf:about="&protege;defaultLanguage"/>
     <owl:AnnotationProperty rdf:about="&rdfs;label"/>
     <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
-    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
     <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000116"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
     <owl:AnnotationProperty rdf:about="&obo;OBI_0000283"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000119"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000117"/>
-    <owl:AnnotationProperty rdf:about="&obo;IAO_0000118"/>
     <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000118"/>
     
 
 
@@ -2192,11 +2192,11 @@
 
     <owl:Class rdf:about="&obo;IDO_0000441">
         <rdfs:label xml:lang="en">antifungal disposition</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IDO_0000439"/>
+        <rdfs:subClassOf rdf:resource="&snap;Disposition"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A disposition to kill or inhibit the growth of fungal organisms.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An antimicrobial disposition to kill or inhibit the growth of fungal organisms.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2407,7 +2407,6 @@
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An organism that is experiencing pregnancy-induced or pathologic immunosuppression.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Formal definition: A quality that inheres in an organism with an immune system by virtue of the fact that the organism&#39;s immunocompetence is reduced as a result of substances, such as drugs, or infections that interfere with one or more immune system processes (GO:0002376).</obo:IAO_0000116>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     </owl:Class>
     
@@ -2420,7 +2419,7 @@
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000531"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An organism that has immunocompetence.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An host that has immunocompetence.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     </owl:Class>
     
@@ -2463,7 +2462,6 @@
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A host that has an infection in or on its extended organism.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Formal definition: A quality inhering in an organism by virtue of the fact that the organism is the bearer of the host of infectious parasite role in a symbiosis process (GO:0044403) with an organism that has the infectious disposition and that has established an infection in the host.</obo:IAO_0000116>
     </owl:Class>
     
 
@@ -2476,8 +2474,7 @@
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An infected host that has two infections with different species of infectious agents as part.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Formal definition: A quality inhering in an organism by virtue of the fact that the organism is the bearer of the host of infectious parasite role in a symbiosis process (GO:0044403) with organisms of at least two different types that have the infectious disposition and that have established an infection in the host.</obo:IAO_0000116>
+        <obo:IAO_0000115 xml:lang="en">An infected host that has two infections with distinct Species of infectious agents.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2485,8 +2482,8 @@
     <!-- http://purl.obolibrary.org/obo/IDO_0000462 -->
 
     <owl:Class rdf:about="&obo;IDO_0000462">
-        <rdfs:label xml:lang="en">symptomatic host</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IDO_0000531"/>
+        <rdfs:label xml:lang="en">_obsolete_symptomatic host</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
         <obo:IAO_0000115 xml:lang="en">A host exhibiting disease symptoms.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
@@ -2596,9 +2593,9 @@
         <rdfs:label xml:lang="en">complex infection</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000586"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An infection comprised of infectious organisms from different species.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An infection comprised of infectious organisms from different Species.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">mixed infection</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">polymicrobial infection</obo:IAO_0000118>
     </owl:Class>
@@ -2640,7 +2637,6 @@
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An infection for which the infectious agents that are part of the infection are distributed throughout the host.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Formal definition: A quality that inheres in an infection by virtue of the fact that the organisms comprising the infection are distributed throughout the host, including multiple host organs and/or systems (e.g. circulatory system).</obo:IAO_0000116>
     </owl:Class>
     
 
@@ -3067,7 +3063,6 @@
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An infection that has as part virus particles located in the blood.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Formal definition: An infection defined by the presence of virions in the blood.</obo:IAO_0000116>
     </owl:Class>
     
 
@@ -3081,7 +3076,6 @@
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An infection that has as part bacteria located in the blood.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Formal definition: An infection defined by the presence of bacteria in the blood.</obo:IAO_0000116>
     </owl:Class>
     
 
@@ -3340,12 +3334,6 @@
 
     <owl:Class rdf:about="&obo;IDO_0000531">
         <rdfs:label xml:lang="en">host</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
-                <owl:someValuesFrom rdf:resource="&obo;IDO_0000629"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0100026"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
@@ -3730,11 +3718,11 @@
 
     <owl:Class rdf:about="&obo;IDO_0000560">
         <rdfs:label xml:lang="en">antifungal</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IDO_0000558"/>
+        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An antimicrobial bearing the antifungal disposition.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An material entity bearing the antifungal disposition.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3743,11 +3731,11 @@
 
     <owl:Class rdf:about="&obo;IDO_0000561">
         <rdfs:label xml:lang="en">antiparasitic</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IDO_0000558"/>
+        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An antimicrobial bearing the antiparasitic disposition.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A material entity bearing the antiparasitic disposition.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -4080,9 +4068,10 @@
         <rdfs:label xml:lang="en">infection</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <rdfs:comment>The organism corresponding to the extended organism is host to the infectious agents.  By this definition, parts of the host can be considered part of the infection.</rdfs:comment>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A part of an extended organism that itself has as part a population of one or more infectious agents and that is (1) clinically abnormal in virtue of the presence of this population, or (2) such that clinical abnormality is a likely consequence of transmission of the infectious agent, an offspring of the infectious agent, or a member of the infectious agent population to a canonical host.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A part of an extended organism that itself has as part a population of one or more infectious agents and that is (1) clinically abnormal in virtue of the presence of this infectious agent population, or (2) has a disposition to bring clinical abnormality to immunocompetent organisms of the same Species as the host (the organism corresponding to the extended organism) through transmission of a member or offspring of a member of the infectious agent popuation.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -4686,7 +4675,7 @@
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An infection resulting from a transmission process that does not unfold in a health care facility.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An infection resulting from a transmission process that did not unfold in a health care facility.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -4788,6 +4777,7 @@
     <owl:Class rdf:about="&obo;IDO_0000640">
         <rdfs:label xml:lang="en">acquired immunodeficiency</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000617"/>
+        <rdfs:comment>Causes of acquired immunodeficiences include infection and drug treatments (e.g. chemotherapy).</rdfs:comment>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An immunodeficiency that is not caused by a genetic predisposition.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
@@ -4804,7 +4794,7 @@
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An infection comprised of infectious organism all of the same species.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An infection comprised of infectious organisms all of the same Species.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -4910,6 +4900,20 @@
         <obo:IAO_0000115 xml:lang="en">A colonization of host process in which the host is of Species Homo sapiens.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000651 -->
+
+    <owl:Class rdf:about="&obo;IDO_0000651">
+        <rdfs:label>primary immunodeficiency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IDO_0000617"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115>An immunodeficiency that exists in an organism because of a genetic predisposition.</obo:IAO_0000115>
+        <obo:IAO_0000118>congenital immunodeficiency</obo:IAO_0000118>
+        <obo:IAO_0000117>Alex Diehl</obo:IAO_0000117>
     </owl:Class>
     
 
