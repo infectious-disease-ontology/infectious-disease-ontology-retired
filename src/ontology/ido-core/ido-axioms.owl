@@ -178,24 +178,6 @@
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000570"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#part_of"/>
-            <ObjectIntersectionOf>
-                <ObjectComplementOf>
-                    <ObjectSomeValuesFrom>
-                        <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_quality"/>
-                        <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000020"/>
-                    </ObjectSomeValuesFrom>
-                </ObjectComplementOf>
-                <ObjectSomeValuesFrom>
-                    <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_role"/>
-                    <Class IRI="http://purl.obolibrary.org/obo/IDO_0000629"/>
-                </ObjectSomeValuesFrom>
-            </ObjectIntersectionOf>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="http://purl.obolibrary.org/obo/IDO_0000586"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#part_of"/>
