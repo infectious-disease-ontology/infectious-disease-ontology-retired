@@ -34,7 +34,32 @@
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
     <IAO_0000412 rdf:resource="http://purl.org/obo/owl/TRANS"/>
   </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008150">
+    <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+    <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051234">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
+    <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000045">
+    <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+    <IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ogms.owl"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000031">
+    <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
+    <IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ogms.owl"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000063">
+    <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+    <IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ogms.owl"/>
+  </owl:Class>
 </rdf:RDF>
+
+
+
+
+
 
 
 

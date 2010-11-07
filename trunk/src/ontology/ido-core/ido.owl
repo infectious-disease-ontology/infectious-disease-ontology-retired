@@ -72,12 +72,12 @@
     <owl:AnnotationProperty rdf:about="&protege;defaultLanguage"/>
     <owl:AnnotationProperty rdf:about="&rdfs;label"/>
     <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
-    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
     <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000116"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
-    <owl:AnnotationProperty rdf:about="&obo;OBI_0000283"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000412"/>
+    <owl:AnnotationProperty rdf:about="&obo;OBI_0000283"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000119"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000117"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000118"/>
@@ -3113,11 +3113,11 @@
 
     <owl:Class rdf:about="&obo;IDO_0000509">
         <rdfs:label xml:lang="en">organism population</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <rdfs:subClassOf rdf:resource="&snap;ObjectAggregate"/>
         <rdfs:comment>The organism population may be delineated by spatio-temporal proximity or by demographic criteria such as age.</rdfs:comment>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A population of organisms.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An aggregate of organisms of the same Species.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     </owl:Class>
     
@@ -3152,7 +3152,7 @@
     <!-- http://purl.obolibrary.org/obo/IDO_0000513 -->
 
     <owl:Class rdf:about="&obo;IDO_0000513">
-        <rdfs:label xml:lang="en">infectious organism population</rdfs:label>
+        <rdfs:label xml:lang="en">infectious agent population</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000509"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
@@ -3297,8 +3297,8 @@
     <!-- http://purl.obolibrary.org/obo/IDO_0000527 -->
 
     <owl:Class rdf:about="&obo;IDO_0000527">
-        <rdfs:label xml:lang="en">infectious organism</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IDO_0000596"/>
+        <rdfs:label xml:lang="en">_obsolete_infectious organism</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An infectious agent that is an organism.</obo:IAO_0000115>
@@ -4204,7 +4204,7 @@
 
     <owl:Class rdf:about="&obo;IDO_0000596">
         <rdfs:label xml:lang="en">infectious agent</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0100026"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An organism that has an infectious disposition.</obo:IAO_0000115>
@@ -4582,13 +4582,14 @@
     <!-- http://purl.obolibrary.org/obo/IDO_0000625 -->
 
     <owl:Class rdf:about="&obo;IDO_0000625">
-        <rdfs:label xml:lang="en">establishment in host</rdfs:label>
+        <rdfs:label xml:lang="en">establishment of localization in host</rdfs:label>
         <rdfs:subClassOf rdf:resource="&GO;GO_0051234"/>
+        <obo:IAO_0000116>Requested addition of this term to the GO.</obo:IAO_0000116>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An establishment of localization process in which a material entity reaches a site in an organism in which it can survive, grow, multiply, or mature.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">An organism begins bearing a particular host role as soon as the extended organism contains the relevant material entity, regardless of that entity&#39;s location in the extended organism.  An establishment process is any process by which the entity reaches a location in the extended organism in which it can persist and continue its lifecycle.  For example, an organism is host to a virus as soon as any part of the extended organism is occupied by virus particles.  During an establishment process, virus particles enter host cells of the relevant type, and viral DNA is integrated into host DNA.</obo:IAO_0000116>
+        <rdfs:comment xml:lang="en">An organism begins bearing a particular host role as soon as the extended organism contains the relevant material entity, regardless of that entity&#39;s location in the extended organism.  An establishment process is any process by which the entity reaches a location in the extended organism in which it can persist and continue its lifecycle.  For example, an organism is host to a virus as soon as any part of the extended organism is occupied by virus particles.  During an establishment process, virus particles enter host cells of the relevant type, and viral DNA is integrated into host DNA.</rdfs:comment>
     </owl:Class>
     
 
@@ -5099,6 +5100,12 @@
     <!-- http://www.ifomis.org/bfo/1.1/snap#MaterialEntity -->
 
     <owl:Class rdf:about="&snap;MaterialEntity"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate -->
+
+    <owl:Class rdf:about="&snap;ObjectAggregate"/>
     
 
 
