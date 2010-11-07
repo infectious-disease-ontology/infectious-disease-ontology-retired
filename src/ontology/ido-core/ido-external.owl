@@ -19,7 +19,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="&obo;ido/ido-external.owl">
-        <protege:defaultLanguage rdf:datatype="&rdf;PlainLiteral">en</protege:defaultLanguage>
+        <protege:defaultLanguage>en</protege:defaultLanguage>
 	<rdfs:comment>This file is the MIREOT specification file - see http://obi-ontology.org/page/MIREOT</rdfs:comment>
     </owl:Ontology>
   <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0100026">
