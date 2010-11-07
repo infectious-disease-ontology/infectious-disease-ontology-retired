@@ -22,7 +22,12 @@
         <protege:defaultLanguage rdf:datatype="&rdf;PlainLiteral">en</protege:defaultLanguage>
 	<rdfs:comment>This file is the MIREOT specification file - see http://obi-ontology.org/page/MIREOT</rdfs:comment>
     </owl:Ontology>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0100026">
+    <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+    <IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+  </owl:Class>
 </rdf:RDF>
+
 
 
 

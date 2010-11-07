@@ -25,6 +25,7 @@ if (!$branchpath)
 
 my $externals_table = 
     [["PATO", "http://purl.org/obo/owl/PATO#PATO_", "http://purl.org/obo/owl/PATO", "\\d{7}","PATO:0001879"],
+     ["OBI", "http://purl.obolibrary.org/obo/OBI_", "http://purl.obolibrary.org/obo/obi.owl", "\\d{7}", "OBI:0100026"],
      ["PRO", "http://purl.org/obo/owl/PRO#PRO_", "http://purl.org/obo/owl/PRO","\\d{9}","PRO:000001958"],
      ["FMA", "http://purl.org/obo/owl/FMA#FMA_", "http://purl.org/obo/owl/FMA","\\d+","FMA:7203"],
      ["CHEBI", "http://purl.org/obo/owl/CHEBI#CHEBI_", "http://purl.org/obo/owl/CHEBI","\\d+","CHEBI:16714"],
