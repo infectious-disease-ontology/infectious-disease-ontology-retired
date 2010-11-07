@@ -72,12 +72,12 @@
     <owl:AnnotationProperty rdf:about="&protege;defaultLanguage"/>
     <owl:AnnotationProperty rdf:about="&rdfs;label"/>
     <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
-    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000116"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
-    <owl:AnnotationProperty rdf:about="&obo;IAO_0000412"/>
     <owl:AnnotationProperty rdf:about="&obo;OBI_0000283"/>
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000412"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000119"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000117"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000118"/>
