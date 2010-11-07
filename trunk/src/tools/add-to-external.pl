@@ -50,7 +50,7 @@ sub usage
   print "Usage:\nperl add-to-external.pl [\"instance\"] child parent [path to external.owl]\ne.g. perl add-to-external.pl PRO:000000001 CHEBI:23091. The default path to external is $branchpath\n";
   print "The script recognizes the following prefixes:\n";
   map { print "  $_->[0] (e.g. $_->[4]) Ontology: $_->[2]\n" } @{$externals_table};
-  print "Additionally, OBI ids in the form OBI_0600065 or OBI:0600065 or IAO ids of the form OBI_0000412 or IAO:0000412 can be used for parent terms\n";
+  print "Additionally, IDO ids in the form IDO_0600065 or IDO:0600065 or IAO ids of the form IAO_0000412 or IAO:0000412 can be used for parent terms\n";
   exit;
 }
 
@@ -64,7 +64,7 @@ sub findit
 
 findit($child) or usage("child term '$child' doesn't look like a valid id");
 
-($parent =~ /(OBI|IAO)(:|_)\d+/ || findit($parent)) or usage("parent term '$parent' doesn't look like a valid id.");
+($parent =~ /(IDO|IAO)(:|_)\d+/ || findit($parent)) or usage("parent term '$parent' doesn't look like a valid id.");
 
 -e $branchpath or usage("$branchpath doesn't exist");
 
@@ -77,7 +77,7 @@ if ($child =~ /(.*?):(.*)$/)
 }
 else { $childuri =~ $child; }
 $DB::single=1;
-if ($parent =~ /^((OBI|IAO)(:|_)\d+)$/)
+if ($parent =~ /^((IDO|IAO)(:|_)\d+)$/)
 { my $id = $1; $id =~ s/:/_/;
   $parenturi = "http://purl.obolibrary.org/obo/$id" }
 elsif ($parent =~ /^http/)
@@ -88,8 +88,8 @@ elsif( $parent =~ /(.*?):(.*)$/)
   $parenturi= @found[0]->[1].$id;
 }
 
-(($parent=~ /^(OBI|IAO)(_|:)/) || ($parent=~ /^(snap|span):/) || `grep 'rdf:about="$parenturi">' $branchpath`) 
-    or usage("$parenturi not present. Please use this script to add it then try again.\n");
+(($parent=~ /^(IDO|IAO)(_|:)/) || ($parent=~ /^(snap|span):/) || `grep 'rdf:about="$parenturi">' $branchpath`) 
+    or usage("$parenturi not present - parent terms must be present either be from IDO or IAO or in the external file before they are used as parents. Please use this script to add it then try again.\n");
 
 `grep '<owl:Class rdf:about="$childuri">' $branchpath` and usage("$childuri already present, so not adding it again");
 
