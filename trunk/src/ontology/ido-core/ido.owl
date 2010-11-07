@@ -49,13 +49,13 @@
         <dc:contributor rdf:datatype="&rdf;PlainLiteral">Barry Smith</dc:contributor>
         <dc:creator rdf:datatype="&rdf;PlainLiteral">Lindsay Cowell</dc:creator>
         <protege:defaultLanguage rdf:datatype="&rdf;PlainLiteral">en</protege:defaultLanguage>
-        <rdfs:comment xml:lang="en">The core Infectious Disease Ontology is an ontology of entities generally relevant to both the biomedical and clinical aspects of infectious diseases, including terms such as &#39;pathogen&#39;, &#39;host&#39;, &#39;vector&#39;, and &#39;vaccine&#39;.  The structure of IDO adheres to the Basic Formal Ontology.  Terms in IDO that are within the scope of other OBO Foundry ontologies, such as the Gene Ontology, are derived from those ontologies.  Other terms are defined as cross-products of terms from Foundry ontologies to the extent possible. For more information, see http://www.infectiousdiseaseontology.org/Home.html</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&rdf;PlainLiteral">http://www.infectiousdiseaseontology.org/Home.html</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">The core Infectious Disease Ontology is an ontology of entities generally relevant to both the biomedical and clinical aspects of infectious diseases, including terms such as &#39;pathogen&#39;, &#39;host&#39;, &#39;vector&#39;, and &#39;vaccine&#39;.  The structure of IDO adheres to the Basic Formal Ontology.  Terms in IDO that are within the scope of other OBO Foundry ontologies, such as the Gene Ontology, are derived from those ontologies.  Other terms are defined as cross-products of terms from Foundry ontologies to the extent possible. For more information, see http://www.infectiousdiseaseontology.org/Home.html. </rdfs:comment>
         <rdfs:comment xml:lang="en">This ontology is in early development. Expect it to change.</rdfs:comment>
         <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl"/>
         <owl:imports rdf:resource="&obo;ogms.owl"/>
         <owl:imports rdf:resource="&obo;iao/dev/ontology-metadata.owl"/>
         <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1"/>
-        <rdfs:seeAlso rdf:resource="http://www.infectiousdiseaseontology.org/Home.html"/>
     </owl:Ontology>
     
 
@@ -72,15 +72,16 @@
     <owl:AnnotationProperty rdf:about="&protege;defaultLanguage"/>
     <owl:AnnotationProperty rdf:about="&rdfs;label"/>
     <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
-    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000116"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
     <owl:AnnotationProperty rdf:about="&obo;OBI_0000283"/>
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000412"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000119"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000117"/>
-    <owl:AnnotationProperty rdf:about="&dc;date"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000118"/>
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
     
 
 
@@ -4203,10 +4204,10 @@
 
     <owl:Class rdf:about="&obo;IDO_0000596">
         <rdfs:label xml:lang="en">infectious agent</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IDO_0000528"/>
+        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A pathogen whose pathogenic disposition is an infectious disposition.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism that has an infectious disposition.</obo:IAO_0000115>
         <rdfs:comment>The term infectious agent refers to infectious organisms and prion proteins.</rdfs:comment>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
     </owl:Class>
@@ -4339,7 +4340,7 @@
     <!-- http://purl.obolibrary.org/obo/IDO_0000606 -->
 
     <owl:Class rdf:about="&obo;IDO_0000606">
-        <rdfs:label xml:lang="en">process of establishing a clinically abnormal colony</rdfs:label>
+        <rdfs:label xml:lang="en">establishment of a clinically abnormal colony</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000604"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A colonization of host process that results in a clinically abnormal colony.</obo:IAO_0000115>
@@ -4582,22 +4583,11 @@
 
     <owl:Class rdf:about="&obo;IDO_0000625">
         <rdfs:label xml:lang="en">establishment in host</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&GO;GO_0051234"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&OBO_REL;occurs_in"/>
-                        <owl:someValuesFrom rdf:resource="&obo;IDO_0000531"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&GO;GO_0051234"/>
-        <obo:IAO_0000115 xml:lang="en">A process in which a material entity reaches a site in an organism in which it can survive, grow, multiply, or mature.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An establishment of localization process in which a material entity reaches a site in an organism in which it can survive, grow, multiply, or mature.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">An organism begins bearing a particular host role as soon as the extended organism contains the relevant material entity, regardless of that entity&#39;s location in the extended organism.  An establishment process is any process by which the entity reaches a location in the extended organism in which it can persist and continue its lifecycle.  For example, an organism is host to a virus as soon as any part of the extended organism is occupied by virus particles.  During an establishment process, virus particles enter host cells of the relevant type, and viral DNA is integrated into host DNA.</obo:IAO_0000116>
     </owl:Class>
     
@@ -4648,9 +4638,9 @@
     <owl:Class rdf:about="&obo;IDO_0000629">
         <rdfs:label xml:lang="en">host role</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Role"/>
-        <obo:IAO_0000115 xml:lang="en">A role borne by an organism in virtue of the fact that it&#39;s extended organism contains a material entity.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A role borne by an organism in virtue of the fact that it&#39;s extended organism contains a material entity other than the organism.</obo:IAO_0000115>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
     </owl:Class>
     
@@ -4960,12 +4950,26 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IDO_0000655 -->
+
+    <owl:Class rdf:about="&obo;IDO_0000655">
+        <rdfs:label>transmissibility disposition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;Disposition"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <rdfs:comment>The disposition is realized in a transmission process.</rdfs:comment>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Alex Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115>A disposition to undergo a transmission process.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0001002 -->
 
     <owl:Class rdf:about="&obo;IDO_0001002">
         <rdfs:label>transition to clinical abnormality</rdfs:label>
         <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
-        <obo:IAO_0000115>A process by which a disorder comes into existence. a biological object becomes clinically abnormal.</obo:IAO_0000115>
+        <obo:IAO_0000115>A process by which a part of an organism or something contained in an organism becomes clinically abnormal.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -4989,7 +4993,9 @@
 
     <!-- http://purl.obolibrary.org/obo/OGMS_0000045 -->
 
-    <owl:Class rdf:about="&obo;OGMS_0000045"/>
+    <owl:Class rdf:about="&obo;OGMS_0000045">
+        <obo:IAO_0000412>Ontology for General Medical Science:  http://purl.obolibrary.org/obo/ogms.owl</obo:IAO_0000412>
+    </owl:Class>
     
 
 
@@ -5046,6 +5052,7 @@
     <owl:Class rdf:about="&GO;GO_0051234">
         <rdfs:label>establishment of localization</rdfs:label>
         <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
+        <obo:IAO_0000412>Gene Ontology: http://purl.org/obo/owl/GO</obo:IAO_0000412>
     </owl:Class>
     
 
@@ -5063,7 +5070,10 @@
 
     <owl:Class rdf:about="&TRANS;TRANS_0000000">
         <rdfs:label>transmission process</rdfs:label>
+        <rdfs:label>Suggested label: pathogen transmission process</rdfs:label>
         <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
+        <obo:IAO_0000115>Suggested definition: A process by which a pathogen passes from one host organism to a second host organism of the same Species.</obo:IAO_0000115>
+        <obo:IAO_0000412>Transmission Ontology: http://purl.org/obo/owl/TRANS</obo:IAO_0000412>
     </owl:Class>
     
 
