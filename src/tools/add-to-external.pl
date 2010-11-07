@@ -64,7 +64,7 @@ sub findit
 
 findit($child) or usage("child term '$child' doesn't look like a valid id");
 
-($parent =~ /(IDO|IAO)(:|_)\d+/ || findit($parent)) or usage("parent term '$parent' doesn't look like a valid id.");
+($parent =~ /(IDO)(:|_)\d+/ || findit($parent)) or usage("parent term '$parent' doesn't look like a valid id.");
 
 -e $branchpath or usage("$branchpath doesn't exist");
 
@@ -77,7 +77,7 @@ if ($child =~ /(.*?):(.*)$/)
 }
 else { $childuri =~ $child; }
 $DB::single=1;
-if ($parent =~ /^((IDO|IAO)(:|_)\d+)$/)
+if ($parent =~ /^((IDO)(:|_)\d+)$/)
 { my $id = $1; $id =~ s/:/_/;
   $parenturi = "http://purl.obolibrary.org/obo/$id" }
 elsif ($parent =~ /^http/)
@@ -88,7 +88,7 @@ elsif( $parent =~ /(.*?):(.*)$/)
   $parenturi= @found[0]->[1].$id;
 }
 
-(($parent=~ /^(IDO|IAO)(_|:)/) || ($parent=~ /^(snap|span):/) || `grep 'rdf:about="$parenturi">' $branchpath`) 
+(($parent=~ /^(IDO)(_|:)/) || ($parent=~ /^(snap|span):/) || `grep 'rdf:about="$parenturi">' $branchpath`) 
     or usage("$parenturi not present - parent terms must be present either be from IDO or IAO or in the external file before they are used as parents. Please use this script to add it then try again.\n");
 
 `grep '<owl:Class rdf:about="$childuri">' $branchpath` and usage("$childuri already present, so not adding it again");
