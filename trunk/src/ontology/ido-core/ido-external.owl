@@ -75,7 +75,22 @@
     <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
     <IAO_0000412 rdf:resource="http://purl.org/obo/owl/NCBITaxon"/>
   </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006955">
+    <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+    <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0040007">
+    <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+    <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0000003">
+    <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+    <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
 </rdf:RDF>
+
+
+
 
 
 
