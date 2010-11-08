@@ -4992,27 +4992,6 @@
     </owl:Class>
     
 
-
-    <!-- http://purl.obolibrary.org/obo/OGMS_0000031 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000031"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OGMS_0000045 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000045">
-        <obo:IAO_0000412>Ontology for General Medical Science:  http://purl.obolibrary.org/obo/ogms.owl</obo:IAO_0000412>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OGMS_0000063 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000063"/>
-    
-
-
     <!-- http://purl.org/obo/owl/CARO#CARO_0000000 -->
 
     <owl:Class rdf:about="http://purl.org/obo/owl/CARO#CARO_0000000">
