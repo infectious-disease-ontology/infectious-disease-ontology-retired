@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:obi="http://purl.obolibrary.org/obo/"
+    xmlns:protege-dc="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
+    xmlns:ncbitax="http://purl.org/obo/owl/NCBITaxon#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+    xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
+    xmlns:pato="http://purl.org/obo/owl/PATO#"
+    xmlns:cell="http://purl.org/obo/owl/CL#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:envo="http://purl.org/obo/owl/ENVO#"
+    xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
+    xmlns:caro="http://purl.org/obo/owl/CARO#"
+    xmlns:robfo="http://purl.org/obo/owl/ro_bfo_bridge/1.1#"
+    xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
+    xmlns:rotoo="http://purl.org/obo/owl/ro#"
+    xmlns:pro="http://purl.org/obo/owl/PRO#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:so="http://purl.org/obo/owl/SO#"
+    xmlns:go="http://purl.org/obo/owl/GO#"
+    xmlns:chebi="http://purl.org/obo/owl/CHEBI#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
+  xml:base="http://purl.obolibrary.org/obo/ido/ido-external-derived.owl">
+  <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido-external-derived.owl"/>
+  <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2157">
+    <rdfs:label xml:lang="en">Archaea</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000045">
+    <rdfs:label>disorder</rdfs:label>
+    <obi:IAO_0000111>disorder</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A material entity which is clinically abnormal and part of an extended organism. Disorders are the physical basis of disease.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_10239">
+    <rdfs:label>Viruses</rdfs:label>
+    <rdfs:label xml:lang="en">Viruses</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_33154">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2759"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">Fungi/Metazoa group</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">Fungi/Metazoa group</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/NCBITaxon"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2759">
+    <rdfs:label xml:lang="en">Eukaryota</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2">
+    <rdfs:label xml:lang="en">Bacteria</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0100026">
+    <rdfs:label xml:lang="en">organism</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">organism</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000031">
+    <rdfs:label>disease</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A disposition (i) to undergo pathological processes that (ii) exists in an organism because of one or more disorders in that organism.</obi:IAO_0000115>
+    <obi:IAO_0000111>disease</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000087">
+    <rdfs:label>extended organism</rdfs:label>
+    <obi:IAO_0000111>extended organism</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">An object aggregate consisting of an organism and all material entities located within the organism, overlapping the organism, or occupying sites formed in part by the organism.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000063">
+    <rdfs:label>disease course</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">The totality of all processes through which a given disease instance is realized.</obi:IAO_0000115>
+    <obi:IAO_0000111>disease course</obi:IAO_0000111>
+  </owl:Class>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/CHEBI#CHEBI_23367">
+    <obi:IAO_0000111 xml:lang="en">molecular entity</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">molecular entity</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.</obi:IAO_0000115>
+  </rdf:Description>
+  <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0008150">
+    <obi:IAO_0000111 xml:lang="en">biological_process</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">biological_process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end.</obi:IAO_0000115>
+  </rdf:Description>
+  <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0019814">
+    <obi:IAO_0000111 xml:lang="en">immunoglobulin complex</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A protein complex that in its canonical form is composed of two identical immunoglobulin heavy chains and two identical immunoglobulin light chains, held together by disulfide bonds and sometimes complexed with additional proteins. An immunoglobulin complex may be embedded in the plasma membrane or present in the extracellular space, in mucosal areas or other tissues, or circulating in the blood or lymph.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">immunoglobulin complex</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/TRANS#TRANS_0000000">
+    <rdfs:label xml:lang="en">transmission process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A process that is the means during which the pathogen is transmitted directly or indirectly from its natural reservoir, a susceptible host or source to a new host.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">transmission process</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0016265">
+    <rdfs:label xml:lang="en">death</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A permanent cessation of all vital functions: the end of life; can be applied to a whole organism or to a part of an organism.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">death</obi:IAO_0000111>
+  </rdf:Description>
+  <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412"/>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0051234">
+    <obi:IAO_0000115 xml:lang="en">The directed movement of a cell, substance or cellular entity, such as a protein complex or organelle, to a specific location.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">establishment of localization</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">establishment of localization</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0044406">
+    <obi:IAO_0000115 xml:lang="en">The attachment of an organism to its host via adhesion molecules, general stickiness etc., either directly or indirectly. The host is defined as the larger of the organisms involved in a symbiotic interaction.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">adhesion to host</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">adhesion to host</obi:IAO_0000111>
+  </rdf:Description>
+</rdf:RDF>
