@@ -74,6 +74,11 @@
     <obi:IAO_0000115 xml:lang="en">The totality of all processes through which a given disease instance is realized.</obi:IAO_0000115>
     <obi:IAO_0000111>disease course</obi:IAO_0000111>
   </owl:Class>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0006955">
+    <rdfs:label xml:lang="en">immune response</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any immune system process that functions in the calibrated response of an organism to a potential internal or invasive threat.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">immune response</obi:IAO_0000111>
+  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/obo/owl/CHEBI#CHEBI_23367">
     <obi:IAO_0000111 xml:lang="en">molecular entity</obi:IAO_0000111>
     <rdfs:label xml:lang="en">molecular entity</rdfs:label>
@@ -101,11 +106,21 @@
     <obi:IAO_0000115 xml:lang="en">A permanent cessation of all vital functions: the end of life; can be applied to a whole organism or to a part of an organism.</obi:IAO_0000115>
     <obi:IAO_0000111 xml:lang="en">death</obi:IAO_0000111>
   </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0040007">
+    <obi:IAO_0000111 xml:lang="en">growth</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">The increase in size or mass of an entire organism, a part of an organism or a cell.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">growth</rdfs:label>
+  </rdf:Description>
   <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412"/>
   <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0051234">
     <obi:IAO_0000115 xml:lang="en">The directed movement of a cell, substance or cellular entity, such as a protein complex or organelle, to a specific location.</obi:IAO_0000115>
     <obi:IAO_0000111 xml:lang="en">establishment of localization</obi:IAO_0000111>
     <rdfs:label xml:lang="en">establishment of localization</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0000003">
+    <rdfs:label xml:lang="en">reproduction</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">reproduction</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">The production by an organism of new individuals that contain some portion of their genetic material inherited from that organism.</obi:IAO_0000115>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0044406">
     <obi:IAO_0000115 xml:lang="en">The attachment of an organism to its host via adhesion molecules, general stickiness etc., either directly or indirectly. The host is defined as the larger of the organisms involved in a symbiotic interaction.</obi:IAO_0000115>
