@@ -24,7 +24,6 @@
     <Import>http://purl.org/obo/owl/ro_proposed</Import>
     <Import>http://purl.obolibrary.org/obo/ido.owl</Import>
     <Import>http://purl.org/obo/owl/ro</Import>
-    <Import>http://purl.obolibrary.org/obo/ogms.owl</Import>
     <Declaration>
         <ObjectProperty IRI="http://purl.obolibrary.org/obo/IDO_0000660"/>
     </Declaration>
