@@ -133,7 +133,7 @@
     <!-- http://purl.org/obo/owl/GO#GO_0000003 -->
 
     <owl:Class rdf:about="&GO;GO_0000003">
-        <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
+        <rdfs:subClassOf rdf:resource="&GO;GO_0008150"/>
         <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -160,7 +160,7 @@
     <!-- http://purl.org/obo/owl/GO#GO_0006955 -->
 
     <owl:Class rdf:about="&GO;GO_0006955">
-        <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
+        <rdfs:subClassOf rdf:resource="&GO;GO_0008150"/>
         <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -178,7 +178,7 @@
     <!-- http://purl.org/obo/owl/GO#GO_0016265 -->
 
     <owl:Class rdf:about="&GO;GO_0016265">
-        <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
+        <rdfs:subClassOf rdf:resource="&GO;GO_0008150"/>
         <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -196,7 +196,7 @@
     <!-- http://purl.org/obo/owl/GO#GO_0040007 -->
 
     <owl:Class rdf:about="&GO;GO_0040007">
-        <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
+        <rdfs:subClassOf rdf:resource="&GO;GO_0008150"/>
         <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -205,7 +205,34 @@
     <!-- http://purl.org/obo/owl/GO#GO_0044406 -->
 
     <owl:Class rdf:about="&GO;GO_0044406">
-        <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
+        <rdfs:subClassOf rdf:resource="&GO;GO_0008150"/>
+        <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0044411 -->
+
+    <owl:Class rdf:about="&GO;GO_0044411">
+        <rdfs:subClassOf rdf:resource="&GO;GO_0051704"/>
+        <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0048525 -->
+
+    <owl:Class rdf:about="&GO;GO_0048525">
+        <rdfs:subClassOf rdf:resource="&GO;GO_0065007"/>
+        <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0050777 -->
+
+    <owl:Class rdf:about="&GO;GO_0050777">
+        <rdfs:subClassOf rdf:resource="&GO;GO_0065007"/>
         <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -215,6 +242,24 @@
 
     <owl:Class rdf:about="&GO;GO_0051234">
         <rdfs:subClassOf rdf:resource="&GO;GO_0008150"/>
+        <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0051704 -->
+
+    <owl:Class rdf:about="&GO;GO_0051704">
+        <rdfs:subClassOf rdf:resource="&GO;GO_0008150"/>
+        <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0065007 -->
+
+    <owl:Class rdf:about="&GO;GO_0065007">
+        <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
         <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -285,37 +330,7 @@
     <!-- http://www.ifomis.org/bfo/1.1/span#ProcessualEntity -->
 
     <owl:Class rdf:about="&span;ProcessualEntity"/>
-  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0065007">
-    <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
-    <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0048525">
-    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0065007"/>
-    <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0050777">
-    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0065007"/>
-    <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008150">
-    <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
-    <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051704">
-    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-    <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044411">
-    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051704"/>
-    <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
-  </owl:Class>
 </rdf:RDF>
-
-
-
-
-
-
 
 
 

@@ -73,12 +73,12 @@
     <owl:AnnotationProperty rdf:about="&protege;defaultLanguage"/>
     <owl:AnnotationProperty rdf:about="&rdfs;label"/>
     <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
-    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000116"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
-    <owl:AnnotationProperty rdf:about="&obo;IAO_0000412"/>
     <owl:AnnotationProperty rdf:about="&obo;OBI_0000283"/>
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000412"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000119"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000117"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000118"/>
@@ -2169,9 +2169,9 @@
     <owl:Class rdf:about="&obo;IDO_0000439">
         <rdfs:label xml:lang="en">antimicrobial disposition</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Disposition"/>
+        <obo:IAO_0000115 xml:lang="en">A disposition to kill or inhibit the development or reproduction of microorganisms.</obo:IAO_0000115>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A disposition to kill or inhibit the growth of microorganisms.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <rdfs:comment>The disposition is realized in the killing or growth inhibition of microorganisms.</rdfs:comment>
         <rdfs:comment>Some instances might be functions, depending on whether the bearer is something that exists and is used for the purpose (alcohol) or something that was designed for the purpose (pine sol).  Entities that kill microorganisms are referred to as microbicidal; entities that inhibit the growth of microorganisms are referred to as microbistatic.</rdfs:comment>
@@ -2198,7 +2198,7 @@
         <rdfs:label xml:lang="en">antifungal disposition</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Disposition"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A disposition to kill or inhibit the growth of fungal organisms.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A disposition to kill or inhibit the development or reproduction of fungal organisms.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
     </owl:Class>
@@ -2214,7 +2214,7 @@
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000118>antibiotic disposition</obo:IAO_0000118>
-        <obo:IAO_0000115 xml:lang="en">A disposition to kill or inhibit the growth of bacteria.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A disposition to kill or inhibit the reproduction of bacteria.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2226,9 +2226,9 @@
         <rdfs:subClassOf rdf:resource="&snap;Disposition"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A disposition to kill or inhibit the growth of eukaryotic parasites.</obo:IAO_0000115>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <rdfs:comment>In the term name, we are using parasite in the medical sense of eukaryotic organisms that are parasitic in humans.</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">A disposition to kill or inhibit the development or reproduction of eukaryotic parasites.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2265,7 +2265,7 @@
     <!-- http://purl.obolibrary.org/obo/IDO_0000446 -->
 
     <owl:Class rdf:about="&obo;IDO_0000446">
-        <rdfs:label xml:lang="en">host resistance to infectious agent</rdfs:label>
+        <rdfs:label xml:lang="en">resistance to infectious agent</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000444"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
@@ -2293,11 +2293,11 @@
     <owl:Class rdf:about="&obo;IDO_0000448">
         <rdfs:label xml:lang="en">immunity to infectious agent</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000446"/>
+        <obo:IAO_0000115 xml:lang="en">A resistance to infectious agent that inheres in an organism in virtue of immune system components in the extended organism.</obo:IAO_0000115>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <rdfs:comment>We don&#39;t specify that immunity results from prior exposure, because we want to include innate immunity.  In addition, for adaptive immunity, there could be some low level immunity even in a primary immune response.</rdfs:comment>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A host resistance to infectious agent that inheres in an organism in virtue of immune system components in the extended organism.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">protective immunity to infectious agent</obo:IAO_0000118>
     </owl:Class>
     
@@ -4084,13 +4084,13 @@
     <!-- http://purl.obolibrary.org/obo/IDO_0000587 -->
 
     <owl:Class rdf:about="&obo;IDO_0000587">
-        <rdfs:label xml:lang="en">host genetic resistance to infectious agent</rdfs:label>
+        <rdfs:label xml:lang="en">genetic resistance to infectious agent</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000446"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <rdfs:comment>The resistance of individuals to HIV invasion oonferred by particular CCR5 alleles is an example.  Resistance against malaria conferred by the sickle cell gene is another.</rdfs:comment>
-        <obo:IAO_0000115 xml:lang="en">A host resistance to infectious agent that inheres in an organism in virtue of a specific allele or combination of alleles in its genome.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A resistance to infectious agent that inheres in an organism in virtue of a specific allele or combination of alleles in its genome.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -4117,7 +4117,7 @@
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An organism that has an immunodeficiency.</obo:IAO_0000115>
-        <obo:IAO_0000118 xml:lang="en">immunocompromised host</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">immunocompromised organism</obo:IAO_0000118>
     </owl:Class>
     
 
@@ -4181,7 +4181,7 @@
         <rdfs:label xml:lang="en">direct host exposure to infectious agent</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IDO_0000658"/>
         <obo:IAO_0000117>Bjoern Peters</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A process in which an infectious agent comes into physical contact with a potential host of the infectious agent.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A process in which a potential host of an infectious agent comes into direct physical contact with the infectious agent.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -4260,7 +4260,7 @@
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A host exposure to environment with infectious agent where the exposure is accidental and the environment is a laboratory and where the infectious agent has is infectious in humans.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A host exposure to environment with infectious agent where the exposure is accidental; the environment is a laboratory, and the infectious agent is infectious in humans.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Alan Ruttenberg 2010/05/20- Tentative definition. Needs review by Bjoern</obo:IAO_0000116>
     </owl:Class>
     
@@ -5008,6 +5008,30 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IDO_0000662 -->
+
+    <owl:Class rdf:about="&obo;IDO_0000662">
+        <rdfs:label>life-sustaining process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GO;GO_0008150"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alex Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115>A process which is necessary for the survival of an organism.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000663 -->
+
+    <owl:Class rdf:about="&obo;IDO_0000663">
+        <rdfs:label>negative regulation of life-sustaining process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GO;GO_0065007"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alex Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115>Any process that stops, prevents, or reduces the frequency, rate or extent of a life-sustaining process.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0001002 -->
 
     <owl:Class rdf:about="&obo;IDO_0001002">
@@ -5032,7 +5056,6 @@
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
         <obo:IAO_0000412>OBI</obo:IAO_0000412>
         <obo:IAO_0000115>An organism is material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.</obo:IAO_0000115>
     </owl:Class>
@@ -5061,7 +5084,6 @@
 
     <owl:Class rdf:about="&CARO;CARO_0000000">
         <rdfs:label>anatomical entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
     </owl:Class>
     
 
@@ -5070,7 +5092,6 @@
 
     <owl:Class rdf:about="&CHEBI;CHEBI_23367">
         <rdfs:label>molecular entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
     </owl:Class>
     
 
@@ -5079,7 +5100,6 @@
 
     <owl:Class rdf:about="&GO;GO_0005575">
         <rdfs:label>cellular component</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
     </owl:Class>
     
 
@@ -5088,14 +5108,13 @@
 
     <owl:Class rdf:about="&GO;GO_0005615">
         <rdfs:label>extracellular space</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;part_of"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0100026"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0008150 -->
+
+    <owl:Class rdf:about="&GO;GO_0008150"/>
     
 
 
@@ -5103,9 +5122,14 @@
 
     <owl:Class rdf:about="&GO;GO_0051234">
         <rdfs:label>establishment of localization</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
         <obo:IAO_0000412>Gene Ontology: http://purl.org/obo/owl/GO</obo:IAO_0000412>
     </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0065007 -->
+
+    <owl:Class rdf:about="&GO;GO_0065007"/>
     
 
 
@@ -5113,16 +5137,13 @@
 
     <owl:Class rdf:about="&NCBITaxon;NCBITaxon_10239">
         <rdfs:label>Viruses</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0100026"/>
     </owl:Class>
     
 
 
     <!-- http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2 -->
 
-    <owl:Class rdf:about="&NCBITaxon;NCBITaxon_2">
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0100026"/>
-    </owl:Class>
+    <owl:Class rdf:about="&NCBITaxon;NCBITaxon_2"/>
     
 
 
@@ -5136,9 +5157,7 @@
 
     <!-- http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2759 -->
 
-    <owl:Class rdf:about="&NCBITaxon;NCBITaxon_2759">
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0100026"/>
-    </owl:Class>
+    <owl:Class rdf:about="&NCBITaxon;NCBITaxon_2759"/>
     
 
 
@@ -5147,7 +5166,6 @@
     <owl:Class rdf:about="&TRANS;TRANS_0000000">
         <rdfs:label>transmission process</rdfs:label>
         <rdfs:label>Suggested label: pathogen transmission process</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
         <obo:IAO_0000115>Suggested definition: A process by which a pathogen passes from one host organism to a second host organism of the same Species.</obo:IAO_0000115>
         <obo:IAO_0000412>Transmission Ontology: http://purl.org/obo/owl/TRANS</obo:IAO_0000412>
     </owl:Class>
