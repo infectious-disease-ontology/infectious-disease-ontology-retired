@@ -3513,8 +3513,8 @@
     <!-- http://purl.obolibrary.org/obo/IDO_0000546 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000546">
-        <rdfs:label xml:lang="en">end reservoir of infectious agent</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <rdfs:label xml:lang="en">_obsolete_end reservoir of infectious agent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000115 xml:lang="en">A material entity bearing an end reservoir of infectious agent role.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
