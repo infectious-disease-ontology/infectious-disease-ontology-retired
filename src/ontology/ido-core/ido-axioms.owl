@@ -1,14 +1,4 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE Ontology [
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-]>
-
-
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://purl.obolibrary.org/obo/ido/ido-axioms.owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -27,6 +17,98 @@
     <Declaration>
         <ObjectProperty IRI="http://purl.obolibrary.org/obo/IDO_0000660"/>
     </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/IDO_0000661"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000400"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <ObjectIntersectionOf>
+                <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#participates_in"/>
+                    <Class IRI="http://purl.org/obo/owl/GO#GO_0044403"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000401"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#participates_in"/>
+                        <Class IRI="http://purl.org/obo/owl/GO#GO_0044403"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <Class IRI="http://purl.org/obo/owl/GO#GO_0085030"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000402"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#participates_in"/>
+                        <Class IRI="http://purl.org/obo/owl/GO#GO_0044403"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <Class IRI="http://purl.org/obo/owl/GO#GO_0085031"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000408"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <ObjectIntersectionOf>
+                <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#part_of"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000087"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#contains"/>
+                            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000522"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000413"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <ObjectIntersectionOf>
+                <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#part_of"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000087"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#contains"/>
+                            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000526"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="http://purl.obolibrary.org/obo/IDO_0000414"/>
         <ObjectSomeValuesFrom>
@@ -64,6 +146,130 @@
                 </ObjectSomeValuesFrom>
             </ObjectIntersectionOf>
         </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000417"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#location_of"/>
+                        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000596"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <Class IRI="http://purl.org/obo/owl/TRANS#TRANS_0000002"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000418"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#location_of"/>
+                        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000596"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <Class IRI="http://purl.org/obo/owl/TRANS#TRANS_0000002"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000419"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#location_of"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000596"/>
+                            <ObjectComplementOf>
+                                <ObjectSomeValuesFrom>
+                                    <ObjectProperty IRI="http://purl.obolibrary.org/obo/IDO_0000661"/>
+                                    <ObjectIntersectionOf>
+                                        <Class IRI="http://purl.org/obo/owl/GO#GO_0000003"/>
+                                        <ObjectSomeValuesFrom>
+                                            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#occurs_in"/>
+                                            <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                                        </ObjectSomeValuesFrom>
+                                    </ObjectIntersectionOf>
+                                </ObjectSomeValuesFrom>
+                            </ObjectComplementOf>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <Class IRI="http://purl.org/obo/owl/TRANS#TRANS_0000002"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000420"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#location_of"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000596"/>
+                            <ObjectSomeValuesFrom>
+                                <ObjectProperty IRI="http://purl.obolibrary.org/obo/IDO_0000661"/>
+                                <ObjectIntersectionOf>
+                                    <Class IRI="http://purl.org/obo/owl/GO#GO_0000003"/>
+                                    <ObjectSomeValuesFrom>
+                                        <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#occurs_in"/>
+                                        <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                                    </ObjectSomeValuesFrom>
+                                </ObjectIntersectionOf>
+                            </ObjectSomeValuesFrom>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <Class IRI="http://purl.org/obo/owl/TRANS#TRANS_0000002"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000421"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <ObjectComplementOf>
+                        <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                    </ObjectComplementOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#location_of"/>
+                        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000596"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <Class IRI="http://purl.org/obo/owl/TRANS#TRANS_0000002"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="http://purl.obolibrary.org/obo/IDO_0000436"/>
@@ -121,125 +327,18 @@
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="http://purl.obolibrary.org/obo/IDO_0000438"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000439"/>
         <ObjectIntersectionOf>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                <Class IRI="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
             </ObjectSomeValuesFrom>
-            <ObjectAllValuesFrom>
-                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
-                <ObjectIntersectionOf>
-                    <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
-                    <ObjectUnionOf>
-                        <ObjectSomeValuesFrom>
-                            <ObjectProperty IRI="http://purl.obolibrary.org/obo/IDO_0000660"/>
-                            <Class IRI="http://purl.org/obo/owl/GO#GO_0016265"/>
-                        </ObjectSomeValuesFrom>
-                        <ObjectSomeValuesFrom>
-                            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#negatively_regulates"/>
-                            <Class IRI="http://purl.org/obo/owl/GO#GO_0000003"/>
-                        </ObjectSomeValuesFrom>
-                    </ObjectUnionOf>
-                </ObjectIntersectionOf>
-            </ObjectAllValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000440"/>
-        <ObjectIntersectionOf>
             <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
-            </ObjectSomeValuesFrom>
-            <ObjectAllValuesFrom>
                 <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
-                <ObjectIntersectionOf>
-                    <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
-                    <ObjectUnionOf>
-                        <Class IRI="http://purl.org/obo/owl/GO#GO_0048525"/>
-                        <ObjectSomeValuesFrom>
-                            <ObjectProperty IRI="http://purl.obolibrary.org/obo/IDO_0000660"/>
-                            <Class IRI="http://purl.org/obo/owl/GO#GO_0016265"/>
-                        </ObjectSomeValuesFrom>
-                    </ObjectUnionOf>
-                </ObjectIntersectionOf>
-            </ObjectAllValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000441"/>
-        <ObjectIntersectionOf>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#positively_regulates"/>
+                    <Class IRI="http://purl.org/obo/owl/GO#GO_0044411"/>
+                </ObjectSomeValuesFrom>
             </ObjectSomeValuesFrom>
-            <ObjectAllValuesFrom>
-                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
-                <ObjectIntersectionOf>
-                    <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
-                    <ObjectUnionOf>
-                        <ObjectSomeValuesFrom>
-                            <ObjectProperty IRI="http://purl.obolibrary.org/obo/IDO_0000660"/>
-                            <Class IRI="http://purl.org/obo/owl/GO#GO_0016265"/>
-                        </ObjectSomeValuesFrom>
-                        <ObjectSomeValuesFrom>
-                            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#negatively_regulates"/>
-                            <Class IRI="http://purl.org/obo/owl/GO#GO_0000003"/>
-                        </ObjectSomeValuesFrom>
-                    </ObjectUnionOf>
-                </ObjectIntersectionOf>
-            </ObjectAllValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000442"/>
-        <ObjectIntersectionOf>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
-            </ObjectSomeValuesFrom>
-            <ObjectAllValuesFrom>
-                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
-                <ObjectIntersectionOf>
-                    <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
-                    <ObjectSomeValuesFrom>
-                        <ObjectProperty IRI="http://purl.obolibrary.org/obo/IDO_0000660"/>
-                        <Class IRI="http://purl.org/obo/owl/GO#GO_0016265"/>
-                    </ObjectSomeValuesFrom>
-                </ObjectIntersectionOf>
-            </ObjectAllValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000443"/>
-        <ObjectIntersectionOf>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
-            </ObjectSomeValuesFrom>
-            <ObjectAllValuesFrom>
-                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
-                <ObjectIntersectionOf>
-                    <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
-                    <ObjectUnionOf>
-                        <ObjectSomeValuesFrom>
-                            <ObjectProperty IRI="http://purl.obolibrary.org/obo/IDO_0000660"/>
-                            <Class IRI="http://purl.org/obo/owl/GO#GO_0016265"/>
-                        </ObjectSomeValuesFrom>
-                        <ObjectSomeValuesFrom>
-                            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#negatively_regulates"/>
-                            <Class IRI="http://purl.org/obo/owl/GO#GO_0000003"/>
-                        </ObjectSomeValuesFrom>
-                    </ObjectUnionOf>
-                </ObjectIntersectionOf>
-            </ObjectAllValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -257,23 +356,35 @@
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="http://purl.obolibrary.org/obo/IDO_0000450"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
-            <ObjectIntersectionOf>
-                <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
-                <ObjectSomeValuesFrom>
-                    <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#results_in_formation_of"/>
-                    <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000045"/>
-                </ObjectSomeValuesFrom>
-            </ObjectIntersectionOf>
-        </ObjectAllValuesFrom>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#results_in_formation_of"/>
+                        <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000045"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="http://purl.obolibrary.org/obo/IDO_0000451"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000596"/>
-        </ObjectSomeValuesFrom>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <Class IRI="http://purl.obolibrary.org/obo/IDO_0000596"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <Class IRI="http://purl.org/obo/owl/GO#GO_0044411"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="http://purl.obolibrary.org/obo/IDO_0000452"/>
@@ -303,13 +414,6 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000455"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="http://purl.obolibrary.org/obo/IDO_0000458"/>
         <ObjectIntersectionOf>
             <ObjectSomeValuesFrom>
@@ -323,48 +427,6 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000463"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000596"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000464"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000466"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000596"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000467"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000468"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000470"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000596"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="http://purl.obolibrary.org/obo/IDO_0000472"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_part"/>
@@ -376,97 +438,6 @@
                 </ObjectAllValuesFrom>
             </ObjectIntersectionOf>
         </ObjectAllValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000479"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000480"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000481"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000482"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000483"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000484"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000485"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000486"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000487"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000488"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000489"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000490"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000494"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
-        </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="http://purl.obolibrary.org/obo/IDO_0000495"/>
@@ -715,16 +686,22 @@
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="http://purl.obolibrary.org/obo/IDO_0000585"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
-            <ObjectIntersectionOf>
-                <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
-                <ObjectSomeValuesFrom>
-                    <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#results_in_formation_of"/>
-                    <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000045"/>
-                </ObjectSomeValuesFrom>
-            </ObjectIntersectionOf>
-        </ObjectAllValuesFrom>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <Class IRI="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#results_in_formation_of"/>
+                        <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000045"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="http://purl.obolibrary.org/obo/IDO_0000586"/>
@@ -747,19 +724,6 @@
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000618"/>
-        <ObjectIntersectionOf>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
-            </ObjectSomeValuesFrom>
-            <ObjectAllValuesFrom>
-                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
-                <Class IRI="http://purl.org/obo/owl/GO#GO_0006955"/>
-            </ObjectAllValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="http://purl.obolibrary.org/obo/IDO_0000619"/>
         <ObjectIntersectionOf>
             <ObjectSomeValuesFrom>
@@ -777,12 +741,20 @@
         <ObjectIntersectionOf>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                <Class IRI="http://purl.obolibrary.org/obo/IDO_0000596"/>
+                <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
             </ObjectSomeValuesFrom>
             <ObjectAllValuesFrom>
                 <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
                 <ObjectIntersectionOf>
                     <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_part"/>
+                        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000625"/>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_part"/>
+                        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000626"/>
+                    </ObjectSomeValuesFrom>
                     <ObjectSomeValuesFrom>
                         <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_part"/>
                         <Class IRI="http://purl.obolibrary.org/obo/IDO_0000656"/>
@@ -814,25 +786,6 @@
                 <ObjectSomeValuesFrom>
                     <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#participates_in"/>
                     <Class IRI="http://purl.obolibrary.org/obo/IDO_0000477"/>
-                </ObjectSomeValuesFrom>
-            </ObjectIntersectionOf>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000629"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-            <ObjectIntersectionOf>
-                <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
-                <ObjectSomeValuesFrom>
-                    <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#part_of"/>
-                    <ObjectIntersectionOf>
-                        <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000087"/>
-                        <ObjectSomeValuesFrom>
-                            <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#contains"/>
-                            <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
-                        </ObjectSomeValuesFrom>
-                    </ObjectIntersectionOf>
                 </ObjectSomeValuesFrom>
             </ObjectIntersectionOf>
         </ObjectSomeValuesFrom>
@@ -898,13 +851,542 @@
             </ObjectAllValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000655"/>
-        <ObjectAllValuesFrom>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000404"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <ObjectIntersectionOf>
+                <Class IRI="http://purl.obolibrary.org/obo/IDO_0000596"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#located_in"/>
+                    <Class IRI="http://purl.obolibrary.org/obo/IDO_0000531"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000405"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000528"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000408"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <ObjectIntersectionOf>
+                <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#part_of"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000087"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#contains"/>
+                            <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000424"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000425"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000426"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000430"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <Class IRI="http://purl.org/obo/owl/CARO#CARO_0000000"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#part_of"/>
+                        <Class IRI="http://purl.org/obo/owl/TRANS#TRANS_0000000"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000431"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <Class IRI="http://purl.org/obo/owl/CARO#CARO_0000000"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#part_of"/>
+                        <Class IRI="http://purl.org/obo/owl/TRANS#TRANS_0000000"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000432"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
+                        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000439"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                    <ObjectUnionOf>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.obolibrary.org/obo/IDO_0000660"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0016265"/>
+                        </ObjectSomeValuesFrom>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#negatively_regulates"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0000003"/>
+                        </ObjectSomeValuesFrom>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#negatively_regulates"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0032502"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectUnionOf>
+                </ObjectIntersectionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000433"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
+                        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000439"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                    <ObjectUnionOf>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.obolibrary.org/obo/IDO_0000660"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0016265"/>
+                        </ObjectSomeValuesFrom>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#negatively_regulates"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0000003"/>
+                        </ObjectSomeValuesFrom>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#negatively_regulates"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0032502"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectUnionOf>
+                </ObjectIntersectionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000434"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000504"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000435"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000504"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000439"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                    <ObjectUnionOf>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.obolibrary.org/obo/IDO_0000660"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0016265"/>
+                        </ObjectSomeValuesFrom>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#negatively_regulates"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0000003"/>
+                        </ObjectSomeValuesFrom>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#negatively_regulates"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0032502"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectUnionOf>
+                </ObjectIntersectionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000440"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                    <ObjectUnionOf>
+                        <Class IRI="http://purl.org/obo/owl/GO#GO_0048525"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.obolibrary.org/obo/IDO_0000660"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0016265"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectUnionOf>
+                </ObjectIntersectionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000441"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                    <ObjectUnionOf>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.obolibrary.org/obo/IDO_0000660"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0016265"/>
+                        </ObjectSomeValuesFrom>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#negatively_regulates"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0000003"/>
+                        </ObjectSomeValuesFrom>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#negatively_regulates"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0032502"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectUnionOf>
+                </ObjectIntersectionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000442"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                    <ObjectUnionOf>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.obolibrary.org/obo/IDO_0000660"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0016265"/>
+                        </ObjectSomeValuesFrom>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#negatively_regulates"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0043093"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectUnionOf>
+                </ObjectIntersectionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000443"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                    <ObjectUnionOf>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.obolibrary.org/obo/IDO_0000660"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0016265"/>
+                        </ObjectSomeValuesFrom>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#negatively_regulates"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0000003"/>
+                        </ObjectSomeValuesFrom>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#negatively_regulates"/>
+                            <Class IRI="http://purl.org/obo/owl/GO#GO_0032502"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectUnionOf>
+                </ObjectIntersectionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000455"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000463"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000596"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000464"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000466"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000596"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000467"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000468"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000470"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000596"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000479"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000480"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000481"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000482"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000483"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000484"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000485"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000486"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000487"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000488"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000489"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000490"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000494"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://purl.obolibrary.org/obo/IDO_0000509"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000576"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
-            <Class IRI="http://purl.org/obo/owl/TRANS#TRANS_0000000"/>
-        </ObjectAllValuesFrom>
-    </EquivalentClasses>
+            <Class IRI="http://purl.org/obo/owl/GO#GO_0045087"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000578"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+            <Class IRI="http://purl.org/obo/owl/GO#GO_0006959"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000579"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+            <Class IRI="http://purl.org/obo/owl/GO#GO_0002443"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000618"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <Class IRI="http://purl.org/obo/owl/GO#GO_0006955"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000621"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+            <Class IRI="http://purl.org/obo/owl/GO#GO_0002250"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000629"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <ObjectIntersectionOf>
+                <Class IRI="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#part_of"/>
+                    <ObjectIntersectionOf>
+                        <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000087"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="http://www.obofoundry.org/ro/ro.owl#contains"/>
+                            <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000635"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+            <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IDO_0000655"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                <Class IRI="http://purl.obolibrary.org/obo/IDO_0000528"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://purl.org/obo/owl/OBO_REL#realized_by"/>
+                <Class IRI="http://purl.org/obo/owl/TRANS#TRANS_0000000"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
     <DisjointClasses>
         <Class IRI="http://purl.obolibrary.org/obo/IDO_0000472"/>
         <Class IRI="http://purl.obolibrary.org/obo/IDO_0000473"/>
@@ -1084,123 +1566,128 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000471</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs &#39;different species&#39;</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs &#39;different species&#39;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000474</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs &#39;distributed throughout&#39; </Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs &#39;distributed throughout&#39; </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000475</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs &#39;relatively small area&#39;</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs &#39;relatively small area&#39;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000505</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs FMA term.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs FMA term.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000506</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs FMA term.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs FMA term.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000546</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs &#39;end reservoir of infectious agent role&#39;</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs &#39;end reservoir of infectious agent role&#39;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000547</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL: Needs &#39;product of&#39; relation.  It is a product of this process:
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL: Needs &#39;product of&#39; relation.  It is a product of this process:
 production and has_participant some (has_role some pathogen and has_disposition some &#39;virulence factor disposition&#39;)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000552</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">IDO Error endotoxin role =&gt; endotoxin disposition</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IDO Error endotoxin role =&gt; endotoxin disposition</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000563</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs &#39;process of killing microorganisms&#39;</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs &#39;process of killing microorganisms&#39;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000564</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs &#39;process of killing viruses&#39;</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs &#39;process of killing viruses&#39;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000565</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs &#39;process of inhibiting the growth of microorganisms&#39;</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs &#39;process of inhibiting the growth of microorganisms&#39;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000617</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs immune system component (FMA?) and defective functioning (OGMS?)</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs immune system component (FMA?) and defective functioning (OGMS?)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000628</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs &#39;extended period of time&#39;</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs &#39;extended period of time&#39;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000630</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs &#39;hospital&#39; (OGMS?)</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs &#39;hospital&#39; (OGMS?)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000631</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs &#39;health care facility&#39;</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs &#39;health care facility&#39;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000633</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs &#39;another infection in a non-adjacent location&#39;</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs &#39;another infection in a non-adjacent location&#39;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000638</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs nursing home (OGMS?)</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs nursing home (OGMS?)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000642</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">needs &#39;species&#39;</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">needs &#39;species&#39;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000645</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs NCBI taxonomy term.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs NCBI taxonomy term.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000646</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs NCBI taxonomy terms.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs NCBI taxonomy terms.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000647</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs NCBI Taxonomy term.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs NCBI Taxonomy term.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000648</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs NCBI taxonomy term.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs NCBI taxonomy term.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000649</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DL needs NCBI taxonomy term.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DL needs NCBI taxonomy term.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://purl.obolibrary.org/obo/IDO_0000660</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">results_in</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">results_in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/IDO_0000661</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">capable_of</Literal>
     </AnnotationAssertion>
 </Ontology>
 
