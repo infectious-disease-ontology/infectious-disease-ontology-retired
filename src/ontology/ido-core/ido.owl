@@ -3245,11 +3245,11 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000524">
         <rdfs:label xml:lang="en">mutualist</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000522"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <obo:IAO_0000115 xml:lang="en">A organism bearing a mutualist role.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A symbiont bearing a mutualist role.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3258,9 +3258,9 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000525">
         <rdfs:label xml:lang="en">commensal</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000522"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <obo:IAO_0000115 xml:lang="en">A organism bearing a commensal role.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A symbiont bearing a commensal role.</obo:IAO_0000115>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     </owl:Class>
@@ -3271,9 +3271,9 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000526">
         <rdfs:label xml:lang="en">parasite</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000522"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <obo:IAO_0000115 xml:lang="en">A organism bearing a parasite role.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A symbiont bearing a parasite role.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
     </owl:Class>
@@ -3431,11 +3431,11 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000539">
         <rdfs:label xml:lang="en">infectious agent carrier</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000537"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An infectious agent host bearing the infectious agent carrier role.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An organism bearing the infectious agent carrier role.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3457,7 +3457,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000541">
         <rdfs:label xml:lang="en">mechanical vector of infectious agent</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000540"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An infectious agent vector bearing a mechanical vector of infectious agent role.</obo:IAO_0000115>
@@ -3470,7 +3470,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000542">
         <rdfs:label xml:lang="en">biological vector of infectious agent</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000540"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An infectious agent vector bearing a biological vector of infectious agent role.</obo:IAO_0000115>
@@ -4191,9 +4191,8 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An organism that has an infectious disposition.</obo:IAO_0000115>
-        <rdfs:comment>The term infectious agent refers to infectious organisms and prion proteins.</rdfs:comment>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism that has an infectious disposition.</obo:IAO_0000115>
     </owl:Class>
     
 
