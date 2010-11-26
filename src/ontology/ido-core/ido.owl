@@ -3787,7 +3787,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000566">
         <rdfs:label xml:lang="en">primary infection</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000504"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
@@ -3800,7 +3800,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000567">
         <rdfs:label xml:lang="en">secondary infection</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000504"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
@@ -4685,7 +4685,7 @@
     <!-- http://purl.obolibrary.org/obo/IDO_0000635 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000635">
-        <rdfs:label xml:lang="en">source of infection</rdfs:label>
+        <rdfs:label xml:lang="en">source of infection role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
         <obo:IAO_0000115 xml:lang="en">A role borne by a material entity in virtue of the fact that it contains a site from which an infectious agent is transmitted.</obo:IAO_0000115>
         <rdfs:comment>The role is realized in a process that has as part a transmission process and a process by which the infectious agent or one of its offspring becomes part of a disorder in the host.</rdfs:comment>
@@ -5013,6 +5013,19 @@
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alex Diehl</obo:IAO_0000117>
         <obo:IAO_0000115>Any process that stops, prevents, or reduces the frequency, rate or extent of a life-sustaining process.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000665 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000665">
+        <rdfs:label>source of infection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <obo:IAO_0000115>A material entity bearing a source of infection role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alex Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     </owl:Class>
     
 
