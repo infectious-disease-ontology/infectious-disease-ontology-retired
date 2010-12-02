@@ -183,15 +183,6 @@
     
 
 
-    <!-- http://purl.org/obo/owl/GO#GO_0005615 -->
-
-    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005615">
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0005575"/>
-        <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/obo/owl/GO#GO_0006955 -->
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006955">
@@ -451,6 +442,14 @@
     </owl:Class>
     
 
+
+    <!-- http://purl.org/obo/owl/GO#GO_0005615 -->
+
+    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005615">
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0005575"/>
+        <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    </owl:Class>
+    
 
     <!-- http://www.ifomis.org/bfo/1.1/snap#Disposition -->
 
