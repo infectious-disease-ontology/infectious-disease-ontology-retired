@@ -100,15 +100,6 @@
     
 
 
-    <!-- http://purl.org/obo/owl/OBO_REL#occurs_in -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#occurs_in">
-        <rdfs:label>occurs_in</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.obofoundry.org/ro/ro.owl#has_part -->
 
     <owl:ObjectProperty rdf:about="http://www.obofoundry.org/ro/ro.owl#has_part">
