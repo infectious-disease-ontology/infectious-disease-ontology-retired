@@ -31,6 +31,7 @@
   <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
   <owl:ObjectProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty"/>
   <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido-external-by-hand.owl">
+    <owl:versionIRI rdf:about="http://purl.obolibrary.org/obo/ido/2010-12-02/ido-external-by-hand.owl"/>
     <oboInOwl:savedBy>alanr</oboInOwl:savedBy>
     <oboInOwl:hasDefaultNamespace>relationship</oboInOwl:hasDefaultNamespace>
     <rdfs:comment>Alan Ruttenberg: This is subset for use in IDO. part_of is changed to ro relation uri</rdfs:comment>
