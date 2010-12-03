@@ -19,7 +19,7 @@
      xmlns:CL="http://purl.org/obo/owl/CL#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido-external.owl">
-        <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This file is the MIREOT specification file - see http://obi-ontology.org/page/MIREOT</rdfs:comment>
+        <rdfs:comment >This file is the MIREOT specification file - see http://obi-ontology.org/page/MIREOT</rdfs:comment>
     </owl:Ontology>
     
 
