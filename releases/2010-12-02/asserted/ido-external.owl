@@ -19,8 +19,7 @@
      xmlns:CL="http://purl.org/obo/owl/CL#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido-external.owl">
-       <owl:versionIRI rdf:about="http://purl.obolibrary.org/obo/ido/2010-12-02/ido-external.owl"/>
-
+        <owl:versionIRI rdf:about="http://purl.obolibrary.org/obo/ido/2010-12-02/ido-external.owl"/>
         <rdfs:comment >This file is the MIREOT specification file - see http://obi-ontology.org/page/MIREOT</rdfs:comment>
     </owl:Ontology>
     
@@ -176,15 +175,6 @@
     
 
 
-    <!-- http://purl.org/obo/owl/GO#GO_0005575 -->
-
-    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005575">
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
-        <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/obo/owl/GO#GO_0006955 -->
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006955">
@@ -224,7 +214,7 @@
     <!-- http://purl.org/obo/owl/GO#GO_0019814 -->
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019814">
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0005575"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0032991"/>
         <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -233,7 +223,7 @@
     <!-- http://purl.org/obo/owl/GO#GO_0019815 -->
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019815">
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0005575"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0032991"/>
         <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -260,7 +250,7 @@
     <!-- http://purl.org/obo/owl/GO#GO_0042101 -->
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042101">
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0005575"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0032991"/>
         <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
     </owl:Class>
     
@@ -422,6 +412,7 @@
     <!-- http://purl.org/obo/owl/NCBITaxon#NCBITaxon_33154 -->
 
     <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_33154">
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2759"/>
         <IAO_0000412 rdf:resource="http://purl.org/obo/owl/NCBITaxon"/>
     </owl:Class>
     
@@ -444,14 +435,6 @@
     </owl:Class>
     
 
-
-    <!-- http://purl.org/obo/owl/GO#GO_0005615 -->
-
-    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005615">
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0005575"/>
-        <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
-    </owl:Class>
-    
 
     <!-- http://www.ifomis.org/bfo/1.1/snap#Disposition -->
 
@@ -486,7 +469,19 @@
     <!-- http://www.ifomis.org/bfo/1.1/span#ProcessualEntity -->
 
     <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032991">
+    <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+    <IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+
+
+  <owl:Class rdf:about="http://purl.org/obo/owl/UBERON#UBERON_0000178">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CARO#CARO_0000000"/>
+    <IAO_0000412 rdf:resource="http://purl.org/obo/owl/UBERON"/>
+  </owl:Class>
 </rdf:RDF>
+
+
 
 
 
