@@ -186,11 +186,6 @@
     <obi:IAO_0000115 xml:lang="en">Biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species.</obi:IAO_0000115>
     <obi:IAO_0000111 xml:lang="en">anatomical entity</obi:IAO_0000111>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0005575">
-    <obi:IAO_0000115 xml:lang="en">The part of a cell or its extracellular environment in which a gene product is located. A gene product may be located in one or more parts of a cell and its location may be as specific as a particular macromolecular complex, that is, a stable, persistent association of macromolecules that function together.</obi:IAO_0000115>
-    <obi:IAO_0000111 xml:lang="en">cellular_component</obi:IAO_0000111>
-    <rdfs:label xml:lang="en">cellular_component</rdfs:label>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0051704">
     <obi:IAO_0000115 xml:lang="en">Any process by which an organism has an effect on another organism of the same or different species.</obi:IAO_0000115>
     <rdfs:label xml:lang="en">multi-organism process</rdfs:label>

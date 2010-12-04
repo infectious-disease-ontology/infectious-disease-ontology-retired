@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog id="XML Catalog File (see http://www.oasis-open.org/committees/entity/spec-2001-08-06.html) - Created By Protégé 4" prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="file:///Users/alanr/repos/infectious-disease-ontology/trunk/src/ontology/ido-core/ido-external.owl" uri="ido-external.owl"/>
+    <uri id="User Entered Import Resolution" name="file:///Users/alanr/repos/infectious-disease-ontology/trunk/src/ontology/ido-core/ido-external-derived.owl" uri="ido-external-derived.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/obo/owl/ro_bfo1-1_bridge" uri="http://www.obofoundry.org/ro/ro_bfo_bridge.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/obo/owl/ro" uri="http://www.obofoundry.org/ro/ro.owl"/>
     <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/ido/ido-external-by-hand.owl" uri="ido-external-by-hand.owl"/>
