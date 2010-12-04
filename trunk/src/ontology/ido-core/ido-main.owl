@@ -16,8 +16,9 @@
      xmlns:TRANS="http://purl.org/obo/owl/TRANS#"
      xmlns:CL="http://purl.org/obo/owl/CL#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido-axioms.owl">
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido.owl"/>
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido.owl">
+      <owl:versionIRI rdf:about="http://purl.obolibrary.org/obo/ido/ido-main.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/ido-base.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/ido-external-by-hand.owl"/>
         <owl:imports rdf:resource="http://www.obofoundry.org/ro/ro.owl"/>
         <owl:imports rdf:resource="http://www.obofoundry.org/ro/ro_bfo_bridge.owl"/>
