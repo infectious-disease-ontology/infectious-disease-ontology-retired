@@ -31,8 +31,8 @@
         <rdfs:comment xml:lang="en">This ontology is in early development. Expect it to change.</rdfs:comment>
         <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/dev/ontology-metadata.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/ido-external-derived.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/ido-external.owl"/>
+        <owl:imports rdf:resource="file:///Users/alanr/repos/infectious-disease-ontology/trunk/src/ontology/ido-core/ido-external-derived.owl"/>
+        <owl:imports rdf:resource="file:///Users/alanr/repos/infectious-disease-ontology/trunk/src/ontology/ido-core/ido-external.owl"/>
         <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1"/>
     </owl:Ontology>
     
@@ -82,23 +82,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBI_0000300 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000300">
-        <rdfs:label>is_realized_by</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/obo/owl/OBO_REL#bearer_of -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#bearer_of">
-        <rdfs:label>bearer_of</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
 
     <!-- http://www.obofoundry.org/ro/ro.owl#has_part -->
 
@@ -110,17 +93,6 @@
     </owl:ObjectProperty>
     
 
-
-    <!-- http://www.obofoundry.org/ro/ro.owl#part_of -->
-
-    <owl:ObjectProperty rdf:about="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    
 
 
     <!-- 
@@ -3378,55 +3350,6 @@
     </owl:Class>
     
 
-
-    <!-- http://purl.obolibrary.org/obo/OGMS_0000031 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000031"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OGMS_0000045 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000045"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OGMS_0000063 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000063"/>
-    
-
-
-    <!-- http://purl.org/obo/owl/CARO#CARO_0000000 -->
-
-    <owl:Class rdf:about="http://purl.org/obo/owl/CARO#CARO_0000000">
-        <rdfs:label>anatomical entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/obo/owl/CHEBI#CHEBI_23367 -->
-
-    <owl:Class rdf:about="http://purl.org/obo/owl/CHEBI#CHEBI_23367">
-        <rdfs:label>molecular entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/obo/owl/GO#GO_0005575 -->
-
-    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005575">
-        <rdfs:label>cellular component</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/obo/owl/GO#GO_0008150 -->
-
-    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008150"/>
-    
-
-
     <!-- http://purl.org/obo/owl/GO#GO_0051234 -->
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051234">
@@ -3435,26 +3358,12 @@
     </owl:Class>
     
 
-
-    <!-- http://purl.org/obo/owl/GO#GO_0065007 -->
-
-    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0065007"/>
-    
-
-
     <!-- http://purl.org/obo/owl/NCBITaxon#NCBITaxon_10239 -->
 
     <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_10239">
         <rdfs:label>Viruses</rdfs:label>
     </owl:Class>
     
-
-
-    <!-- http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2 -->
-
-    <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2"/>
-    
-
 
     <!-- http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2157 -->
 
@@ -3464,10 +3373,6 @@
     
 
 
-    <!-- http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2759 -->
-
-    <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2759"/>
-    
 
 
     <!-- http://purl.org/obo/owl/TRANS#TRANS_0000000 -->
@@ -3484,60 +3389,7 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#ObsoleteClass -->
 
     <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
-    
 
-
-    <!-- http://www.ifomis.org/bfo/1.1/snap#Disposition -->
-
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
-    
-
-
-    <!-- http://www.ifomis.org/bfo/1.1/snap#GenericallyDependentContinuant -->
-
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#GenericallyDependentContinuant"/>
-    
-
-
-    <!-- http://www.ifomis.org/bfo/1.1/snap#MaterialEntity -->
-
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
-    
-
-
-    <!-- http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate -->
-
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
-    
-
-
-    <!-- http://www.ifomis.org/bfo/1.1/snap#Quality -->
-
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
-    
-
-
-    <!-- http://www.ifomis.org/bfo/1.1/snap#Role -->
-
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Role"/>
-    
-
-
-    <!-- http://www.ifomis.org/bfo/1.1/span#Process -->
-
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#Process"/>
-    
-
-
-    <!-- http://www.ifomis.org/bfo/1.1/span#ProcessualEntity -->
-
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
-    
-
-
-    <!-- http://www.ifomis.org/bfo/1.1/span#TemporalInterval -->
-
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#TemporalInterval"/>
 </rdf:RDF>
 
 
