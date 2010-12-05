@@ -20,14 +20,14 @@
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido-base.owl">
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-05-19</dc:date>
-        <dc:creator >Lindsay Cowell</dc:creator>
-        <dc:creator >Albert Goldfain</dc:creator>
-        <dc:creator >Alexander Diehl</dc:creator>
-        <dc:creator >Barry Smith</dc:creator>
-        <dc:creator >Bjoern Peters</dc:creator>
-        <dc:creator >Alan Ruttenberg</dc:creator>
-        <protege:defaultLanguage >en</protege:defaultLanguage>
-        <rdfs:seeAlso >http://www.infectiousdiseaseontology.org/Home.html</rdfs:seeAlso>
+        <dc:creator rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Alan Ruttenberg</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Albert Goldfain</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Alexander Diehl</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Barry Smith</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bjoern Peters</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lindsay Cowell</dc:creator>
+        <protege:defaultLanguage rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">en</protege:defaultLanguage>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.infectiousdiseaseontology.org/Home.html</rdfs:seeAlso>
         <rdfs:comment xml:lang="en">The core Infectious Disease Ontology is an ontology of entities generally relevant to both the biomedical and clinical aspects of infectious diseases, including terms such as &#39;pathogen&#39;, &#39;host&#39;, &#39;vector&#39;, and &#39;vaccine&#39;.  The structure of IDO adheres to the Basic Formal Ontology.  Terms in IDO that are within the scope of other OBO Foundry ontologies, such as the Gene Ontology, are derived from those ontologies.  Other terms are defined as cross-products of terms from Foundry ontologies to the extent possible. For more information, see http://www.infectiousdiseaseontology.org/Home.html. </rdfs:comment>
         <rdfs:comment xml:lang="en">This ontology is in early development. Expect it to change.</rdfs:comment>
         <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl"/>
@@ -83,7 +83,6 @@
     
 
 
-
     <!-- http://www.obofoundry.org/ro/ro.owl#has_part -->
 
     <owl:ObjectProperty rdf:about="http://www.obofoundry.org/ro/ro.owl#has_part">
@@ -95,6 +94,17 @@
     
 
 
+    <!-- http://www.obofoundry.org/ro/ro.owl#part_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    
+
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -103,9 +113,6 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-
-    
-
 
     
 
@@ -505,8 +512,6 @@
     
 
 
-
-
     <!-- http://purl.obolibrary.org/obo/IDO_0000430 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000430">
@@ -821,9 +826,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000452">
         <rdfs:label xml:lang="en">infectious disposition</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000450"/>
-        <obo:IAO_0000115 xml:lang="en">A pathogenic disposition that inheres in a material entity and is the disposition for that entity (1) to be transmitted to a host, (2) to establish itself in the host, and (3) to become part of a disorder in the host.</obo:IAO_0000115>
+        <rdfs:comment>The disposition is realized in a process that has as part a transmission process, an establishment in host process, and a process in which an organism becomes part of a disorder.  The infectious disposition has a complementary disposition that inheres in an organism and is the capability to be host to an organism with an infectious disposition and to undergo processes intiated by that infectious organism that result in a disorder.</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">A pathogenic disposition that inheres in an organism and is the disposition for that organism (1) to be transmitted to a host, (2) to establish itself in the host, and (3) to become part of a disorder in the host.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <rdfs:comment>The disposition is realized in a process that has as part a transmission process, an establishment in host process, and a process in which an entity becomes part of a disorder.  The infectious disposition has a complementary disposition that inheres in an organism and is the capability to be host to an entity with an infectious disposition and to undergo processes intiated by that entity that result in a disorder.</rdfs:comment>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
     </owl:Class>
@@ -951,7 +956,6 @@
         <obo:IAO_0000115 xml:lang="en">An organism that has two infections with distinct Species of infectious agents.</obo:IAO_0000115>
     </owl:Class>
     
-
 
 
     <!-- http://purl.obolibrary.org/obo/IDO_0000463 -->
@@ -1140,6 +1144,8 @@
         <obo:IAO_0000115 xml:lang="en">An infectious disease course that begins soon after infection is established and progresses rapidly to severe stages.</obo:IAO_0000115>
     </owl:Class>
     
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000479 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000479">
@@ -1479,8 +1485,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000503">
         <rdfs:label xml:lang="en">infectious disease pandemic</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
-        <obo:IAO_0000115 xml:lang="en">A process in which multiple infectious disease epidemics of the same type of infectious disease unfold over overlapping periods of time and affect organism populations located in different geographic regions, including different countries and continents.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A process in which multiple infectious disease epidemics of the same type of infectious disease unfold over overlapping periods of time and affect organism populations located in different geographic regions, including different countries and continents.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
     </owl:Class>
@@ -1524,6 +1530,7 @@
         <obo:IAO_0000115 xml:lang="en">An infection that has as part bacteria located in the blood.</obo:IAO_0000115>
     </owl:Class>
     
+
 
     <!-- http://purl.obolibrary.org/obo/IDO_0000508 -->
 
@@ -1619,9 +1626,6 @@
     
 
 
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IDO_0000519 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000519">
@@ -1711,6 +1715,8 @@
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
     </owl:Class>
     
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000528 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000528">
@@ -2289,6 +2295,8 @@
         <obo:IAO_0000115 xml:lang="en">An organism who is host to an infectious agent and has symptoms of the infectious disease associated with the infectious agent</obo:IAO_0000115>
     </owl:Class>
     
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000576 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000576">
@@ -2301,6 +2309,8 @@
         <obo:IAO_0000115 xml:lang="en">An immunity to infectious agent that inheres in an organism in virtue of germline encoded components that directly recognize components of potential pathogens.</obo:IAO_0000115>
     </owl:Class>
     
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000578 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000578">
@@ -2422,7 +2432,7 @@
         <rdfs:comment>The organism corresponding to the extended organism is host to the infectious agents.  By this definition, parts of the host can be considered part of the infection.</rdfs:comment>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A part of an extended organism that itself has as part a population of one or more infectious agents and that is (1) clinically abnormal in virtue of the presence of this infectious agent population, or (2) has a disposition to bring clinical abnormality to immunocompetent organisms of the same Species as the host (the organism corresponding to the extended organism) through transmission of a member or offspring of a member of the infectious agent popuation.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A part of an extended organism that itself has as part a population of one or more infectious agents and that is (1) clinically abnormal in virtue of the presence of this infectious agent population, or (2) has a disposition to bring clinical abnormality to immunocompetent organisms of the same Species as the host (the organism corresponding to the extended organism) through transmission of a member or offspring of a member of the infectious agent population.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2480,6 +2490,8 @@
         <obo:IAO_0000118 xml:lang="en">persistent infectious disease course</obo:IAO_0000118>
     </owl:Class>
     
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000592 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000592">
@@ -2537,9 +2549,8 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An organism that has an infectious disposition.</obo:IAO_0000115>
-        <rdfs:comment>The term infectious agent refers to infectious organisms and prion proteins.</rdfs:comment>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism that has an infectious disposition.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2743,6 +2754,7 @@
     </owl:Class>
     
 
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000615 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000615">
@@ -2850,7 +2862,6 @@
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     </owl:Class>
     
-
 
 
     <!-- http://purl.obolibrary.org/obo/IDO_0000625 -->
@@ -3256,8 +3267,8 @@
         <rdfs:label>process that results in death</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
         <obo:IAO_0000115>A process that results in death.</obo:IAO_0000115>
-        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alex Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -3351,6 +3362,43 @@
     </owl:Class>
     
 
+
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000045 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000045"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000063 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000063"/>
+    
+
+
+    <!-- http://purl.org/obo/owl/CARO#CARO_0000000 -->
+
+    <owl:Class rdf:about="http://purl.org/obo/owl/CARO#CARO_0000000"/>
+    
+
+
+    <!-- http://purl.org/obo/owl/CHEBI#CHEBI_23367 -->
+
+    <owl:Class rdf:about="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0008150 -->
+
+    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008150"/>
+    
+
+
     <!-- http://purl.org/obo/owl/GO#GO_0051234 -->
 
     <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051234">
@@ -3359,12 +3407,26 @@
     </owl:Class>
     
 
+
+    <!-- http://purl.org/obo/owl/GO#GO_0065007 -->
+
+    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0065007"/>
+    
+
+
     <!-- http://purl.org/obo/owl/NCBITaxon#NCBITaxon_10239 -->
 
     <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_10239">
         <rdfs:label>Viruses</rdfs:label>
     </owl:Class>
     
+
+
+    <!-- http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2 -->
+
+    <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2"/>
+    
+
 
     <!-- http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2157 -->
 
@@ -3374,6 +3436,10 @@
     
 
 
+    <!-- http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2759 -->
+
+    <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2759"/>
+    
 
 
     <!-- http://purl.org/obo/owl/TRANS#TRANS_0000000 -->
@@ -3390,7 +3456,54 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#ObsoleteClass -->
 
     <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+    
 
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#Disposition -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#MaterialEntity -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#Quality -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#Role -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Role"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#Process -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#Process"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#ProcessualEntity -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#TemporalInterval -->
+
+    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#TemporalInterval"/>
 </rdf:RDF>
 
 
