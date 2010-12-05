@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 05:12:2010 01:46
+date: 05:12:2010 18:08
 saved-by: generate-ido-obo
-auto-generated-by: http://purl.obolibrary.org/obo/obi/repository/trunk/src/tools/build/generate-obo.lisp
+auto-generated-by: http://purl.obolibrary.org/obo/infectious-disease-ontology/repository/trunk/src/tools/generate-obo.lisp
 default-namespace: IDO
 idspace: RO http://www.obofoundry.org/ro/ro.owl# "OBO Relation ontology official home on OBO Foundry"
 idspace: ROP http://purl.org/obo/owl/OBO_REL# "Relation ontology proposed terms"
@@ -23,6 +23,7 @@ idspace: ENVO http://purl.org/obo/owl/ENVO# "Environment Ontology"
 idspace: VO http://purl.obolibrary.org/obo/VO "Vaccine Ontology"
 idspace: SO http://purl.org/obo/owl/SO# "Sequence Ontology"
 idspace: HPO http://purl.org/obo/owl/HP# "Human Phenotype Ontology"
+idspace: UBERON http://purl.org/obo/owl/UBERON# "Multi-species anatomy"
 
 remark: This file is a subset of IDO adequate for indexing using the OLS service. It does not include all logical assertions present in the OWL file, which can be obtained at http://purl.obolibrary.org/obo/ido/2010-12-02/ido-base.owl
 
@@ -272,7 +273,6 @@ id: NCBITaxon:2
 name: Bacteria
 is_a: OBI:0100026 ! organism
 
-
 [Term]
 id: GO:0085030
 name: mutualism
@@ -290,7 +290,6 @@ id: GO:0085031
 name: commensalism
 def:"An interaction between two organisms living together in more or less intimate association in a relationship in which one benefits and the other is unaffected." [OBO:imported "http://purl.org/obo/owl/GO"]
 is_a: GO:0044403 ! symbiosis, encompassing mutualism through parasitism
-
 
 [Term]
 id: span:ScatteredTemporalRegion
@@ -385,7 +384,7 @@ is_a: OBI:0100026 ! organism
 [Term]
 id: IDO:0000481
 name: infectious disease incidence proportion
-def:"An instance of infectious disease incidence proportion is measured by dividing a measure of an instance of infectious disease incidence by the number of members of the population in which the infectious disease course had not begun at the beginning of the specified period of time over which the incidence was measured." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A quality that inheres in an organism population and is the proportion of members of the population not experiencing an infectious disease course at the beginning of a specified period of time in whom the infectious disease begins during the specified period of time. " [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Quality ! quality
 
 [Term]
@@ -397,7 +396,7 @@ is_a: CL:0000000 ! cell
 [Term]
 id: IDO:0000480
 name: infection incidence
-def:"A particular instance of infection incidence will depend on a type of infectious agent\, a population\, and a period of time.  Incidence is used as a measure of risk.  Actual measures of incidence are based only on reported cases and usually specify a time interval and geographic location.  Other constraints may include population demographics.  These constraints will vary with the context of the incidence measure." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A quality that inheres in an organism population and is the number of organisms in the population that become infected with an infectious agent during a specified period of time." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Quality ! quality
 
 [Term]
@@ -409,7 +408,7 @@ is_a: IDO:0000658 ! host exposure to infectious agent
 [Term]
 id: IDO:0000483
 name: infectious disease incidence rate
-def:"An instance of infectious disease incidence rate is measured by dividing a measure of an instance of the infectious disease incidence proportion by the length of the period of time over which the incidence was measured." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A quality that inheres in an organism population and is the infectious disease incidence proportion per unit time." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Quality ! quality
 
 [Term]
@@ -420,13 +419,13 @@ is_obsolete: true
 [Term]
 id: IDO:0000482
 name: infection incidence proportion
-def:"An instance of infection incidence proportion is measured by dividing a measure of an instance of infection incidence by the number of members of the population not infected at the beginning of the specified period of time over which the incidence was measured." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A quality that inheres in an organism population and is the proportion of members of the population not experiencing an infectious disease course at the beginning of a specified period of time in whom the infectious disease begins during the specified period of time. " [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Quality ! quality
 
 [Term]
 id: IDO:0000485
 name: infectious disease prevalence
-def:"Prevalence is sometimes defined as a proportion with total population size in the denominator.  A particular instance of infectious disease prevalence will depend on a type of infectious disease\, a population\, and a period of time.  Actual measures of prevalence are based only on reported cases and usually specify a time interval and geographic location.  Other constraints may include population demographics." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A quality that inheres in an organism population and is the number of realizations of an infectious disease in the population at a specified time." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Quality ! quality
 
 [Term]
@@ -438,7 +437,7 @@ is_obsolete: true
 [Term]
 id: IDO:0000484
 name: infection incidence rate
-def:"An instance of infection incidence rate is measured by dividing a measure of an instance of infection incidence proportion by the length of the period of time over which the incidence was measured." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A quality that inheres in an organism population and is the infection incidence proportion per unit time." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Quality ! quality
 
 [Term]
@@ -456,13 +455,13 @@ is_obsolete: true
 [Term]
 id: IDO:0000487
 name: infectious disease lifetime prevalence
-def:"Prevalence is sometimes defined as a proportion with total population size in the denominator.  A particular instance of infectious disease lifetime prevalence will depend on a type of infectious disease and a population.  Actual measures of prevalence are based only on reported cases and usually specify a geographic location.  Other constraints may include population demographics." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A quality that inheres in an organism population and is the number of organisms in the population who have\, at any point during their lives\, been bearers of an infectious disease and experienced realization of the disease." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Quality ! quality
 
 [Term]
 id: IDO:0000486
 name: infection prevalence
-def:"Prevalence is sometimes defined as a proportion with total population size in the denominator.  A particular instance of infection prevalence will depend on a type of infectious agent\, a population\, and a period of time.  Actual measures of prevalence are based only on reported cases and usually specify a time interval and geographic location.  Other constraints may include population demographics." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A quality that inheres in an organism population and is the number of organisms in the population infected with an infectious agent at a specified time." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Quality ! quality
 
 [Term]
@@ -474,13 +473,13 @@ is_obsolete: true
 [Term]
 id: IDO:0000489
 name: infectious disease mortality rate
-def:"A particular instance of infectious disease mortality rate will depend on a type of infectious disease and a population.  Actual measures of mortality rate are based only on reported cases and usually specify a geographic location.  Other constraints may include population demographics.  Mortality rate is typically expressed in units of deaths per 1000 individuals per year." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A quality that inheres in an organism population and is the per capita number of deaths in the population resulting from an infectious disease over a specified period of time." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Quality ! quality
 
 [Term]
 id: IDO:0000488
 name: infectious agent seroprevalence
-def:"Prevalence is sometimes defined as a proportion with total population size in the denominator.  A particular instance of infectious agent seroprevalence will depend on a type of infectious agent and a population.  Actual measures of seroprevalence are based only on tested individuals and usually specify a geographic location.  Other constraints may include population demographics." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A quality that inheres in an organism population and is the number of organisms in the population that have antibody specific for an infectious agent in their serum at a specified time." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Quality ! quality
 
 [Term]
@@ -492,7 +491,7 @@ is_a: IDO:0000658 ! host exposure to infectious agent
 [Term]
 id: IDO:0000596
 name: infectious agent
-def:"The term infectious agent refers to infectious organisms and prion proteins." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An organism that has an infectious disposition." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000528 ! pathogen
 is_a: OBI:0100026 ! organism
 
@@ -726,7 +725,7 @@ is_obsolete: true
 [Term]
 id: IDO:0000479
 name: infectious disease incidence
-def:"A particular instance of infectious disease incidence will depend on a type of infectious disease\, a population\, and a period of time.  Incidence is used as a measure of risk.  Actual measures of incidence are based only on reported cases and usually specify a time interval and geographic location.  Other constraints may include population demographics.  These constraints will vary with the context of the incidence measure." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A quality that inheres in an organism population and is the number of realizations of an infectious disease for which the infectious disease course begins during a specified period of time." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Quality ! quality
 
 [Term]
@@ -870,19 +869,19 @@ is_a: OGMS:0000063 ! disease course
 [Term]
 id: IDO:0000494
 name: infectious disease sporadicity
-def:"Sporadic quality of infectious disease is relational to previous prevalence of the disease." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A quality that inheres in an organism population by virtue of the fact that realizations of an infectious disease occur in the population with a fluctuating prevalence." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Quality ! quality
 
 [Term]
 id: IDO:0000493
 name: infectious disease hyper-endemicity
-def:"Hyper-endemic infectious diseases may have high endemic levels only in certain seasons.  A hyper-endemic disease affects all age groups equally." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An infectious disease endemicity that inheres in an organism population in virtue of the fact that the infectious disease endemic level for an infectious disease is persistently high in the population.  " [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000490 ! infectious disease endemicity
 
 [Term]
 id: IDO:0000492
 name: infectious disease endemic rate
-def:"Infectious disease endemic rate is relational to previous infectious disease incidence rates of the disease." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An infectious disease incidence rate that is typical for an infectious disease in an organism population. " [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000483 ! infectious disease incidence rate
 
 [Term]
@@ -894,13 +893,13 @@ is_a: CARO:0000000 ! anatomical entity
 [Term]
 id: IDO:0000491
 name: infectious disease endemic level
-def:"Infectious disease endemic level is relational to previous prevalences of the disease." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An infectious disease prevalence that is typical for an infectious disease in an organism population. " [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000485 ! infectious disease prevalence
 
 [Term]
 id: IDO:0000490
 name: infectious disease endemicity
-def:"A particular instance of infectious disease endemicity will depend on a type of infectious agent and a population.  The population may be specified by temporal\, geographic\, or demographic constraints.  Infectious diseases that are typical or common to a particular population are referred to as endemic." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A quality that inheres in an organism population in virtue of the fact that infections of the type that causes an infectious disease are maintained in the population via intra-population transmission or by transmission from a local reservoir." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Quality ! quality
 
 [Term]
@@ -1000,7 +999,7 @@ is_a: IDO:0000558 ! antimicrobial
 [Term]
 id: IDO:0000443
 name: antiparasitic disposition
-def:"In the term name\, we are using parasite in the medical sense of eukaryotic organisms that are parasitic in humans." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A disposition to kill or inhibit the development or reproduction of eukaryotic parasites." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Disposition ! disposition
 
 [Term]
@@ -1012,7 +1011,7 @@ is_a: CHEBI:23367 ! molecular entity
 [Term]
 id: IDO:0000444
 name: protective resistance
-def:"The disposition is realized in a process that mitigates damage to the bearer and has the part as a participant.; This mitigation sometimes takes the form of protection.  CCR5 mutations protect T cells from HIV invasion.  If a patient's tumor is resistant to chemotherapy\, then the patient is resistant to something beneficial\, but the tumor is resistant to something damaging.  In this case protective resistance inheres in the tumor's cells and in the tumor\, but not in the patient.  In some cases\, the quality that confers the protective resistance will confer other dispositions that damage the entity\, such as is the case with sickle cell trait." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A disposition that inheres in a material entity in virtue of the fact that the entity has a part (e.g. a gene product)\, which itself has a disposition to mitigate damage to the entity." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Disposition ! disposition
 
 [Term]
@@ -1066,13 +1065,13 @@ is_a: CARO:0000000 ! anatomical entity
 [Term]
 id: IDO:0000448
 name: immunity to infectious agent
-def:"We don't specify that immunity results from prior exposure\, because we want to include innate immunity.  In addition\, for adaptive immunity\, there could be some low level immunity even in a primary immune response." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A resistance to infectious agent that inheres in an organism in virtue of immune system components in the extended organism." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000446 ! resistance to infectious agent
 
 [Term]
 id: IDO:0000449
 name: sterilizing immunity to infectious agent
-def:"Sterilizing immunity is typically conferred by neutralizing antibodies." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An immunity to infectious agent that results in elimination of the infectious agent from the host." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000448 ! immunity to infectious agent
 
 [Term]
@@ -1170,7 +1169,7 @@ is_obsolete: true
 [Term]
 id: IDO:0000433
 name: antiseptic role
-def:"The role is realized in the killing and/or growth inhibition of microorganisms on the anatomical entity. " [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A role borne by a material entity in virtue of the fact that it has an antimicrobial disposition and is applied to an anatomical entity of a living organism.  " [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Role ! role
 
 [Term]
@@ -1188,7 +1187,7 @@ is_a: snap:MaterialEntity ! material_entity
 [Term]
 id: IDO:0000434
 name: primary infection role
-def:"The role is realized in a process by which the infectious disorder is established in the host." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A role borne by an infectious disorder in virtue of the fact that (1) the host has at least two distinct infectious disorders\, where neither arose from the other through metastasis\, (2) at the time the infectious disorder was established in the host\, the host had no infectious disorder\, and (3) the infectious disorder increases the host's susceptibility to infectious disorders." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Role ! role
 
 [Term]
@@ -1200,13 +1199,13 @@ is_a: IDO:0000504 ! infectious disorder
 [Term]
 id: IDO:0000431
 name: infectious agent portal of exit role
-def:"The role is realized in a process by which an infectious agent exists a host." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A role borne by an anatomical entity in virtue of the fact that it serves as the site through which an infectious agent exits a host." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Role ! role
 
 [Term]
 id: IDO:0000432
 name: disinfectant role
-def:"The role is realized in the killing and/or growth inhibition of microorganisms on the non-living entity." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A role borne by a material entity in virtue of the fact that it has an antimicrobial disposition and is applied to a non-living entity.  " [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Role ! role
 
 [Term]
@@ -1224,13 +1223,13 @@ is_a: IDO:0000558 ! antimicrobial
 [Term]
 id: IDO:0000437
 name: adhesion disposition
-def:"The disposition is realized in an adherence to host process." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A disposition borne by a biological macromolecule that is the disposition to participate in adherence to host." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Disposition ! disposition
 
 [Term]
 id: IDO:0000438
 name: invasion disposition
-def:"A molecule with the invasion disposition is referred to as an invasion factor or invasin." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A disposition borne by a biological macromolecule that is the disposition to facilitate breach of host epithelial barriers or entry into and survival in host cells." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Disposition ! disposition
 
 [Term]
@@ -1242,7 +1241,7 @@ is_a: IDO:0000504 ! infectious disorder
 [Term]
 id: IDO:0000435
 name: secondary infection role
-def:"The role is realized in a process by which the infectious disorder is established in the host." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A role borne by an infectious disorder in virtue of the fact that (1) the host has at least two distinct infectious disorders\, where neither arose from the other through metastasis\, (2) at the time the infectious disorder was established in the host\, the host had a primary infectious disorder\, and (3) establishment of the infectious disorder occurs because of increased susceptibility to infectious disorders conferred by the primary infectious disorder." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Role ! role
 
 [Term]
@@ -1260,7 +1259,7 @@ is_a: IDO:0000559 ! antiviral
 [Term]
 id: IDO:0000436
 name: infectious disease
-def:"The disposition is realized in an infectious disease course." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A disease whose physical basis is an infectious disorder." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: OGMS:0000031 ! disease
 
 [Term]
@@ -1284,7 +1283,7 @@ is_a: snap:MaterialEntity ! material_entity
 [Term]
 id: IDO:0000430
 name: infectious agent portal of entry role
-def:"The role is realized in a process by which an infectious agent enters a host." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A role borne by an anatomical entity in virtue of the fact that it serves as the site through which an infectious agent enters a host." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Role ! role
 
 [Term]
@@ -1360,7 +1359,7 @@ is_obsolete: true
 [Term]
 id: IDO:0000439
 name: antimicrobial disposition
-def:"Some instances might be functions\, depending on whether the bearer is something that exists and is used for the purpose (alcohol) or something that was designed for the purpose (pine sol).  Entities that kill microorganisms are referred to as microbicidal; entities that inhibit the growth of microorganisms are referred to as microbistatic.; The disposition is realized in the killing or growth inhibition of microorganisms." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A disposition to kill or inhibit the development or reproduction of microorganisms." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Disposition ! disposition
 
 [Term]
@@ -1409,7 +1408,7 @@ is_obsolete: true
 [Term]
 id: IDO:0000576
 name: innate immunity to infectious agent
-def:"The disposition is realized in an innate immune response." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An immunity to infectious agent that inheres in an organism in virtue of germline encoded components that directly recognize components of potential pathogens." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000448 ! immunity to infectious agent
 
 [Term]
@@ -1421,25 +1420,25 @@ is_obsolete: true
 [Term]
 id: IDO:0000464
 name: infectivity
-def:"This quality is measured by the proportion of exposed who become infected." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A quality that inheres in an infectious agent and is the liklihood that the infectious disposition will be realized upon exposure of a susceptible organism." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Quality ! quality
 
 [Term]
 id: IDO:0000578
 name: humoral immunity to infectious agent
-def:"The disposition is realized in a humoral immune response.; "Circulating body fluid" refers to blood\, lymph\, and hemolymph." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An immunity to infectious agent that inheres in an organism in virtue of components of its circulating body fluid." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000448 ! immunity to infectious agent
 
 [Term]
 id: IDO:0000579
 name: leukocyte-mediated immunity to infectious agent
-def:"The disposition is realized in a leukocyte-mediated immune response." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An immunity to infectious agent that inheres in an organism in virtue of its leukocytes." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000448 ! immunity to infectious agent
 
 [Term]
 id: IDO:0000466
 name: virulence
-def:"This quality is measured by the proportion of clinically apparent cases that are severe or fatal." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A quality that inheres in an infectious agent and is the degree to which realizations of the infectious disease caused by the infectious agent become severe or fatal. " [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Quality ! quality
 
 [Term]
@@ -1451,7 +1450,7 @@ is_a: snap:SpatialRegion ! spatial_region
 [Term]
 id: IDO:0000467
 name: susceptibility
-def:"Low susceptibility is often referred to as resistance.  In this sense\, resistance is a quality." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A quality that inheres in an entity and is the degree to which it can be harmed by another entity." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Quality ! quality
 
 [Term]
@@ -1475,7 +1474,7 @@ is_obsolete: true
 [Term]
 id: IDO:0000463
 name: infectious agent transmissibility
-def:"The transmissibility quality varies with both the type of organism being transmitted and the type of organism to which transmission is happening." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A quality that inheres in an infectious agent and is the likelihood that the infectious agent will undergo a horizontal transmission process." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Quality ! quality
 
 [Term]
@@ -1582,7 +1581,7 @@ is_a: OBI:0100026 ! organism
 [Term]
 id: IDO:0000587
 name: genetic resistance to infectious agent
-def:"The resistance of individuals to HIV invasion oonferred by particular CCR5 alleles is an example.  Resistance against malaria conferred by the sickle cell gene is another." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A resistance to infectious agent that inheres in an organism in virtue of a specific allele or combination of alleles in its genome." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000446 ! resistance to infectious agent
 
 [Term]
@@ -1605,25 +1604,25 @@ is_a: OBI:0100026 ! organism
 [Term]
 id: IDO:0000585
 name: collective pathogenic disposition
-def:"The disposition is realized in processes that create a disorder." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A collective disposition to initiate processes that result in a disorder." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000455 ! collective disposition
 
 [Term]
 id: IDO:0000458
 name: contagiousness
-def:"The disposition is realized in a horizontal transmission process.; Highly contagious infections\, those with a relatively high likelihood of spread\, are referred to as contagious and are those for which spread is likely as a result of data-to-day activities of the host." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A disposition that inheres in a host of infectious agent and is a disposition to transmit infectious agents to organisms of the same Species through casual contact with a high likelihood of realization." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Disposition ! disposition
 
 [Term]
 id: IDO:0000586
 name: infection
-def:"The organism corresponding to the extended organism is host to the infectious agents.  By this definition\, parts of the host can be considered part of the infection." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A part of an extended organism that itself has as part a population of one or more infectious agents and that is (1) clinically abnormal in virtue of the presence of this infectious agent population\, or (2) has a disposition to bring clinical abnormality to immunocompetent organisms of the same Species as the host (the organism corresponding to the extended organism) through transmission of a member or offspring of a member of the infectious agent popuation." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:MaterialEntity ! material_entity
 
 [Term]
 id: IDO:0000455
 name: collective disposition
-def:"The disposition is realized in a process that has as part realizations of some of the individual dispositions.; "... in virtue of the individual dispositions of the contstituents" is intended to capture the fact that the collective disposition results from the combination of the individual dispositions.  It is not necessary that every constituent of the aggregate have a relevant individual disposition." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A disposition that inheres in a collection of entities in virtue of the individual dispositions of the constituents of that collection. " [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Disposition ! disposition
 
 [Term]
@@ -1641,7 +1640,7 @@ is_a: OBI:0100026 ! organism
 [Term]
 id: IDO:0000453
 name: zoonotic disposition
-def:"An infectious disease associated with an infectious agent that bears the zoonotic disposition is referred to as a zoonosis." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An infectious disposition that is the disposition to be transmitted from an infected\, non-human host to a human host." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000452 ! infectious disposition
 
 [Term]
@@ -1653,7 +1652,7 @@ is_a: snap:IndependentContinuant ! independent_continuant
 [Term]
 id: IDO:0000454
 name: reverse zoonotic disposition
-def:"An infectious disease associated with an infectious agent that bears the reverse zoonotic disposition is referred to as a reverse zoonosis." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An infectious disposition that is the disposition to be transmitted from an infected\, human host to a non-human host." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000452 ! infectious disposition
 
 [Term]
@@ -1665,19 +1664,19 @@ is_a: snap:Disposition ! disposition
 [Term]
 id: IDO:0000580
 name: passive immunity to infectious agent
-def:"The disposition is realized in a neutralizing process carried out by the antibodies.; Passive immunity results from a passive immunization.; The protective antibodies are typically introduced by injection\, breast feeding\, or by passing from the placenta to the fetus." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An immunity to infectious agent that inheres in an organism in virtue of antibodies not produced by that organism." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000448 ! immunity to infectious agent
 
 [Term]
 id: IDO:0000452
 name: infectious disposition
-def:"The disposition is realized in a process that has as part a transmission process\, an establishment in host process\, and a process in which an entity becomes part of a disorder.  The infectious disposition has a complementary disposition that inheres in an organism and is the capability to be host to an entity with an infectious disposition and to undergo processes intiated by that entity that result in a disorder." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A pathogenic disposition that inheres in an organism and is the disposition for that organism (1) to be transmitted to a host\, (2) to establish itself in the host\, and (3) to become part of a disorder in the host." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000450 ! pathogenic disposition
 
 [Term]
 id: IDO:0000450
 name: pathogenic disposition
-def:"The use of 'initiates' is intended to convey that a pathogenic disposition is realized when processes resulting in a disorder begin because of some action on the part of the bearer of the disposition.  By this interpretation of 'initiates'\, disorder-causing entities such as glass\, UV light\, and toxins do not have a pathogenic disposition.; The disposition is realized in processes that create a disorder." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A disposition to initiate processes that result in a disorder." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Disposition ! disposition
 
 [Term]
@@ -1839,13 +1838,13 @@ is_a: span:TemporalInterval ! temporal_interval
 [Term]
 id: IDO:0000417
 name: infectious agent transporter role
-def:"The role is realized in a process that transfers an infectious organism from one location to another." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A role borne by a material entity in virtue of the fact that an infectious agent is located in or on the entity and the entity has the capability to transfer (either actively or passively) the infectious agent from one location to another. " [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Role ! role
 
 [Term]
 id: IDO:0000418
 name: infectious agent vector role
-def:"The role is realized in a transmission process.  A bearer of a vector role is also a bearer of a host role." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An infectious agent transporter role that is borne by an organism active in the transfer of an infectious agent to an organism of another Species and in which the agent is infectious." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000417 ! infectious agent transporter role
 
 [Term]
@@ -1857,7 +1856,7 @@ is_a: IDO:0000418 ! infectious agent vector role
 [Term]
 id: IDO:0000410
 name: intermediate host role
-def:"The role is realized in developmental processes of the host's partner in symbiosis." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A symbiont host role borne by an organism in virtue of the fact that its partner in symbiosis utilizes the host to undergo a developmental stage transition\, and the host is required for continuation of the partner's life cycle." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000408 ! symbiont host role
 
 [Term]
@@ -1869,19 +1868,19 @@ is_a: IDO:0000408 ! symbiont host role
 [Term]
 id: IDO:0000411
 name: paratenic host role
-def:"The role is realized in developmental processes of the host's partner in symbiosis." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A symbiont host role borne by an organism in virtue of the fact that its partner in symbiosis utilizes the host to undergo a developmental stage transition\, but the host is not required for continuation of the partner's life cycle. " [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000408 ! symbiont host role
 
 [Term]
 id: IDO:0000414
 name: infectious agent host role
-def:"By this definition\, vectors and other organisms that may not be infected are bearers of the infectious agent host role." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A pathogen host role borne by an organism in virtue of the fact that its extended organism contains an infectious agent." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000415 ! pathogen host role
 
 [Term]
 id: IDO:0000413
 name: parasite host role
-def:"The partner in symbiosis bears the parasite role.; The role is realized in processes that result in the parasite's growth\, survival\, or fitness advantage or in the host's growth\, survival\, or fitness reduction." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A symbiont host role borne by an organism in virtue of the fact that its partner in symbiosis derives from the host a growth\, survival\, or fitness advantage while the host's growth\, survival\, or fitness is reduced." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000408 ! symbiont host role
 
 [Term]
@@ -1893,7 +1892,7 @@ is_a: IDO:0000414 ! infectious agent host role
 [Term]
 id: IDO:0000415
 name: pathogen host role
-def:"Bearing the infectious agent host role implies bearing the pathogen host role\, but the reverse is not true.  See comment for infectious agent host role." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A host role borne by an organism in virtue of the fact that its extended organism contains a pathogen." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000629 ! host role
 
 [Term]
@@ -1911,7 +1910,7 @@ is_a: IDO:0000509 ! organism population
 [Term]
 id: IDO:0000640
 name: acquired immunodeficiency
-def:"Causes of acquired immunodeficiences include infection and drug treatments (e.g. chemotherapy)." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An immunodeficiency that is not caused by a genetic predisposition." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000617 ! immunodeficiency
 
 [Term]
@@ -2019,13 +2018,13 @@ is_a: IDO:0000421 ! infectious agent vehicle role
 [Term]
 id: IDO:0000422
 name: biological vehicle of infectious agent role
-def:"Examples include blood\, serum\, tissue\, or fresh produce." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An infectious agent vehicle role borne by an entity in virtue of the fact that the entity is living or contains living cells other than those that have the infectious disposition." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000421 ! infectious agent vehicle role
 
 [Term]
 id: IDO:0000421
 name: infectious agent vehicle role
-def:"Drinking water bears the infectious agent vehicle role\, but does not bear either of the subtype roles." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An infectious agent transporter role borne by an entity in virtue of the fact that the entity is not a complete organism." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000417 ! infectious agent transporter role
 
 [Term]
@@ -2037,7 +2036,7 @@ is_a: IDO:0000418 ! infectious agent vector role
 [Term]
 id: IDO:0000427
 name: exotoxin disposition
-def:"The disposition is realized in a direct enzymatic process that damages host cells or extracellular matrix." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A toxin disposition to damage cells or extracellular matrix by a direct enzymatic process." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000426 ! toxin disposition
 
 [Term]
@@ -2049,13 +2048,13 @@ is_a: snap:Disposition ! disposition
 [Term]
 id: IDO:0000425
 name: virulence factor disposition
-def:"The virulence factor disposition is typically realized in processes that improve survival of the pathogen in a host\, increase the likelihood of transmission to a host\, or cause pathological processes in a host." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A disposition borne by a biological macromolecule produced by a pathogen that is a disposition to undergo processes that increase the pathogen's virulence." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Disposition ! disposition
 
 [Term]
 id: IDO:0000424
 name: reservoir of infectious agent role
-def:"If the material entity bearing the reservoir role is an organism\, then this organism also bears the host role.  The organism may also bear the vector role.; The role is realized in a process that has as part life and multiplication processes of an infectious agent and a transmission process.  " [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A role borne by a material entity in virtue of the fact that it is a habitat in which infectious agents can persist and multiply and from which they can be transmitted in virtue of prevailing practices of potential hosts." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Role ! role
 
 [Term]
@@ -2115,7 +2114,7 @@ is_a: span:ProcessualEntity ! processual_entity
 [Term]
 id: IDO:0000635
 name: source of infection role
-def:"The role is realized in a process that has as part a transmission process and a process by which the infectious agent or one of its offspring becomes part of a disorder in the host." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A role borne by a material entity in virtue of the fact that it contains a site from which an infectious agent is transmitted." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Role ! role
 
 [Term]
@@ -2275,31 +2274,31 @@ is_a: snap:IndependentContinuant ! independent_continuant
 [Term]
 id: IDO:0000408
 name: symbiont host role
-def:"The relevant environmental resources may include nutrient resources\, warmth\, or moisture.; The role is realized in processes in which the host makes the relevant environmental resources available to its partner in symbiosis.  A bearer of a symbiont host role is bearer also of a symbiont role." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A host role borne by an organism in virtue of the fact that its extended organism contains a second organism and provides an environment supportive for the survival\, growth\, maturation\, or reproduction of that organism.  " [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000629 ! host role
 
 [Term]
 id: IDO:0000409
 name: definitive host role
-def:"The role is realized in developmental and reproduction processes of the host's partner in symbiosis." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A symbiont host role borne by an organism in virtue of the fact that its partner in symbiosis reaches developmental maturity or reproduces sexually in the host.  " [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000408 ! symbiont host role
 
 [Term]
 id: IDO:0000406
 name: opportunistic infectious disposition
-def:"The disposition is realized in a process by which the bearer becomes part of a disorder in an immunocompromised host.; This includes individuals who are immunocompromised or who have damaged barriers that normally protect against infection (e.g. skin)." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An infectious disposition to become part of a disorder only in organisms whose defenses are compromised." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000452 ! infectious disposition
 
 [Term]
 id: IDO:0000407
 name: primary infectious disposition
-def:"A pathogen with a primary infectious disposition can cause disease or death in both immunocompromised and immunocompetent hosts.; A quote from page 3 of Mandell's "Principles and Practice of Infectious Diseases" (Sixth edition): "It is useful to distinguish "principal" pathogens\, which regularly cause disease in some proportion of susceptible individuals with apparently intact defense systems\, from other potentially pathogenic microorganisms.  ... even for most organisms classified as principal pathogens\, for example\, Staphylococcus aureus and the pneumococcus\, some impairment or local breakdown in normal host defense mechanisms must occur for these bacteria to cause disease.  ... Thus\, it seems clear that the capacity of certain microorganisms to cause disease in seemingly uncompromised human hosts on a regular basis reflects some fundamental difference in their virulence capabilities from those of opportunists and the more numerous commensal species that rarely\, if ever\, cause disease."" [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An infectious disposition to become part of a disorder in organisms that have intact defenses." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000452 ! infectious disposition
 
 [Term]
 id: IDO:0000405
 name: pathogen role
-def:"Clostridium botulinum is an example of an entity with the capability to bear the pathogen role but that does not have the capability to bear the infectious agent role or the parasite role.  The influenza viruses are examples of organisms that can bear both the infectious agent and pathogen roles." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A role borne by pathogen in virtue of the fact that it or one of its products is sufficiently close to an organism towards which it has the pathogenic disposition to allow realization of the pathogenic disposition." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Role ! role
 
 [Term]
@@ -2329,7 +2328,7 @@ is_a: IDO:0000405 ! pathogen role
 [Term]
 id: IDO:0000403
 name: parasite role
-def:"The role is realized in processes that result in the parasite's growth\, survival\, or fitness advantage or in the other organism's growth\, survival\, or fitness reduction.; In the medical community\, the term 'parasite' is used with the narrower meaning of eukaryotic pathogen." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A symbiont role borne by an organism in virtue of the fact that it derives a growth\, survival\, or fitness advantage from symbiosis while the other symbiont's growth\, survival\, or fitness is reduced." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000400 ! symbiont role
 
 [Term]
@@ -2341,13 +2340,13 @@ is_a: span:ProcessualEntity ! processual_entity
 [Term]
 id: IDO:0000402
 name: commensal role
-def:"The role is realized in processes that result in the commensal's growth\, survival\, or fitness advantage." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A symbiont role borne by an organism in virtue of the fact that it derives a growth\, survival\, or fitness advantage from symbiosis\, but the other symbiont is neither advantaged nor disadvantaged." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000400 ! symbiont role
 
 [Term]
 id: IDO:0000401
 name: mutualist role
-def:"The role is realized in processes that result in the growth\, survival\, or fitness advantage of either organism." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A symbiont role borne by an organism in virtue of the fact that both symbionts derive a growth\, survival\, or fitness advantage from symbiosis." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000400 ! symbiont role
 
 [Term]
@@ -2359,9 +2358,8 @@ is_a: OBI:0100026 ! organism
 [Term]
 id: IDO:0000400
 name: symbiont role
-def:"The role is realized in symbiosis." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A role borne by an organism in symbiosis." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Role ! role
-
 
 [Term]
 id: IDO:0000658
@@ -2414,7 +2412,7 @@ is_a: IDO:0000540 ! infectious agent vector
 [Term]
 id: IDO:0000655
 name: transmissibility disposition
-def:"The disposition is realized in a transmission process." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A disposition to undergo a transmission process." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Disposition ! disposition
 
 [Term]
@@ -2588,25 +2586,25 @@ is_a: snap:Disposition ! disposition
 [Term]
 id: IDO:0000623
 name: communicability
-def:"The disposition is realized in a direct\, horizontal transmission process between members of the same Species." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An infectious disposition to be transmitted directly from one organism to another of the same Species by horizontal transmission." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000452 ! infectious disposition
 
 [Term]
 id: IDO:0000624
-name: host range
+name: obsolete_host range
 def:"A quality that inheres in an infection and is the likelihood that infectious agents part of the infection will spread to other hosts.; A generically dependent continuant that is the set of organism types whose instances have as one of their canonical dispositions\, the disposition to bear the host role for a colony of a certain type." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_obsolete: true
 
 [Term]
 id: IDO:0000625
 name: establishment of localization in host
-def:"An organism begins bearing a particular host role as soon as the extended organism contains the relevant material entity\, regardless of that entity's location in the extended organism.  An establishment process is any process by which the entity reaches a location in the extended organism in which it can persist and continue its lifecycle.  For example\, an organism is host to a virus as soon as any part of the extended organism is occupied by virus particles.  During an establishment process\, virus particles enter host cells of the relevant type\, and viral DNA is integrated into host DNA." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An establishment of localization process in which a material entity reaches a site in an organism in which it can survive\, grow\, multiply\, or mature." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: GO:0051234 ! establishment of localization
 
 [Term]
 id: IDO:0000621
 name: acquired immunity to infectious agent
-def:"The disposition is realized in an immune response in which such antigen receptors participate." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An immunity to infectious agent that inheres in an organism in virtue of antigen receptors encoded by somatically diversified genes in the organism's genome and expressed by cells that have undergone selection during a primary immune response in that organism." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: IDO:0000448 ! immunity to infectious agent
 
 [Term]
@@ -2675,7 +2673,7 @@ is_obsolete: true
 [Term]
 id: IDO:0000618
 name: immunocompetence
-def:"The disposition inheres in a bearer in virtue of the fact that the bearer has all canonical immune system components and none are disordered.  The disposition is realized in a successful immune response." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"A disposition that is the ability to mount a normal immune response." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:Disposition ! disposition
 
 [Term]
@@ -2715,7 +2713,7 @@ is_a: IDO:0000509 ! organism population
 [Term]
 id: IDO:0000509
 name: organism population
-def:"The organism population may be delineated by spatio-temporal proximity or by demographic criteria such as age." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
+def:"An aggregate of organisms of the same Species." [OBO:sourced "IDO consortium http://www.infectiousdiseaseontology.org"]
 is_a: snap:ObjectAggregate ! object_aggregate
 
 [Term]
