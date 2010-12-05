@@ -3821,7 +3821,6 @@ production and has_participant some (has_role some pathogen and has_disposition 
     <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000528"/>
     <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-    <rdfs:comment>The term infectious agent refers to infectious organisms and prion proteins.</rdfs:comment>
     <owl:equivalentClass>
       <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
