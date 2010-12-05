@@ -12,11 +12,12 @@
     <owl:versionIRI rdf:about="http://purl.obolibrary.org/obo/ido/2010-12-02/ido.owl"/>
     <owl:imports rdf:resource="http://www.obofoundry.org/ro/ro.owl"/>
     <dc:creator>Albert Goldfain</dc:creator>
-    <dc:contributor>Barry Smith</dc:contributor>
+    <dc:creator>Barry Smith</dc:creator>
+    <dc:creator>Bjoern Peters</dc:creator>
     <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1"/>
     <j.1:defaultLanguage>en</j.1:defaultLanguage>
     <owl:imports rdf:resource="http://www.obofoundry.org/ro/ro_bfo_bridge.owl"/>
-    <dc:contributor>Alan Ruttenberg</dc:contributor>
+    <dc:creator>Alan Ruttenberg</dc:creator>
     <rdfs:comment xml:lang="en">The core Infectious Disease Ontology is an ontology of entities generally relevant to both the biomedical and clinical aspects of infectious diseases, including terms such as 'pathogen', 'host', 'vector', and 'vaccine'.  The structure of IDO adheres to the Basic Formal Ontology.  Terms in IDO that are within the scope of other OBO Foundry ontologies, such as the Gene Ontology, are derived from those ontologies.  Other terms are defined as cross-products of terms from Foundry ontologies to the extent possible. For more information, see http://www.infectiousdiseaseontology.org/Home.html. </rdfs:comment>
     <dc:creator>Lindsay Cowell</dc:creator>
     <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
