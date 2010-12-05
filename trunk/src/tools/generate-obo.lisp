@@ -1,4 +1,4 @@
-# This is a modified version of the OBI to OBO script lightly edited to work with owlapiv3. Changes should be merged back to OBI.
+; This is a modified version of the OBI to OBO script lightly edited to work with owlapiv3. Changes should be merged back to OBI.
 
 (defun obo-format-time (&optional (time-value (get-universal-time)))
   "Format a time how the obo format likes to see it"
@@ -193,7 +193,7 @@ remark: This file is a subset of ~a adequate for indexing using the OLS service.
 	   (if obsolete
 	       (format f "is_obsolete: true~%")
 	       (loop for super in (parents class kb)
-		    unless (or (#"matches" (rdfs-label super) "^_.*") (eq super !owl:Thing))
+		    unless (or (#"matches" (or (rdfs-label super) "") "^_.*") (eq super !owl:Thing))
 		  do (format f "is_a: ~a ! ~a~%"  (localname-namespaced super) (rdfs-label super))))
 	   (terpri f))
 	;; now write out the list of properties we will use (we don't actually write their values out yet in the above)
