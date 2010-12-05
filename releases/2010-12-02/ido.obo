@@ -26,7 +26,7 @@ idspace: HPO http://purl.org/obo/owl/HP# "Human Phenotype Ontology"
 remark: This file is a subset of IDO adequate for indexing using the OLS service. It does not include all logical assertions present in the OWL file, which can be obtained at http://purl.obolibrary.org/obo/ido.owl
 remark: creators: Linsday Cowell, Albert Goldfain, Alexander Diehl, Barry Smith, Bjoern Peters, Alan Ruttenberg
 remark: The core Infectious Disease Ontology is an ontology of entities generally relevant to both the biomedical and clinical aspects of infectious diseases, including terms such as 'pathogen', 'host', 'vector', and 'vaccine'.  The structure of IDO adheres to the Basic Formal Ontology.  Terms in IDO that are within the scope of other OBO Foundry ontologies, such as the Gene Ontology, are derived from those ontologies.  Other terms are defined as cross-products of terms from Foundry ontologies to the extent possible. For more information, see http://www.infectiousdiseaseontology.org/Home.html.
-remark: version of 2010-12-05
+remark: version of 2010-12-02
 remark: available from http://purl.obolibrary.org/obo/ido/2010-12-02/ido.obo
 
 [Term]
