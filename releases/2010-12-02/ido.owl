@@ -7356,7 +7356,7 @@ production and has_participant some (has_role some pathogen and has_disposition 
     </rdfs:subClassOf>
     <rdfs:label xml:lang="en">infectious disposition</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000450"/>
-    <obo:IAO_0000115 xml:lang="en">A pathogenic disposition that inheres in a material entity and is the disposition for that entity (1) to be transmitted to a host, (2) to establish itself in the host, and (3) to become part of a disorder in the host.</obo:IAO_0000115>
+    <obo:IAO_0000115 xml:lang="en">A pathogenic disposition that inheres in an organism and is the disposition for that organism (1) to be transmitted to a host, (2) to establish itself in the host, and (3) to become part of a disorder in the host.</obo:IAO_0000115>
     <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     <rdfs:comment>The disposition is realized in a process that has as part a transmission process, an establishment in host process, and a process in which an entity becomes part of a disorder.  The infectious disposition has a complementary disposition that inheres in an organism and is the capability to be host to an entity with an infectious disposition and to undergo processes intiated by that entity that result in a disorder.</rdfs:comment>
     <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
