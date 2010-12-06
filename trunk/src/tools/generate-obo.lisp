@@ -130,6 +130,7 @@
 		     (ontology-uri "http://purl.obolibrary.org/obo/obi.owl")
 		     (filter-dont-include nil)
 		     (include-obsolete nil)
+		     (remarks nil)
 		     )
   (with-open-file (f  path :direction :output :if-does-not-exist :create :if-exists :supersede)
     (let ((*current-labels* (rdfs-labels kb)) ; speed optimization for labels and comments
@@ -162,10 +163,9 @@ idspace: ENVO http://purl.org/obo/owl/ENVO# \"Environment Ontology\"
 idspace: VO http://purl.obolibrary.org/obo/VO \"Vaccine Ontology\"
 idspace: SO http://purl.org/obo/owl/SO# \"Sequence Ontology\"
 idspace: HPO http://purl.org/obo/owl/HP# \"Human Phenotype Ontology\"
-remark: This file is a subset of ~a adequate for indexing using the OLS service. It does not include all logical assertions present in the OWL file, which can be obtained at ~a
-
-" (obo-format-time) saved-by default-namespace
-		 ontology-name ontology-uri)
+idspace: UBERON http://purl.org/obo/owl/UBERON# \"Multi-species anatomy\"
+~{~^remark: ~a~%~}
+" (obo-format-time) saved-by default-namespace remarks)
 	(loop for class in (set-difference (descendants !owl:Thing kb) (list !protegeowl:DIRECTED-BINARY-RELATION !protegeowl:PAL-CONSTRAINT))
 	   for obsolete = (and (not (eq class !<http://www.geneontology.org/formats/oboInOwl#ObsoleteClass>))
 			       (or 
