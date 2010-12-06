@@ -1680,7 +1680,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000624">
         <rdfs:label xml:lang="en">_obsolete_contagiousness quality</rdfs:label>
-        <rdfs:label xml:lang="en">host range</rdfs:label>
+        <rdfs:label xml:lang="en">_obsolete_host range</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
