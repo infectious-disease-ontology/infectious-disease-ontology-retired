@@ -19,7 +19,7 @@
      xmlns:TRANS="http://purl.org/obo/owl/TRANS#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido-obsolete.owl">
-      <owl:versionIRI rdf:about="http://purl.obolibrary.org/obo/ido/2010-12-02/ido-obsolete.owl"/>
+      <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ido/2010-12-02/ido-obsolete.owl"/>
     </owl:Ontology>
 
 

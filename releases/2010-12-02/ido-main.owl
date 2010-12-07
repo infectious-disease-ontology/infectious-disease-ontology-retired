@@ -9,7 +9,7 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido.owl">
-    <owl:versionIRI rdf:about="http://purl.obolibrary.org/obo/ido/2010-12-02/ido-main.owl"/>
+    <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ido/2010-12-02/ido-main.owl"/>
     <owl:imports rdf:resource="http://www.obofoundry.org/ro/ro.owl"/>
     <dc:creator>Albert Goldfain</dc:creator>
     <dc:creator>Barry Smith</dc:creator>

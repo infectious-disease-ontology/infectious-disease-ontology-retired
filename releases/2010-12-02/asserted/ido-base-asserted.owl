@@ -19,7 +19,7 @@
      xmlns:TRANS="http://purl.org/obo/owl/TRANS#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido-base.owl">
-       <owl:versionIRI rdf:about="http://purl.obolibrary.org/obo/ido/2010-12-02/ido-base.owl"/>
+       <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ido/2010-12-02/ido-base.owl"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-12-02</dc:date>
         <dc:creator >Alan Ruttenberg</dc:creator>
         <dc:creator >Albert Goldfain</dc:creator>

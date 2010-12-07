@@ -28,7 +28,7 @@
     xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
   xml:base="http://purl.obolibrary.org/obo/ido/ido-external-derived.owl">
   <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido-external-derived.owl">
-    <owl:versionIRI rdf:about="http://purl.obolibrary.org/obo/ido/2010-12-02/ido-external-derived.owl"/>
+    <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ido/2010-12-02/ido-external-derived.owl"/>
   </owl:Ontology>
   <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2157">
     <rdfs:label xml:lang="en">Archaea</rdfs:label>
