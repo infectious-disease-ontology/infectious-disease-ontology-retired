@@ -42,8 +42,10 @@
      xmlns:TRANS="http://purl.org/obo/owl/TRANS#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="&obo;ido.owl">
+      <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ido/2010-05-26/ido.owl"/>
         <dc:date rdf:datatype="&xsd;date">2010-05-26</dc:date>
         <dc:contributor>Alan Ruttenberg</dc:contributor>
+	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-05-26</owl:versionInfo>
         <dc:creator>Albert Goldfain</dc:creator>
         <protege:defaultLanguage>en</protege:defaultLanguage>
         <dc:creator>Alexander Diehl</dc:creator>

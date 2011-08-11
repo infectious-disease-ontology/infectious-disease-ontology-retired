@@ -20,6 +20,9 @@
 <!-- Ontology Information -->
   <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido.owl"
                 protege:defaultLanguage="en">
+    <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ido/2009-08-14/ido.owl"/>
+    <dc:date rdf:datatype="&xsd;date">2009-08-14</dc:date>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009-08-14</owl:versionInfo>
     <dc:contributor>Alan Ruttenberg</dc:contributor>
     <dc:contributor>Barry Smith</dc:contributor>
     <dc:creator>Albert Goldfain</dc:creator>
