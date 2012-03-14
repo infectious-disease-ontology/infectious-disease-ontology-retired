@@ -2,22 +2,21 @@
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/ido/dev/dsRNA-recognition-and-signaling-via-TLR3-pathway.owl#"
      xml:base="http://purl.obolibrary.org/obo/ido/dev/dsRNA-recognition-and-signaling-via-TLR3-pathway.owl"
      xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:p1="#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
+     xmlns:GO="http://purl.org/obo/owl/GO#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:PRO="http://purl.org/obo/owl/PRO#"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:SO="http://purl.org/obo/owl/SO#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:GO="http://purl.org/obo/owl/GO#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#">
+     xmlns:SO="http://purl.org/obo/owl/SO#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/dev/dsRNA-recognition-and-signaling-via-TLR3-pathway.owl">
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/ontology-metadata.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/dev/dsRNA-recognition-and-signaling-via-TLR3-pathway-external-derived.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/dev/dsRNA-recognition-and-signaling-via-TLR3-pathway-external.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/dev/pathway-defs.owl"/>
-        <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1"/>
+        <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1#"/>
         <owl:imports rdf:resource="http://www.obofoundry.org/ro/ro.owl"/>
     </owl:Ontology>
     
@@ -90,39 +89,31 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_0011764 -->
+    <!-- http://purl.obolibrary.org/obo/opath_0000601 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011764">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000601">
         <rdfs:label>2TLR3 + dsRNA -&gt; 2TLR3dsRNA</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:allValuesFrom>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
                     <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#submitted_2tlr3"/>
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrna"/>
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/SO#SO_0001169"/>
-                            <owl:Class>
-                                <owl:complementOf>
-                                    <owl:Class>
-                                        <owl:unionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0043234"/>
-                                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000000001"/>
-                                        </owl:unionOf>
-                                    </owl:Class>
-                                </owl:complementOf>
-                            </owl:Class>
-                        </owl:unionOf>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
                     </owl:Class>
-                </owl:allValuesFrom>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrna"/>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -143,30 +134,20 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0022618"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0001169"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0022618"/>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrna"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -198,7 +179,25 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#submitted_2tlr3"/>
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrna"/>
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/SO#SO_0001169"/>
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0043234"/>
+                                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000000001"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:complementOf>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000116>process 2TLR3+dsRNA-&gt; 2TLR3dsRNA, dsRNAb of TLR3 in 2TLR3, RNApca, , , LRR from row 69 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
@@ -206,15 +205,35 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_0011765 -->
+    <!-- http://purl.obolibrary.org/obo/opath_0000602 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011765">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000602">
         <rdfs:label>2TLR3dsRNA + TRIF -&gt; 2TLR3dsRNATRIF</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatrif"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0070976"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001154"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+                                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrna"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -224,6 +243,34 @@
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrna"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0071523"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrna"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0070976"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
                                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000001749"/>
@@ -248,39 +295,11 @@
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrna"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0070976"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
                                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000001749"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0071523"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrna"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -309,28 +328,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0070976"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001154"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrna"/>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatrif"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000116>process 2TLR3dsRNA+TRIF-&gt; 2TLR3dsRNATRIF, tirdb of trif and tirdb of TLR3 in 2TLR3dsRNA, tirdbp that has location endves, , , TIR from row 70 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
@@ -338,33 +337,11 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_0011766 -->
+    <!-- http://purl.obolibrary.org/obo/opath_0000603 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011766">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000603">
         <rdfs:label>2TLR3dsRNATRIF + TRF3 -&gt; 2TLR3dsRNATRIFTRF3</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatrif"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatrif"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
@@ -387,6 +364,56 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatrif"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002289"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatrif"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002289"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatriftrf3"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -415,64 +442,26 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002289"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatriftrf3"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002289"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000116>process 2TLR3dsRNATRIF+TRF3-&gt; 2TLR3dsRNATRIFTRF3, trafdb of trif in 2TLR3dsRNATRIF, trafdbp located in early endosome, , , TRAF from row 71 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_0011767 -->
+    <!-- http://purl.obolibrary.org/obo/opath_0000604 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011767">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000604">
         <rdfs:label>2TLR3dsRNATRIFTRF3 + TBK1tankIKKe -&gt; 2TLR3dsRNATRIFTRF3TBK1tankIKKe</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_2880558"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tank"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatriftrf3"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatriftrf3"/>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatriftrf3tbk1tankikke"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -497,10 +486,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_2880558"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankikke"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tank"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -509,8 +498,24 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatriftrf3tbk1tankikke"/>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankikke"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankikke"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -537,74 +542,16 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankikke"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000116>process 2TLR3dsRNATRIFTRF3+TBK1tankIKKe-&gt;2TLR3dsRNATRIFTRF3TBK1tankIKKe, trafdb of tank, trafdp located in eendo, , , TRAF from row 72 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_0011768 -->
+    <!-- http://purl.obolibrary.org/obo/opath_0000605 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011768">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000605">
         <rdfs:label>2TLR3dsRNATRIFTRF3TBK1tankIKKe + ub -&gt; 2TLR3dsRNATRIFTRF3TBK1tankk63ubIKKe</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000016963"/>
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatriftrf3tbk1tankikke"/>
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatriftrf3tbk1tankk63ubikke"/>
-                            <owl:Class>
-                                <owl:complementOf>
-                                    <owl:Class>
-                                        <owl:unionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0043234"/>
-                                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000000001"/>
-                                        </owl:unionOf>
-                                    </owl:Class>
-                                </owl:complementOf>
-                            </owl:Class>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatriftrf3tbk1tankk63ubikke"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000016963"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0043241"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
@@ -633,6 +580,34 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000016963"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0043241"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatriftrf3tbk1tankk63ubikke"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000016963"/>
             </owl:Restriction>
@@ -656,6 +631,30 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000016963"/>
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatriftrf3tbk1tankikke"/>
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatriftrf3tbk1tankk63ubikke"/>
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0043234"/>
+                                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000000001"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:complementOf>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatriftrf3tbk1tankikke"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -664,11 +663,17 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_0011769 -->
+    <!-- http://purl.obolibrary.org/obo/opath_0000606 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011769">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000606">
         <rdfs:label>2TLR3dsRNATRIFTRF3TBK1tankk63ubIKKe -&gt; 2TLR3dsRNATRIFTRF3 + TBK1tankk63ubIKKe</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatriftrf3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
@@ -695,8 +700,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatriftrf3tbk1tankk63ubikke"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatriftrf3"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -717,18 +728,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_2tlr3dsrnatriftrf3tbk1tankk63ubikke"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0043241"/>
             </owl:Restriction>
@@ -738,23 +737,11 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_0011770 -->
+    <!-- http://purl.obolibrary.org/obo/opath_0000607 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011770">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000607">
         <rdfs:label>TBK1tankk63ubIKKe + IRF3 -&gt; TBK1tankk63ubIKKeIRF3</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf3"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
@@ -767,20 +754,32 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0005515"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001779"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke"/>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002045"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -817,109 +816,16 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002045"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0005515"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002045"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0006461"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000116>process TBK1tankk63ubIKKe+IRF3-&gt;TBK1tankk63ubIKKeIRF3, pb of IRF3 and pb of TBK1 in TBK1tankk63ubIKKe, pca located in cyto, , ,  from row 75 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDO_0011771 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011771">
-        <rdfs:label>TBK1tankk63ubIKKeIRF3 -&gt; TBK1tankk63ubIKKeIRF3p</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf3p"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf3"/>
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf3p"/>
-                            <owl:Class>
-                                <owl:complementOf>
-                                    <owl:Class>
-                                        <owl:unionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0043234"/>
-                                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000000001"/>
-                                        </owl:unionOf>
-                                    </owl:Class>
-                                </owl:complementOf>
-                            </owl:Class>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0016301"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001778"/>
+                                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001779"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf3"/>
+                                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -930,6 +836,44 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0006461"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002045"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000116>process TBK1tankk63ubIKKe+IRF3-&gt;TBK1tankk63ubIKKeIRF3, pb of IRF3 and pb of TBK1 in TBK1tankk63ubIKKe, pca located in cyto, , ,  from row 75 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/opath_0000608 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000608">
+        <rdfs:label>TBK1tankk63ubIKKeIRF3 -&gt; TBK1tankk63ubIKKeIRF3p</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
@@ -968,36 +912,24 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0016301"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf3"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001778"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+                                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf3"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000116>process TBK1tankk63ubIKKeIRF3-&gt; TBK1tankk63ubIKKeIRF3p, Ka of IKKe in TBK1tankk63ubIKKeIRF3 and Kb of IRF3 in TBK1tankk63ubIKKeIRF3, pop located in cyto, , ,  from row 76 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDO_0011772 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011772">
-        <rdfs:label>TBK1tankk63ubIKKeIRF3p -&gt; TBK1tankk63ubIKKe + IRF3p</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003260"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf3p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1009,7 +941,7 @@
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf3p"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf3"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1018,16 +950,43 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke"/>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf3"/>
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf3p"/>
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0043234"/>
+                                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000000001"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:complementOf>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0043241"/>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf3p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000116>process TBK1tankk63ubIKKeIRF3-&gt; TBK1tankk63ubIKKeIRF3p, Ka of IKKe in TBK1tankk63ubIKKeIRF3 and Kb of IRF3 in TBK1tankk63ubIKKeIRF3, pop located in cyto, , ,  from row 76 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/opath_0000609 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000609">
+        <rdfs:label>TBK1tankk63ubIKKeIRF3p -&gt; TBK1tankk63ubIKKe + IRF3p</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
@@ -1052,16 +1011,78 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf3p"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0043241"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003260"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf3p"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000116>process TBK1tankk63ubIKKeIRF3p-&gt; TBK1tankk63ubIKKe+IRF3p, , pcd loated in cyto, , ,  from row 77 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_0011773 -->
+    <!-- http://purl.obolibrary.org/obo/opath_0000610 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011773">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000610">
         <rdfs:label>TBK1tankk63ubIKKe + IRF7 -&gt; TBK1tankk63ubIKKeIRF7</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0006461"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
@@ -1082,6 +1103,28 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002049"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002049"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1112,52 +1155,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf7"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0006461"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000002049"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1189,39 +1188,11 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_0011774 -->
+    <!-- http://purl.obolibrary.org/obo/opath_0000611 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011774">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000611">
         <rdfs:label>TBK1tankk63ubIKKeIRF7 -&gt; TBK1tankk63ubIKKeIRF7p</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf7"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf7p"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf7"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
@@ -1254,24 +1225,26 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0016301"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001778"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf7"/>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf7"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf7p"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf7"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1297,16 +1270,48 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0016301"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001778"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+                                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf7"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000116>process TBK1tankk63ubIKKeIRF7-&gt; TBK1tankk63ubIKKeIRF7p, Ka of IKKe in TBK1tankk63ubIKKeIRF7 and Kb of IRF7 in TBK1tankk63ubIKKeIRF7, pop located in cyto, , ,  from row 79 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_0011775 -->
+    <!-- http://purl.obolibrary.org/obo/opath_0000612 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011775">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000612">
         <rdfs:label>TBK1tankk63ubIKKeIRF7p -&gt; TBK1tankk63ubIKKe + IRF7p</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
@@ -1321,18 +1326,6 @@
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003280"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikke"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1371,16 +1364,38 @@
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_tbk1tankk63ubikkeirf7p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003280"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000116>process TBK1tankk63ubIKKeIRF7p-&gt; TBK1tankk63ubIKKe+IRF7p, , pcd loated in cyto, , ,  from row 80 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_0011776 -->
+    <!-- http://purl.obolibrary.org/obo/opath_0000613 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011776">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000613">
         <rdfs:label>IRF7p + IRF7p -&gt; IRF7pIRF7p</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003280"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
@@ -1412,8 +1427,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003280"/>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0006461"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1434,8 +1449,24 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003280"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000116>process IRF7p+IRF7p-&gt;IRF7pIRF7p, phom of IRF7p, pca located in cyto, , ,  from row 81 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/opath_0000614 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000614">
+        <rdfs:label>IRF3p + IRF3P -&gt; IRF3pIRF3p</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0006461"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0043496"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1447,27 +1478,11 @@
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003280"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003260"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000116>process IRF7p+IRF7p-&gt;IRF7pIRF7p, phom of IRF7p, pca located in cyto, , ,  from row 81 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDO_0011777 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011777">
-        <rdfs:label>IRF3p + IRF3P -&gt; IRF3pIRF3p</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf3p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1517,24 +1532,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0043496"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003260"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf3p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000116>process IRF3p+IRF3P-&gt; IRF3pIRF3p, phom of IRF3p, phomp locate in cyto, , ,  from row 82 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
@@ -1542,71 +1541,11 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_0011778 -->
+    <!-- http://purl.obolibrary.org/obo/opath_0000615 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011778">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000615">
         <rdfs:label>IRF3p + IRF7p -&gt; IRF3pIRF7p</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003280"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf7p"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0046982"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003280"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0046982"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003260"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003260"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
@@ -1615,8 +1554,18 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003260"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0046982"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003260"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1649,6 +1598,44 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0046982"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003280"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003260"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003260"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
@@ -1659,32 +1646,28 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000003280"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf7p"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000116>process IRF3p+IRF7p-&gt;IRF3pIRF7p, phet of IRF3p and phet of IRF7P, pca located in cyto, , ,  from row 83 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_0011779 -->
+    <!-- http://purl.obolibrary.org/obo/opath_0000616 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011779">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000616">
         <rdfs:label>IRF3pIRF3p + IMPalpha4 -&gt; IRF3pIRF3pIMPalpha4</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
@@ -1695,6 +1678,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf3pimpalpha4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1727,6 +1716,22 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0008139"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
@@ -1735,6 +1740,12 @@
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0006607"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1753,10 +1764,36 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000116>process IRF3pIRF3p+IMPalpha4-&gt; IRF3pIRF3pIMPalpha4, nlsb of IMPalpha4, NLSsni, , ,  from row 84 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/opath_0000617 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000617">
+        <rdfs:label>IRF7pIRF7p + IMPalpha4 -&gt; IRF7pIRF7pIMPalpha4</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0008139"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf7pirf7p"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1765,42 +1802,10 @@
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0006607"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000116>process IRF3pIRF3p+IMPalpha4-&gt; IRF3pIRF3pIMPalpha4, nlsb of IMPalpha4, NLSsni, , ,  from row 84 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDO_0011780 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011780">
-        <rdfs:label>IRF7pIRF7p + IMPalpha4 -&gt; IRF7pIRF7pIMPalpha4</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf7pirf7pimpalpha4"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1821,18 +1826,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0008139"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf7pirf7pimpalpha4"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1861,14 +1856,18 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0006607"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf7pirf7p"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000116>process IRF7pIRF7p+IMPalpha4-&gt; IRF7pIRF7pIMPalpha4, nlsb of IMPalpha4, NLSsni, , ,  from row 85 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
@@ -1876,76 +1875,15 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_0011781 -->
+    <!-- http://purl.obolibrary.org/obo/opath_0000618 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011781">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000618">
         <rdfs:label>IRF3pIRF7p + IMPalpha4 -&gt; IRF3pIRF7pIMPalpha4</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#genid-A103"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0006607"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf7p"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0008139"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf7p"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1972,14 +1910,80 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf7pimpalpha4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf7p"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf7p"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0008139"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000116>process IRF3pIRF7p+IMPalpha4-&gt;IRF3pIRF7pIMPalpha4, nlsb of IMPalpha4, NLSsni, , ,  from row 86 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_0011782 -->
+    <!-- http://purl.obolibrary.org/obo/opath_0000619 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011782">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000619">
         <rdfs:label>IRF3pIRF3pIMPalpha4 + ISREdnas -&gt; IRF3pIRF3pISREdnas + IMPalpha4</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
         <rdfs:subClassOf>
@@ -1991,7 +1995,7 @@
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf3pimpalpha4"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000279"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2001,7 +2005,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf3pimpalpha4"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000279"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2022,26 +2032,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf3pisrednas"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0065004"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000279"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf3pimpalpha4"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2053,11 +2045,17 @@
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000279"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf3pimpalpha4"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0065004"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2085,20 +2083,70 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf3pisrednas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000116>process IRF3pIRF3pIMPalpha4+ISREdnas-&gt;IRF3pIRF3pISREdnas+IMPalpha4, ISREb of IRF3pIRF3p, pDca, , ,  from row 87 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_0011783 -->
+    <!-- http://purl.obolibrary.org/obo/opath_0000620 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011783">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000620">
         <rdfs:label>IRF7pIRF7pIMPalpha4 + ISREdnas -&gt; IRF7pIRF7pISREdnas + IMPalpha4</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf7pirf7pimpalpha4"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf7pirf7pimpalpha4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000279"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf7pirf7pisrednas"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000279"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2128,58 +2176,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000279"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0065004"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000279"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf7pirf7pimpalpha4"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0009001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf7pirf7pimpalpha4"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf7pirf7pisrednas"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2198,14 +2196,20 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0065004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000116>process IRF7pIRF7pIMPalpha4+ISREdnas-&gt;IRF7pIRF7pISREdnas+IMPalpha4, ISREb of IRF7pIRF7p, pDca, , ,  from row 88 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDO_0011784 -->
+    <!-- http://purl.obolibrary.org/obo/opath_0000621 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0011784">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/opath_0000621">
         <rdfs:label>IRF3pIRF7pIMPalpha4 + ISREdnas -&gt; IRF3pIRF7pISREdnas + IMPalpha4</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
         <rdfs:subClassOf>
@@ -2216,8 +2220,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000279"/>
+                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf7pisrednas"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2263,24 +2267,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#submitted_isreb"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf7p"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf7pisrednas"/>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0065004"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2301,14 +2289,30 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0065004"/>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000279"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has-output"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#PRO_000009435"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/obo/owl/GO#submitted_isreb"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PRO#submitted_irf3pirf7p"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000116>process IRF3pIRF7pIMPalpha4+ISREdnas-&gt;IRF3pIRF7pISREdnas+IMPalpha4, ISREb of IRF3pIRF7p, pDca, , ,  from row 89 of parsed-process-block in sheet TRIF from workbook TLR3</obo:IAO_0000116>
