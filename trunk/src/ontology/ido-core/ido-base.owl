@@ -20,16 +20,16 @@
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido-base.owl">
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-05-19</dc:date>
-        <dc:creator rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Alan Ruttenberg</dc:creator>
-        <dc:creator rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Albert Goldfain</dc:creator>
-        <dc:creator rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Alexander Diehl</dc:creator>
-        <dc:creator rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Barry Smith</dc:creator>
-        <dc:creator rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bjoern Peters</dc:creator>
-        <dc:creator rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lindsay Cowell</dc:creator>
-        <protege:defaultLanguage rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">en</protege:defaultLanguage>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.infectiousdiseaseontology.org/Home.html</rdfs:seeAlso>
+        <protege:defaultLanguage>en</protege:defaultLanguage>
+        <dc:creator>Alan Ruttenberg</dc:creator>
+        <dc:creator>Bjoern Peters</dc:creator>
+        <dc:creator>Albert Goldfain</dc:creator>
+        <dc:creator>Barry Smith</dc:creator>
+        <dc:creator>Lindsay Cowell</dc:creator>
         <rdfs:comment xml:lang="en">The core Infectious Disease Ontology is an ontology of entities generally relevant to both the biomedical and clinical aspects of infectious diseases, including terms such as &#39;pathogen&#39;, &#39;host&#39;, &#39;vector&#39;, and &#39;vaccine&#39;.  The structure of IDO adheres to the Basic Formal Ontology.  Terms in IDO that are within the scope of other OBO Foundry ontologies, such as the Gene Ontology, are derived from those ontologies.  Other terms are defined as cross-products of terms from Foundry ontologies to the extent possible. For more information, see http://www.infectiousdiseaseontology.org/Home.html. </rdfs:comment>
         <rdfs:comment xml:lang="en">This ontology is in early development. Expect it to change.</rdfs:comment>
+        <rdfs:seeAlso>http://www.infectiousdiseaseontology.org/Home.html</rdfs:seeAlso>
+        <dc:creator>Alexander Diehl</dc:creator>
         <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/ontology-metadata.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/ido-external-derived.owl"/>
@@ -61,6 +61,17 @@
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
     
 
 
@@ -410,7 +421,7 @@
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An infectious agent vector role borne by an organism in virtue of the fact that the infectious agent multiplies in or on the vector.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An infectious agent vector role borne by an organism in virtue of the fact that the infectious agent multiplies in the vector.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2235,7 +2246,7 @@
     <!-- http://purl.obolibrary.org/obo/IDO_0000569 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000569">
-        <rdfs:label xml:lang="en">aymptomatic host of infectious agent</rdfs:label>
+        <rdfs:label xml:lang="en">asymptomatic host of infectious agent</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
@@ -3028,7 +3039,7 @@
     <!-- http://purl.obolibrary.org/obo/IDO_0000638 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000638">
-        <rdfs:label xml:lang="en">nursing-home acquired</rdfs:label>
+        <rdfs:label xml:lang="en">nursing-home acquired infection</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
@@ -3522,5 +3533,5 @@
 
 
 
-<!-- Generated by the OWL API (version 3.1.0.20194) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
 
