@@ -523,6 +523,32 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IDO_0000428 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000428">
+        <rdfs:label xml:lang="en">enterotoxin disposition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000427"/>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An exotoxin disposition to damage cells of the host intestinal mucosa.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000429 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000429">
+        <rdfs:label xml:lang="en">endotoxin disposition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000426"/>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A toxin disposition that inheres in a protein or protein complex that is released from a pathogen only upon cytolysis.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000430 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000430">
@@ -630,8 +656,8 @@
         <rdfs:comment>The disposition is realized in an adherence to host process.</rdfs:comment>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A disposition borne by a biological macromolecule that is the disposition to participate in adherence to a host.</obo:IAO_0000115>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A disposition borne by a biological macromolecule that is the disposition to participate in adherence to host.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -656,10 +682,10 @@
         <rdfs:label xml:lang="en">antimicrobial disposition</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
         <obo:IAO_0000115 xml:lang="en">A disposition to kill or inhibit the development or reproduction of microorganisms.</obo:IAO_0000115>
+        <rdfs:comment>The disposition is realized in the killing or inhibition of microorganisms.</rdfs:comment>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <rdfs:comment>The disposition is realized in the killing or growth inhibition of microorganisms.</rdfs:comment>
         <rdfs:comment>Some instances might be functions, depending on whether the bearer is something that exists and is used for the purpose (alcohol) or something that was designed for the purpose (pine sol).  Entities that kill microorganisms are referred to as microbicidal; entities that inhibit the growth of microorganisms are referred to as microbistatic.</rdfs:comment>
     </owl:Class>
     
@@ -724,11 +750,11 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000444">
         <rdfs:label xml:lang="en">protective resistance</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
-        <rdfs:comment>This mitigation sometimes takes the form of protection.  CCR5 mutations protect T cells from HIV invasion.  If a patient&#39;s tumor is resistant to chemotherapy, then the patient is resistant to something beneficial, but the tumor is resistant to something damaging.  In this case protective resistance inheres in the tumor&#39;s cells and in the tumor, but not in the patient.  In some cases, the quality that confers the protective resistance will confer other dispositions that damage the entity, such as is the case with sickle cell trait.</rdfs:comment>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A disposition that inheres in a material entity in virtue of the fact that the entity has a part (e.g. a gene product), which itself has a disposition to mitigate damage to the entity.</obo:IAO_0000115>
         <rdfs:comment>The disposition is realized in a process that mitigates damage to the bearer and has the part as a participant.</rdfs:comment>
+        <rdfs:comment>Examples include the following:  CCR5 mutations protect T cells from HIV invasion.  A tumor cell&#39;s resistance to chemotherapy protects the cell from damage by the drug (although this harms the patient).  An insect&#39;s resistance to insecticide protects it from the insecticide.</rdfs:comment>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
     </owl:Class>
     
@@ -810,9 +836,9 @@
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <rdfs:comment>The use of &#39;initiates&#39; is intended to convey that a pathogenic disposition is realized when processes resulting in a disorder begin because of some action on the part of the bearer of the disposition.  By this interpretation of &#39;initiates&#39;, disorder-causing entities such as glass, UV light, and toxins do not have a pathogenic disposition.</rdfs:comment>
-        <rdfs:comment>The disposition is realized in processes that create a disorder.</rdfs:comment>
         <obo:IAO_0000115 xml:lang="en">A disposition to initiate processes that result in a disorder.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
+        <rdfs:comment>A pathogenic disposition is realized in processes that create a disorder.</rdfs:comment>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">pathogenicity</obo:IAO_0000118>
     </owl:Class>
@@ -841,7 +867,7 @@
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A pathogenic disposition that inheres in an organism and is the disposition for that organism (1) to be transmitted to a host, (2) to establish itself in the host, (3) to initiate processes that result in a disorder in the host, and (4) to become part of that disorder.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A pathogenic disposition that inheres in an organism and is a disposition for that organism (1) to be transmitted to a host, (2) to establish itself in the host, (3) to initiate processes that result in a disorder in the host, and (4) to become part of that disorder.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -920,9 +946,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000458">
         <rdfs:label xml:lang="en">contagiousness</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
-        <rdfs:comment>Highly contagious infections, those with a relatively high likelihood of spread, are referred to as contagious and are those for which spread is likely as a result of data-to-day activities of the host.</rdfs:comment>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <rdfs:comment>Highly contagious infections, those with a relatively high likelihood of spread, are referred to as contagious and are those for which spread is likely as a result of day-to-day activities of the host.</rdfs:comment>
         <rdfs:comment>The disposition is realized in a horizontal transmission process.</rdfs:comment>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A disposition that inheres in a host of infectious agent and is a disposition to transmit infectious agents to organisms of the same Species through casual contact with a high likelihood of realization.</obo:IAO_0000115>
@@ -1193,7 +1219,7 @@
         <rdfs:comment>An instance of infectious disease incidence proportion is measured by dividing a measure of an instance of infectious disease incidence by the number of members of the population in which the infectious disease course had not begun at the beginning of the specified period of time over which the incidence was measured.</rdfs:comment>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the proportion of members of the population not experiencing an infectious disease course at the beginning of a specified period of time in whom the infectious disease begins during the specified period of time. </obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the proportion of members of the population not experiencing an infectious disease course at the beginning of a specified period of time and in whom the infectious disease begins during the specified period of time. </obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">cumulative incidence of infectious disease</obo:IAO_0000118>
     </owl:Class>
@@ -1206,10 +1232,10 @@
         <rdfs:label xml:lang="en">infection incidence proportion</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
         <rdfs:comment>An instance of infection incidence proportion is measured by dividing a measure of an instance of infection incidence by the number of members of the population not infected at the beginning of the specified period of time over which the incidence was measured.</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the proportion of members of the population not infected at the beginning of a specified period of time who become infected during the specified period of time. </obo:IAO_0000115>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A quality that inheres in an organism population and is the proportion of members of the population not experiencing an infectious disease course at the beginning of a specified period of time in whom the infectious disease begins during the specified period of time. </obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">cumulative incidence of infection</obo:IAO_0000118>
     </owl:Class>
     
@@ -1655,10 +1681,10 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000520">
         <rdfs:label xml:lang="en">communicability period</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#TemporalInterval"/>
-        <obo:IAO_0000115 xml:lang="en">A continuous temporal interval during which contagiousness inhering in the bearer of a host role.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A continuous temporal interval during which an infectious agent host bears a contagiousness disposition.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2154,12 +2180,13 @@
     <!-- http://purl.obolibrary.org/obo/IDO_0000562 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000562">
-        <rdfs:label xml:lang="en">antibiotic</rdfs:label>
+        <rdfs:label xml:lang="en">antibacterial</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <obo:IAO_0000118>antibiotic</obo:IAO_0000118>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A material entity bearing an antiviral disposition.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A material entity bearing an antibacterial disposition.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2250,7 +2277,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An organism that is host to an infectious agent has no symptoms of the infectious disease associated with the infectious agent.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An organism that is host to an infectious agent and has no symptoms of the infectious disease associated with the infectious agent.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
     </owl:Class>
     
@@ -2582,11 +2609,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000598">
         <rdfs:label xml:lang="en">host living with infected household contact</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000597"/>
-        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A host exposure to environment with infectious agent where the environment is a household that also has an infected host</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Alan Ruttenberg 2010/05/20- Tentative definition. Needs review by Bjoern</obo:IAO_0000116>
-        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -2598,9 +2622,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000597"/>
         <obo:IAO_0000115 xml:lang="en">A host exposure to environment with infectious agent where the environment is an area in which an infectious agent is endemic</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Alan Ruttenberg 2010/05/20- Tentative definition. Needs review by Bjoern</obo:IAO_0000116>
-        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -2610,9 +2631,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000600">
         <rdfs:label xml:lang="en">release of infectious human pathogen in laboratory</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000597"/>
-        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
-        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A host exposure to environment with infectious agent where the exposure is accidental; the environment is a laboratory, and the infectious agent is infectious in humans.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Alan Ruttenberg 2010/05/20- Tentative definition. Needs review by Bjoern</obo:IAO_0000116>
     </owl:Class>
@@ -2624,9 +2642,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000601">
         <rdfs:label xml:lang="en">host coming into contact with vector of infectious agent</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000597"/>
-        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A host exposure to environment with infectious agent where the environment contains an infectious agent vector.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Alan Ruttenberg 2010/05/20- Tentative definition. Needs review by Bjoern</obo:IAO_0000116>
     </owl:Class>
@@ -2638,10 +2653,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000602">
         <rdfs:label xml:lang="en">host exposure to substance that might have infectious agent</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000597"/>
-        <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A host exposure to environment with infectious agent where the environment contains a material entity that has been assessed to confer a risk of infection.</obo:IAO_0000115>
-        <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
-        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000116 xml:lang="en">Alan Ruttenberg 2010/05/20- Tentative definition. Needs review by Bjoern</obo:IAO_0000116>
     </owl:Class>
     
@@ -2668,7 +2680,7 @@
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An establishment in host process in which an organism establishes itself in a host.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An establishment of localization in host process in which an organism establishes itself in a host.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Establishment of one organism in the extended organism of another (the host) involves at least one of (1) movement of the organism to a location within the host in which the organism can persist, or (2) adherence or attachment of the organism to part of the host.</obo:IAO_0000116>
     </owl:Class>
     
@@ -3344,6 +3356,26 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IDO_0000666 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000666">
+        <rdfs:label xml:lang="en">human pathogenicity disposition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000450"/>
+        <obo:IAO_0000115>A disposition to initiate processes that result in a disorder in a human organism.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000667 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000667">
+        <rdfs:label xml:lang="en">parasitic disposition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
+        <obo:IAO_0000115>A disposition to participate in a process of symbiosis in which the bearer derives a growth, survival, or fitness advantage from symbiosis while the other symbiont&#39;s growth, survival, or fitness is reduced.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0001002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0001002">
@@ -3461,12 +3493,6 @@
         <obo:IAO_0000412>Transmission Ontology: http://purl.org/obo/owl/TRANS</obo:IAO_0000412>
         <obo:IAO_0000116>Suggested label: pathogen transmission process</obo:IAO_0000116>
     </owl:Class>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#ObsoleteClass -->
-
-    <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
     
 
 
