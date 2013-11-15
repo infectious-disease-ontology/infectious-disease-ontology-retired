@@ -331,7 +331,7 @@
     <oboInOwl:hasOBONamespace>relationship</oboInOwl:hasOBONamespace>
     <oboInOwl:hasAlternativeId>OBO_REL:0000031</oboInOwl:hasAlternativeId>
   </owl:ObjectProperty>
-  <owl:Class rdf:about="http://purl.org/obo/owl/UBERON#UBERON_0000178">
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000178">
     <rdfs:label xml:lang="en">blood</rdfs:label>
   </owl:Class>
 

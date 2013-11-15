@@ -4,19 +4,19 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-     xmlns:CARO="http://purl.org/obo/owl/CARO#"
+     xmlns:CARO="http://purl.obolibrary.org/obo/"
      xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
-     xmlns:NCBITaxon="http://purl.org/obo/owl/NCBITaxon#"
+     xmlns:NCBITaxon="http://purl.obolibrary.org/obo/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:GO="http://purl.org/obo/owl/GO#"
+     xmlns:GO="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:CHEBI="http://purl.org/obo/owl/CHEBI#"
+     xmlns:CHEBI="http://purl.obolibrary.org/obo/"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:TRANS="http://purl.org/obo/owl/TRANS#"
+     xmlns:TRANS="http://purl.obolibrary.org/obo/"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido-base.owl">
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-05-19</dc:date>
@@ -1573,7 +1573,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000508">
         <rdfs:label xml:lang="en">virion</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_10239"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10239"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
@@ -1983,7 +1983,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000547">
         <rdfs:label xml:lang="en">virulence factor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A biological macromolecule produced by a pathogen and that has a virulence factor disposition.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
@@ -1996,7 +1996,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000548">
         <rdfs:label xml:lang="en">invasion factor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A biological macromolecule that has an invasion disposition.</obo:IAO_0000115>
@@ -2010,7 +2010,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000549">
         <rdfs:label xml:lang="en">toxin</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
@@ -2023,7 +2023,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000550">
         <rdfs:label xml:lang="en">exotoxin</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A molecular entity bearing an exotoxin disposition.</obo:IAO_0000115>
@@ -2036,7 +2036,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000551">
         <rdfs:label xml:lang="en">enterotoxin</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
@@ -2049,7 +2049,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000552">
         <rdfs:label xml:lang="en">endotoxin</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
         <obo:IAO_0000115 xml:lang="en">A molecular entity with a toxin disposition and that is a structural component of a pathogen and is released from the pathogen only upon cytolysis.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
@@ -2062,7 +2062,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000553">
         <rdfs:label xml:lang="en">infectious agent portal of entry</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CARO#CARO_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An anatomical entity bearing an infectious agent portal of entry role.</obo:IAO_0000115>
@@ -2075,7 +2075,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000554">
         <rdfs:label xml:lang="en">infectious agent portal of exit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CARO#CARO_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
@@ -2114,7 +2114,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000557">
         <rdfs:label xml:lang="en">adhesion factor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A biological macromolecule that has an adhesion disposition.</obo:IAO_0000115>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
@@ -2438,7 +2438,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000584">
         <rdfs:label xml:lang="en">cytotoxin</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A molecular entity with a toxin disposition, the realization of which damages host cells.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
@@ -2891,7 +2891,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000625">
         <rdfs:label xml:lang="en">establishment of localization in host</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051234"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051234"/>
         <obo:IAO_0000116>Requested addition of this term to the GO.</obo:IAO_0000116>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
@@ -2986,7 +2986,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000632">
         <rdfs:label xml:lang="en">neurotoxin</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
@@ -3277,7 +3277,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000656">
         <rdfs:label>horizontal pathogen transmission process</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/TRANS#TRANS_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000000"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000115>A pathogen transmission process in which a pathogen is transmitted from one host to another of the same Species, and the two hosts are not in a parent-child relationship.</obo:IAO_0000115>
     </owl:Class>
@@ -3323,7 +3323,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000662">
         <rdfs:label>life-sustaining process</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alex Diehl</obo:IAO_0000117>
         <obo:IAO_0000115>A process which is necessary for the survival of an organism.</obo:IAO_0000115>
@@ -3335,7 +3335,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0000663">
         <rdfs:label>negative regulation of life-sustaining process</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0065007"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0065007"/>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000117>Alex Diehl</obo:IAO_0000117>
         <obo:IAO_0000115>Any process that stops, prevents, or reduces the frequency, rate or extent of a life-sustaining process.</obo:IAO_0000115>
@@ -3393,10 +3393,10 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_10239"/>
-                    <rdf:Description rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2"/>
-                    <rdf:Description rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2157"/>
-                    <rdf:Description rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2759"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_10239"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2157"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -3424,73 +3424,73 @@
     
 
 
-    <!-- http://purl.org/obo/owl/CARO#CARO_0000000 -->
+    <!-- http://purl.obolibrary.org/obo/CARO_0000000 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/CARO#CARO_0000000"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0000000"/>
     
 
 
-    <!-- http://purl.org/obo/owl/CHEBI#CHEBI_23367 -->
+    <!-- http://purl.obolibrary.org/obo/CHEBI_23367 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/CHEBI#CHEBI_23367"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_23367"/>
     
 
 
-    <!-- http://purl.org/obo/owl/GO#GO_0008150 -->
+    <!-- http://purl.obolibrary.org/obo/GO_0008150 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008150"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
     
 
 
-    <!-- http://purl.org/obo/owl/GO#GO_0051234 -->
+    <!-- http://purl.obolibrary.org/obo/GO_0051234 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051234">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051234">
         <rdfs:label>establishment of localization</rdfs:label>
-        <obo:IAO_0000412>Gene Ontology: http://purl.org/obo/owl/GO</obo:IAO_0000412>
+        <obo:IAO_0000412>Gene Ontology: http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/obo/owl/GO#GO_0065007 -->
+    <!-- http://purl.obolibrary.org/obo/GO_0065007 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0065007"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0065007"/>
     
 
 
-    <!-- http://purl.org/obo/owl/NCBITaxon#NCBITaxon_10239 -->
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_10239 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_10239">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_10239">
         <rdfs:label>Viruses</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2 -->
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_2 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
     
 
 
-    <!-- http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2157 -->
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_2157 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2157">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2157">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2759 -->
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_2759 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2759"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
     
 
 
-    <!-- http://purl.org/obo/owl/TRANS#TRANS_0000000 -->
+    <!-- http://purl.obolibrary.org/obo/TRANS_0000000 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/TRANS#TRANS_0000000">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TRANS_0000000">
         <rdfs:label>transmission process</rdfs:label>
         <obo:IAO_0000116>Suggested definition: A process by which a pathogen passes from one host organism to a second host organism of the same Species.</obo:IAO_0000116>
-        <obo:IAO_0000412>Transmission Ontology: http://purl.org/obo/owl/TRANS</obo:IAO_0000412>
+        <obo:IAO_0000412>Transmission Ontology: http://purl.obolibrary.org/obo/trans.owl</obo:IAO_0000412>
         <obo:IAO_0000116>Suggested label: pathogen transmission process</obo:IAO_0000116>
     </owl:Class>
     
@@ -3552,7 +3552,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://purl.org/obo/owl/TRANS#TRANS_0000002">
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/TRANS_0000002">
         <obo:IAO_0000116>Suggested label: indirect pathogen transmission process</obo:IAO_0000116>
     </rdf:Description>
 </rdf:RDF>
