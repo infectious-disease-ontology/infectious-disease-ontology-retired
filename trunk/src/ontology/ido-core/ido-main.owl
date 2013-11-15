@@ -21,7 +21,6 @@
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/ido-base.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/ido-external-by-hand.owl"/>
         <owl:imports rdf:resource="http://www.obofoundry.org/ro/ro.owl"/>
-        <owl:imports rdf:resource="http://www.obofoundry.org/ro/ro_bfo_bridge.owl"/>
     </owl:Ontology>
     
 
@@ -62,8 +61,8 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IDO_0000661">
         <rdfs:label xml:lang="en">capable_of</rdfs:label>
-        <rdfs:domain rdf:resource="http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant"/>
-        <rdfs:range rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
     </owl:ObjectProperty>
     
 
@@ -71,7 +70,7 @@
     <!-- http://purl.obolibrary.org/obo/IDO_0000664 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IDO_0000664">
-        <rdfs:range rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
     </owl:ObjectProperty>
     
 
@@ -80,8 +79,8 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#bearer_of">
         <owl:inverseOf rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-        <rdfs:range rdf:resource="http://www.ifomis.org/bfo/1.1/snap#DependentContinuant"/>
-        <rdfs:domain rdf:resource="http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
     </owl:ObjectProperty>
     
 
@@ -90,7 +89,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#has_disposition">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/OBO_REL#bearer_of"/>
-        <rdfs:range rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
     </owl:ObjectProperty>
     
 
@@ -99,7 +98,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#has_function">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/OBO_REL#bearer_of"/>
-        <rdfs:range rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Function"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
     </owl:ObjectProperty>
     
 
@@ -113,7 +112,7 @@
     <!-- http://purl.org/obo/owl/OBO_REL#has_role -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#has_role">
-        <rdfs:range rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
     </owl:ObjectProperty>
     
 
@@ -140,8 +139,8 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#realized_by">
         <owl:inverseOf rdf:resource="http://purl.org/obo/owl/OBO_REL#realizes"/>
-        <rdfs:domain rdf:resource="http://www.ifomis.org/bfo/1.1/snap#RealizableEntity"/>
-        <rdfs:range rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
     </owl:ObjectProperty>
     
 
@@ -163,12 +162,12 @@
     <!-- http://purl.org/obo/owl/OBO_REL#unfolds_in -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#unfolds_in">
-        <rdfs:domain rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#Site"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000029"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -414,7 +413,7 @@
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
                                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000625"/>
@@ -464,7 +463,7 @@
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
                                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000625"/>
@@ -672,7 +671,7 @@
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#location_of"/>
                                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000596"/>
@@ -853,7 +852,7 @@
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                                     <owl:Class>
                                         <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
                                     </owl:Class>
@@ -891,7 +890,7 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#location_of"/>
                                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000596"/>
@@ -995,7 +994,7 @@
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
                                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000000"/>
@@ -1033,7 +1032,7 @@
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
                                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000000"/>
@@ -1066,7 +1065,7 @@
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
                                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000439"/>
@@ -1080,7 +1079,7 @@
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                                     <owl:Class>
                                         <owl:unionOf rdf:parseType="Collection">
                                             <owl:Restriction>
@@ -1124,7 +1123,7 @@
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
                                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000439"/>
@@ -1138,7 +1137,7 @@
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                                     <owl:Class>
                                         <owl:unionOf rdf:parseType="Collection">
                                             <owl:Restriction>
@@ -1361,14 +1360,14 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                        <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#realized_by"/>
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                                     <owl:Class>
                                         <owl:unionOf rdf:parseType="Collection">
                                             <owl:Restriction>
@@ -1414,14 +1413,14 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                        <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#realized_by"/>
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                                     <owl:Class>
                                         <owl:unionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0048525"/>
@@ -1463,14 +1462,14 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                        <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#realized_by"/>
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                                     <owl:Class>
                                         <owl:unionOf rdf:parseType="Collection">
                                             <owl:Restriction>
@@ -1518,14 +1517,14 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                        <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#realized_by"/>
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                                     <owl:Class>
                                         <owl:unionOf rdf:parseType="Collection">
                                             <owl:Restriction>
@@ -1568,14 +1567,14 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                        <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#realized_by"/>
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                                     <owl:Class>
                                         <owl:unionOf rdf:parseType="Collection">
                                             <owl:Restriction>
@@ -1619,7 +1618,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/IDO_0000450"/>
@@ -1703,14 +1702,14 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                        <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#realized_by"/>
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#results_in_formation_of"/>
                                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000045"/>
@@ -1777,7 +1776,7 @@
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
                                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000625"/>
@@ -1819,7 +1818,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/IDO_0000458"/>
@@ -2004,7 +2003,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2328,7 +2327,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_output"/>
                         <owl:someValuesFrom>
@@ -2605,7 +2604,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000450"/>
@@ -2862,7 +2861,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_role"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000421"/>
@@ -2881,7 +2880,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_role"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000423"/>
@@ -2902,7 +2901,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_role"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000424"/>
@@ -3055,7 +3054,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_role"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000432"/>
@@ -3077,7 +3076,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_role"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000433"/>
@@ -3117,7 +3116,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000439"/>
@@ -3138,7 +3137,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000440"/>
@@ -3159,7 +3158,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000441"/>
@@ -3180,7 +3179,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000443"/>
@@ -3201,7 +3200,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000442"/>
@@ -3222,7 +3221,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
                         <owl:someValuesFrom>
@@ -3245,7 +3244,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
     </owl:Class>
     
 
@@ -3256,7 +3255,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
                         <owl:someValuesFrom>
@@ -3284,7 +3283,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
                         <owl:someValuesFrom>
@@ -3315,7 +3314,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
     </owl:Class>
     
 
@@ -3527,7 +3526,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_disposition"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000444"/>
@@ -3689,14 +3688,14 @@
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0000455"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                        <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#realized_by"/>
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#results_in_formation_of"/>
                                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000045"/>
@@ -3871,7 +3870,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#negatively_regulates"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006955"/>
@@ -3959,7 +3958,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                        <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#realized_by"/>
@@ -4038,7 +4037,7 @@
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
                                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000625"/>
@@ -4133,7 +4132,7 @@
                                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OGMS_0000087"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
-                                                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -4184,7 +4183,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#inheres_in"/>
-                <owl:someValuesFrom rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -4439,7 +4438,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#has_role"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000635"/>
@@ -4647,63 +4646,56 @@
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#DependentContinuant -->
-
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#DependentContinuant"/>
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#Disposition -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
 
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Disposition"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016"/>
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#Function -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000034 -->
 
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Function"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000034"/>
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000004 -->
 
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#MaterialEntity -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
 
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate -->
 
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000017"/>
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#RealizableEntity -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
 
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#RealizableEntity"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#Role -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000029 -->
 
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Role"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000029"/>
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#Site -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
 
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#Site"/>
-    
-
-
-    <!-- http://www.ifomis.org/bfo/1.1/span#ProcessualEntity -->
-
-    <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
     
 
 
