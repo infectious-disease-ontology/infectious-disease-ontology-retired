@@ -17,7 +17,7 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:TRANS="http://purl.obolibrary.org/obo/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido-base.owl">
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-05-19</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-08-01</dc:date>
         <protege:defaultLanguage>en</protege:defaultLanguage>
         <dc:creator>Alan Ruttenberg</dc:creator>
         <dc:creator>Bjoern Peters</dc:creator>
