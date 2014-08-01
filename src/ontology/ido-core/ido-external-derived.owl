@@ -9,7 +9,6 @@
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-    xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
     xmlns:pato="http://purl.org/obo/owl/PATO#"
     xmlns:cell="http://purl.org/obo/owl/CL#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -17,7 +16,6 @@
     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
     xmlns:caro="http://purl.org/obo/owl/CARO#"
     xmlns:robfo="http://purl.org/obo/owl/ro_bfo_bridge/1.1#"
-    xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
     xmlns:rotoo="http://purl.org/obo/owl/ro#"
     xmlns:pro="http://purl.org/obo/owl/PRO#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -25,7 +23,6 @@
     xmlns:go="http://purl.org/obo/owl/GO#"
     xmlns:chebi="http://purl.org/obo/owl/CHEBI#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
   xml:base="http://purl.obolibrary.org/obo/ido/ido-external-derived.owl">
   <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido-external-derived.owl"/>
   <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045087">

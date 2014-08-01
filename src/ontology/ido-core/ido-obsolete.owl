@@ -5,7 +5,6 @@
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:CARO="http://purl.org/obo/owl/CARO#"
-     xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
      xmlns:NCBITaxon="http://purl.org/obo/owl/NCBITaxon#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -16,8 +15,7 @@
      xmlns:CHEBI="http://purl.org/obo/owl/CHEBI#"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:TRANS="http://purl.org/obo/owl/TRANS#"
-     xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
+     xmlns:TRANS="http://purl.org/obo/owl/TRANS#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido-obsolete.owl">
     </owl:Ontology>
 
