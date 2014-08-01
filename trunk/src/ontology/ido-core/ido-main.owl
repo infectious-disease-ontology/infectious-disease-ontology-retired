@@ -2,13 +2,11 @@
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/ido/ido-axioms.owl#"
      xml:base="http://purl.obolibrary.org/obo/ido/ido-axioms.owl"
      xmlns:TRANS="http://purl.obolibrary.org/obo/"
-     xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
      xmlns:owl="http://www.w3.org/2002/07/owl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido.owl">
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/ido-base.owl"/>
