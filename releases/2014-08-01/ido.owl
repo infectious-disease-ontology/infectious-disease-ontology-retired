@@ -4,6 +4,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 
 <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido.owl">
+     <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ido/2014-08-01/ido.owl"/>
+     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-08-01</owl:versionInfo>
      <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/ido-main.owl"/>
      <owl:imports rdf:resource="http://infectious-disease-ontology.googlecode.com/svn/releases/2014-08-01/ido-obsolete.owl"/>
 </owl:Ontology>
