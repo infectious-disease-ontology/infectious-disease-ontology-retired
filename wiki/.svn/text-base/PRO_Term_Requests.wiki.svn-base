@@ -1,0 +1,98 @@
+#summary This page is used to coordinate the submission of term requests to the Protein Ontology.
+
+= Introduction =
+
+This page is used to coordinate the submission of term requests to the Protein Ontology.  Before making a term request, please check the list below to see whether the term you need has already been requested.  If it has not, please add the term to the list and make your request.  Once you receive a PRO ID for your requested term, please remove the term from the list.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+Protein complex list submitted to PRO from Anna Mari
+
+-kbK phosphorylated form
+-inhibitor of nuclear factor kappa-b subunit beta
+-inhibitor of nuclear factor kappa-b subunit beta 48 lysine  ubiquitinated
+-TLR4MD2LPSCD14m complex
+-TLR4MD2LPS complex dimer
+-TIRAP phosphorylated on Tyr 86 or Tyr 106 or Tyr159
+-TLR4MD2LPS complex dimer + tirap
+-TLR4MD2LPScomplex dimer + tram
+-2TLR4MD2LPS = 2 TLR4MD2LPS 
+-2TLR4MD2LPS -tirap+pip2
+-tirap+pip2
+-TLR4MD2LPS complex dimer + tirap + myd88=2TLR4MD2LPS TIRAP+MyD88
+-TLR4MD2LPS complex dimer + tram + trif
+-2TLR4MD2LPS -TIRAP+MyD88+IRK4
+-TLR4MD2LPS complex dimer -TIRAP+MyD88IRK4+IRK1
+-TLR4MD2LPS complex dimer -TIRAP+MyD88IRK4IRK1where IRK1 is phosphorylated
+-TLR4MD2LPS complex dimer -TIRAP+MyD88IRK4IRK1p where IRK1 is polyphosphorylated
+-TLR4MD2LPS complex dimer -TIRAP+MyD88IRK4IRK1pp+TRAF6
+-IRK1pp+TRAF6
+-IRK1ppTRAF6+pel
+-IRK1ppTRAF6pel +TIFA
+-IRK1ppTRAF6pelTI  where TRAF6 is K63 ubiquitinated 
+-IRK1ppTRAF6pubpel where TRAF6 is polyubiquitineted
+-IRK1ppTRAF6pubpel where PEL1 is phosphorylated
+-IRK1ppTRAF6pubPEL1p where IRK1 is ubiquitinated
+-IKBphosphorylated bound ubiquitin in lysin 48 +Nfkb
+-IKB phosphorylated
+-IKB phosphorylated+NFKB
+-IRK1ppTRAF6pubPEL1p+tak1tab1tab2tab3
+-IRK1ubppTRAF6pubPEL1p+IKbK
+-NFKB+IMPalpha4
+-NfKb+ssDNA
+-TANK k63 ubiquitinated
+-IRF3p+p65
+-IRF7p+IRF7p
+-IRF3p+IRF3p
+-IRF3p+IRF7p
+-IRF3pIRF3p+IMPalpha
+-IRF3p65+IMPalpha
+-IRF7pIRF7p+IMPalpha
+-IRF3pIRF7p+IMPalpha
+-IRF3pIRF7p+ISREdnas
+-IRF3pIRF3p+ISREdnas
+-2TLR4MD2LPS -tt+traf3
+-2TLR4MD2LPS -tt+traf3+TBK1-tank-Ikke
+-2TLR4MD2LPS-tt-trf3-TBK1-tankk63ub-IKKe tank ubiquitinqted 
+-2TLR4MD2LPS -tt-trf3+TANKK63ub
+-TBK1-Tank-IKKe, tank in the complex is  ubiquitinated
+-Mitogen-activated protein kinase kinase 3 phosphorilsted
+-Mitogen-activated protein kinase kinase 4 phosphorilsted
+-Mitogen-activated protein kinase kinase 6 phosphorilsted
+-Mitogen-activated protein kinase kinase 7
+-Mitogen-activated protein kinase kinase 7 phosphorilsted
+-mitogen-activated protein kinase 8 phosphorylated
+-tak1tab1tab2tab3+MKK3p
+-tak1tab1tab2tab3+MKK6p
+-tak1tab1tab2tab3+MKK3
+-tak1tab1tab2tab3+MKK6
+-MKK3p+MAPK1
+-MKK6p +MAPK1
+-MKK3p+MAPK1p
+-MKK6p+MAPK1p
+-MAPK1p+IMPalpha 
+-JNKp+IMPalpha 
+-importin alpha
+-Mkk7p+JNK
+-MKK4p+JNK
+-receptor-interacting serine-threonine kinase 1
+-receptor-interacting serine-threonine kinase 1 polyubiquitinated
+-2TLR4MD2LPS -tt+TRAF6
+-2TLR4MD2LPS -ttTRAF6+RIP1
+-2TLR4MD2LPS -ttTRAF6rip1where RIP is polyubiquitineted
+-TRAF6rip1ubub+tak1tab1tab2tab3
+-TRAF6rip1ububtak1tab1tab2tab3+IkBk
+-TRAF6rip1ububtak1tab1tab2tab3IkBk where IkBk is phosphorylated
+-TRAF6+PEL1+RIP1ubub
+-2TLR4MD2LPS -tirap where tirap is phosphorylated on Tyr 86 or Tyr 106 or Tyr159
+-2TLR4MD2LPS -tirap+Myd88s
+-2TLR4MD2LPS -tram+SARM
+-TLR4MD2LPS complex dimer -TIRAP+MyD88IRK4+IRKM
+-tirapp+SOCS1
+-tirapp 48 ubiquitinated 

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/343/releases/2010-12-02/asserted
+END
+ido-asserted.owl
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/343/releases/2010-12-02/asserted/ido-asserted.owl
+END
+ido-main-asserted.owl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/343/releases/2010-12-02/asserted/ido-main-asserted.owl
+END
+ido-obsolete.owl
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/343/releases/2010-12-02/asserted/ido-obsolete.owl
+END
+ido-external-derived.owl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/343/releases/2010-12-02/asserted/ido-external-derived.owl
+END
+ido-external.owl
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/343/releases/2010-12-02/asserted/ido-external.owl
+END
+ido-external-by-hand.owl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/343/releases/2010-12-02/asserted/ido-external-by-hand.owl
+END
+ido-base-asserted.owl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/343/releases/2010-12-02/asserted/ido-base-asserted.owl
+END

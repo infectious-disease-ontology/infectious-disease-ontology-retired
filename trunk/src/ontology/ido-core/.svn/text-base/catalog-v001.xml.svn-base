@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog id="XML Catalog File (see http://www.oasis-open.org/committees/entity/spec-2001-08-06.html) - Created By Protégé 4" prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://purl.org/obo/owl/ro_bfo1-1_bridge" uri="http://www.obofoundry.org/ro/ro_bfo_bridge.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/obo/owl/ro" uri="http://www.obofoundry.org/ro/ro.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/ido/ido-external-by-hand.owl" uri="ido-external-by-hand.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/ido.owl" uri="ido.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/ido/ido-external.owl" uri="ido-external.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/ido/ido-external-derived.owl" uri="ido-external-derived.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/ido/ido-main.owl" uri="ido-main.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/ido/ido-base.owl" uri="ido-base.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/ido/ido-obsolete.owl" uri="ido-obsolete.owl"/>
+    <uri id="User Entered Import Resolution" name="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl" uri="../external/protege-dc.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/iao/dev/ontology-metadata.owl" uri="../external/iao/ontology-metadata.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.org/obo/owl/infectious_disease_ontology" uri="historical/IDO-1-3-oboconv.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.org/obo/owl/ro_bfo_bridge/1.1" uri="../external/ro_bfo_bridge11.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.obofoundry.org/ro/ro.owl" uri="../external/ro.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ifomis.org/bfo/1.1" uri="../external/bfo11.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.obofoundry.org/ro/ro_bfo_bridge.owl" uri="../external/ro_bfo_bridge11.owl"/>
+</catalog>

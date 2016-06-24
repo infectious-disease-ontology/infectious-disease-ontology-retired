@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/obi/!svn/ver/3511/trunk/src/tools/build/ReleaseTool/src/owl2
+END
+Config.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/obi/!svn/ver/3408/trunk/src/tools/build/ReleaseTool/src/owl2/Config.java
+END
+OBIentity.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/obi/!svn/ver/3511/trunk/src/tools/build/ReleaseTool/src/owl2/OBIentity.java
+END
+TextFileReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/obi/!svn/ver/3408/trunk/src/tools/build/ReleaseTool/src/owl2/TextFileReader.java
+END
+IAOrelease.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/obi/!svn/ver/3448/trunk/src/tools/build/ReleaseTool/src/owl2/IAOrelease.java
+END
+AddEditorPreferredTerms.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/obi/!svn/ver/3511/trunk/src/tools/build/ReleaseTool/src/owl2/AddEditorPreferredTerms.java
+END
+TestCode.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/obi/!svn/ver/3408/trunk/src/tools/build/ReleaseTool/src/owl2/TestCode.java
+END
+OntoView.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/obi/!svn/ver/3408/trunk/src/tools/build/ReleaseTool/src/owl2/OntoView.java
+END
+OBIrelease.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/obi/!svn/ver/3511/trunk/src/tools/build/ReleaseTool/src/owl2/OBIrelease.java
+END
+ExtractAnnotProp.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/obi/!svn/ver/3511/trunk/src/tools/build/ReleaseTool/src/owl2/ExtractAnnotProp.java
+END
+AnnotPropLayerAdder.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/obi/!svn/ver/3408/trunk/src/tools/build/ReleaseTool/src/owl2/AnnotPropLayerAdder.java
+END
+AssignOBIIDs.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/obi/!svn/ver/3511/trunk/src/tools/build/ReleaseTool/src/owl2/AssignOBIIDs.java
+END
+OntologyManipulator.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/obi/!svn/ver/3448/trunk/src/tools/build/ReleaseTool/src/owl2/OntologyManipulator.java
+END
+QCChecker.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/obi/!svn/ver/3408/trunk/src/tools/build/ReleaseTool/src/owl2/QCChecker.java
+END
+OBImerge.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/obi/!svn/ver/3511/trunk/src/tools/build/ReleaseTool/src/owl2/OBImerge.java
+END
+OWLReasonerRunner.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/obi/!svn/ver/3448/trunk/src/tools/build/ReleaseTool/src/owl2/OWLReasonerRunner.java
+END

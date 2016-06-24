@@ -1,0 +1,6 @@
+K 13
+svn:externals
+V 70
+obi https://obi.svn.sourceforge.net/svnroot/obi/trunk/src/tools/build
+
+END

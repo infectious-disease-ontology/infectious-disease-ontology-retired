@@ -1,0 +1,6 @@
+K 13
+svn:externals
+V 80
+iao http://information-artifact-ontology.googlecode.com/svn/trunk/src/ontology/
+
+END

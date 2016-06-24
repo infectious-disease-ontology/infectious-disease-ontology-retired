@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway.owl#"
+     xml:base="http://purl.obolibrary.org/obo/ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
+     xmlns:CHEBI="http://purl.org/obo/owl/CHEBI#"
+     xmlns:PRO="http://purl.org/obo/owl/PRO#"
+     xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:PATO="http://purl.org/obo/owl/PATO#"
+     xmlns:SO="http://purl.org/obo/owl/SO#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:GO="http://purl.org/obo/owl/GO#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/dev/all-tlr.owl">
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/dev/TLR2-Lta-signaling-pathway.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/dev/dsRNA-recognition-and-signaling-via-TLR3-pathway.owl"/>
+    </owl:Ontology>
+</rdf:RDF>
+

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:obi="http://purl.obolibrary.org/obo/"
+    xmlns:protege-dc="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
+    xmlns:ncbitax="http://purl.org/obo/owl/NCBITaxon#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:obi_rel="http://purl.obolibrary.org/obo/obi/Relations.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:obi_func="http://purl.obolibrary.org/obo/obi/OBI-Function.owl#"
+    xmlns:obi_owlfull="http://purl.obolibrary.org/obo/obi/obi-owl-full.owl#"
+    xmlns:obi_biomat="http://purl.obolibrary.org/obo/obi/Biomaterial.owl#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:obi_ext="http://purl.obolibrary.org/obo/obi/external.owl#"
+    xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+    xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
+    xmlns:obi_annot="http://purl.obolibrary.org/obo/obi/AnnotationProperty.owl#"
+    xmlns:obi_plan="http://purl.obolibrary.org/obo/obi/PlanAndPlannedProcess.owl#"
+    xmlns:pato="http://purl.org/obo/owl/PATO#"
+    xmlns:cell="http://purl.org/obo/owl/CL#"
+    xmlns:obi_extd="http://purl.obolibrary.org/obo/obi/externalDerived.owl#"
+    xmlns:obi_role="http://purl.obolibrary.org/obo/obi/Role.owl#"
+    xmlns:obi_instr="http://purl.obolibrary.org/obo/obi/InstrumentAndPart.owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:envo="http://purl.org/obo/owl/ENVO#"
+    xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
+    xmlns:caro="http://purl.org/obo/owl/CARO#"
+    xmlns:robfo="http://purl.org/obo/owl/ro_bfo_bridge/1.1#"
+    xmlns:obi_quality="http://purl.obolibrary.org/obo/obi/Quality.owl#"
+    xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
+    xmlns:rotoo="http://purl.org/obo/owl/ro#"
+    xmlns:pro="http://purl.org/obo/owl/PRO#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:obi_denrie="http://purl.obolibrary.org/obo/obi/DigitalEntityPlus.owl#"
+    xmlns:so="http://purl.org/obo/owl/SO#"
+    xmlns:go="http://purl.org/obo/owl/GO#"
+    xmlns:chebi="http://purl.org/obo/owl/CHEBI#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
+  xml:base="http://purl.obolibrary.org/obo/obi/externalDerived.owl">
+  <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/obi/externalDerived.owl"/>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005575">
+    <obi:IAO_0000115 xml:lang="en">The part of a cell or its extracellular environment in which a gene product is located. A gene product may be located in one or more parts of a cell and its location may be as specific as a particular macromolecular complex, that is, a stable, persistent association of macromolecules that function together.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">cellular_component</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0003674">
+    <obi:IAO_0000115 xml:lang="en">Elemental activities, such as catalysis or binding, describing the actions of a gene product at the molecular level. A given gene product may exhibit one or more molecular functions.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">molecular_function</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008150">
+    <obi:IAO_0000115 xml:lang="en">Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">biological_process</rdfs:label>
+  </owl:Class>
+  <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+  <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
+  <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412"/>
+</rdf:RDF>

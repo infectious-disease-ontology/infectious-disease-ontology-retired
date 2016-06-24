@@ -1,0 +1,1999 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:obi="http://purl.obolibrary.org/obo/"
+    xmlns:protege-dc="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
+    xmlns:ncbitax="http://purl.org/obo/owl/NCBITaxon#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:obi_rel="http://purl.obolibrary.org/obo/obi/Relations.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:obi_func="http://purl.obolibrary.org/obo/obi/OBI-Function.owl#"
+    xmlns:obi_owlfull="http://purl.obolibrary.org/obo/obi/obi-owl-full.owl#"
+    xmlns:obi_biomat="http://purl.obolibrary.org/obo/obi/Biomaterial.owl#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:obi_ext="http://purl.obolibrary.org/obo/obi/external.owl#"
+    xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+    xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
+    xmlns:obi_annot="http://purl.obolibrary.org/obo/obi/AnnotationProperty.owl#"
+    xmlns:obi_plan="http://purl.obolibrary.org/obo/obi/PlanAndPlannedProcess.owl#"
+    xmlns:pato="http://purl.org/obo/owl/PATO#"
+    xmlns:cell="http://purl.org/obo/owl/CL#"
+    xmlns:obi_extd="http://purl.obolibrary.org/obo/obi/externalDerived.owl#"
+    xmlns:obi_role="http://purl.obolibrary.org/obo/obi/Role.owl#"
+    xmlns:obi_instr="http://purl.obolibrary.org/obo/obi/InstrumentAndPart.owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:envo="http://purl.org/obo/owl/ENVO#"
+    xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
+    xmlns:caro="http://purl.org/obo/owl/CARO#"
+    xmlns:robfo="http://purl.org/obo/owl/ro_bfo_bridge/1.1#"
+    xmlns:obi_quality="http://purl.obolibrary.org/obo/obi/Quality.owl#"
+    xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
+    xmlns:rotoo="http://purl.org/obo/owl/ro#"
+    xmlns:pro="http://purl.org/obo/owl/PRO#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:obi_denrie="http://purl.obolibrary.org/obo/obi/DigitalEntityPlus.owl#"
+    xmlns:so="http://purl.org/obo/owl/SO#"
+    xmlns:go="http://purl.org/obo/owl/GO#"
+    xmlns:chebi="http://purl.org/obo/owl/CHEBI#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
+  xml:base="http://purl.obolibrary.org/obo/obi/externalDerived.owl">
+  <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/obi/externalDerived.owl"/>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0046823">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of substances between the cytoplasm and the nucleus.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">negative regulation of nucleocytoplasmic transport</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0046822"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032387"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">negative regulation of nucleocytoplasmic transport</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0034645">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044249"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">cellular macromolecule biosynthetic process</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">cellular macromolecule biosynthetic process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways resulting in the formation of a macromolecule, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass, carried out by individual cells.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0009059"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044260"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0035354">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044459"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043234"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Toll-like receptor 1-Toll-like receptor 2 protein complex</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A heterodimeric protein complex containing Toll-like receptor 1 (TLR1) and Toll-like receptor 2 (TLR2).</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">Toll-like receptor 1-Toll-like receptor 2 protein complex</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016740">
+    <obi:IAO_0000111 xml:lang="en">transferase activity</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">transferase activity</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0003824"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from one compound (generally regarded as the donor) to another compound (generally regarded as the acceptor). Transferase is the systematic name for any enzyme of EC class 2.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0070201">
+    <rdfs:label xml:lang="en">regulation of establishment of protein localization</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032880"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the directed movement of a protein to a specific location.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">regulation of establishment of protein localization</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0003676">
+    <rdfs:label xml:lang="en">nucleic acid binding</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with any nucleic acid.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005488"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">nucleic acid binding</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0001067">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003676"/>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a nucleic acid region that regulates a nucleic acid-based process. Such processes include transcription, DNA replication, and DNA repair.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">regulatory region nucleic acid binding</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">regulatory region nucleic acid binding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051050">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">positive regulation of transport</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">positive regulation of transport</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0048518"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051049"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Any process that activates or increases the frequency, rate or extent of the directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006350">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0034645"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">The cellular synthesis of either RNA on a template of DNA or DNA on a template of RNA.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">transcription</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0090304"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">transcription</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0046822">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032386"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the directed movement of substances between the nucleus and the cytoplasm.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">regulation of nucleocytoplasmic transport</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">regulation of nucleocytoplasmic transport</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006461">
+    <obi:IAO_0000111 xml:lang="en">protein complex assembly</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">protein complex assembly</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0071822"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0065003"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">The aggregation, arrangement and bonding together of a set of components to form a protein complex.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0071533">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0006461"/>
+    <obi:IAO_0000111 xml:lang="en">ankyrin repeat-mediated complex assembly</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A process of protein complex assembly in which the arrangement and bonding together of the set of components that form the protein complex is mediated by an ankyrin repeat interaction.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">ankyrin repeat-mediated complex assembly</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006139">
+    <obi:IAO_0000111 xml:lang="en">nucleobase, nucleoside, nucleotide and nucleic acid metabolic process</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0034641"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">nucleobase, nucleoside, nucleotide and nucleic acid metabolic process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any cellular metabolic process involving nucleobases, nucleosides, nucleotides and nucleic acids.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044238"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0003677">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003676"/>
+    <obi:IAO_0000115 xml:lang="en">Any molecular function by which a gene product interacts selectively with DNA (deoxyribonucleic acid).</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">DNA binding</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">DNA binding</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0035355">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044459"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043234"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">Toll-like receptor 2-Toll-like receptor 6 protein complex</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">Toll-like receptor 2-Toll-like receptor 6 protein complex</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A heterodimeric protein complex containing Toll-like receptor 2 (TLR2) and Toll-like receptor 6 (TLR6).</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051220">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032507"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">cytoplasmic sequestering of protein</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">The selective interaction of a protein with specific molecules in the cytoplasm, thereby inhibiting its transport into other areas of the cell.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">cytoplasmic sequestering of protein</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051224"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0000981">
+    <obi:IAO_0000111 xml:lang="en">sequence-specific DNA binding RNA polymerase II transcription factor activity</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0003700"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a specific DNA sequence in order to modulate transcription by RNA polymerase II. The transcription factor may or may not also interact selectively with a protein or macromolecular complex.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">sequence-specific DNA binding RNA polymerase II transcription factor activity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006508">
+    <obi:IAO_0000111 xml:lang="en">proteolysis</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">The hydrolysis of proteins into smaller polypeptides and/or amino acids by cleavage of their peptide bonds.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">proteolysis</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019538"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051090">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the activity of a transcription factor, any factor involved in the initiation or regulation of transcription.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006355"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">regulation of transcription factor activity</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0090046"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">regulation of transcription factor activity</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051101"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0071530">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0006461"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">FHA domain-mediated complex assembly</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A process of protein complex assembly in which the arrangement and bonding together of the set of components that form the protein complex is mediated by an FHA (forkhead-associated) domain interaction.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">FHA domain-mediated complex assembly</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0003674">
+    <obi:IAO_0000111 xml:lang="en">molecular_function</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Elemental activities, such as catalysis or binding, describing the actions of a gene product at the molecular level. A given gene product may exhibit one or more molecular functions.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">molecular_function</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0050789">
+    <obi:IAO_0000111 xml:lang="en">regulation of biological process</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">regulation of biological process</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0065007"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of a biological process. Biological processes are regulated by many means; examples include the control of gene expression, protein modification or interaction with a protein or substrate molecule.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0003824">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">catalytic activity</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">catalytic activity</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Catalysis of a biochemical reaction at physiological temperatures. In biologically catalyzed reactions, the reactants are known as substrates, and the catalysts are naturally occurring macromolecular substances known as enzymes. Enzymes possess specific binding sites for substrates, and are usually composed wholly or largely of protein, but RNA that has catalytic activity (ribozyme) is often also regarded as enzymatic.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006807">
+    <rdfs:label xml:lang="en">nitrogen compound metabolic process</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008152"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">nitrogen compound metabolic process</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways involving organic or inorganic compounds that contain nitrogen, including (but not limited to) nitrogen fixation, nitrification, denitrification, assimilatory/dissimilatory nitrate reduction and the interconversion of nitrogenous organic matter and ammonium.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0010556">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0060255"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">regulation of macromolecule biosynthetic process</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0009889"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">regulation of macromolecule biosynthetic process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the rate, frequency or extent of the chemical reactions and pathways resulting in the formation of a macromolecule, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043234">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032991"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">protein complex</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Any macromolecular complex composed of two or more polypeptide subunits, which may or may not be identical. Protein complexes may have other associated non-protein prosthetic groups, such as nucleotides, metal ions or other small molecules.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">protein complex</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0034763">
+    <obi:IAO_0000111 xml:lang="en">negative regulation of transmembrane transport</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">negative regulation of transmembrane transport</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0034762"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of a solute from one side of a membrane to the other.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0048523"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051051"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0070628">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032403"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">proteasome binding</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">proteasome binding</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a proteasome, a large multisubunit protein complex that catalyzes protein degradation.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016879">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016874"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">ligase activity, forming carbon-nitrogen bonds</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">ligase activity, forming carbon-nitrogen bonds</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Catalysis of the joining of two molecules, or two groups within a single molecule, via a carbon-nitrogen bond, with the concomitant hydrolysis of the diphosphate bond in ATP or a similar triphosphate.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0070647">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006464"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">A protein modification process by which one or more groups of a small protein, such as ubiquitin or a ubiquitin-like protein, are covalently attached to or removed from a target protein.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">protein modification by small protein conjugation or removal</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">protein modification by small protein conjugation or removal</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0034762">
+    <obi:IAO_0000111 xml:lang="en">regulation of transmembrane transport</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0050794"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">regulation of transmembrane transport</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051049"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the directed movement of a solute from one side of a membrane to the other.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043388">
+    <obi:IAO_0000115 xml:lang="en">Any process that increases the frequency, rate or extent of DNA binding. DNA binding is any process in which a gene product interacts selectively with DNA (deoxyribonucleic acid).</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051099"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051101"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">positive regulation of DNA binding</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">positive regulation of DNA binding</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0060255">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019222"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">regulation of macromolecule metabolic process</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving macromolecules, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">regulation of macromolecule metabolic process</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0031326">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">regulation of cellular biosynthetic process</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">regulation of cellular biosynthetic process</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0009889"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0031323"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of substances, carried out by individual cells.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006366">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006351"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">The synthesis of RNA from a DNA template by RNA polymerase II (Pol II), originating at a Pol II-specific promoter. Includes transcription of messenger RNA (mRNA) and certain small nuclear RNAs (snRNAs).</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">transcription from RNA polymerase II promoter</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">transcription from RNA polymerase II promoter</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051252">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0060255"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">regulation of RNA metabolic process</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">regulation of RNA metabolic process</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019219"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving RNA.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0070976">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019904"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a Toll-Interleukin receptor (TIR) domain of a protein. The TIR domain is an intracellular 200 residue domain that is found in the Toll protein, the interleukin-1 receptor (IL-1R), and MyD88; it contains three highly-conserved regions, and mediates protein-protein interactions between the Toll-like receptors (TLRs) and signal-transduction components.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">TIR domain binding</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">TIR domain binding</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0060341">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0050794"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">regulation of cellular localization</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">regulation of cellular localization</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of a process in which a cell, a substance, or a cellular entity is transported to, or maintained in a specific location within or in the membrane of a cell.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032879"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042308">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0090317"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0034763"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that stops, prevents, or reduces the frequency, rate or extent of the movement of proteins from the cytoplasm into the nucleus.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">negative regulation of protein import into nucleus</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0046823"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042306"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">negative regulation of protein import into nucleus</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0010468">
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of gene expression. Gene expression is the process in which a gene's coding sequence is converted into a mature gene product or products (proteins or RNA). This includes the production of an RNA transcript as well as any processing to produce a mature RNA product or an mRNA (for protein-coding genes) and the translation of that mRNA into protein. Some protein processing events may be included when they are required to form an active form of a product from an inactive precursor form.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">regulation of gene expression</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0060255"/>
+    <obi:IAO_0000111 xml:lang="en">regulation of gene expression</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0022411">
+    <rdfs:label xml:lang="en">cellular component disassembly</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016043"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">cellular component disassembly</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A cellular process that results in the breakdown of a cellular component.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0070513">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019904"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">death domain binding</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">death domain binding</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a death domain of a protein. The death domain (DD) is a homotypic protein interaction module composed of a bundle of six alpha-helices. DD bind each other forming oligomers. Some DD-containing proteins are involved in the regulation of apoptosis and inflammation through their activation of caspases and NF-kappaB.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0048523">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0048519"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">negative regulation of cellular process</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Any process that stops, prevents, or reduces the frequency, rate or extent of a cellular process, any of those that are carried out at the cellular level, but are not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0050794"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">negative regulation of cellular process</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0035326">
+    <obi:IAO_0000111 xml:lang="en">enhancer binding</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with an enhancer, a cis-acting sequence that increases the utilization of some eukaryotic promoters, and can function in either orientation and in any location (upstream or downstream) relative to the core promoter.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">enhancer binding</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044212"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032774">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways resulting in the formation of RNA, ribonucleic acid, one of the two main type of nucleic acid, consisting of a long, unbranched macromolecule formed from ribonucleotides joined in 3',5'-phosphodiester linkage. Includes polymerization of ribonucleotide monomers.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016070"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">RNA biosynthetic process</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">RNA biosynthetic process</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044249"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043565">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003677"/>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with DNA of a specific nucleotide composition, e.g. GC-rich DNA binding, or with a specific sequence motif or type of DNA e.g. promotor binding or rDNA binding.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">sequence-specific DNA binding</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">sequence-specific DNA binding</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051223">
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the directed movement of a protein into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051049"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">regulation of protein transport</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">regulation of protein transport</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0070201"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044248">
+    <obi:IAO_0000111 xml:lang="en">cellular catabolic process</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">cellular catabolic process</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044237"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways resulting in the breakdown of substances, carried out by individual cells.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0009056"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043226">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005575"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">organelle</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, and prokaryotic structures such as anammoxosomes and pirellulosomes. Excludes the plasma membrane.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">organelle</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032507">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Any process in which a protein is maintained in a specific location within, or in the membrane of, a cell, and is prevented from moving elsewhere.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051651"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0045185"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">maintenance of protein location in cell</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">maintenance of protein location in cell</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032984">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043933"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">macromolecular complex disassembly</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0022411"/>
+    <rdfs:label xml:lang="en">macromolecular complex disassembly</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">The disaggregation of a macromolecular complex into its constituent components.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042307">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0034764"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">positive regulation of protein import into nucleus</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">positive regulation of protein import into nucleus</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0090316"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0046824"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that activates or increases the frequency, rate or extent of movement of proteins from the cytoplasm into the nucleus.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042306"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0007253">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042994"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042347"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">cytoplasmic sequestering of NF-kappaB</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">The selective interaction of the transcription factor NF-kappaB with specific molecules in the cytoplasm, thereby inhibiting its translocation into the nucleus.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">cytoplasmic sequestering of NF-kappaB</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042277">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005488"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">peptide binding</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">peptide binding</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with peptides, any of a group of organic compounds comprising two or more amino acids linked by peptide bonds.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0003700">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0001071"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a specific DNA sequence in order to modulate transcription. The transcription factor may or may not also interact selectively with a protein or macromolecular complex.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">sequence-specific DNA binding transcription factor activity</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">sequence-specific DNA binding transcription factor activity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043412">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043170"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">The covalent alteration of one or more monomeric units in a polypeptide, polynucleotide, polysaccharide, or other biological macromolecule, resulting in a change in its properties.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">macromolecule modification</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">macromolecule modification</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0090047">
+    <obi:IAO_0000115 xml:lang="en">Any process that increases the frequency, rate or extent of transcription regulator activity, any molecular function that plays a role in regulating transcription; may bind a promoter or enhancer DNA sequence or interact with a DNA-binding transcription factor.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">positive regulation of transcription regulator activity</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0090046"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044093"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">positive regulation of transcription regulator activity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032446">
+    <rdfs:label xml:lang="en">protein modification by small protein conjugation</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">protein modification by small protein conjugation</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0070647"/>
+    <obi:IAO_0000115 xml:lang="en">A protein modification process in which one or more groups of a small protein, such as ubiquitin or a ubiquitin-like protein, are covalently attached to a target protein.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051224">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051051"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">negative regulation of protein transport</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051223"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of a protein into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">negative regulation of protein transport</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0033157">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032386"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">regulation of intracellular protein transport</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">regulation of intracellular protein transport</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the directed movement of proteins within cells.</obi:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051223"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044249">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0009058"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044237"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">cellular biosynthetic process</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">cellular biosynthetic process</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways resulting in the formation of substances, carried out by individual cells.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043227">
+    <obi:IAO_0000115 xml:lang="en">Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane. Includes the nucleus, mitochondria, plastids, vacuoles, and vesicles. Excludes the plasma membrane.</obi:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0043226"/>
+    <obi:IAO_0000111 xml:lang="en">membrane-bounded organelle</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">membrane-bounded organelle</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051603">
+    <obi:IAO_0000111 xml:lang="en">proteolysis involved in cellular protein catabolic process</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0006508"/>
+    <rdfs:label xml:lang="en">proteolysis involved in cellular protein catabolic process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">The hydrolysis of a peptide bond or bonds within a protein as part of the chemical reactions and pathways resulting in the breakdown of a protein by individual cells.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0055131">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019904"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">C3HC4-type RING finger domain binding</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">C3HC4-type RING finger domain binding</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a C3HC4-type zinc finger domain of a protein. The C3HC4-type zinc finger is a variant of RING finger, is a cysteine-rich domain of 40 to 60 residues that coordinates two zinc ions, and has the consensus sequence: C-X2-C-X(9-39)-C-X(1-3)-H-X(2-3)-C-X2-C-X(4-48)-C-X2-C, where X is any amino acid. Many proteins containing a C3HC4-type RING finger play a key role in the ubiquitination pathway.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005515">
+    <obi:IAO_0000111 xml:lang="en">protein binding</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005488"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules).</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">protein binding</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051049">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">regulation of transport</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032879"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">regulation of transport</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006351">
+    <obi:IAO_0000111 xml:lang="en">transcription, DNA-dependent</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0032774"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0006350"/>
+    <rdfs:label xml:lang="en">transcription, DNA-dependent</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">The cellular synthesis of RNA on a template of DNA.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0000975">
+    <rdfs:label xml:lang="en">regulatory region DNA binding</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003677"/>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a DNA region that regulates a DNA-based process. Such processes include transcription, DNA replication, and DNA repair.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">regulatory region DNA binding</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0001067"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0004842">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019787"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">ubiquitin-protein ligase activity</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">ubiquitin-protein ligase activity</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Catalysis of the reaction: ATP + ubiquitin + protein lysine = AMP + diphosphate + protein N-ubiquityllysine.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051099">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">positive regulation of binding</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051098"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044093"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Any process that activates or increases the rate or extent of binding, the selective interaction of a molecule with one or more specific sites on another molecule.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">positive regulation of binding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0030506">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008092"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">ankyrin binding</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">ankyrin binding</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with ankyrin, a 200 kDa cytoskeletal protein that attaches other cytoskeletal proteins to integral membrane proteins.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042347">
+    <obi:IAO_0000115 xml:lang="en">Any process that stops, prevents, or reduces the frequency, rate or extent of the transfer of NF-kappaB, a transcription factor for eukaryotic RNA polymerase II promoters, from the cytoplasm into the nucleus, across the nuclear membrane.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">negative regulation of NF-kappaB import into nucleus</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042345"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042992"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">negative regulation of NF-kappaB import into nucleus</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0009889">
+    <rdfs:label xml:lang="en">regulation of biosynthetic process</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019222"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">regulation of biosynthetic process</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of substances.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051235">
+    <obi:IAO_0000111 xml:lang="en">maintenance of location</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">maintenance of location</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process in which a cell, substance or cellular entity, such as a protein complex or organelle, is maintained in a location and prevented from moving elsewhere.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0065008"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0045185">
+    <obi:IAO_0000115 xml:lang="en">Any process in which a protein is maintained in a location and prevented from moving elsewhere. These include sequestration, stabilization to prevent transport elsewhere and the active retrieval of proteins that do move away.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">maintenance of protein location</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051235"/>
+    <obi:IAO_0000111 xml:lang="en">maintenance of protein location</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0030275">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019904"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">LRR domain binding</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">LRR domain binding</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a LRR domain (leucine rich repeats) of a protein.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044267">
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways involving a specific protein, rather than of proteins in general, occurring at the level of an individual cell. Includes protein modification.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044260"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">cellular protein metabolic process</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019538"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">cellular protein metabolic process</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0048522">
+    <obi:IAO_0000111 xml:lang="en">positive regulation of cellular process</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0048518"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">positive regulation of cellular process</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that activates or increases the frequency, rate or extent of a cellular process, any of those that are carried out at the cellular level, but are not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0050794"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0071840">
+    <rdfs:label xml:lang="en">cellular component organization or biogenesis</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A process that results in the biosynthesis of constituent macromolecules, assembly, arrangement of constituent parts, or disassembly of a cellular component.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">cellular component organization or biogenesis</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008150"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0003702">
+    <rdfs:label xml:lang="en">RNA polymerase II transcription factor activity</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Functions to initiate or regulate RNA polymerase II transcription.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0030528"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">RNA polymerase II transcription factor activity</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051222">
+    <rdfs:label xml:lang="en">positive regulation of protein transport</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">positive regulation of protein transport</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051050"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051223"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that activates or increases the frequency, rate or extent of the directed movement of a protein into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019222">
+    <obi:IAO_0000111 xml:lang="en">regulation of metabolic process</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">regulation of metabolic process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the chemical reactions and pathways within a cell or an organism.</obi:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0050789"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043229">
+    <obi:IAO_0000115 xml:lang="en">Organized structure of distinctive morphology and function, occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044424"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0043226"/>
+    <obi:IAO_0000111 xml:lang="en">intracellular organelle</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">intracellular organelle</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0022607">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">cellular component assembly</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016043"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">The aggregation, arrangement and bonding together of a cellular component.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">cellular component assembly</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044238">
+    <obi:IAO_0000111 xml:lang="en">primary metabolic process</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008152"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">primary metabolic process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways involving those compounds which are formed as a part of the normal anabolic and catabolic processes. These processes take place in most, if not all, cells of the organism.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043170">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008152"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">macromolecule metabolic process</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways involving macromolecules, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">macromolecule metabolic process</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042346">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042993"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">positive regulation of NF-kappaB import into nucleus</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042345"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Any process that activates or increases the frequency, rate or extent of transfer of NF-kappaB, a transcription factor for eukaryotic RNA polymerase II promoters, from the cytoplasm into the nucleus, across the nuclear membrane.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">positive regulation of NF-kappaB import into nucleus</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044237">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0009987"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008152"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">cellular metabolic process</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways by which individual cells transform chemical substances.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">cellular metabolic process</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019899">
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with any enzyme.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">enzyme binding</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0005515"/>
+    <rdfs:label xml:lang="en">enzyme binding</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0071822">
+    <obi:IAO_0000111 xml:lang="en">protein complex subunit organization</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Any process by which macromolecules aggregate, disaggregate, or are modified, resulting in the formation, disassembly, or alteration of a protein complex.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">protein complex subunit organization</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043933"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0009059">
+    <rdfs:label xml:lang="en">macromolecule biosynthetic process</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">macromolecule biosynthetic process</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0043170"/>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways resulting in the formation of a macromolecule, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0009058"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0065008">
+    <rdfs:label xml:lang="en">regulation of biological quality</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of a biological quality. A biological quality is a measurable attribute of an organism or part of an organism, such as size, mass, shape, color, etc.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0065007"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">regulation of biological quality</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0090304">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0006139"/>
+    <obi:IAO_0000111 xml:lang="en">nucleic acid metabolic process</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">nucleic acid metabolic process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any cellular metabolic process involving nucleic acids.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0080090">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0019222"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">regulation of primary metabolic process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the chemical reactions and pathways within a cell or an organism involving those compounds formed as a part of the normal anabolic and catabolic processes. These processes take place in most, if not all, cells of the organism.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">regulation of primary metabolic process</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043130">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032182"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">ubiquitin binding</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently and non-covalently with ubiquitin, a protein that when covalently bound to other cellular proteins marks them for proteolytic degradation.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">ubiquitin binding</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016310">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">phosphorylation</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006796"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">The process of introducing a phosphate group into a molecule, usually with the formation of a phosphoric ester, a phosphoric anhydride or a phosphoric amide.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">phosphorylation</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0070534">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016567"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">protein K63-linked ubiquitination</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A protein ubiquitination process in which a polymer of ubiquitin, formed by linkages between lysine residues at position 63 of the ubiquitin monomers, is added to a protein. K63-linked ubiquitination does not target the substrate protein for degradation, but is involved in several pathways, notably as a signal to promote error-free DNA postreplication repair.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">protein K63-linked ubiquitination</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006468">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006464"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0016310"/>
+    <obi:IAO_0000111 xml:lang="en">protein phosphorylation</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">protein phosphorylation</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">The process of introducing a phosphate group on to a protein.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042345">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">regulation of NF-kappaB import into nucleus</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the transfer of NF-kappaB, a transcription factor for eukaryotic RNA polymerase II promoters, from the cytoplasm into the nucleus, across the nuclear membrane.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">regulation of NF-kappaB import into nucleus</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042990"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008588">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0042346"/>
+    <obi:IAO_0000115 xml:lang="en">The release of NF-kappaB from specific molecules in the cytoplasm to which it was bound, thereby allowing its translocation into the nucleus.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">release of cytoplasmic sequestered NF-kappaB</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">release of cytoplasmic sequestered NF-kappaB</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0009058">
+    <obi:IAO_0000111 xml:lang="en">biosynthetic process</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">biosynthetic process</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008152"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways resulting in the formation of substances; typically the energy-requiring part of metabolism in which simpler substances are transformed into more complex ones.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0031593">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0043130"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">polyubiquitin binding</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently and non-covalently with a polymer of ubiqutin.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">polyubiquitin binding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006511">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019941"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">ubiquitin-dependent protein catabolic process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways resulting in the breakdown of a protein or peptide by hydrolysis of its peptide bonds, initiated by the covalent attachment of a ubiquitin group, or multiple ubiquitin groups, to the protein.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">ubiquitin-dependent protein catabolic process</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051098">
+    <rdfs:label xml:lang="en">regulation of binding</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of binding, the selective interaction of a molecule with one or more specific sites on another molecule.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">regulation of binding</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0065009"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016567">
+    <obi:IAO_0000115 xml:lang="en">The process in which one or more ubiquitin groups are added to a protein.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">protein ubiquitination</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0032446"/>
+    <obi:IAO_0000111 xml:lang="en">protein ubiquitination</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0065009">
+    <rdfs:label xml:lang="en">regulation of molecular function</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0065007"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">regulation of molecular function</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005938">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044444"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">cell cortex</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">The region of a cell that lies just beneath the plasma membrane and often, but not always, contains a network of actin filaments and associated proteins.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">cell cortex</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0070936">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0016567"/>
+    <rdfs:label xml:lang="en">protein K48-linked ubiquitination</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A protein ubiquitination process in which a polymer of ubiquitin, formed by linkages between lysine residues at position 48 of the ubiquitin monomers, is added to a protein. K48-linked ubiquitination targets the substrate protein for degradation.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">protein K48-linked ubiquitination</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016874">
+    <rdfs:label xml:lang="en">ligase activity</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Catalysis of the joining of two substances, or two groups within a single molecule, with the concomitant hydrolysis of the diphosphate bond in ATP or a similar triphosphate.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">ligase activity</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003824"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016301">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016772"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">kinase activity</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Catalysis of the transfer of a phosphate group, usually from ATP, to a substrate molecule.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">kinase activity</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005737">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044424"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">All of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">cytoplasm</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">cytoplasm</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042990">
+    <obi:IAO_0000111 xml:lang="en">regulation of transcription factor import into nucleus</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042306"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">regulation of transcription factor import into nucleus</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the movement of a transcription factor from the cytoplasm to the nucleus.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0009057">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0009056"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways resulting in the breakdown of a macromolecule, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">macromolecule catabolic process</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0043170"/>
+    <rdfs:label xml:lang="en">macromolecule catabolic process</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019900">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0019899"/>
+    <rdfs:label xml:lang="en">kinase binding</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">kinase binding</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a kinase, any enzyme that catalyzes the transfer of a phosphate group.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019787">
+    <obi:IAO_0000115 xml:lang="en">Catalysis of ATP-dependent isopeptide bond formation between the carboxy-terminal residues of a small conjugating protein such as ubiquitin or a ubiquitin-like protein, and a substrate lysine residue. This function may be performed alone or in conjunction with an E3, ubiquitin-like protein ligase.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">small conjugating protein ligase activity</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016881"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">small conjugating protein ligase activity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008385">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0043234"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044445"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">IkappaB kinase complex</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">IkappaB kinase complex</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A protein serine/threonine kinase that phosphorylates IkappaB, thereby targeting this for proteasomal degradation and allowing the nuclear translocation of kB. Composed of alpha, beta and gamma subunits, the latter not having kinase activity but presumed to play a regulatory role.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0090316">
+    <obi:IAO_0000111 xml:lang="en">positive regulation of intracellular protein transport</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032388"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">positive regulation of intracellular protein transport</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process that decreases the frequency, rate or extent of the directed movement of proteins within cells.</obi:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051222"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0033157"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016070">
+    <obi:IAO_0000111 xml:lang="en">RNA metabolic process</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044260"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">RNA metabolic process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0090304"/>
+    <obi:IAO_0000115 xml:lang="en">The cellular chemical reactions and pathways involving RNA, ribonucleic acid, one of the two main type of nucleic acid, consisting of a long, unbranched macromolecule formed from ribonucleotides joined in 3',5'-phosphodiester linkage.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0031371">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044424"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Any complex that possesses ubiquitin conjugating enzyme activity.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">ubiquitin conjugating enzyme complex</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0043234"/>
+    <rdfs:label xml:lang="en">ubiquitin conjugating enzyme complex</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0090046">
+    <obi:IAO_0000111 xml:lang="en">regulation of transcription regulator activity</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of transcription regulator activity, any molecular function that plays a role in regulating transcription; may bind a promoter or enhancer DNA sequence or interact with a DNA-binding transcription factor.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0065009"/>
+    <rdfs:label xml:lang="en">regulation of transcription regulator activity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0050789"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0003705">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0000981"/>
+    <rdfs:label xml:lang="en">sequence-specific enhancer binding RNA polymerase II transcription factor activity</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">sequence-specific enhancer binding RNA polymerase II transcription factor activity</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Functions to initiate or regulate RNA polymerase II transcription by binding an enhancer region of DNA.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019941">
+    <obi:IAO_0000111 xml:lang="en">modification-dependent protein catabolic process</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways resulting in the breakdown of a protein or peptide by hydrolysis of its peptide bonds, initiated by the covalent modification of the target protein.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">modification-dependent protein catabolic process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051603"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043632"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051171">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0019222"/>
+    <obi:IAO_0000111 xml:lang="en">regulation of nitrogen compound metabolic process</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">regulation of nitrogen compound metabolic process</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving nitrogen or nitrogenous compounds.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006355">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051252"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of cellular DNA-dependent transcription.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">regulation of transcription, DNA-dependent</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">regulation of transcription, DNA-dependent</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0045449"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042306">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0034762"/>
+    <obi:IAO_0000111 xml:lang="en">regulation of protein import into nucleus</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">regulation of protein import into nucleus</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0046822"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of movement of proteins from the cytoplasm to the nucleus.</obi:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0033157"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0009056">
+    <rdfs:label xml:lang="en">catabolic process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways resulting in the breakdown of substances, including the breakdown of carbon compounds with the liberation of energy for use by the cell or organism.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">catabolic process</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008152"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042992">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">negative regulation of transcription factor import into nucleus</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Any process that stops, prevents, or reduces the frequency, rate or extent of the movement of a transcription factor from the cytoplasm to the nucleus.</obi:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0042990"/>
+    <rdfs:label xml:lang="en">negative regulation of transcription factor import into nucleus</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0042308"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_2000112">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0031326"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0010556"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of cellular macromolecule biosynthetic process.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">regulation of cellular macromolecule biosynthetic process</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">regulation of cellular macromolecule biosynthetic process</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0090317">
+    <obi:IAO_0000111 xml:lang="en">negative regulation of intracellular protein transport</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0033157"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032387"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">negative regulation of intracellular protein transport</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process that decreases the frequency, rate or extent of the directed movement of proteins within cells.</obi:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051224"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0065007">
+    <obi:IAO_0000111 xml:lang="en">biological regulation</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008150"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of any biological process, quality or function.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">biological regulation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016043">
+    <obi:IAO_0000111 xml:lang="en">cellular component organization</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">A process that results in the assembly, arrangement of constituent parts, or disassembly of a cellular component.</obi:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0071840"/>
+    <rdfs:label xml:lang="en">cellular component organization</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0030528">
+    <obi:IAO_0000115 xml:lang="en">Plays a role in regulating transcription; may bind a promoter or enhancer DNA sequence or interact with a DNA-binding transcription factor.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">transcription regulator activity</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">transcription regulator activity</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0009987">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008150"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">cellular process</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">cellular process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process that is carried out at the cellular level, but not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005488">
+    <obi:IAO_0000111 xml:lang="en">binding</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
+    <obi:IAO_0000115 xml:lang="en">The selective, non-covalent, often stoichiometric, interaction of a molecule with one or more specific sites on another molecule.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">binding</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044260">
+    <obi:IAO_0000111 xml:lang="en">cellular macromolecule metabolic process</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">cellular macromolecule metabolic process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways involving macromolecules, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass, as carried out by individual cells.</obi:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0043170"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0044237"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032388">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051050"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that activates or increases the frequency, rate or extent of the directed movement of substances within cells.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032386"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">positive regulation of intracellular transport</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">positive regulation of intracellular transport</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016772">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">transferase activity, transferring phosphorus-containing groups</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Catalysis of the transfer of a phosphorus-containing group from one compound (donor) to another (acceptor).</obi:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0016740"/>
+    <obi:IAO_0000111 xml:lang="en">transferase activity, transferring phosphorus-containing groups</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006793">
+    <obi:IAO_0000111 xml:lang="en">phosphorus metabolic process</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0044237"/>
+    <rdfs:label xml:lang="en">phosphorus metabolic process</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways involving the nonmetallic element phosphorus or compounds that contain phosphorus, usually in the form of a phosphate group (PO4).</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043687">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">post-translational protein modification</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">The covalent alteration of one or more amino acids occurring in a protein after the protein has been completely translated and released from the ribosome.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006464"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">post-translational protein modification</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0035370">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0031371"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">A heterodimeric ubiquitin conjugating enzyme complex that catalyzes assembly of K63-linked polyubiquitin chains and is involved in NF-kappaB activation. In humans at least, the complex comprises the ubiquitin-conjugating enzyme UBC13 and ubiquitin-conjugating enzyme variant 1A (UEV1A).</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">UBC13-UEV1A complex</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">UBC13-UEV1A complex</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032403">
+    <rdfs:label xml:lang="en">protein complex binding</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with any protein complex (a complex of two or more proteins that may include other nonprotein molecules).</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">protein complex binding</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0005515"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0034641">
+    <obi:IAO_0000111 xml:lang="en">cellular nitrogen compound metabolic process</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">cellular nitrogen compound metabolic process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0044237"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0006807"/>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways involving various organic and inorganic nitrogenous compounds, as carried out by individual cells.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0050794">
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of a cellular process, any of those that are carried out at the cellular level, but are not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0050789"/>
+    <rdfs:label xml:lang="en">regulation of cellular process</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">regulation of cellular process</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044444">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044424"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Any constituent part of the cytoplasm, all of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">cytoplasmic part</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">cytoplasmic part</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042993">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that activates or increases the frequency, rate or extent of the movement of a transcription factor from the cytoplasm to the nucleus.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">positive regulation of transcription factor import into nucleus</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0042990"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0042307"/>
+    <rdfs:label xml:lang="en">positive regulation of transcription factor import into nucleus</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032880">
+    <rdfs:label xml:lang="en">regulation of protein localization</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of any process in which a protein is transported to, or maintained in, a specific location.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032879"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">regulation of protein localization</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008092">
+    <obi:IAO_0000111 xml:lang="en">cytoskeletal protein binding</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">cytoskeletal protein binding</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with any protein component of any cytoskeleton (actin, microtubule, or intermediate filament cytoskeleton).</obi:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0005515"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044197">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019904"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">Rel homology domain binding</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">Rel homology domain binding</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a Rel Homology Domain (RHD) of a protein. The RHD is found in a family of eukaryotic transcription factors, which includes NF-kappaB, Dorsal, Relish and NFAT.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006796">
+    <rdfs:label xml:lang="en">phosphate metabolic process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways involving the phosphate group, the anion or salt of any phosphoric acid.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0006793"/>
+    <obi:IAO_0000111 xml:lang="en">phosphate metabolic process</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0006464">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0043412"/>
+    <obi:IAO_0000115 xml:lang="en">The covalent alteration of one or more amino acids occurring in proteins, peptides and nascent polypeptides (co-translational, post-translational modifications). Includes the modification of charged tRNAs that are destined to occur in a protein (pre-translation modification).</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0044267"/>
+    <obi:IAO_0000111 xml:lang="en">protein modification process</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">protein modification process</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032387">
+    <rdfs:label xml:lang="en">negative regulation of intracellular transport</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">negative regulation of intracellular transport</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051051"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of substances within cells.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032386"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044424">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044464"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">intracellular part</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">intracellular part</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0045449">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the synthesis of either RNA on a template of DNA or DNA on a template of RNA.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019219"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">regulation of transcription</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_2000112"/>
+    <obi:IAO_0000111 xml:lang="en">regulation of transcription</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0010468"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0048519">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0050789"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">negative regulation of biological process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process that stops, prevents, or reduces the frequency, rate or extent of a biological process. Biological processes are regulated by many means; examples include the control of gene expression, protein modification or interaction with a protein or substrate molecule.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">negative regulation of biological process</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0000209">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0016567"/>
+    <obi:IAO_0000115 xml:lang="en">Addition of multiple ubiquitin groups to a protein, forming a ubiquitin chain.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">protein polyubiquitination</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">protein polyubiquitination</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032386">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051049"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the directed movement of substances within cells.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">regulation of intracellular transport</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">regulation of intracellular transport</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0060341"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008150">
+    <obi:IAO_0000111 xml:lang="en">biological_process</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">biological_process</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032182">
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a small conjugating protein such as ubiquitin or a ubiquitin-like protein.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">small conjugating protein binding</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">small conjugating protein binding</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0005515"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044445">
+    <rdfs:label xml:lang="en">cytosolic part</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">cytosolic part</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0044444"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Any constituent part of cytosol, that part of the cytoplasm that does not contain membranous or particulate subcellular components.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0034764">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0034762"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0048522"/>
+    <rdfs:label xml:lang="en">positive regulation of transmembrane transport</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process that activates or increases the frequency, rate or extent of the directed movement of a solute from one side of a membrane to the other.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">positive regulation of transmembrane transport</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051050"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051101">
+    <obi:IAO_0000111 xml:lang="en">regulation of DNA binding</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051098"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of DNA binding. DNA binding is any process in which a gene product interacts selectively with DNA (deoxyribonucleic acid).</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">regulation of DNA binding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0042994">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051220"/>
+    <obi:IAO_0000111 xml:lang="en">cytoplasmic sequestering of transcription factor</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0042992"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">cytoplasmic sequestering of transcription factor</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">The selective interaction of a transcription factor with specific molecules in the cytoplasm, thereby inhibiting its translocation into the nucleus.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044459">
+    <obi:IAO_0000115 xml:lang="en">Any constituent part of the plasma membrane, the membrane surrounding a cell that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins.</obi:IAO_0000115>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044425"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">plasma membrane part</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">plasma membrane part</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043933">
+    <obi:IAO_0000111 xml:lang="en">macromolecular complex subunit organization</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0016043"/>
+    <obi:IAO_0000115 xml:lang="en">Any process in which macromolecules aggregate, disaggregate, or are modified, resulting in the formation, disassembly, or alteration of a macromolecular complex.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">macromolecular complex subunit organization</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044198">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019904"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a TRAF-type zinc finger domain of a protein.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">zf-TRAF domain binding</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">zf-TRAF domain binding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044212">
+    <rdfs:label xml:lang="en">transcription regulatory region DNA binding</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0000975"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">transcription regulatory region DNA binding</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a DNA region that regulates the transcription of a region of DNA, which may be a gene, cistron, or operon. Binding may occur as a sequence specific interaction or as an interaction observed only once a factor has been recruited to the DNA by other factors.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044464">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005575"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Any constituent part of a cell, the basic structural and functional unit of all organisms.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">cell part</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">cell part</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0071550">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0006461"/>
+    <obi:IAO_0000111 xml:lang="en">death domain-mediated complex assembly</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A process of protein complex assembly in which the arrangement and bonding together of the set of components that form the protein complex is mediated by a death domain (DD) interaction.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">death domain-mediated complex assembly</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032879">
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of any process in which a cell, a substance, or a cellular entity is transported to, or maintained in, a specific location.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">regulation of localization</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0050789"/>
+    <rdfs:label xml:lang="en">regulation of localization</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044425">
+    <obi:IAO_0000111 xml:lang="en">membrane part</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0044464"/>
+    <rdfs:label xml:lang="en">membrane part</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any constituent part of a membrane, a double layer of lipid molecules that encloses all cells, and, in eukaryotes, many organelles; may be a single or double lipid bilayer; also includes associated proteins.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008139">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005048"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a nuclear localization sequence, a specific peptide sequence that acts as a signal to localize the protein within the nucleus.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">nuclear localization sequence binding</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">nuclear localization sequence binding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0032991">
+    <rdfs:label xml:lang="en">macromolecular complex</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">macromolecular complex</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A stable assembly of two or more macromolecules, i.e. proteins, nucleic acids, carbohydrates or lipids, in which the constituent parts function together.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005575"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005048">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0042277"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">signal sequence binding</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">signal sequence binding</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a signal sequence, a specific peptide sequence found on protein precursors or mature proteins that dictates where the mature protein is localized.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005575">
+    <obi:IAO_0000111 xml:lang="en">cellular_component</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">The part of a cell or its extracellular environment in which a gene product is located. A gene product may be located in one or more parts of a cell and its location may be as specific as a particular macromolecular complex, that is, a stable, persistent association of macromolecules that function together.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">cellular_component</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019219">
+    <obi:IAO_0000111 xml:lang="en">regulation of nucleobase, nucleoside, nucleotide and nucleic acid metabolic process</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0031323"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051171"/>
+    <rdfs:label xml:lang="en">regulation of nucleobase, nucleoside, nucleotide and nucleic acid metabolic process</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Any cellular process that modulates the frequency, rate or extent of the chemical reactions and pathways involving nucleobases, nucleosides, nucleotides and nucleic acids.</obi:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0080090"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0048518">
+    <obi:IAO_0000111 xml:lang="en">positive regulation of biological process</obi:IAO_0000111>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0050789"/>
+    <rdfs:label xml:lang="en">positive regulation of biological process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process that activates or increases the frequency, rate or extent of a biological process. Biological processes are regulated by many means; examples include the control of gene expression, protein modification or interaction with a protein or substrate molecule.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0005634">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043231"/>
+    </rdfs:subClassOf>
+    <obi:IAO_0000111 xml:lang="en">nucleus</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">nucleus</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated. In most cells, the nucleus contains all of the cell's chromosomes except the organellar chromosomes, and is the site of RNA synthesis and processing. In some species, or in specialized cell types, RNA metabolism or DNA replication may be absent.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0016881">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0016879"/>
+    <rdfs:label xml:lang="en">acid-amino acid ligase activity</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Catalysis of the ligation of an acid to an amino acid via a carbon-nitrogen bond, with the concomitant hydrolysis of the diphosphate bond in ATP or a similar triphosphate.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">acid-amino acid ligase activity</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019538">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0043170"/>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways involving a specific protein, rather than of proteins in general. Includes protein modification.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">protein metabolic process</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">protein metabolic process</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0044238"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0019904">
+    <rdfs:label xml:lang="en">protein domain specific binding</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a specific domain of a protein.</obi:IAO_0000115>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">protein domain specific binding</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0005515"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0046824">
+    <rdfs:label xml:lang="en">positive regulation of nucleocytoplasmic transport</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0032388"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0046822"/>
+    <obi:IAO_0000111 xml:lang="en">positive regulation of nucleocytoplasmic transport</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Any process that activates or increases the frequency, rate or extent of the directed movement of substances between the nucleus and the cytoplasm.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044265">
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways resulting in the breakdown of a macromolecule, any large molecule including proteins, nucleic acids and carbohydrates, as carried out by individual cells.</obi:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0009057"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0044260"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0044248"/>
+    <obi:IAO_0000111 xml:lang="en">cellular macromolecule catabolic process</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">cellular macromolecule catabolic process</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0071534">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0006461"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:label xml:lang="en">zf-TRAF domain-mediated complex assembly</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A process of protein complex assembly in which the arrangement and bonding together of the set of components that form the protein complex is mediated by a TRAF-type zinc finger (zf-TRAF) domain interaction.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">zf-TRAF domain-mediated complex assembly</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0044093">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0065009"/>
+    <rdfs:label xml:lang="en">positive regulation of molecular function</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">positive regulation of molecular function</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Any process that activates or increases the rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051091">
+    <rdfs:label xml:lang="en">positive regulation of transcription factor activity</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that activates or increases the frequency, rate or extent of activity of a transcription factor, any factor involved in the initiation or regulation of transcription.</obi:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0090047"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051090"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0043388"/>
+    <obi:IAO_0000111 xml:lang="en">positive regulation of transcription factor activity</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043632">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0044265"/>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways resulting in the breakdown of a macromolecule, initiated by covalent modification of the target molecule.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">modification-dependent macromolecule catabolic process</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">modification-dependent macromolecule catabolic process</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008152">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
+    <obi:IAO_0000111 xml:lang="en">metabolic process</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">metabolic process</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">The chemical reactions and pathways, including anabolism and catabolism, by which living organisms transform chemical substances. Metabolic processes typically transform small molecules, but also include macromolecular processes such as DNA repair and replication, and protein synthesis and degradation.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0065003">
+    <obi:IAO_0000115 xml:lang="en">The aggregation, arrangement and bonding together of a set of macromolecules to form a complex.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">macromolecular complex assembly</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0022607"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">macromolecular complex assembly</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0043933"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043241">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0032984"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0071822"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">The disaggregation of a protein complex into its constituent components. Protein complexes may have other associated non-protein prosthetic groups, such as nucleic acids, metal ions or carbohydrate groups.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">protein complex disassembly</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">protein complex disassembly</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051051">
+    <obi:IAO_0000111 xml:lang="en">negative regulation of transport</obi:IAO_0000111>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0048519"/>
+    <rdfs:label xml:lang="en">negative regulation of transport</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.</obi:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051049"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0031323">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0019222"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0050794"/>
+    <obi:IAO_0000111 xml:lang="en">regulation of cellular metabolic process</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of the chemical reactions and pathways by which individual cells transform chemical substances.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">regulation of cellular metabolic process</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0001071">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0003674"/>
+    <obi:IAO_0000111 xml:lang="en">nucleic acid binding transcription factor activity</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a DNA or RNA sequence in order to modulate transcription. The transcription factor may or may not also interact selectively with a protein or macromolecular complex.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">nucleic acid binding transcription factor activity</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051651">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0009987"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051235"/>
+    <rdfs:label xml:lang="en">maintenance of location in cell</rdfs:label>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Any process in which a substance or cellular entity, such as a protein complex or organelle, is maintained in a specific location within, or in the membrane of, a cell, and is prevented from moving elsewhere.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">maintenance of location in cell</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0071535">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0019904"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000115 xml:lang="en">Interacting selectively and non-covalently with a RING-like zinc finger domain domain of a protein. The RING-like domain is a zinc finger domain that is related to the C3HC4 RING finger domain.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">RING-like zinc finger domain binding</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">RING-like zinc finger domain binding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0051092">
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0051091"/>
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <obi:IAO_0000111 xml:lang="en">positive regulation of NF-kappaB transcription factor activity</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">positive regulation of NF-kappaB transcription factor activity</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any process that activates or increases the frequency, rate or extent of activity of the transcription factor NF-kappaB.</obi:IAO_0000115>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0043231">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/GO"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0043227"/>
+    <obi:IAO_0000115 xml:lang="en">Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane and occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, and vesicles. Excludes the plasma membrane.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">intracellular membrane-bounded organelle</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">intracellular membrane-bounded organelle</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0043229"/>
+  </owl:Class>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000021978">
+    <rdfs:label xml:lang="en">interleukin-1 receptor-associated kinase 1 isoform 1 phosphorylated 4</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">interleukin-1 receptor-associated kinase 1 isoform 1 phosphorylated 4</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">An interleukin-1 receptor-associated kinase 1 phosphorylated form that has been autophosphorylated several times in the Pro-, Ser-, and Thr-rich ProST region between the N-terminal death domain and kinase domain.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001757">
+    <obi:IAO_0000111 xml:lang="en">nuclear factor NF-kappa-B p105 subunit isoform 1 cleaved 1</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A nuclear factor NF-kappa-B p105 subunit proteolytic cleavage product that is derived from nuclear factor NF-kappa-B p105 subunit isoform 1 and that has been processed by proteolytic cleavage to release the C-terminal domain of p105 downstream the 23 residue, glycine rich region (GRR). GRR functions as a processing signal for the generation of p50.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">nuclear factor NF-kappa-B p105 subunit isoform 1 cleaved 1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000000001">
+    <rdfs:label xml:lang="en">protein</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">protein</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">An amino acid chain that is produced de novo by ribosome-mediated translation of a genetically-encoded mRNA.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000003139">
+    <rdfs:label xml:lang="en">TNF receptor-associated factor 6 isoform 1 ubiquitinated 1</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">TNF receptor-associated factor 6 isoform 1 ubiquitinated 1</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A TNF receptor-associated factor 6 isoform 1 ubiquitinated form that is a major product of auto-ubiquitination. The ubiquitinated Lys residue is located downstream the RING domain. Example: UniProtKB:P70196-1, Lys-124, MOD:01148.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001157">
+    <rdfs:label xml:lang="en">toll-like receptor 6</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A toll-like receptor that is a translation product of the TLR6 gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">toll-like receptor 6</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000009435">
+    <rdfs:label xml:lang="en">importin subunit alpha-4</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">importin subunit alpha-4</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A protein that is a translation product of the KPNA4 gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000000103">
+    <obi:IAO_0000115 xml:lang="en">A mitogen-activated protein kinase that is a translation product of the MAPK1 gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">mitogen-activated protein kinase 1</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">mitogen-activated protein kinase 1</rdfs:label>
+  </rdf:Description>
+  <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/CHEBI#CHEBI_9160">
+    <rdfs:label xml:lang="en">single-stranded DNA</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">single-stranded DNA</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/CHEBI#CHEBI_28640">
+    <rdfs:label xml:lang="en">lipoteichoic acid</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">lipoteichoic acid</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000016963">
+    <rdfs:label xml:lang="en">ubiquitin</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">ubiquitin</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A protein that is a translation product of the UBC gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PATO#PATO_0001505">
+    <obi:IAO_0000111 xml:lang="en">separated from</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A relational structural quality inhering in a bearer by virtue of the bearer's not being in contact with another entity, or of no longer being connected or joined with another entity.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">separated from</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001782">
+    <rdfs:label xml:lang="en">interleukin-1 receptor-associated kinase 1</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">An interleukin-1 receptor-associated kinase IRAK1/3 that is a translation product of the IRAK1 gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">interleukin-1 receptor-associated kinase 1</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000003289">
+    <obi:IAO_0000111 xml:lang="en">ubiquitin-conjugating enzyme E2 N</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">ubiquitin-conjugating enzyme E2 N</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A typical ubiquitin-conjugating enzyme E2 that is a translation product of the UBE2N gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001780">
+    <obi:IAO_0000111 xml:lang="en">interleukin-1 receptor-associated kinase 4</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">interleukin-1 receptor-associated kinase 4</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A protein that is a translation product of the IRAK4 gene or a 1:1 ortholog thereof. The archetypical form consists of an N-terminal Death domain (PF00531) and a C-terminal Protein kinase domain (PF00069). This protein is an essential component of innate immunity.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000003141">
+    <obi:IAO_0000111 xml:lang="en">protein pellino homolog 1</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">protein pellino homolog 1</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A protein pellino that is a translation product of the PELI1 gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/CHEBI#CHEBI_30013">
+    <obi:IAO_0000111 xml:lang="en">L-threonine residue</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">L-threonine residue</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/CHEBI#CHEBI_23367">
+    <rdfs:label xml:lang="en">molecular entity</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">molecular entity</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001740">
+    <obi:IAO_0000111 xml:lang="en">myeloid differentiation primary response protein MyD88</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">myeloid differentiation primary response protein MyD88</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A protein that is a translation product of the MYD88 gene or a 1:1 ortholog thereof. This protein is an adapter involved in the Toll-like receptor and IL-1 receptor signaling pathway in the innate immune response.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001770">
+    <obi:IAO_0000111 xml:lang="en">mitogen-activated protein kinase kinase kinase 7-interacting protein 1</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A protein that is a translation product of the MAP3K7IP1 gene or a 1:1 ortholog thereof. It contains a copy of the Protein phosphatase 2C (PF00481) domain.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">mitogen-activated protein kinase kinase kinase 7-interacting protein 1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001751">
+    <rdfs:label xml:lang="en">toll/interleukin-1 receptor domain-containing adapter protein</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">toll/interleukin-1 receptor domain-containing adapter protein</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A protein that is a translation product of the TIRAP gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001771">
+    <obi:IAO_0000115 xml:lang="en">A mitogen-activated protein kinase kinase kinase 7-interacting protein 2/3 that is a translation product of the MAP3K7IP2 gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">mitogen-activated protein kinase kinase kinase 7-interacting protein 2</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">mitogen-activated protein kinase kinase kinase 7-interacting protein 2</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000003286">
+    <obi:IAO_0000111 xml:lang="en">TRAF-interacting protein with FHA domain-containing protein A</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">TRAF-interacting protein with FHA domain-containing protein A</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A TRAF-interacting protein with FHA domain-containing protein that is a translation product of the TIFA gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000002382">
+    <rdfs:label xml:lang="en">TNF receptor-associated factor 6 isoform 2</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A TNF receptor-associated factor 6 that is a translation product of a mature transcript of the TRAF6 gene. Represented by the sequence UniProtKB:P70196-2.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">TNF receptor-associated factor 6 isoform 2</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001752">
+    <obi:IAO_0000111 xml:lang="en">NF-kappa-B essential modulator</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">NF-kappa-B essential modulator</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A protein that is a translation product of the IKBKG gene or a 1:1 ortholog thereof. In response to a large variety of stimuli, among them pro-inflammatory cytokines, growth factors and microbial pathogens, signals emanating from cell surface receptors converge at the IkappaB kinase (IKK) complex. This complex is composed of four subunits, IKKalpha, IKKbeta, ELK, and NEMO. IKKbeta and NEMO subunits are known to be essential for activating NF-kappaB. Activation of NF-kappaB dimers is the result of IKK-mediated, phosphorylation-induced degradation of the IkappaB inhibitor, which enables the NF-kappaB dimers to enter the nucleus and activate specific target gene expression.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000003295">
+    <obi:IAO_0000115 xml:lang="en">A NF-kappa-B inhibitor that is a translation product of the NFKBIE gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">NF-kappa-B inhibitor epsilon</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">NF-kappa-B inhibitor epsilon</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001772">
+    <obi:IAO_0000111 xml:lang="en">mitogen-activated protein kinase kinase kinase 7-interacting protein 3</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">mitogen-activated protein kinase kinase kinase 7-interacting protein 3</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A mitogen-activated protein kinase kinase kinase 7-interacting protein 2/3 that is a translation product of the MAP3K7IP3 gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/CHEBI#CHEBI_29967">
+    <obi:IAO_0000111 xml:lang="en">L-lysine residue</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">L-lysine residue</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000003294">
+    <obi:IAO_0000115 xml:lang="en">A NF-kappa-B inhibitor that is a translation product of the NFKBIB gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">NF-kappa-B inhibitor beta</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">NF-kappa-B inhibitor beta</obi:IAO_0000111>
+  </rdf:Description>
+  <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412"/>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001153">
+    <obi:IAO_0000111 xml:lang="en">toll-like receptor 2</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">toll-like receptor 2</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A toll-like receptor that is a translation product of the TLR2 gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PATO#PATO_0000648">
+    <rdfs:label xml:lang="en">obstructed</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A morphological quality inhering in a bearer by virtue of the bearer's being blocked or filled with obstacles or an obstacle.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">obstructed</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/CHEBI#CHEBI_18348">
+    <rdfs:label xml:lang="en">1-phosphatidyl-1D-myo-inositol 4,5-bisphosphate</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">1-phosphatidyl-1D-myo-inositol 4,5-bisphosphate</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000003293">
+    <obi:IAO_0000111 xml:lang="en">NF-kappa-B inhibitor alpha</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">NF-kappa-B inhibitor alpha</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A NF-kappa-B inhibitor that is a translation product of the NFKBIA gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000003144">
+    <obi:IAO_0000111 xml:lang="en">protein pellino homolog 1 isoform 1 phosphorylated form</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">protein pellino homolog 1 isoform 1 phosphorylated form</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A protein pellino homolog 1 isoform 1 that has been post-translationally modified to include at least one phosphorylated residue.</obi:IAO_0000115>
+  </rdf:Description>
+  <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000003158">
+    <obi:IAO_0000115 xml:lang="en">A protein that is a translation product of the MAP3K7 gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">mitogen-activated protein kinase kinase kinase 7</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">mitogen-activated protein kinase kinase kinase 7</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001775">
+    <obi:IAO_0000111 xml:lang="en">inhibitor of nuclear factor kappa-b kinase subunit alpha</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">An inhibitor of nuclear factor kappa-B kinase complex alpha/beta subunits that is a translation product of the CHUK gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">inhibitor of nuclear factor kappa-b kinase subunit alpha</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001151">
+    <obi:IAO_0000115 xml:lang="en">A toll-like receptor that is a translation product of the TLR1 gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">toll-like receptor 1</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">toll-like receptor 1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000013875">
+    <obi:IAO_0000115 xml:lang="en">A protein that is a translation product of the RELA gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">transcription factor p65</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">transcription factor p65</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000021975">
+    <obi:IAO_0000111 xml:lang="en">interleukin-1 receptor-associated kinase 1 isoform 1 phosphorylated 1</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">interleukin-1 receptor-associated kinase 1 isoform 1 phosphorylated 1</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">An interleukin-1 receptor-associated kinase 1 phosphorylated form that has been phosphorylated by interleukin-1 receptor-associated kinase 4 (IRAK-4).</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000001776">
+    <rdfs:label xml:lang="en">inhibitor of nuclear factor kappa-b kinase subunit beta</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">An inhibitor of nuclear factor kappa-B kinase complex alpha/beta subunits that is a translation product of the IKBKB gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">inhibitor of nuclear factor kappa-b kinase subunit beta</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/PRO#PRO_000003291">
+    <rdfs:label xml:lang="en">ubiquitin-conjugating enzyme E2 variant 1</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A ubiquitin-conjugating enzyme variant that is a translation product of the UBE2V1 gene or a 1:1 ortholog thereof.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">ubiquitin-conjugating enzyme E2 variant 1</obi:IAO_0000111>
+  </rdf:Description>
+</rdf:RDF>

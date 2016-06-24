@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/342/trunk/src/tools
+END
+ido-to-owl.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/252/trunk/src/tools/ido-to-owl.lisp
+END
+parse-pathway-spreadsheet.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/252/trunk/src/tools/parse-pathway-spreadsheet.lisp
+END
+flu2owl.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/83/trunk/src/tools/flu2owl.lisp
+END
+participant-query-example.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/259/trunk/src/tools/participant-query-example.lisp
+END
+ido.asd
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/252/trunk/src/tools/ido.asd
+END
+add-to-external.pl
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/291/trunk/src/tools/add-to-external.pl
+END
+pathway-to-owl.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/258/trunk/src/tools/pathway-to-owl.lisp
+END
+abcl-module-ido.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/231/trunk/src/tools/abcl-module-ido.lisp
+END
+obo.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/201/trunk/src/tools/obo.lisp
+END
+tlr-pathways.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/257/trunk/src/tools/tlr-pathways.lisp
+END
+immunology-external-templates.txt
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/217/trunk/src/tools/immunology-external-templates.txt
+END
+generate-obo.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/342/trunk/src/tools/generate-obo.lisp
+END
+spreadsheet.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/201/trunk/src/tools/spreadsheet.lisp
+END
+ido-to-obo.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/342/trunk/src/tools/ido-to-obo.lisp
+END

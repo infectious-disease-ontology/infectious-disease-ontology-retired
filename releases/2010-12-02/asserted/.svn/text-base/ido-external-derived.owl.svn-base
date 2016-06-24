@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:obi="http://purl.obolibrary.org/obo/"
+    xmlns:protege-dc="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
+    xmlns:ncbitax="http://purl.org/obo/owl/NCBITaxon#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+    xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
+    xmlns:pato="http://purl.org/obo/owl/PATO#"
+    xmlns:cell="http://purl.org/obo/owl/CL#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:envo="http://purl.org/obo/owl/ENVO#"
+    xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
+    xmlns:caro="http://purl.org/obo/owl/CARO#"
+    xmlns:robfo="http://purl.org/obo/owl/ro_bfo_bridge/1.1#"
+    xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
+    xmlns:rotoo="http://purl.org/obo/owl/ro#"
+    xmlns:pro="http://purl.org/obo/owl/PRO#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:so="http://purl.org/obo/owl/SO#"
+    xmlns:go="http://purl.org/obo/owl/GO#"
+    xmlns:chebi="http://purl.org/obo/owl/CHEBI#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
+  xml:base="http://purl.obolibrary.org/obo/ido/ido-external-derived.owl">
+  <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido-external-derived.owl">
+    <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ido/2010-12-02/ido-external-derived.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2157">
+    <rdfs:label xml:lang="en">Archaea</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000045">
+    <rdfs:label>disorder</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A material entity which is clinically abnormal and part of an extended organism. Disorders are the physical basis of disease.</obi:IAO_0000115>
+    <obi:IAO_0000111>disorder</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_10239">
+    <rdfs:label>Viruses</rdfs:label>
+    <rdfs:label xml:lang="en">Viruses</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_33154">
+    <obi:IAO_0000412 rdf:resource="http://purl.org/obo/owl/NCBITaxon"/>
+    <obi:IAO_0000111 xml:lang="en">Fungi/Metazoa group</obi:IAO_0000111>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2759"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Fungi/Metazoa group</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000020">
+    <obi:IAO_0000111>symptom</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A quality of a patient that is observed by the patient and is hypothesized by the patient to be a realization of a disease.</obi:IAO_0000115>
+    <rdfs:label>symptom</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2759">
+    <rdfs:label xml:lang="en">Eukaryota</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0100026">
+    <obi:IAO_0000115 xml:lang="en">A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">organism</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">organism</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2">
+    <rdfs:label xml:lang="en">Bacteria</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000031">
+    <obi:IAO_0000115 xml:lang="en">A disposition (i) to undergo pathological processes that (ii) exists in an organism because of one or more disorders in that organism.</obi:IAO_0000115>
+    <obi:IAO_0000111>disease</obi:IAO_0000111>
+    <rdfs:label>disease</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000087">
+    <rdfs:label>extended organism</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">An object aggregate consisting of an organism and all material entities located within the organism, overlapping the organism, or occupying sites formed in part by the organism.</obi:IAO_0000115>
+    <obi:IAO_0000111>extended organism</obi:IAO_0000111>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000063">
+    <obi:IAO_0000115 xml:lang="en">The totality of all processes through which a given disease instance is realized.</obi:IAO_0000115>
+    <obi:IAO_0000111>disease course</obi:IAO_0000111>
+    <rdfs:label>disease course</rdfs:label>
+  </owl:Class>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0006955">
+    <obi:IAO_0000111 xml:lang="en">immune response</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">immune response</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any immune system process that functions in the calibrated response of an organism to a potential internal or invasive threat.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0044403">
+    <obi:IAO_0000111 xml:lang="en">symbiosis, encompassing mutualism through parasitism</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">An interaction between two organisms living together in more or less intimate association. The term host is usually used for the larger (macro) of the two members of a symbiosis. The smaller (micro) member is called the symbiont organism. Microscopic symbionts are often referred to as endosymbionts. The various forms of symbiosis include parasitism, in which the association is disadvantageous or destructive to one of the organisms; mutualism, in which the association is advantageous, or often necessary to one or both and not harmful to either; and commensalism, in which one member of the association benefits while the other is not affected. However, mutualism, parasitism, and commensalism are often not discrete categories of interactions and should rather be perceived as a continuum of interaction ranging from parasitism to mutualism. In fact, the direction of a symbiotic interaction can change during the lifetime of the symbionts due to developmental changes as well as changes in the biotic/abiotic environment in which the interaction occurs.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">symbiosis, encompassing mutualism through parasitism</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0042101">
+    <rdfs:label xml:lang="en">T cell receptor complex</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">T cell receptor complex</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A protein complex that contains a disulfide-linked heterodimer of T cell receptor (TCR) chains, which are members of the immunoglobulin superfamily, and mediates antigen recognition, ultimately resulting in T cell activation. The TCR heterodimer is associated with the CD3 complex, which consists of the nonpolymorphic polypeptides gamma, delta, epsilon, zeta, and, in some cases, eta (an RNA splice variant of zeta) or Fc epsilon chains.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0019814">
+    <obi:IAO_0000111 xml:lang="en">immunoglobulin complex</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A protein complex that in its canonical form is composed of two identical immunoglobulin heavy chains and two identical immunoglobulin light chains, held together by disulfide bonds and sometimes complexed with additional proteins. An immunoglobulin complex may be embedded in the plasma membrane or present in the extracellular space, in mucosal areas or other tissues, or circulating in the blood or lymph.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">immunoglobulin complex</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/CL#CL_0000738">
+    <rdfs:label xml:lang="en">leukocyte</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">An achromatic cell of the myeloid or lymphoid lineages capable of ameboid movement, found in blood or other tissue.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">leukocyte</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/TRANS#TRANS_0000000">
+    <rdfs:label xml:lang="en">transmission process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A process that is the means during which the pathogen is transmitted directly or indirectly from its natural reservoir, a susceptible host or source to a new host.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">transmission process</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0006959">
+    <obi:IAO_0000111 xml:lang="en">humoral immune response</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">An immune response mediated through a body fluid.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">humoral immune response</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0085031">
+    <obi:IAO_0000115 xml:lang="en">An interaction between two organisms living together in more or less intimate association in a relationship in which one benefits and the other is unaffected.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">commensalism</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">commensalism</obi:IAO_0000111>
+  </rdf:Description>
+  <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412"/>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0051093">
+    <obi:IAO_0000111 xml:lang="en">negative regulation of developmental process</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Any process that stops, prevents or reduces the rate or extent of development, the biological process whose specific outcome is the progression of an organism over time from an initial condition (e.g. a zygote, or a young adult) to a later condition (e.g. a multicellular animal or an aged adult).</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">negative regulation of developmental process</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0044406">
+    <rdfs:label xml:lang="en">adhesion to host</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">The attachment of an organism to its host via adhesion molecules, general stickiness etc., either directly or indirectly. The host is defined as the larger of the organisms involved in a symbiotic interaction.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">adhesion to host</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0002250">
+    <rdfs:label xml:lang="en">adaptive immune response</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">An immune response based on directed amplification of specific receptors for antigen produced through a somatic diversification process, and allowing for enhanced response to subsequent exposures to the same antigen (immunological memory).</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">adaptive immune response</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0048525">
+    <obi:IAO_0000115 xml:lang="en">Any process that stops, prevents, or reduces the frequency, rate or extent of the viral life cycle, the set of processes by which a virus reproduces and spreads among hosts.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">negative regulation of viral reproduction</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">negative regulation of viral reproduction</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/CHEBI#CHEBI_23367">
+    <obi:IAO_0000111 xml:lang="en">molecular entity</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">molecular entity</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0008150">
+    <obi:IAO_0000115 xml:lang="en">Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">biological_process</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">biological_process</obi:IAO_0000111>
+  </rdf:Description>
+  <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/TRANS#TRANS_0000002">
+    <obi:IAO_0000111 xml:lang="en">indirect</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">indirect</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Indirect transmission is a transmission process during which the pathogen is indirectly transferred from a reservoir, source or host to another host by intermediary vehicles, vectors or as airborne dust particles.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0032502">
+    <rdfs:label xml:lang="en">developmental process</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A biological process whose specific outcome is the progression of an integrated living unit: an anatomical structure (which may be a subcellular structure, cell, tissue, or organ), or organism over time from an initial condition to a later condition.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">developmental process</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0050777">
+    <obi:IAO_0000115 xml:lang="en">Any process that stops, prevents, or reduces the frequency, rate or extent of the immune response, the immunological reaction of an organism to an immunogenic stimulus.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">negative regulation of immune response</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">negative regulation of immune response</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0085030">
+    <obi:IAO_0000111 xml:lang="en">mutualism</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">mutualism</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">An interaction between two organisms living together in more or less intimate association in a relationship in which both organisms benefit from each other.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0051234">
+    <obi:IAO_0000111 xml:lang="en">establishment of localization</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">establishment of localization</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">The directed movement of a cell, substance or cellular entity, such as a protein complex or organelle, to a specific location.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0032991">
+    <rdfs:label xml:lang="en">macromolecular complex</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">macromolecular complex</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">A stable assembly of two or more macromolecules, i.e. proteins, nucleic acids, carbohydrates or lipids, in which the constituent parts function together.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/CARO#CARO_0000000">
+    <rdfs:label xml:lang="en">anatomical entity</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">Biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">anatomical entity</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0051704">
+    <obi:IAO_0000115 xml:lang="en">Any process by which an organism has an effect on another organism of the same or different species.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">multi-organism process</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">multi-organism process</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0043093">
+    <obi:IAO_0000115 xml:lang="en">A cytokinesis process that involves a set of conserved proteins including FtsZ, and results in the formation of two similarly sized and shaped cells; the process by which prokaryotic cells divide.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">cytokinesis by binary fission</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">cytokinesis by binary fission</obi:IAO_0000111>
+  </rdf:Description>
+  <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0044411">
+    <obi:IAO_0000115 xml:lang="en">Penetration by an organism into its host organism via active breaching of the physical barriers of the host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">entry into host through host barriers</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">entry into host through host barriers</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/ENVO#ENVO_00002036">
+    <obi:IAO_0000115 xml:lang="en">A spatial region having environmental qualities which may sustain an organism or a community of organisms.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">habitat</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">habitat</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/CL#CL_0000000">
+    <obi:IAO_0000111 xml:lang="en">cell</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Anatomical structure that has as its parts a maximally connected cell compartment surrounded by a plasma membrane.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">cell</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0040007">
+    <rdfs:label xml:lang="en">growth</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">growth</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">The increase in size or mass of an entire organism, a part of an organism or a cell.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0000003">
+    <obi:IAO_0000115 xml:lang="en">The production by an organism of new individuals that contain some portion of their genetic material inherited from that organism.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">reproduction</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">reproduction</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0065007">
+    <obi:IAO_0000115 xml:lang="en">Any process that modulates the frequency, rate or extent of any biological process, quality or function.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">biological regulation</rdfs:label>
+    <obi:IAO_0000111 xml:lang="en">biological regulation</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0002443">
+    <obi:IAO_0000115 xml:lang="en">Any process involved in the carrying out of an immune response by a leukocyte.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">leukocyte mediated immunity</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">leukocyte mediated immunity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0045087">
+    <obi:IAO_0000111 xml:lang="en">innate immune response</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Innate immune responses are defense responses mediated by germline encoded components that directly recognize components of potential pathogens.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">innate immune response</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0016265">
+    <rdfs:label xml:lang="en">death</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">A permanent cessation of all vital functions: the end of life; can be applied to a whole organism or to a part of an organism.</obi:IAO_0000115>
+    <obi:IAO_0000111 xml:lang="en">death</obi:IAO_0000111>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0019815">
+    <obi:IAO_0000111 xml:lang="en">B cell receptor complex</obi:IAO_0000111>
+    <rdfs:label xml:lang="en">B cell receptor complex</rdfs:label>
+    <obi:IAO_0000115 xml:lang="en">An immunoglobulin complex that is present in the plasma membrane of B cells and that in its canonical form is composed of two identical immunoglobulin heavy chains and two identical immunoglobulin light chains and a signaling subunit, a heterodimer of the Ig-alpha and Ig-beta proteins.</obi:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0044409">
+    <obi:IAO_0000111 xml:lang="en">entry into host</obi:IAO_0000111>
+    <obi:IAO_0000115 xml:lang="en">Penetration by an organism into the body, tissues, or cells of the host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction.</obi:IAO_0000115>
+    <rdfs:label xml:lang="en">entry into host</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

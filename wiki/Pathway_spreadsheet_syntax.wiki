@@ -1,0 +1,116 @@
+#summary This page describes the syntax for pathway spreadsheets.
+
+= Introduction =
+
+The goal of the IDO pathway project is to build an OWL representation of molecular immunology consistent with the principles of the OBO foundry, and based on previous work by the [http://groups.google.com/group/biopax-obo BioPAX-OBO] group.
+
+Because curating such information using standard OWL editing tools is tedious and error prone, and because we may want to evolve the OWL representation during development, we are curating the information about the molecular immunology pathways in Excel spreadsheets. A script reads these spreadsheets and translates them to OWL.  We hope that this will be a more comfortable process. 
+
+The format of the spreadsheet is a compromise between ease of use and supplying all information needed to generate an OWL representation that maximally connects to the OBO Foundry ontologies.
+
+= Spreadsheet organization =
+
+Each spreadsheet is actually an excel workbook with possibly multiple sheets. Within each sheet there are a number of blocks. 
+
+A block is a rectangular region of a spreadsheet that is labeled with a known set of column headers. Subsequent rows are considered to be part of the block until either
+ * The first cell of a row is blank
+ * Another set of column headers is found in the row
+
+Any cells in a workbook that are not interpreted as a block are ignored.
+
+Font and cell styles are _currently_ ignored.
+
+Column headers are compared on a case-insensitive basis.
+
+= Kinds of blocks =
+
+== Sheet information block ==
+Column headers: *Spreadsheet id*,	*About*, *Date Created*, *Last edited*, *Editors*
+
+The purpose of this block is to provide information about the curation and interpretation of the sheet.
+
+This block can have 1 or more rows. The first row supplies the information specified by the headers.
+
+ * *Spreadsheet id*: A string uniquely labeling this sheet within the workbook. Case insensitive.
+ * *About*: Documenting, in plain english,  what has been recorded on the sheet
+ * *Date Created*: The date the sheet was created. 
+ * *Last Edited*: The date the sheet was last edited
+ * *Editors*: A list of names of editors, separated by ";"
+
+Subsequent rows are interpreted as properties/values with the first column being the property name and the second column being the value.
+
+Currently only one property is understood:
+ * *Uses entities from*: A list of spreadsheet ids separated by ";", that define the scope of handle lookup within the sheet,  When resolving handles, first the handles on the current sheet will be searched, then the handles on each subsequent sheet listed will be searched, until a match is found.
+
+Example:
+
+|| *Spreadsheet id* || *About* || *Date Created* || *Last edited* || *Editors* ||
+|| TLR4-02 || LPS recognition and signaling via TLR4 || 5/22/09 || 6/24/09 || Anna Maria; Alan||
+|| Uses entities from  || TLR4-01 ||  ||  || ||
+
+ So if I understood correctly I need only to put from which spreedsheet id i took the entity but not list which one?
+Anna Maria
+
+== Handle block ==
+Column headers: *handle*, *Entities*, *Kind*, *class*, *super(s)*
+
+The purpose of this block is to define short names for entities that will be referred to in definitions of e.g. processes and complexes, and associate them with existing ontology terms. 
+
+ * *handle*: A name for an entity that will be referred to in a subsequent definition. Handles must match the regular expression [A-Za-z0-9-]+, that is they can use the upper and lower case letters, numbers, and "-".
+ * *Entities*: A natural language description of the entity for documenting purposes.
+ * *Kind*: A tag describing the kind of entity, currently uncontrolled, also for documentation purposes. Some current values: Gene product, post transcriptional modification, aminoacid, modified aminoacid, complex, complex modified
+ * *class*: An identifier for the entity. Usually OBO style identifier _namespace:id_. However other forms may be recognized. Currently ids that start with "PF" are understood as PFAM identifiers.
+ * *super(s)*: In the case where the entity will be MIREOTed from the source ontology, and the superclass isn't obvious from the _Kind_, an identifier for the parent class.
+
+Example:
+
+|| *handle* || *Entities* || *Kind* || *class* || *super(s)* ||
+|| IRK4 || IRAK4 || Gene product || PRO:000001780 ||  ||
+|| IRK1 || IRAK1 || Gene product || PRO:000001782 ||  ||
+
+== Process block ==
+Column headers *processes*, *realizes*,*part_of*,*class*,*super(s)*,*binding domains*
+
+The purpose of process blocks are to define processes, which are typically expressed as reactions with a set of substrates and a set of products. 
+
+ * *processes*:  See below for more detailed specification. Typically of the form n a + m b -> p c + q d, where a,b,c,d are handles, n,m,p,q are (optional) stoichiometry. Each handle should name a class of material entity.
+ * *realizes*: An optional list of names of functions or dispositions and what they inhere in. See below for more detail on syntax.
+ * *part_of*: An optional handle naming a process that this process is always  part of. See below for more detail on syntax.
+ * *class*:  If this process already has an identifier (e.g. it is named in GO, the OBO style identifier for that process
+ * *super(s)*: If the process has an obvious most specific superclass in GO, the OBO style identifier for that process
+ * *binding domains*: Many processes in IDO involve the formation of protein complexes.  This cell provides information about which domains (parts) of the constituent proteins contain the binding sites. See below for more detail on syntax.
+
+Details on syntax: Documention TBD.
+
+Example:
+
+|| *processes* || *realizes* || *part_of* || *class* || *super(s)* || *binding domains* ||
+|| rlps2-tm+IRK4->rlps-tmIRK4 || ddb of MyD88 in rlps2-tm and of IRK4 || ddp located in pcyto ||  ||  || DD of Myd88 and DD of IRK4 ||
+|| rlps-tmIRK4+ IRK1-> rlps-tmIRK4IRK1 || ddb of MyD88 and of IRK1 || ddp located in pcyto ||  ||  || DD of Myd88 and DD of IRK1 ||
+
+== Evidence block ==
+
+Documentation TBD
+
+== Protein complex block ==
+
+Documentation TBD
+
+== Implementation ==
+
+The raw spreadsheet parsing is done by the Apache POI libraries: http://poi.apache.org/
+
+The lisp code for finding blocks and creating the object oriented representation is in the LSW subversion repository: http://mumble.net:8080/svn/lsw/trunk/read-ms-docs/
+
+The IDO specific blocks and logic are in the IDO repository: 
+ * http://infectious-disease-ontology.googlecode.com/svn/trunk/src/tools/parse-pathway-spreadsheet.lisp
+Translation to OWL, once parsed, is at
+ * http://infectious-disease-ontology.googlecode.com/svn/trunk/src/tools/pathway-to-owl.lisp
+
+== Notes ==
+
+ * Don't remember why the "super(s)" column has the possibility of being plural. We use multiple inheritance.
+ * Should the spreadsheet id be dropped in favor of just using the sheet name that Excel lets you set?
+ * I expect "Last edited" to be unreliable. Would be nice if excel recorded such metadata automatically.
+
+Alan Ruttenberg

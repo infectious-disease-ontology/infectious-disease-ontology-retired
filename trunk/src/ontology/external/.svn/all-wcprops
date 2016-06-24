@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/300/trunk/src/ontology/external
+END
+ro.owl
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/src/ontology/external/ro.owl
+END
+ro_bfo_bridge11.owl
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/8/trunk/src/ontology/external/ro_bfo_bridge11.owl
+END
+protege.owl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/8/trunk/src/ontology/external/protege.owl
+END
+bfo11.owl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/300/trunk/src/ontology/external/bfo11.owl
+END
+protege-dc.owl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/9/trunk/src/ontology/external/protege-dc.owl
+END

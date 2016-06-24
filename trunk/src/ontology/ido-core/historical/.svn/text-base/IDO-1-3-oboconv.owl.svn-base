@@ -1,0 +1,951 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/obo/owl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#" xmlns:oboContent="http://purl.org/obo/owl/" xmlns:oban="http://purl.org/obo/oban/" xml:base="http://purl.org/obo/owl/infectious_disease_ontology">
+  <!--oboInOwl meta-model - we must declare this here, otherwise the ontology will be OWL-Full unless we import http://www.geneontology.org/formats/oboInOwl#-->
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDate"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasVersion"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDefaultNamespace"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDefinition"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSubset"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasURI"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#savedBy"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#replacedBy"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#consider"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#DbXref"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#Definition"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#Subset"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#Synonym"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#SynonymType"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+  <owl:ObjectProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty"/>
+  <owl:Ontology rdf:about="">
+    <oboInOwl:hasDate>08:10:2007 20:55</oboInOwl:hasDate>
+    <oboInOwl:savedBy>Administrator</oboInOwl:savedBy>
+    <oboInOwl:hasDefaultNamespace>infectious_disease</oboInOwl:hasDefaultNamespace>
+    <rdfs:label>infectious_disease</rdfs:label>
+    <rdfs:comment>
+          This is an OWL translation of an ontology whose native representational form is .obo. The translation was performed using the oboInOwl xslt library. For details, see http://www.berkeleybop.org/obo-conv.cgi
+        </rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000200">
+    <rdfs:label xml:lang="en">mode of transmission</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000001"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000201">
+    <rdfs:label xml:lang="en">end reservoir</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000059"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000204">
+    <rdfs:label xml:lang="en">factor</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role played by portion of physical substance in a biological process</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000001"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000205">
+    <rdfs:label xml:lang="en">colonization</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the process by which a biotic entity establishes multiple copies of itself in a new environment (including an organismal environment).nnfix idn"native" environment term</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#part_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000221"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000206">
+    <rdfs:label xml:lang="en">biotic</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000003"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000207">
+    <rdfs:label xml:lang="en">adhesin</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000208">
+    <rdfs:label xml:lang="en">seroprevalence</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prevalence as measured by antibody</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000019"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000209">
+    <rdfs:label xml:lang="en">dormancy</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality [state] of an organism that during its life cycle in which its growth. development, metabolism, etc is temporarily suspended nnnsuspended state, non-replicative state, resting state</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000211"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000210">
+    <rdfs:label xml:lang="en">quality of host</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000002"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000211">
+    <rdfs:label xml:lang="en">quality of pathogen</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000002"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000212">
+    <rdfs:label xml:lang="en">susceptibility</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">can change depending on environmentnnwhere should susceptibility factors go?</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000210"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000213">
+    <rdfs:label xml:lang="en">resistance</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000210"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000214">
+    <rdfs:label xml:lang="en">refractoriness</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000210"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000215">
+    <rdfs:label xml:lang="en">quality of host population</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000002"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000216">
+    <rdfs:label xml:lang="en">herd immunity</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000215"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000217">
+    <rdfs:label xml:lang="en">quality of infectious disease</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000002"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000218">
+    <rdfs:label xml:lang="en">case of infectious disease</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000210"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000219">
+    <rdfs:label xml:lang="en">incubation period</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agent is incubated?ndisease is incubated?</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#part_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000221"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000220">
+    <rdfs:label xml:lang="en">infectivity period</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#part_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000221"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000221">
+    <rdfs:label xml:lang="en">infectious disease progression</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the unfolding or course of infectious diseasennwhat do we say about infectious disease that always remain latent nwhat about when a pathogen continues its progression nnwe need to think about whether we need a term called stagenlife cycle?nprogression?ndevelopment?</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000222">
+    <rdfs:label xml:lang="en">infectious disease course</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000223">
+    <rdfs:label xml:lang="en">host recovery period</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000224">
+    <rdfs:label xml:lang="en">intrinsic incubation period</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000219"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000225">
+    <rdfs:label xml:lang="en">extrinsic incubation period</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#part_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000226"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000226">
+    <rdfs:label xml:lang="en">pathogen life cycle</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is this just the part of the life cycle of the biotic entity that has role pathogen for the period of time while it has role pathogen?nncan include phases in the existence of the entity before it becomes a pathogen</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000227">
+    <rdfs:label xml:lang="en">dormancy period</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is a period a process?</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000228">
+    <rdfs:label xml:lang="en">pathogen outbreak</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000229">
+    <rdfs:label xml:lang="en">oral-fecal transmission</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000083"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000230">
+    <rdfs:label xml:lang="en">vertical transmission</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000083"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000231">
+    <rdfs:label xml:lang="en">horizontal transmission</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000083"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000232">
+    <rdfs:label xml:lang="en">pathogen life cycle stage</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000233">
+    <rdfs:label xml:lang="en">infectious disease progression stage</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000000">
+    <rdfs:label xml:lang="en">process</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000001">
+    <rdfs:label xml:lang="en">role</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000002">
+    <rdfs:label xml:lang="en">quality</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000003">
+    <rdfs:label xml:lang="en">object</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000004">
+    <rdfs:label xml:lang="en">virulence</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the degree of pathogenicitynnpathogenicity and virulence are used in some communities as synonyms.</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000211"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000005">
+    <rdfs:label xml:lang="en">swollen</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000210"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000006">
+    <rdfs:label xml:lang="en">toxicity</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000002"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000007">
+    <rdfs:label xml:lang="en">active</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000002"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000008">
+    <rdfs:label xml:lang="en">contagious</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000211"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000009">
+    <rdfs:label xml:lang="en">latency</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infection has occurred, but it might not have manifested itselfnquality of being in a non replicative statentime to manifest itself na pathogen when it is in a non replicative state</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000211"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000010">
+    <rdfs:label xml:lang="en">immunosuppressed</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000210"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000011">
+    <rdfs:label xml:lang="en">exogenous</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000211"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000012">
+    <rdfs:label xml:lang="en">immunity</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000210"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000013">
+    <rdfs:label xml:lang="en">protective</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000002"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000015">
+    <rdfs:label xml:lang="en">temperature</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000210"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000016">
+    <rdfs:label xml:lang="en">inactivated</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000002"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000017">
+    <rdfs:label xml:lang="en">mortality</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000002"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000018">
+    <rdfs:label xml:lang="en">pandemic</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000029"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000019">
+    <rdfs:label xml:lang="en">prevalence</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total number of cases of a particular disease at a given time in a particular population divided by the number of individuals in that particular populationnnthe burden of a disease in a population</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000215"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000020">
+    <rdfs:label xml:lang="en">epidemic</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000029"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000021">
+    <rdfs:label xml:lang="en">infected</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000210"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000022">
+    <rdfs:label xml:lang="en">live</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000002"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000023">
+    <rdfs:label xml:lang="en">zoonotic</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000211"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000024">
+    <rdfs:label xml:lang="en">immunocompromised</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000210"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000025">
+    <rdfs:label xml:lang="en">pathogenicity</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the ability of the biotic entity to cause disease in a host of a given typenndo we need to say damage instead of disease?nnpathogenicity and virulence are used as synonyms in some communities</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000211"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000026">
+    <rdfs:label xml:lang="en">tropism</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000002"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000027">
+    <rdfs:label xml:lang="en">drug resistance</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000211"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000028">
+    <rdfs:label xml:lang="en">antibiotic resistance</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000027"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000029">
+    <rdfs:label xml:lang="en">incidence</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">number of new cases in a given period of time</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000217"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000030">
+    <rdfs:label xml:lang="en">invasive</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000211"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000031">
+    <rdfs:label xml:lang="en">endogenous</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000211"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000032">
+    <rdfs:label xml:lang="en">attenuated</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000002"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000033">
+    <rdfs:label xml:lang="en">morbidity</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000002"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000034">
+    <rdfs:label xml:lang="en">endemic</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000217"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000035">
+    <rdfs:label xml:lang="en">fusion protein</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000001"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000036">
+    <rdfs:label xml:lang="en">colonizer</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000001"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000037">
+    <rdfs:label xml:lang="en">commensal</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000036"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000038">
+    <rdfs:label xml:lang="en">parasite</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000036"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000039">
+    <rdfs:label xml:lang="en">symbiant</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000036"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000040">
+    <rdfs:label xml:lang="en">virulence factor</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">role played by a portion of substance to promote virulencennmagnitudendegree of pathogenesis</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000204"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000041">
+    <rdfs:label xml:lang="en">route of entry</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000001"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000042">
+    <rdfs:label xml:lang="en">invasin</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000040"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000043">
+    <rdfs:label xml:lang="en">toxin</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000040"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000044">
+    <rdfs:label xml:lang="en">endotoxin</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000043"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000045">
+    <rdfs:label xml:lang="en">exotoxin</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000043"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000046">
+    <rdfs:label xml:lang="en">sign</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000001"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000047">
+    <rdfs:label xml:lang="en">treatment</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000001"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000048">
+    <rdfs:label xml:lang="en">symptom</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">look at mathias's ontology of cancer to get all the subterms...its under quality there</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000001"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000049">
+    <rdfs:label xml:lang="en">antimicrobial</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000047"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000050">
+    <rdfs:label xml:lang="en">medicine</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000047"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000051">
+    <rdfs:label xml:lang="en">therapeutic</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000047"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000052">
+    <rdfs:label xml:lang="en">vaccine</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000047"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000053">
+    <rdfs:label xml:lang="en">antibiotic</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000049"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000054">
+    <rdfs:label xml:lang="en">colonization factor</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">role played by portion of physical substance which promotes colonization</rdfs:comment>
+    <oboInOwl:hasRelatedSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">&lt;new synonym&gt;</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000204"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000055">
+    <rdfs:label xml:lang="en">adhesion factor</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">role played by portion of physical substance utilized by an organism in order to establish adherence to a surface in a host</rdfs:comment>
+    <oboInOwl:hasRelatedSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">adhesin</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">adhesin factor</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000204"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000056">
+    <rdfs:label xml:lang="en">host</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000001"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000057">
+    <rdfs:label xml:lang="en">carrier</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000056"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000058">
+    <rdfs:label xml:lang="en">chronic carrier</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000057"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000059">
+    <rdfs:label xml:lang="en">reservoir</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">holding place for a potential pathogen...animate or inanimate</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000001"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000060">
+    <rdfs:label xml:lang="en">fomite</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inanimate holder, is water a fomite or only a reservoir?</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000059"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000061">
+    <rdfs:label xml:lang="en">mobile genetic element</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000001"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000062">
+    <rdfs:label xml:lang="en">pathogenicity island</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000001"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000063">
+    <rdfs:label xml:lang="en">vector</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">holder and a carrier (actively transmits) and living: potentially make a cross product.  every vector comes into contact with the target. (from one host to another?)</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000001"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000064">
+    <rdfs:label xml:lang="en">pathogen</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000001"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000065">
+    <rdfs:label xml:lang="en">dependovirus</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000064"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000066">
+    <rdfs:label xml:lang="en">infectious agent</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000064"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000067">
+    <rdfs:label xml:lang="en">opportunistic pathogen</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000064"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000068">
+    <rdfs:label xml:lang="en">emerging pathogen</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000066"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000069">
+    <rdfs:label xml:lang="en">primary pathogen</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000066"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000070">
+    <rdfs:label xml:lang="en">prion</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000066"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000071">
+    <rdfs:label xml:lang="en">initiation of infection</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000072">
+    <rdfs:label xml:lang="en">disruption of body surface</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000071"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000073">
+    <rdfs:label xml:lang="en">disruption of normal microbioflora</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000071"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000074">
+    <rdfs:label xml:lang="en">pathogen adherence to host cell</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">create cross products for "host" and "pathogen" that will be part of this process.</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#part_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000221"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000075">
+    <rdfs:label xml:lang="en">nonspecific adherence</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000074"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000076">
+    <rdfs:label xml:lang="en">specific adherence</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000074"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000077">
+    <rdfs:label xml:lang="en">afimbrial specific adherence</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000076"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000078">
+    <rdfs:label xml:lang="en">fimbrial specific adherence</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000076"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000079">
+    <rdfs:label xml:lang="en">penetration of epithelial barrier</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000080">
+    <rdfs:label xml:lang="en">penetration via injury of epithelial barrier</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000079"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000081">
+    <rdfs:label xml:lang="en">transcytosis</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000079"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000082">
+    <rdfs:label xml:lang="en">utilization of membranous cell gateway</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000079"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000083">
+    <rdfs:label xml:lang="en">transmission</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the process by which an infectious agent passes from one organism to another organism</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#part_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000221"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000084">
+    <rdfs:label xml:lang="en">pathogenesis</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:nthe specific processes that generate the ability of an organism to cause disease in anothernnnThis is defined in GO so import.</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000085">
+    <rdfs:label xml:lang="en">penetration of host cell</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000086">
+    <rdfs:label xml:lang="en">engulfment</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000085"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000087">
+    <rdfs:label xml:lang="en">fusion with host cell membrane</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000085"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000088">
+    <rdfs:label xml:lang="en">membrane invagination</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000085"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000089">
+    <rdfs:label xml:lang="en">passage through cell membrane</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000085"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000090">
+    <rdfs:label xml:lang="en">engulfment by nonphagocyte</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000086"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000091">
+    <rdfs:label xml:lang="en">engulfment by phagocyte</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000086"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000092">
+    <rdfs:label xml:lang="en">damaging host cells and tissues in subepithelial space</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#part_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000221"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000093">
+    <rdfs:label xml:lang="en">induction of damaging host immune response</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000092"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000094">
+    <rdfs:label xml:lang="en">pathogen-induced apoptosis</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000092"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000095">
+    <rdfs:label xml:lang="en">pathogen-induced necrosis</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000092"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000096">
+    <rdfs:label xml:lang="en">virus-induced cytopathogenesis</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000092"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000097">
+    <rdfs:label xml:lang="en">pathogen spread through host</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#part_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000221"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000098">
+    <rdfs:label xml:lang="en">infectious disease</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">comment about the instances:nncollections of etiologically connected cases of infectious disease in a given population</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000215"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000100">
+    <rdfs:label xml:lang="en">pathogen evasion of host immune response</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#part_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000221"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000101">
+    <rdfs:label xml:lang="en">emergence</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the process by which an infectious disease establishes itself in a new population (or at a sufficiently higher rate? higher prevalence and/or higher incidence)</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000102">
+    <rdfs:label xml:lang="en">epidemiological spread of disease</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000103">
+    <rdfs:label xml:lang="en">outbreak</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000104">
+    <rdfs:label xml:lang="en">infection</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000105">
+    <rdfs:label xml:lang="en">infection treatment process</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000106">
+    <rdfs:label xml:lang="en">immunization</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000107">
+    <rdfs:label xml:lang="en">prevention of infection</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000000"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000108">
+    <rdfs:label xml:lang="en">transport by blood</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000097"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000109">
+    <rdfs:label xml:lang="en">transport by lymph</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000097"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000110">
+    <rdfs:label xml:lang="en">modulation of inflammatory response</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000111">
+    <rdfs:label xml:lang="en">antigenic variation</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000100"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000112">
+    <rdfs:label xml:lang="en">resist phagocytosis in subepithelial space</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000100"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000113">
+    <rdfs:label xml:lang="en">serum resistance</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000100"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000114">
+    <rdfs:label xml:lang="en">phase variation</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000111"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000115">
+    <rdfs:label xml:lang="en">genetic diversification</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000111"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000116">
+    <rdfs:label xml:lang="en">complement resistance</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000113"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000117">
+    <rdfs:label xml:lang="en">epidemic spread of disease</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000102"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000118">
+    <rdfs:label xml:lang="en">pandemic spread of disease</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000102"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000119">
+    <rdfs:label xml:lang="en">vaccination</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000106"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000300">
+    <rdfs:label xml:lang="en">progression rate</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000002"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000301">
+    <rdfs:label xml:lang="en">rapid progression</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000300"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000302">
+    <rdfs:label xml:lang="en">long-term non-progression</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000300"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000303">
+    <rdfs:label xml:lang="en">highly exposed persistently seronegative</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000300"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000304">
+    <rdfs:label xml:lang="en">&lt;new term&gt;</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000305">
+    <rdfs:label xml:lang="en">co-infected</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000210"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/IDO#IDO_0000306">
+    <rdfs:label xml:lang="en">fitness</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is a quality relating to both bacteria and host</rdfs:comment>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/IDO#IDO_0000002"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#has_participant">
+    <rdfs:label xml:lang="en">has_participant</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#has_quality">
+    <rdfs:label xml:lang="en">has_quality</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#has_role">
+    <rdfs:label xml:lang="en">has_role</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/OBO_REL#part_of">
+    <rdfs:label xml:lang="en">part_of</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#preceded_by">
+    <rdfs:label xml:lang="en">preceded_by</rdfs:label>
+    <oboInOwl:hasOBONamespace>infectious_disease</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+</rdf:RDF>

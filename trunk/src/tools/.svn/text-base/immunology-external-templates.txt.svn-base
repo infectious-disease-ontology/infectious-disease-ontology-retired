@@ -1,0 +1,126 @@
+default endpoint:http://sparql.obo.neurocommons.org/sparql/
+default graph_base:http://purl.org/science/graph/obo/
+# define the prefixes that will be added to all queries
+
+prefix:rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix:owl: <http://www.w3.org/2002/07/owl#>
+prefix:obi: <http://purl.obolibrary.org/obo/>
+prefix:tax: <http://purl.org/obo/owl/NCBITaxon#NCBITaxon>
+prefix:go: <http://purl.org/obo/owl/GO#GO>
+prefix:chebi: <http://purl.org/obo/owl/CHEBI#CHEBI>
+prefix:obo: <http://www.geneontology.org/formats/oboInOwl#>
+prefix:iao: <http://purl.obolibrary.org/obo/>
+
+# give names to our annotation properties
+
+alias:preferredTerm=iao:IAO_0000111
+alias:definition=iao:IAO_0000115
+alias:importedFrom=iao:IAO_0000412
+
+# give names to the top obi taxa 
+alias:bacteria=tax:_2
+alias:eukaryota=tax:_2759
+alias:archaea=tax:_2157
+alias:viruses=tax:_10239
+alias:cellularOrganism=tax:_131567
+
+# give names to the top terms
+alias:cc=go:_0005575
+alias:mf=go:_0003674
+alias:bp=go:_0008150
+alias:me=chebi:_23367
+
+# get the labels for the classes we import.
+# Maybe pick up synonyms later.
+== once only ==
+construct
+ { ?super rdf:type owl:Class.
+   ?super rdfs:label ?label.
+   ?super alias:definition ?definition.
+ }
+where
+{
+ { graph <http://purl.org/science/graph/obo/GO> {
+   { ?super rdfs:label ?label.}
+    UNION
+     { ?super obo:hasDefinition ?blank. ?blank rdfs:label ?definition}
+   FILTER ((?super=alias:bp) || (?super=alias:cc) || (?super=alias:mf))
+  }
+ }
+UNION
+ { graph <http://purl.org/science/graph/obo/CHEBI> {
+   { alias:me rdfs:label ?label.}
+    UNION
+     { alias:me obo:hasDefinition ?blank. ?blank rdfs:label ?definition}
+  }
+ }
+}
+# Get the GO term and superclasses up to the 3 we include in OBI, and labels for them
+== http://purl.org/obo/owl/(GO|PRO) == 
+construct
+ { ?super rdf:type owl:Class.
+   ?super rdfs:subClassOf ?parent.
+   ?super alias:preferredTerm ?label.
+   ?super rdfs:label ?label.
+   ?super alias:importedFrom <http://purl.org/obo/owl/GO>.
+   ?super alias:definition ?definition.
+ }
+where  
+{
+
+# part 1
+ { # We harvest the transitive superclass annotations
+    _ID_GOES_HERE_ rdfs:subClassOf ?super. 
+    graph <http://purl.org/science/graph/obo/GO>
+     { ?super rdfs:subClassOf ?parent.
+     { ?super rdfs:label ?label.}
+         UNION
+     { ?super obo:hasDefinition ?blank. ?blank rdfs:label ?definition}
+     } FILTER (!isBlank(?super) && !isBlank(?parent))
+  }
+UNION
+ { graph <http://purl.org/science/graph/obo/GO>
+   { ?super rdfs:subClassOf ?parent.
+     { ?super rdfs:label ?label.}
+         UNION
+     { ?super obo:hasDefinition ?blank. ?blank rdfs:label ?definition}
+     FILTER (?super=_ID_GOES_HERE_  && !isBlank(?parent))
+   }
+  }
+}
+# get the label and definition for your basic OBO term.
+
+== http://purl.org/obo/owl/.* == 
+construct
+{ 
+  _ID_GOES_HERE_ alias:preferredTerm ?label.
+  _ID_GOES_HERE_ rdfs:label ?label.
+  _ID_GOES_HERE_ alias:definition ?definition.
+}
+from _GRAPH_GOES_HERE_
+where
+{
+  {   _ID_GOES_HERE_ rdfs:label ?label. }
+  UNION
+  {   _ID_GOES_HERE_ obo:hasDefinition ?blank.
+      ?blank rdfs:label ?definition}
+}
+
+# get the label and definition for VO (ie obolibrary type) terms
+== http://purl.obolibrary.org/obo/.* == 
+construct
+{ 
+  _ID_GOES_HERE_ rdf:type owl:Class.
+  _ID_GOES_HERE_ alias:preferredTerm ?label.
+  _ID_GOES_HERE_ rdfs:label ?label.
+  _ID_GOES_HERE_ alias:definition ?definition.
+}
+from _GRAPH_GOES_HERE_
+where
+{
+  {   _ID_GOES_HERE_ rdfs:label ?label. }
+  UNION
+  {   _ID_GOES_HERE_ alias:definition ?definition}
+}
+
+

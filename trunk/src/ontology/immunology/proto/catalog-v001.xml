@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog id="XML Catalog File (see http://www.oasis-open.org/committees/entity/spec-2001-08-06.html) - Created By Protégé 4" prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=/Users/alanr/repos/infectious-disease-ontology/trunk/src/ontology/immunology/proto, Auto-Update=false" prefer="public" xml:base="">
+        <uri name="http://purl.obolibrary.org/obo/ido/dev/pathway-defs.owl" uri="pathway-defs.owl"/>
+	<uri name="http://purl.obolibrary.org/obo/ido/dev/TLR2-Lta-signaling-pathway.owl" uri="TLR2-Lta-signaling-pathway.owl"/>
+	<uri name="http://purl.obolibrary.org/obo/ido/dev/TLR2-Lta-signaling-pathway-external.owl" uri="TLR2-Lta-signaling-pathway-external.owl"/>
+	<uri name="http://purl.obolibrary.org/obo/ido/dev/TLR2-Lta-signaling-pathway-external-derived.owl" uri="TLR2-Lta-signaling-pathway-external-derived.owl"/>
+	<uri name="http://purl.obolibrary.org/obo/ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway.owl" uri="LPS-recognition-and-signaling-via-TLR4-pathway.owl"/>
+	<uri name="http://purl.obolibrary.org/obo/ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway-external.owl" uri="LPS-recognition-and-signaling-via-TLR4-pathway-external.owl"/>
+	<uri name="http://purl.obolibrary.org/obo/ido/dev/LPS-recognition-and-signaling-via-TLR4-pathway-external-derived.owl" uri="LPS-recognition-and-signaling-via-TLR4-pathway-external-derived.owl"/>
+	<uri name="http://purl.obolibrary.org/obo/ido/dev/dsRNA-recognition-and-signaling-via-TLR3-pathway.owl" uri="dsRNA-recognition-and-signaling-via-TLR3-pathway.owl"/>
+	<uri name="http://purl.obolibrary.org/obo/ido/dev/dsRNA-recognition-and-signaling-via-TLR3-pathway-external.owl" uri="dsRNA-recognition-and-signaling-via-TLR3-pathway-external.owl"/>
+	<uri name="http://purl.obolibrary.org/obo/ido/dev/dsRNA-recognition-and-signaling-via-TLR3-pathway-external-derived.owl" uri="dsRNA-recognition-and-signaling-via-TLR3-pathway-external-derived.owl"/>
+	<uri name="http://purl.obolibrary.org/obo/ido/dev/MDP-recognition-and-signaling-via-NOD2-pathway-pathway.owl" uri="MDP-recognition-and-signaling-via-NOD2-pathway.owl"/>
+	<uri name="http://purl.obolibrary.org/obo/ido/dev/MDP-recognition-and-signaling-via-NOD2-pathway-external.owl" uri="MDP-recognition-and-signaling-via-NOD2-pathway-external.owl"/>
+	<uri name="http://purl.obolibrary.org/obo/ido/dev/MDP-recognition-and-signaling-via-NOD2-pathway-external-derived.owl" uri="MDP-recognition-and-signaling-via-NOD2-pathway-external-derived.owl"/>
+    </group>
+</catalog>

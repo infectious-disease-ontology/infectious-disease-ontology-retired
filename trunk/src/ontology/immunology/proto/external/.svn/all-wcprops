@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/269/trunk/src/ontology/immunology/proto/external
+END
+ro.owl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/211/trunk/src/ontology/immunology/proto/external/ro.owl
+END
+ro_bfo_bridge11.owl
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/211/trunk/src/ontology/immunology/proto/external/ro_bfo_bridge11.owl
+END
+ontology-metadata.owl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/211/trunk/src/ontology/immunology/proto/external/ontology-metadata.owl
+END
+bfo11.owl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/211/trunk/src/ontology/immunology/proto/external/bfo11.owl
+END
+protege-dc.owl
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/269/trunk/src/ontology/immunology/proto/external/protege-dc.owl
+END
