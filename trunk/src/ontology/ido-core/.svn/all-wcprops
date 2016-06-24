@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 45
-/svn/!svn/ver/357/trunk/src/ontology/ido-core
+/svn/!svn/ver/362/trunk/src/ontology/ido-core
 END
 IDO-editors-worksheet.xls
 K 25
@@ -19,13 +19,13 @@ ido-base.owl
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/svn/!svn/ver/357/trunk/src/ontology/ido-core/ido-base.owl
+/svn/!svn/ver/362/trunk/src/ontology/ido-core/ido-base.owl
 END
 ido-obsolete.owl
 K 25
 svn:wc:ra_dav:version-url
 V 62
-/svn/!svn/ver/341/trunk/src/ontology/ido-core/ido-obsolete.owl
+/svn/!svn/ver/362/trunk/src/ontology/ido-core/ido-obsolete.owl
 END
 ido.obo
 K 25
@@ -43,31 +43,31 @@ ido-external-derived.owl
 K 25
 svn:wc:ra_dav:version-url
 V 70
-/svn/!svn/ver/348/trunk/src/ontology/ido-core/ido-external-derived.owl
+/svn/!svn/ver/362/trunk/src/ontology/ido-core/ido-external-derived.owl
 END
 ido-external.owl
 K 25
 svn:wc:ra_dav:version-url
 V 62
-/svn/!svn/ver/349/trunk/src/ontology/ido-core/ido-external.owl
+/svn/!svn/ver/362/trunk/src/ontology/ido-core/ido-external.owl
 END
 ido-external-by-hand.owl
 K 25
 svn:wc:ra_dav:version-url
 V 70
-/svn/!svn/ver/323/trunk/src/ontology/ido-core/ido-external-by-hand.owl
+/svn/!svn/ver/359/trunk/src/ontology/ido-core/ido-external-by-hand.owl
 END
 external-templates.txt
 K 25
 svn:wc:ra_dav:version-url
 V 68
-/svn/!svn/ver/285/trunk/src/ontology/ido-core/external-templates.txt
+/svn/!svn/ver/358/trunk/src/ontology/ido-core/external-templates.txt
 END
 ido-main.owl
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/svn/!svn/ver/344/trunk/src/ontology/ido-core/ido-main.owl
+/svn/!svn/ver/362/trunk/src/ontology/ido-core/ido-main.owl
 END
 catalog-v001.xml
 K 25

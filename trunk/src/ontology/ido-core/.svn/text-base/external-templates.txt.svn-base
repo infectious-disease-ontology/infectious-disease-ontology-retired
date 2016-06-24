@@ -1,12 +1,12 @@
-default endpoint:http://sparql.obo.neurocommons.org/sparql/
-default graph_base:http://purl.org/science/graph/obo/
+default endpoint:http://beta.neurocommons.org/sparql/
+default graph_base:http://purl.org/science/graph/obo2/
 # define the prefixes that will be added to all queries
 
 prefix:rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix:owl: <http://www.w3.org/2002/07/owl#>
 prefix:obi: <http://purl.obolibrary.org/obo/>
-prefix:tax: <http://purl.org/obo/owl/NCBITaxon#NCBITaxon>
-prefix:obo: <http://www.geneontology.org/formats/oboInOwl#>
+prefix:tax: <http://purl.obolibrary.org/obo/NCBITaxon>
+
 prefix:iao: <http://purl.obolibrary.org/obo/>
 
 # give names to our annotation properties
@@ -36,13 +36,13 @@ where
  }  
 
 # Get the taxon term and superclasses up to the 4 we include in OBI, and labels for them
-== http://purl.org/obo/owl/NCBITaxon == 
+== http://purl.obolibrary.org/obo/NCBITaxon.* == 
 construct
  { ?super rdf:type owl:Class.
    ?super rdfs:subClassOf ?parent.
    ?super alias:preferredTerm ?label.
    ?super rdfs:label ?label.
-   ?super alias:importedFrom <http://purl.org/obo/owl/NCBITaxon>
+   ?super alias:importedFrom <http://purl.obolibrary.org/obo/ncbitaxon.owl>
  }
 where  
 {
@@ -50,14 +50,14 @@ where
 # part 1
  { # We harvest the transitive superclass annotations
     _ID_GOES_HERE_ rdfs:subClassOf ?super. 
-    graph <http://purl.org/science/graph/obo/NCBITaxon>
+    graph <http://purl.org/science/graph/obo2/NCBITaxon>
      { ?super rdfs:subClassOf ?parent.
        ?super rdfs:label ?label.
      }
   }
 UNION
 
- { graph <http://purl.org/science/graph/obo/NCBITaxon>
+ { graph <http://purl.org/science/graph/obo2/NCBITaxon>
    { ?super rdfs:subClassOf ?parent.
      ?super rdfs:label ?label.
      FILTER (?super=_ID_GOES_HERE_)
@@ -68,7 +68,7 @@ FILTER (!((?super=tax:_2) || (?super=tax:_2759) || (?super=tax:_10239) || (?supe
  (?parent = tax:_131567)))
 }
 # get the label and definition for your basic OBO term.
-== http://purl.org/obo/owl/.* == 
+== http://purl.obolibrary.org/obo/.* == 
 construct
 { 
   _ID_GOES_HERE_ alias:preferredTerm ?label.
@@ -80,8 +80,8 @@ where
 {
   {   _ID_GOES_HERE_ rdfs:label ?label. }
   UNION
-  {   _ID_GOES_HERE_ obo:hasDefinition ?blank.
-      ?blank rdfs:label ?definition}
+  {   _ID_GOES_HERE_ alias:definition ?definition.
+  }
 }
 
 # get the label and definition for BIRN terms

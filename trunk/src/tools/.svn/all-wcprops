@@ -3,6 +3,30 @@ svn:wc:ra_dav:version-url
 V 33
 /svn/!svn/ver/342/trunk/src/tools
 END
+immunology-external-templates.txt
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/217/trunk/src/tools/immunology-external-templates.txt
+END
+generate-obo.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/342/trunk/src/tools/generate-obo.lisp
+END
+spreadsheet.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/201/trunk/src/tools/spreadsheet.lisp
+END
+ido-to-obo.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/342/trunk/src/tools/ido-to-obo.lisp
+END
 ido-to-owl.lisp
 K 25
 svn:wc:ra_dav:version-url
@@ -62,28 +86,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 51
 /svn/!svn/ver/257/trunk/src/tools/tlr-pathways.lisp
-END
-immunology-external-templates.txt
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/svn/!svn/ver/217/trunk/src/tools/immunology-external-templates.txt
-END
-generate-obo.lisp
-K 25
-svn:wc:ra_dav:version-url
-V 51
-/svn/!svn/ver/342/trunk/src/tools/generate-obo.lisp
-END
-spreadsheet.lisp
-K 25
-svn:wc:ra_dav:version-url
-V 50
-/svn/!svn/ver/201/trunk/src/tools/spreadsheet.lisp
-END
-ido-to-obo.lisp
-K 25
-svn:wc:ra_dav:version-url
-V 49
-/svn/!svn/ver/342/trunk/src/tools/ido-to-obo.lisp
 END

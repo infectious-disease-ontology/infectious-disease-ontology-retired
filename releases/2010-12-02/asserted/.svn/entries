@@ -1,9 +1,9 @@
 10
 
 dir
-357
-https://infectious-disease-ontology.googlecode.com/svn/releases/2010-12-02/asserted
-https://infectious-disease-ontology.googlecode.com/svn
+368
+http://infectious-disease-ontology.googlecode.com/svn/releases/2010-12-02/asserted
+http://infectious-disease-ontology.googlecode.com/svn
 
 
 
@@ -26,115 +26,13 @@ alanruttenberg
 
 92b75ed2-ff87-11dd-9d1a-b59b2e1864b6
 
-ido-asserted.owl
-file
-
-
-
-
-2010-12-16T02:52:22.000000Z
-fca94a4dfcb36f744b9d9974e854d375
-2010-12-07T00:24:07.643440Z
-343
-alanruttenberg
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-543
-
-ido-main-asserted.owl
-file
-
-
-
-
-2010-12-16T02:52:22.000000Z
-aa71062e603fd88ab022f7dd042b34b8
-2010-12-07T00:24:07.643440Z
-343
-alanruttenberg
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-229759
-
-ido-obsolete.owl
-file
-
-
-
-
-2010-12-16T02:52:22.000000Z
-8b9463f0b4fbd945bd76a662e4163644
-2010-12-07T00:24:07.643440Z
-343
-alanruttenberg
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-76283
-
 ido-external-derived.owl
 file
 
 
 
 
-2010-12-16T02:52:22.000000Z
+2016-03-18T18:52:21.128257Z
 2d01bb19f638ca78930d800ff585faa7
 2010-12-07T00:24:07.643440Z
 343
@@ -168,7 +66,7 @@ file
 
 
 
-2010-12-16T02:52:22.000000Z
+2016-03-18T18:52:21.128257Z
 958e8be64812ce449c3566e4d8795ee5
 2010-12-07T00:24:07.643440Z
 343
@@ -202,7 +100,7 @@ file
 
 
 
-2010-12-16T02:52:22.000000Z
+2016-03-18T18:52:21.128257Z
 0557872393ffb877af3885ddad5d1ab8
 2010-12-07T00:24:07.643440Z
 343
@@ -236,7 +134,7 @@ file
 
 
 
-2010-12-16T02:52:22.000000Z
+2016-03-18T18:52:21.128257Z
 172bf732f5b51a38938554249a0a47e5
 2010-12-07T00:24:07.643440Z
 343
@@ -263,4 +161,106 @@ alanruttenberg
 
 
 187254
+
+ido-asserted.owl
+file
+
+
+
+
+2016-03-18T18:52:21.128257Z
+fca94a4dfcb36f744b9d9974e854d375
+2010-12-07T00:24:07.643440Z
+343
+alanruttenberg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+543
+
+ido-main-asserted.owl
+file
+
+
+
+
+2016-03-18T18:52:21.128257Z
+aa71062e603fd88ab022f7dd042b34b8
+2010-12-07T00:24:07.643440Z
+343
+alanruttenberg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+229759
+
+ido-obsolete.owl
+file
+
+
+
+
+2016-03-18T18:52:21.128257Z
+8b9463f0b4fbd945bd76a662e4163644
+2010-12-07T00:24:07.643440Z
+343
+alanruttenberg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+76283
 

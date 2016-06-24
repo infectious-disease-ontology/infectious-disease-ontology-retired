@@ -1,15 +1,15 @@
 10
 
 dir
-357
-https://infectious-disease-ontology.googlecode.com/svn/trunk/src/ontology/ido-core
-https://infectious-disease-ontology.googlecode.com/svn
+368
+http://infectious-disease-ontology.googlecode.com/svn/trunk/src/ontology/ido-core
+http://infectious-disease-ontology.googlecode.com/svn
 
 
 
-2013-03-09T19:55:21.689975Z
-357
-lindsay.cowell@utsouthwestern.edu
+2014-08-01T17:14:21.274164Z
+362
+albertgoldfain@gmail.com
 
 
 
@@ -32,7 +32,7 @@ file
 
 
 
-2013-02-22T01:34:53.000000Z
+2016-03-18T18:52:24.924187Z
 f9e3e034acf051ca44f20c8e5b118fc3
 2013-03-09T19:55:21.689975Z
 357
@@ -69,7 +69,7 @@ file
 
 
 
-2010-12-04T03:04:48.000000Z
+2016-03-18T18:52:24.924187Z
 10ab55e71128f57446e3c9ce88c1b314
 2009-05-12T06:35:00.685005Z
 10
@@ -103,11 +103,11 @@ file
 
 
 
-2013-03-09T20:17:39.000000Z
-038951d489e2bfe4e38ffe07174eca92
-2013-03-09T19:55:21.689975Z
-357
-lindsay.cowell@utsouthwestern.edu
+2016-03-18T18:52:24.928187Z
+af34aecd2b1d8aa571755d414053207e
+2014-08-01T17:14:21.274164Z
+362
+albertgoldfain@gmail.com
 
 
 
@@ -129,7 +129,7 @@ lindsay.cowell@utsouthwestern.edu
 
 
 
-191734
+191465
 
 ido-obsolete.owl
 file
@@ -137,11 +137,11 @@ file
 
 
 
-2010-12-16T02:52:22.000000Z
-14e40600993c06216de5aa73c7beea94
-2010-12-06T00:43:28.262984Z
-341
-alanruttenberg
+2016-03-18T18:52:24.928187Z
+10edecbfc9c5d4a0418f75ac41aab67d
+2014-08-01T17:14:21.274164Z
+362
+albertgoldfain@gmail.com
 
 
 
@@ -163,7 +163,7 @@ alanruttenberg
 
 
 
-76191
+76083
 
 ido.obo
 file
@@ -171,7 +171,7 @@ file
 
 
 
-2010-12-04T03:04:48.000000Z
+2016-03-18T18:52:24.928187Z
 d5c9d5b88b91b851a8102e8549803bae
 2010-07-19T03:53:25.753047Z
 252
@@ -205,7 +205,7 @@ file
 
 
 
-2010-12-04T03:04:48.000000Z
+2016-03-18T18:52:24.928187Z
 69d1135d82b68b1d989192ee488fc99f
 2010-12-04T02:27:23.335253Z
 320
@@ -239,11 +239,11 @@ file
 
 
 
-2013-11-14T21:35:30.000000Z
-cd8e8f5e94db1c403a8f033ec634a780
-2011-09-01T22:46:33.280597Z
-348
-lindsay.cowell@utsouthwestern.edu
+2016-03-18T18:52:24.928187Z
+ecc7abb1ae09315897c4cde8a05afe0b
+2014-08-01T17:14:21.274164Z
+362
+albertgoldfain@gmail.com
 
 
 
@@ -265,7 +265,7 @@ lindsay.cowell@utsouthwestern.edu
 
 
 
-22285
+27183
 
 ido-external.owl
 file
@@ -273,11 +273,11 @@ file
 
 
 
-2011-09-02T01:07:00.000000Z
-06d1be5ed22d3477a5155d88f90c9d82
-2011-09-02T01:00:00.780196Z
-349
-lindsay.cowell@utsouthwestern.edu
+2016-03-18T18:52:24.928187Z
+00196bc25eaa3edd96360364eb107682
+2014-08-01T17:14:21.274164Z
+362
+albertgoldfain@gmail.com
 
 
 
@@ -299,7 +299,7 @@ lindsay.cowell@utsouthwestern.edu
 
 
 
-16176
+16146
 
 ido-external-by-hand.owl
 file
@@ -307,10 +307,10 @@ file
 
 
 
-2010-12-04T03:43:49.000000Z
-37acc07416989cb88d06ee57cc1a71e4
-2010-12-04T03:39:48.641311Z
-323
+2016-03-18T18:52:24.928187Z
+84a58d42e745904830eb03df9b0f1f35
+2013-11-15T07:54:42.687381Z
+359
 alanruttenberg
 
 
@@ -333,7 +333,7 @@ alanruttenberg
 
 
 
-21357
+18632
 
 external-templates.txt
 file
@@ -341,10 +341,10 @@ file
 
 
 
-2010-12-04T03:04:48.000000Z
-847d4c37d887a2dda31073fac0817cf4
-2010-11-08T02:00:28.087007Z
-285
+2016-03-18T18:52:24.928187Z
+64c2c640122cc750513754c7b7da66f9
+2013-11-15T06:37:40.899866Z
+358
 alanruttenberg
 
 
@@ -367,7 +367,10 @@ alanruttenberg
 
 
 
-3474
+3407
+
+tool
+dir
 
 ido-main.owl
 file
@@ -375,11 +378,11 @@ file
 
 
 
-2010-12-16T03:01:26.000000Z
-5d21ff2c9910064ef23bae2156be63db
-2010-12-21T00:51:31.302069Z
-344
-lindsay.cowell@utsouthwestern.edu
+2016-03-18T18:52:24.928187Z
+b183d76d7b4fd75bad872ccfc1f8b6ce
+2014-08-01T17:14:21.274164Z
+362
+albertgoldfain@gmail.com
 
 
 
@@ -401,7 +404,7 @@ lindsay.cowell@utsouthwestern.edu
 
 
 
-235957
+234073
 
 catalog-v001.xml
 file
@@ -409,7 +412,7 @@ file
 
 
 
-2010-12-04T04:07:40.000000Z
+2016-03-18T18:52:24.928187Z
 78dce17e17c88b55b4a05cd89ea7adc3
 2010-12-04T03:54:11.608648Z
 325

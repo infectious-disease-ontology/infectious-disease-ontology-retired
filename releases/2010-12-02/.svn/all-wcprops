@@ -3,24 +3,6 @@ svn:wc:ra_dav:version-url
 V 37
 /svn/!svn/ver/353/releases/2010-12-02
 END
-ido-base.owl
-K 25
-svn:wc:ra_dav:version-url
-V 50
-/svn/!svn/ver/347/releases/2010-12-02/ido-base.owl
-END
-ido-main-workaround.owl
-K 25
-svn:wc:ra_dav:version-url
-V 61
-/svn/!svn/ver/353/releases/2010-12-02/ido-main-workaround.owl
-END
-ido.obo
-K 25
-svn:wc:ra_dav:version-url
-V 45
-/svn/!svn/ver/340/releases/2010-12-02/ido.obo
-END
 ido.owl
 K 25
 svn:wc:ra_dav:version-url
@@ -38,4 +20,22 @@ K 25
 svn:wc:ra_dav:version-url
 V 50
 /svn/!svn/ver/352/releases/2010-12-02/ido-main.owl
+END
+ido-base.owl
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/347/releases/2010-12-02/ido-base.owl
+END
+ido-main-workaround.owl
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/353/releases/2010-12-02/ido-main-workaround.owl
+END
+ido.obo
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/340/releases/2010-12-02/ido.obo
 END

@@ -1,9 +1,9 @@
 10
 
 dir
-357
-https://infectious-disease-ontology.googlecode.com/svn/trunk/src/ontology/ido-core/historical
-https://infectious-disease-ontology.googlecode.com/svn
+368
+http://infectious-disease-ontology.googlecode.com/svn/trunk/src/ontology/ido-core/historical
+http://infectious-disease-ontology.googlecode.com/svn
 
 
 
@@ -32,7 +32,7 @@ file
 
 
 
-2010-12-04T03:04:48.000000Z
+2016-03-18T18:52:23.032222Z
 019b4c41b3ef8e8178bf55faee985d63
 2009-08-08T17:14:01.088037Z
 52
@@ -66,7 +66,7 @@ file
 
 
 
-2010-12-04T03:04:48.000000Z
+2016-03-18T18:52:23.032222Z
 4a621a6b237e6a55ddfd07f9ed87214d
 2009-08-08T17:19:29.040901Z
 53
@@ -100,7 +100,7 @@ file
 
 
 
-2010-12-04T03:04:48.000000Z
+2016-03-18T18:52:23.032222Z
 b53bd55d91681f478a11951be8eeb404
 2009-08-08T16:14:16.408270Z
 48
@@ -134,7 +134,7 @@ file
 
 
 
-2010-12-04T03:04:48.000000Z
+2016-03-18T18:52:23.032222Z
 cf0bca5a5cb4382aa1da9b952eb14438
 2009-08-08T16:14:16.408270Z
 48
@@ -168,7 +168,7 @@ file
 
 
 
-2010-12-04T03:04:48.000000Z
+2016-03-18T18:52:23.032222Z
 29f942ee4886327d6b89716295b02afc
 2009-08-08T16:14:16.408270Z
 48

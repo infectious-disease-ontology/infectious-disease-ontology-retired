@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:j.0="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:j.1="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+<owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido.owl">
+     <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ido/2014-08-01/ido.owl"/>
+     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-08-01</owl:versionInfo>
+     <dc:creator>Albert Goldfain</dc:creator>
+     <dc:creator>Barry Smith</dc:creator>
+     <dc:creator>Bjoern Peters</dc:creator>
+     <j.1:defaultLanguage>en</j.1:defaultLanguage>
+     <dc:creator>Alan Ruttenberg</dc:creator>
+     <rdfs:comment xml:lang="en">The core Infectious Disease Ontology is an ontology of entities generally relevant to both the biomedical and clinical aspects of infectious diseases, including terms such as 'pathogen', 'host', 'vector', and 'vaccine'.  The structure of IDO adheres to the Basic Formal Ontology.  Terms in IDO that are within the scope of other OBO Foundry ontologies, such as the Gene Ontology, are derived from those ontologies.  Other terms are defined as cross-products of terms from Foundry ontologies to the extent possible. For more information, see http://www.infectiousdiseaseontology.org/Home.html. </rdfs:comment>
+    <dc:creator>Lindsay Cowell</dc:creator>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-08-01</dc:date>
+    <rdfs:seeAlso>http://www.infectiousdiseaseontology.org/Home.html</rdfs:seeAlso>
+    <dc:creator>Alexander Diehl</dc:creator>
+    <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl"/>     
+    <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/ido-main.owl"/>
+    <owl:imports rdf:resource="http://infectious-disease-ontology.googlecode.com/svn/releases/2014-08-01/ido-obsolete.owl"/>
+</owl:Ontology>
+</rdf:RDF>

@@ -3,6 +3,18 @@ svn:wc:ra_dav:version-url
 V 55
 /svn/!svn/ver/56/trunk/src/ontology/ido-core/historical
 END
+infectious_disease_obo_cvs_1.2.obo
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/48/trunk/src/ontology/ido-core/historical/infectious_disease_obo_cvs_1.2.obo
+END
+infectious_disease_obo_cvs_1.3.obo
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/48/trunk/src/ontology/ido-core/historical/infectious_disease_obo_cvs_1.3.obo
+END
 IDO-2009-05-15.obo
 K 25
 svn:wc:ra_dav:version-url
@@ -20,16 +32,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 90
 /svn/!svn/ver/48/trunk/src/ontology/ido-core/historical/infectious_disease_obo_cvs_1.1.obo
-END
-infectious_disease_obo_cvs_1.2.obo
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/48/trunk/src/ontology/ido-core/historical/infectious_disease_obo_cvs_1.2.obo
-END
-infectious_disease_obo_cvs_1.3.obo
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/48/trunk/src/ontology/ido-core/historical/infectious_disease_obo_cvs_1.3.obo
 END

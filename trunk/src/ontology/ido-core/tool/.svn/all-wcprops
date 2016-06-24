@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/358/trunk/src/ontology/ido-core/tool
+END
+lsw.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/358/trunk/src/ontology/ido-core/tool/lsw.jar
+END
+commands.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/358/trunk/src/ontology/ido-core/tool/commands.lisp
+END
+owltool.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/358/trunk/src/ontology/ido-core/tool/owltool.jar
+END
