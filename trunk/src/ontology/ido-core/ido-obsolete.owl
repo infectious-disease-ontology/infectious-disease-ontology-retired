@@ -2,20 +2,12 @@
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/ido.owl#"
      xml:base="http://purl.obolibrary.org/obo/ido.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
-     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-     xmlns:CARO="http://purl.org/obo/owl/CARO#"
-     xmlns:NCBITaxon="http://purl.org/obo/owl/NCBITaxon#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:GO="http://purl.org/obo/owl/GO#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:CHEBI="http://purl.org/obo/owl/CHEBI#"
-     xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:TRANS="http://purl.org/obo/owl/TRANS#">
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido/ido-obsolete.owl">
     </owl:Ontology>
 
