@@ -1,14 +1,12 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/ido/ido-axioms.owl#"
-     xml:base="http://purl.obolibrary.org/obo/ido/ido-axioms.owl"
-     xmlns:TRANS="http://purl.obolibrary.org/obo/"
-     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
-     xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/ido/ido-main.owl#"
+     xml:base="http://purl.obolibrary.org/obo/ido/ido-main.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido.owl">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido-main.owl">
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/ido-base.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/ido-external-by-hand.owl"/>
         <owl:imports rdf:resource="http://www.obofoundry.org/ro/ro.owl"/>
@@ -63,7 +61,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IDO_0000661">
         <rdfs:label xml:lang="en">capable_of</rdfs:label>
-        <TRANS:IAO_0000116 xml:lang="en">This is consistent with the &#39;capable_of&#39; relation as introduced by the cell ontology (CL).</TRANS:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">This is consistent with the &#39;capable_of&#39; relation as introduced by the cell ontology (CL).</obo:IAO_0000116>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
     </owl:ObjectProperty>
