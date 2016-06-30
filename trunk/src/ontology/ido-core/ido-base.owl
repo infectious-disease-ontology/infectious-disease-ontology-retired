@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/ido.owl#"
-     xml:base="http://purl.obolibrary.org/obo/ido.owl"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/ido/ido-base.owl#"
+     xml:base="http://purl.obolibrary.org/obo/ido/ido-base.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -140,28 +139,28 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0000664 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IDO_0000664">
         <rdfs:label>has_material_basis_in</rdfs:label>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.obofoundry.org/ro/ro.owl#has_part -->
-
-    <owl:ObjectProperty rdf:about="http://www.obofoundry.org/ro/ro.owl#has_part">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:label>has_part</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.obofoundry.org/ro/ro.owl#part_of -->
-
-    <owl:ObjectProperty rdf:about="http://www.obofoundry.org/ro/ro.owl#part_of"/>
     
 
 
@@ -203,6 +202,12 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000027"/>
     
 
 
