@@ -14,6 +14,7 @@
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ido-main.owl">
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ro/core.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/ido-base.owl"/>
+	<owl:imports rdf:resource="http://purl.obolibrary.org/obo/ido/ido-external-by-hand.owl"/>
     </owl:Ontology>
     
 
