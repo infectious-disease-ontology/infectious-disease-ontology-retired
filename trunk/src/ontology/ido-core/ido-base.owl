@@ -27,6 +27,7 @@
         <dc:license>Creative Commons 3.0 BY</dc:license>
         <protege:defaultLanguage>en</protege:defaultLanguage>
         <dc:creator>Lindsay Cowell</dc:creator>
+	<dc:contributor>Jie Zheng</dc:contributor>
         <rdfs:comment xml:lang="en">This ontology is in early development. Expect it to change.</rdfs:comment>
         <dc:creator>Barry Smith</dc:creator>
     </owl:Ontology>
@@ -83,12 +84,6 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0000283 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000283"/>
     
 
 
