@@ -9,8 +9,5 @@
     <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/ido/ido-main.owl" uri="ido-main.owl"/>
     <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/ido/ido-base.owl" uri="ido-base.owl"/>
     <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/ido/ido-obsolete.owl" uri="ido-obsolete.owl"/>
-    <uri id="User Entered Import Resolution" name="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl" uri="../external/protege-dc.owl"/>
-    <uri id="User Entered Import Resolution" name="http://purl.org/obo/owl/ro_bfo_bridge/1.1" uri="../external/ro_bfo_bridge11.owl"/>
-    <uri id="User Entered Import Resolution" name="http://www.obofoundry.org/ro/ro.owl" uri="../external/ro.owl"/>
-    <uri id="User Entered Import Resolution" name="http://www.obofoundry.org/ro/ro_bfo_bridge.owl" uri="../external/ro_bfo_bridge11.owl"/>
+    <uri id="User Entered Import Resolution" name="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl" uri="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl"/>
 </catalog>
